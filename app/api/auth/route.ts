@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { passwordCorrecta, generarToken, nombreCookie } from "@/lib/auth";
-import { getDashboardBySlug } from "@/lib/dashboards";
+import { generarToken, nombreCookie, verifyPassword } from "@/lib/auth";
+import { getDashboardBySlug, getPasswordHash } from "@/lib/dashboards-supabase";
 
 export const runtime = "nodejs";
 
@@ -17,17 +17,17 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: false, error: "Faltan datos" }, { status: 400 });
   }
 
-  const d = getDashboardBySlug(dashboard);
+  const d = await getDashboardBySlug(dashboard);
   if (!d) {
     return NextResponse.json({ ok: false, error: "Dashboard no encontrado" }, { status: 404 });
   }
 
-  // Si es publico no requiere contrasena.
-  if (d.esPublico) {
+  if (d.es_publico) {
     return NextResponse.json({ ok: true });
   }
 
-  if (!passwordCorrecta(dashboard, password)) {
+  const hash = await getPasswordHash(dashboard);
+  if (!verifyPassword(password, hash)) {
     return NextResponse.json({ ok: false, error: "Contraseña incorrecta" }, { status: 401 });
   }
 

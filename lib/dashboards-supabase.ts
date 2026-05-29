@@ -48,6 +48,22 @@ export async function getDashboardBySlug(slug: string): Promise<Dashboard | unde
   return all.find((d) => d.slug === slug);
 }
 
+export async function getPasswordHash(slug: string): Promise<string | null> {
+  try {
+    const { data, error } = await supabaseServer
+      .from("dashboards")
+      .select("password_hash")
+      .eq("slug", slug)
+      .single();
+
+    if (error) throw error;
+    return data?.password_hash || null;
+  } catch (err) {
+    console.error("Error leyendo password_hash:", err);
+    return null;
+  }
+}
+
 export async function getDashboardHTML(slug: string): Promise<string | null> {
   try {
     const { data, error } = await supabaseServer
