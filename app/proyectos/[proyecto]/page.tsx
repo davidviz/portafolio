@@ -2,34 +2,29 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import DashboardCard from "@/components/DashboardCard";
-import { getProyecto, proyectos } from "@/config/proyectos";
-import { getDashboardsByProyecto } from "@/lib/dashboards";
+import { getProyectoBySlug, getDashboardsByProyecto } from "@/lib/dashboards-supabase";
 
-export function generateStaticParams() {
-  return proyectos.map((p) => ({ proyecto: p.slug }));
-}
+export const dynamic = "force-dynamic";
 
-export default function PaginaProyecto({
+export default async function PaginaProyecto({
   params,
 }: {
   params: { proyecto: string };
 }) {
-  const proyecto = getProyecto(params.proyecto);
+  const proyecto = await getProyectoBySlug(params.proyecto);
   if (!proyecto) notFound();
 
-  const dashboards = getDashboardsByProyecto(proyecto.slug);
-  const parrafos = proyecto.descripcion.split("\n\n");
+  const dashboards = await getDashboardsByProyecto(proyecto.slug);
+  const parrafos = (proyecto.descripcion || "").split("\n\n");
 
   return (
     <>
       <Header />
 
-      {/* Cabecera del proyecto con imagen */}
       <section className="relative overflow-hidden border-b border-borde">
         {proyecto.imagen && (
           <div className="absolute inset-0">
             <img src={proyecto.imagen} alt={proyecto.nombre} className="h-full w-full object-cover" />
-            {/* Capa base oscura + degradado mas fuerte en el lado del texto */}
             <div className="absolute inset-0 bg-tinta/78" />
             <div className="absolute inset-0 bg-gradient-to-r from-tinta via-tinta/90 to-transparent" />
           </div>
@@ -57,7 +52,6 @@ export default function PaginaProyecto({
         </div>
       </section>
 
-      {/* Grilla de dashboards */}
       <section className="mx-auto max-w-contenido px-6 py-16">
         <div className="flex items-end justify-between">
           <div>

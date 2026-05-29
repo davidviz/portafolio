@@ -8,6 +8,19 @@ export type Dashboard = {
   objetivo: string;
   icono: string;
   es_publico: boolean;
+  esPublico: boolean;
+  orden?: number;
+};
+
+export type ProyectoPublico = {
+  id: string;
+  slug: string;
+  nombre: string;
+  cliente: string;
+  resumen: string;
+  descripcion: string;
+  estado: string;
+  imagen?: string;
   orden?: number;
 };
 
@@ -17,9 +30,7 @@ export async function getDashboards(): Promise<Dashboard[]> {
       .from("dashboards")
       .select("*")
       .order("orden", { ascending: true });
-
     if (error) throw error;
-
     return (
       data?.map((d) => ({
         id: d.id,
@@ -29,6 +40,7 @@ export async function getDashboards(): Promise<Dashboard[]> {
         objetivo: d.objetivo,
         icono: d.icono || "📊",
         es_publico: d.es_publico,
+        esPublico: d.es_publico,
         orden: d.orden,
       })) || []
     );
@@ -55,7 +67,6 @@ export async function getPasswordHash(slug: string): Promise<string | null> {
       .select("password_hash")
       .eq("slug", slug)
       .single();
-
     if (error) throw error;
     return data?.password_hash || null;
   } catch (err) {
@@ -71,11 +82,42 @@ export async function getDashboardHTML(slug: string): Promise<string | null> {
       .select("html")
       .eq("slug", slug)
       .single();
-
     if (error) throw error;
     return data?.html || null;
   } catch (err) {
     console.error("Error leyendo HTML del dashboard:", err);
     return null;
   }
+}
+
+// ---------- Proyectos desde Supabase ----------
+export async function getProyectos(): Promise<ProyectoPublico[]> {
+  try {
+    const { data, error } = await supabaseServer
+      .from("proyectos")
+      .select("*")
+      .order("orden", { ascending: true });
+    if (error) throw error;
+    return (
+      data?.map((p) => ({
+        id: p.id,
+        slug: p.slug,
+        nombre: p.nombre,
+        cliente: p.cliente || "",
+        resumen: p.resumen || "",
+        descripcion: p.descripcion || "",
+        estado: p.estado || "",
+        imagen: p.imagen_url || undefined,
+        orden: p.orden,
+      })) || []
+    );
+  } catch (err) {
+    console.error("Error leyendo proyectos:", err);
+    return [];
+  }
+}
+
+export async function getProyectoBySlug(slug: string): Promise<ProyectoPublico | undefined> {
+  const all = await getProyectos();
+  return all.find((p) => p.slug === slug);
 }

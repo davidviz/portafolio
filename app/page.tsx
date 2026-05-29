@@ -1,10 +1,13 @@
 import Header from "@/components/Header";
 import ProyectoCard from "@/components/ProyectoCard";
 import { perfil } from "@/config/perfil";
-import { proyectos } from "@/config/proyectos";
-import { getDashboardsByProyecto } from "@/lib/dashboards";
+import { getProyectos, getDashboards } from "@/lib/dashboards-supabase";
 
-export default function Home() {
+export const dynamic = "force-dynamic";
+
+export default async function Home() {
+  const proyectos = await getProyectos();
+  const dashboards = await getDashboards();
   return (
     <>
       <Header />
@@ -144,7 +147,7 @@ export default function Home() {
             <ProyectoCard
               key={p.slug}
               proyecto={p}
-              cantidadDashboards={getDashboardsByProyecto(p.slug).length}
+              cantidadDashboards={dashboards.filter((d) => d.proyecto === p.slug).length}
             />
           ))}
         </div>

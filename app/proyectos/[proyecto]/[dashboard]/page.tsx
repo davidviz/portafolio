@@ -1,19 +1,17 @@
 import { notFound } from "next/navigation";
 import DashboardGate from "@/components/DashboardGate";
-import { getProyecto } from "@/config/proyectos";
-import { getDashboards, getDashboardBySlug } from "@/lib/dashboards";
+import { getProyectoBySlug } from "@/lib/dashboards-supabase";
+import { getDashboardBySlug } from "@/lib/dashboards-supabase";
 
-export function generateStaticParams() {
-  return getDashboards().map((d) => ({ proyecto: d.proyecto, dashboard: d.slug }));
-}
+export const dynamic = "force-dynamic";
 
-export default function PaginaDashboard({
+export default async function PaginaDashboard({
   params,
 }: {
   params: { proyecto: string; dashboard: string };
 }) {
-  const proyecto = getProyecto(params.proyecto);
-  const dashboard = getDashboardBySlug(params.dashboard);
+  const proyecto = await getProyectoBySlug(params.proyecto);
+  const dashboard = await getDashboardBySlug(params.dashboard);
   if (!proyecto || !dashboard || dashboard.proyecto !== proyecto.slug) notFound();
 
   return (
