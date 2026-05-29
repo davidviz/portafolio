@@ -76,18 +76,33 @@ export async function getPasswordHash(slug: string): Promise<string | null> {
 }
 
 export async function getDashboardHTML(slug: string): Promise<string | null> {
+  // 1) Intentar leer el HTML guardado en Supabase
   try {
     const { data, error } = await supabaseServer
       .from("dashboards")
       .select("html")
       .eq("slug", slug)
       .single();
-    if (error) throw error;
-    return data?.html || null;
+    if (!error && data?.html && data.html.trim().length > 0) {
+      return data.html;
+    }
   } catch (err) {
-    console.error("Error leyendo HTML del dashboard:", err);
-    return null;
+    console.error("Error leyendo HTML de Supabase:", err);
   }
+
+  // 2) Fallback: leer el archivo dashboards/<slug>/dashboard.html del repo
+  try {
+    const fs = await import("fs");
+    const path = await import("path");
+    const ruta = path.join(process.cwd(), "dashboards", slug, "dashboard.html");
+    if (fs.existsSync(ruta)) {
+      return fs.readFileSync(ruta, "utf8");
+    }
+  } catch (err) {
+    console.error("Error leyendo HTML de archivo:", err);
+  }
+
+  return null;
 }
 
 // ---------- Proyectos desde Supabase ----------
