@@ -1,21 +1,30 @@
 name: Supabase Keep-Alive
 
-   on:
-     schedule:
-       - cron: "0 8 */3 * *"
-     workflow_dispatch:
+# Mantiene despierto el proyecto Supabase del plan gratuito.
+# El plan free se pausa tras 7 días sin actividad EN LA BASE DE DATOS
+# (no basta con visitas a la web). Este robot escribe un "latido"
+# real en una tabla cada 3 días, así nunca se cumple ese plazo.
+#
+# Requiere dos secretos en el repo (Settings → Secrets → Actions):
+#   SUPABASE_URL          ->  https://TU-REF.supabase.co
+#   SUPABASE_SERVICE_KEY  ->  service_role key (Settings → API en Supabase)
 
-   jobs:
-     ping:
-       runs-on: ubuntu-latest
-       steps:
-         - name: Escribir latido en Supabase
-           run: |
-             curl -sS --fail-with-body -X POST \
-               "${{ secrets.SUPABASE_URL }}/rest/v1/keep_alive" \
-               -H "apikey: ${{ secrets.SUPABASE_SERVICE_KEY }}" \
-               -H "Authorization: Bearer ${{ secrets.SUPABASE_SERVICE_KEY }}" \
-               -H "Content-Type: application/json" \
-               -H "Prefer: resolution=merge-duplicates" \
-               -d "{\"id\": 1, \"last_ping\": \"$(date -u +%FT%TZ)\"}"
-             echo "Latido enviado: $(date -u +%FT%TZ)"
+on:
+  schedule:
+    - cron: "0 8 */3 * *"   # cada 3 días, 08:00 UTC (03:00 en Perú)
+  workflow_dispatch:         # botón para ejecutarlo a mano y probarlo
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Escribir latido en Supabase
+        run: |
+          curl -sS --fail-with-body -X POST \
+            "${{ secrets.SUPABASE_URL }}/rest/v1/keep_alive" \
+            -H "apikey: ${{ secrets.SUPABASE_SERVICE_KEY }}" \
+            -H "Authorization: Bearer ${{ secrets.SUPABASE_SERVICE_KEY }}" \
+            -H "Content-Type: application/json" \
+            -H "Prefer: resolution=merge-duplicates" \
+            -d "{\"id\": 1, \"last_ping\": \"$(date -u +%FT%TZ)\"}"
+          echo "Latido enviado: $(date -u +%FT%TZ)"
