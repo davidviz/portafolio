@@ -1,25 +1,13 @@
-import { NextRequest, NextResponse } from "next/server";
+// Sin reglas de bloqueo: la Home y la grilla son públicas (escaparate).
+// El sellado del dashboard se logra en la vista /sv/<slug>,
+// que no tiene enlaces de salida hacia el sitio.
 
-// Solo corre en la Home y en las páginas de proyectos.
-// (No toca /sv, /api, /admin ni los archivos internos.)
-export const config = {
-  matcher: ["/", "/proyectos/:path*"],
-};
+import { NextResponse } from "next/server";
 
-export function middleware(req: NextRequest) {
-  // ¿El visitante ya entró a algún dashboard? Su sesión deja una cookie "dash_<slug>".
-  const cookieDash = req.cookies.getAll().find((c) => c.name.startsWith("dash_"));
-
-  // Si tiene sesión de dashboard e intenta ir a tu Home o a la grilla,
-  // lo devolvemos a su dashboard sellado. No puede salir.
-  if (cookieDash) {
-    const slug = cookieDash.name.slice("dash_".length);
-    const destino = req.nextUrl.clone();
-    destino.pathname = `/sv/${slug}`;
-    destino.search = "";
-    return NextResponse.redirect(destino);
-  }
-
-  // Visitante anónimo (reclutador, etc.): pasa normal a tu Home neutra.
+export function middleware() {
   return NextResponse.next();
 }
+
+export const config = {
+  matcher: [],
+};
