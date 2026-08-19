@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 type Props = {
@@ -23,6 +23,11 @@ export default function DashboardGate({
   const [error, setError] = useState("");
   const [cargando, setCargando] = useState(false);
   const contenedorRef = useRef<HTMLDivElement>(null);
+
+  // Estado del botón «Actualizar». Ver `actualizar()` más abajo.
+  const [refresco, setRefresco] = useState<"" | "pidiendo" | "esperando" | "listo" | "error">("");
+  const [avisoRefresco, setAvisoRefresco] = useState("");
+  const sondeoRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const srcDashboard = `/api/dashboard/${dashboardSlug}`;
 
@@ -50,6 +55,89 @@ export default function DashboardGate({
     } finally {
       setCargando(false);
     }
+  }
+
+  // Si el usuario se va de la página a mitad de la espera, el sondeo tiene que
+  // morir con el componente; si no, sigue pegándole al endpoint en segundo plano.
+  useEffect(() => {
+    return () => { if (sondeoRef.current) clearInterval(sondeoRef.current); };
+  }, []);
+
+  function recargarIframe() {
+    const f = contenedorRef.current?.querySelector("iframe");
+    if (f) f.src = f.src;
+  }
+
+  /**
+   * «Actualizar» significa traer lo último del Google Sheet, no volver a pedir
+   * el HTML que ya estaba publicado —que es lo único que hacía antes—.
+   *
+   * El tablero lo regenera GitHub Actions y tarda alrededor de un minuto, así
+   * que no se puede recargar y ya: hay que disparar, esperar y avisar. El
+   * progreso se sigue consultando `actualizado_en` (unos bytes) en vez de
+   * volver a bajar el HTML de 3 MB en cada intento.
+   *
+   * Si el tablero no se regenera desde el Sheet, o si el disparo falla, se
+   * recarga igual: el botón nunca deja al usuario sin respuesta.
+   */
+  async function actualizar() {
+    if (refresco === "pidiendo" || refresco === "esperando") return;
+    if (sondeoRef.current) clearInterval(sondeoRef.current);
+
+    setRefresco("pidiendo");
+    setAvisoRefresco("Pidiendo los últimos datos del Sheet…");
+
+    let antes: string | null = null;
+    try {
+      const r = await fetch(`/api/dashboard/${dashboardSlug}/refrescar`, { method: "POST" });
+      const d = await r.json();
+      antes = d?.actualizadoEn ?? null;
+
+      if (!d?.soportado) {           // tablero sin vigía: recargar y listo
+        recargarIframe();
+        setRefresco("");
+        setAvisoRefresco("");
+        return;
+      }
+      if (!r.ok || d?.disparado === false) {
+        setRefresco("error");
+        setAvisoRefresco(d?.error ? `No se pudo regenerar: ${d.error}` : "No se pudo regenerar. Se muestra lo último publicado.");
+        recargarIframe();
+        return;
+      }
+    } catch {
+      setRefresco("error");
+      setAvisoRefresco("No se pudo contactar al servidor. Se muestra lo último publicado.");
+      recargarIframe();
+      return;
+    }
+
+    setRefresco("esperando");
+    setAvisoRefresco("Regenerando desde el Sheet… (suele tardar un minuto)");
+
+    // Se sondea hasta 4 min: el pipeline tarda ~1 min, pero si hay otra corrida
+    // en cola GitHub la encola en vez de lanzarla en paralelo.
+    const limite = Date.now() + 4 * 60 * 1000;
+    sondeoRef.current = setInterval(async () => {
+      try {
+        const r = await fetch(`/api/dashboard/${dashboardSlug}/refrescar`, { cache: "no-store" });
+        const d = await r.json();
+        if (d?.actualizadoEn && d.actualizadoEn !== antes) {
+          if (sondeoRef.current) clearInterval(sondeoRef.current);
+          recargarIframe();
+          setRefresco("listo");
+          setAvisoRefresco("Actualizado con los últimos datos del Sheet.");
+          setTimeout(() => { setRefresco(""); setAvisoRefresco(""); }, 6000);
+          return;
+        }
+      } catch { /* un fallo suelto de red no debe cortar la espera */ }
+
+      if (Date.now() > limite) {
+        if (sondeoRef.current) clearInterval(sondeoRef.current);
+        setRefresco("error");
+        setAvisoRefresco("Está tardando más de lo normal. Vuelve a pulsar Actualizar en un momento.");
+      }
+    }, 5000);
   }
 
   function pantallaCompleta() {
@@ -127,15 +215,27 @@ export default function DashboardGate({
         </div>
 
         <div className="flex items-center gap-2">
+          {avisoRefresco && (
+            <span
+              className={
+                "hidden text-xs sm:inline " +
+                (refresco === "error"
+                  ? "text-red-600"
+                  : refresco === "listo"
+                    ? "text-green-700"
+                    : "text-tintaSuave")
+              }
+            >
+              {avisoRefresco}
+            </span>
+          )}
           <button
-            onClick={() => {
-              const f = contenedorRef.current?.querySelector("iframe");
-              if (f) f.src = f.src; // recargar = boton Actualizar
-            }}
-            className="rounded-lg border border-borde px-3 py-1.5 text-sm text-tinta transition-colors hover:border-primario"
-            title="Volver a leer los datos"
+            onClick={actualizar}
+            disabled={refresco === "pidiendo" || refresco === "esperando"}
+            className="rounded-lg border border-borde px-3 py-1.5 text-sm text-tinta transition-colors hover:border-primario disabled:cursor-wait disabled:opacity-60"
+            title="Regenerar el tablero con los últimos datos del Google Sheet"
           >
-            Actualizar
+            {refresco === "pidiendo" || refresco === "esperando" ? "Actualizando…" : "Actualizar"}
           </button>
           <button
             onClick={pantallaCompleta}
