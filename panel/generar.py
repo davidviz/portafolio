@@ -128,6 +128,18 @@ def redactar(datos: dict) -> dict:
     return d
 
 
+BUCKET = "imagenes"
+CARPETA_BUCKET = "parachique"
+
+
+def url_publica(archivo: str) -> str:
+    """Dirección pública de una imagen en el almacenamiento de Supabase."""
+    url = (os.environ.get("SUPABASE_URL") or "").rstrip("/")
+    if not url:
+        return ""
+    return f"{url}/storage/v1/object/public/{BUCKET}/{CARPETA_BUCKET}/{archivo}"
+
+
 def imagen_datauri(ruta: Path, ancho: int, calidad: int) -> str:
     """Devuelve la imagen como data URI. Sin Pillow, usa el archivo tal cual."""
     try:
@@ -155,7 +167,10 @@ def galeria(datos: dict):
             "titulo": vista["titulo"],
             "detalle": vista["detalle"],
             "archivo": vista["archivo"],
-            "uri": imagen_datauri(f, 1100, 72),
+            # Referencia al almacenamiento: mantiene el HTML liviano y deja que
+            # el navegador cachee la imagen entre visitas. Sin entorno (prueba
+            # local) se incrusta, para poder ver el tablero abriendo el archivo.
+            "uri": url_publica(vista["archivo"]) or imagen_datauri(f, 1100, 72),
         })
     return salida
 
@@ -248,10 +263,12 @@ def main() -> int:
         }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         generados.append((slug, len(html), reservado))
 
-    portada = RENDERS / datos.get("renders", {}).get("portada", "01.jpg")
-    if portada.exists():
+    nombre_portada = datos.get("renders", {}).get("portada", "01.jpg")
+    if (RENDERS / nombre_portada).exists():
         SALIDA.mkdir(parents=True, exist_ok=True)
-        (SALIDA / "portada.txt").write_text(imagen_datauri(portada, 1600, 82), encoding="utf-8")
+        (SALIDA / "portada.txt").write_text(
+            url_publica(nombre_portada) or imagen_datauri(RENDERS / nombre_portada, 1600, 82),
+            encoding="utf-8")
 
     print("Panel CS PARACHIQUE generado\n")
     for slug, tam, reservado in generados:

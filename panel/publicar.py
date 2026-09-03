@@ -30,6 +30,40 @@ URL = (os.environ.get("SUPABASE_URL") or "").rstrip("/")
 KEY = os.environ.get("SUPABASE_SERVICE_KEY") or ""
 
 
+BUCKET = "imagenes"
+CARPETA_BUCKET = "parachique"
+RENDERS = BASE / "renders"
+
+
+def subir_imagenes() -> int:
+    """Sube los renders al almacenamiento público del proyecto.
+
+    Se hace antes de publicar los tableros porque estos los referencian por
+    URL. Incrustarlas en el HTML hacía que el Centro de Mando pesara 810 KB y
+    la petición fuera rechazada; además, así el navegador las cachea.
+    """
+    if not RENDERS.exists():
+        return 0
+    subidas = 0
+    for f in sorted(RENDERS.glob("*.jpg")):
+        req = urllib.request.Request(
+            f"{URL}/storage/v1/object/{BUCKET}/{CARPETA_BUCKET}/{f.name}",
+            data=f.read_bytes(), method="POST")
+        req.add_header("apikey", KEY)
+        req.add_header("Authorization", f"Bearer {KEY}")
+        req.add_header("Content-Type", "image/jpeg")
+        req.add_header("x-upsert", "true")
+        req.add_header("Cache-Control", "public, max-age=31536000, immutable")
+        try:
+            with urllib.request.urlopen(req, timeout=120) as r:
+                if r.status in (200, 201):
+                    subidas += 1
+        except urllib.error.HTTPError as e:
+            print(f"  imagen {f.name}: ERROR {e.code} {e.read().decode('utf-8','ignore')[:160]}")
+    print(f"  imágenes en el almacenamiento: {subidas} de {len(list(RENDERS.glob('*.jpg')))}")
+    return subidas
+
+
 def rest(metodo, camino, cuerpo=None, extra=None):
     datos = json.dumps(cuerpo).encode("utf-8") if cuerpo is not None else None
     req = urllib.request.Request(f"{URL}/rest/v1/{camino}", data=datos, method=metodo)
@@ -54,6 +88,8 @@ def main() -> int:
     if not carpetas:
         print("ERROR: no hay tableros en panel/salida. Ejecute antes panel/generar.py")
         return 1
+
+    subir_imagenes()
 
     estado, existentes = rest("GET", "dashboards?select=slug,id&proyecto_slug=eq.parachique")
     if estado != 200:
@@ -90,7 +126,8 @@ def main() -> int:
         if estado in (200, 201, 204):
             print(f"  {slug:26s} {accion:38s} {len(html)/1024:7.0f} KB")
         else:
-            print(f"  {slug:26s} ERROR {estado}: {resp}")
+            pista = "  (el cuerpo excede el límite de la API; revise el peso del HTML)" if estado == 413 else ""
+            print(f"  {slug:26s} ERROR {estado}{pista}: {resp}")
             fallos += 1
 
     # Portada del proyecto
