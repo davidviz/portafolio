@@ -98,6 +98,12 @@ def main() -> int:
         avisar("ERROR: no hay tableros en panel/salida. Ejecute antes panel/generar.py")
         return 1
 
+    aviso = SALIDA / "aviso.log"
+    if aviso.exists():
+        for linea in aviso.read_text(encoding="utf-8").splitlines():
+            if linea.strip():
+                avisar("  [generación] " + linea.strip())
+
     subir_imagenes()
 
     estado, existentes = rest("GET", "dashboards?select=slug,id&proyecto_slug=eq.parachique")
