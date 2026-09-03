@@ -26,6 +26,15 @@ from pathlib import Path
 BASE = Path(__file__).resolve().parent
 SALIDA = BASE / "salida"
 
+# Todo lo que se informa queda también en la bitácora de la base, para poder
+# diagnosticar una corrida sin abrir los registros de GitHub Actions.
+_BITACORA = []
+
+
+def avisar(texto=""):
+    print(texto)
+    _BITACORA.append(str(texto))
+
 URL = (os.environ.get("SUPABASE_URL") or "").rstrip("/")
 KEY = os.environ.get("SUPABASE_SERVICE_KEY") or ""
 
@@ -59,8 +68,8 @@ def subir_imagenes() -> int:
                 if r.status in (200, 201):
                     subidas += 1
         except urllib.error.HTTPError as e:
-            print(f"  imagen {f.name}: ERROR {e.code} {e.read().decode('utf-8','ignore')[:160]}")
-    print(f"  imágenes en el almacenamiento: {subidas} de {len(list(RENDERS.glob('*.jpg')))}")
+            avisar(f"  imagen {f.name}: ERROR {e.code} {e.read().decode('utf-8','ignore')[:160]}")
+    avisar(f"  imágenes en el almacenamiento: {subidas} de {len(list(RENDERS.glob('*.jpg')))}")
     return subidas
 
 
@@ -81,19 +90,19 @@ def rest(metodo, camino, cuerpo=None, extra=None):
 
 def main() -> int:
     if not URL or not KEY:
-        print("ERROR: faltan SUPABASE_URL o SUPABASE_SERVICE_KEY.")
+        avisar("ERROR: faltan SUPABASE_URL o SUPABASE_SERVICE_KEY.")
         return 1
 
     carpetas = sorted((SALIDA / "dashboards").glob("parachique-*"))
     if not carpetas:
-        print("ERROR: no hay tableros en panel/salida. Ejecute antes panel/generar.py")
+        avisar("ERROR: no hay tableros en panel/salida. Ejecute antes panel/generar.py")
         return 1
 
     subir_imagenes()
 
     estado, existentes = rest("GET", "dashboards?select=slug,id&proyecto_slug=eq.parachique")
     if estado != 200:
-        print(f"ERROR leyendo tableros ({estado}): {existentes}")
+        avisar(f"ERROR leyendo tableros ({estado}): {existentes}")
         return 1
     conocidos = {d["slug"] for d in existentes}
 
@@ -124,10 +133,10 @@ def main() -> int:
             accion = "creado (asigne su contraseña en /admin)"
 
         if estado in (200, 201, 204):
-            print(f"  {slug:26s} {accion:38s} {len(html)/1024:7.0f} KB")
+            avisar(f"  {slug:26s} {accion:38s} {len(html)/1024:7.0f} KB")
         else:
             pista = "  (el cuerpo excede el límite de la API; revise el peso del HTML)" if estado == 413 else ""
-            print(f"  {slug:26s} ERROR {estado}{pista}: {resp}")
+            avisar(f"  {slug:26s} ERROR {estado}{pista}: {resp}")
             fallos += 1
 
     # Portada del proyecto
@@ -136,16 +145,37 @@ def main() -> int:
         estado, resp = rest("PATCH", "proyectos?slug=eq.parachique",
                             {"imagen_url": portada.read_text(encoding="utf-8").strip()},
                             "return=minimal")
-        print(f"  portada del proyecto        {'actualizada' if estado in (200, 204) else f'ERROR {estado}: {resp}'}")
+        avisar(f"  portada del proyecto        {'actualizada' if estado in (200, 204) else f'ERROR {estado}: {resp}'}")
         if estado not in (200, 204):
             fallos += 1
 
     if fallos:
-        print(f"\nTerminó con {fallos} error(es).")
+        avisar(f"\nTerminó con {fallos} error(es).")
         return 1
-    print("\nPublicado. https://portafolio-alpha-brown-61.vercel.app/proyectos/parachique")
+    avisar("\nPublicado. https://portafolio-alpha-brown-61.vercel.app/proyectos/parachique")
     return 0
 
 
+def guardar_bitacora(ok: bool):
+    """Deja el resultado en la base. Nunca hace fallar la publicación."""
+    if not URL or not KEY:
+        return
+    try:
+        rest("POST", "panel_bitacora",
+             {"proyecto": "parachique", "ok": ok,
+              "detalle": chr(10).join(_BITACORA)[:8000]},
+             "return=minimal")
+    except Exception:
+        pass
+
+
 if __name__ == "__main__":
-    sys.exit(main())
+    try:
+        codigo = main()
+    except Exception as e:
+        import traceback
+        avisar("EXCEPCIÓN NO CONTROLADA:")
+        avisar(traceback.format_exc()[:4000])
+        codigo = 1
+    guardar_bitacora(codigo == 0)
+    sys.exit(codigo)
