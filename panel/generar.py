@@ -261,12 +261,210 @@ def aplicar_hoja(datos: dict, filas):
     return cambios
 
 
+# =========================================================================
+# HOJAS DE SEGUIMIENTO
+# -------------------------------------------------------------------------
+# Tres hojas en Drive gobiernan el estado de las fichas. Las lee la cuenta de
+# servicio del supervisor (`lector-sheets-…`), a la que él dio acceso desde
+# Drive; su clave viaja como secreto del repositorio, nunca dentro del código.
+#
+#   1 CATÁLOGO       179 códigos. Referencia; el panel no la necesita.
+#   2 SEGUIMIENTO    una fila por presentación: código × versión. La fila con
+#                    `vigente = SI` fija el estado actual de la ficha.
+#   3 OBSERVACIONES  una fila por observación, con la versión que la levanta.
+#
+# Si no hay credenciales, o si algo falla, se usa el JSON del repositorio: la
+# hoja es una mejora del flujo, nunca un punto de fallo de la publicación.
+# =========================================================================
+
+ALCANCE_SHEETS = "https://www.googleapis.com/auth/spreadsheets.readonly"
+
+
+def _token_de_servicio():
+    """Token de acceso a partir de la clave de la cuenta de servicio."""
+    crudo = os.environ.get("GOOGLE_SA_JSON") or ""
+    if not crudo.strip():
+        return None
+    try:
+        from google.oauth2 import service_account
+        from google.auth.transport.requests import Request
+
+        cred = service_account.Credentials.from_service_account_info(
+            json.loads(crudo), scopes=[ALCANCE_SHEETS]
+        )
+        cred.refresh(Request())
+        return cred.token
+    except Exception as e:
+        avisar(f"  aviso: no se pudo autenticar la cuenta de servicio ({e}).")
+        return None
+
+
+def _hoja(hoja_id: str, token: str):
+    """Devuelve la hoja como lista de diccionarios; la fila 1 son los rótulos."""
+    url = (
+        "https://sheets.googleapis.com/v4/spreadsheets/"
+        f"{hoja_id}/values/A1:ZZ?majorDimension=ROWS"
+    )
+    pedido = urllib.request.Request(url, headers={"Authorization": f"Bearer {token}"})
+    with urllib.request.urlopen(pedido, timeout=45) as r:
+        filas = json.loads(r.read().decode("utf-8")).get("values", [])
+    if not filas:
+        return []
+    rotulos = [c.strip().lower() for c in filas[0]]
+    salida = []
+    for fila in filas[1:]:
+        if not any(str(c).strip() for c in fila):
+            continue
+        fila = list(fila) + [""] * (len(rotulos) - len(fila))
+        salida.append({k: str(v).strip() for k, v in zip(rotulos, fila)})
+    return salida
+
+
+def datos_de_las_hojas(cfg: dict):
+    """Lee SEGUIMIENTO y OBSERVACIONES. Devuelve (seguimiento, observaciones)."""
+    hojas = (cfg or {}).get("sheets") or {}
+    if not hojas.get("seguimiento") and not hojas.get("observaciones"):
+        return [], []
+    token = _token_de_servicio()
+    if not token:
+        return [], []
+    resultado = []
+    for nombre in ("seguimiento", "observaciones"):
+        hoja_id = hojas.get(nombre)
+        if not hoja_id:
+            resultado.append([])
+            continue
+        try:
+            filas = _hoja(hoja_id, token)
+            print(f"  hoja {nombre}: {len(filas)} filas")
+            resultado.append(filas)
+        except Exception as e:
+            avisar(f"  aviso: no se pudo leer la hoja {nombre} ({e}).")
+            resultado.append([])
+    return resultado[0], resultado[1]
+
+
+# Lo que el Contratista presenta se califica con esta escala. «APROBADA
+# PARCIALMENTE» es el caso de D-92: el equipo cumple la especificación pero
+# queda un extremo por subsanar, así que la ficha todavía no está cerrada.
+ESTADOS_FICHA = {
+    "SIN PRESENTAR",
+    "PRESENTADA",
+    "OBSERVADA",
+    "APROBADA PARCIALMENTE",
+    "APROBADA",
+    "NO CUMPLE",
+}
+
+
+def aplicar_seguimiento(datos: dict, filas):
+    """Vuelca la hoja de presentaciones sobre el catálogo del panel.
+
+    Cada código toma el estado de su fila `vigente = SI`; si ninguna lo está,
+    manda la de mayor número de versión. Las versiones anteriores quedan como
+    historial del código, que es lo que permite ver que un equipo observado se
+    volvió a presentar corregido.
+    """
+    if not filas:
+        return 0
+    por_codigo = {c["cod"].strip().upper(): c for c in datos.get("catalogo", [])}
+    historial = {}
+    for f in filas:
+        cod = (f.get("codigo") or "").strip().upper()
+        if cod not in por_codigo:
+            continue
+        try:
+            version = int(f.get("version") or 1)
+        except ValueError:
+            version = 1
+        historial.setdefault(cod, []).append((version, f))
+
+    cambios = 0
+    for cod, lista in historial.items():
+        lista.sort(key=lambda x: x[0])
+        vigentes = [f for _, f in lista if (f.get("vigente") or "").upper() in ("SI", "SÍ", "TRUE", "X")]
+        actual = vigentes[-1] if vigentes else lista[-1][1]
+        estado = (actual.get("resultado") or "").strip().upper()
+        c = por_codigo[cod]
+        if estado in ESTADOS_FICHA:
+            c["ficha"] = estado
+            cambios += 1
+        c["version"] = int(actual.get("version") or 1)
+        c["versiones"] = len(lista)
+        c["marca"] = actual.get("marca") or None
+        c["modelo"] = actual.get("modelo") or None
+        c["fabricante"] = actual.get("fabricante") or None
+        c["verificacionWeb"] = actual.get("verificacion_web") or None
+        c["cartaContratista"] = actual.get("carta_contratista") or None
+        c["informeSupervision"] = actual.get("informe_supervision") or None
+        c["queFalta"] = actual.get("que_falta_para_aprobar") or None
+        c["historial"] = [
+            {
+                "version": v,
+                "fecha": f.get("fecha_presentacion") or "",
+                "carta": f.get("carta_contratista") or "",
+                "informe": f.get("informe_supervision") or "",
+                "resultado": (f.get("resultado") or "").upper(),
+            }
+            for v, f in lista
+        ]
+    print(f"  estado de fichas actualizado desde la hoja: {cambios} códigos")
+    return cambios
+
+
+def aplicar_observaciones_hoja(datos: dict, filas):
+    """Reemplaza el detalle de observaciones a fichas por el de la hoja.
+
+    Una observación se cierra consignando la versión que la levanta; mientras
+    esa casilla esté vacía sigue contando como abierta. Ese es el mecanismo por
+    el que un equipo vuelve a presentarse y el panel lo refleja solo.
+    """
+    if not filas:
+        return 0
+    detalle = []
+    for f in filas:
+        cerrada = bool((f.get("version_que_la_levanta") or "").strip())
+        codigos = [c.strip().upper() for c in (f.get("codigo") or "").split(",") if c.strip()]
+        detalle.append({
+            "obs": f.get("id") or "",
+            "nivel": (f.get("nivel") or "LEVE").upper(),
+            "materia": f.get("materia") or "",
+            "ubicacion": f.get("ubicacion_sustento") or "",
+            "folio": f.get("folio_expediente") or "",
+            "sustento": f.get("sustento_normativo") or "",
+            "recomendacion": f.get("se_solicita") or "",
+            "estado": "Subsanada" if cerrada else (f.get("estado") or "Por subsanar").capitalize(),
+            "codigos": codigos,
+            "origen": f.get("informe_que_la_formula") or "",
+            "versionOrigen": f.get("version_origen") or "",
+            "versionLevanta": f.get("version_que_la_levanta") or "",
+            "fuente": "Pronunciamiento sobre el sustento del Contratista",
+        })
+    pron = datos.get("pronunciamientos") or []
+    if pron:
+        por_informe = {}
+        for o in detalle:
+            por_informe.setdefault(o["origen"], []).append(o)
+        for p in pron:
+            if p.get("informe") in por_informe:
+                p["detalle"] = por_informe[p["informe"]]
+    abiertas = sum(1 for o in detalle if not o["versionLevanta"])
+    print(f"  observaciones desde la hoja: {len(detalle)} ({abiertas} abiertas)")
+    return len(detalle)
+
+
 def main() -> int:
     datos = json.loads(leer(BASE / "datos-parachique.json"))
 
+    # Primero la hoja de estados sencilla, por compatibilidad; después las de
+    # seguimiento, que son las que mandan.
     filas = datos_de_la_hoja(datos.get("datos"))
     if filas:
         aplicar_hoja(datos, filas)
+
+    seguimiento, observaciones = datos_de_las_hojas(datos.get("datos"))
+    aplicar_seguimiento(datos, seguimiento)
+    aplicar_observaciones_hoja(datos, observaciones)
 
     reservado = datos_reservados()
     completos = dict(datos)

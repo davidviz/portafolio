@@ -13,6 +13,11 @@ name: Publicar panel CS Parachique
 #   SUPABASE_URL          ->  https://TU-REF.supabase.co
 #   SUPABASE_SERVICE_KEY  ->  service_role key
 #
+# Y uno nuevo, opcional, para leer las hojas de seguimiento de Drive:
+#   GOOGLE_SA_JSON        ->  clave JSON completa de la cuenta de servicio
+#                             lector-sheets-851@portafolio-hrdt.iam.gserviceaccount.com
+# Si no está, la publicacion sigue funcionando con el JSON del repositorio.
+#
 # Nunca toca password_hash ni es_publico: publicar contenido no cambia quién
 # puede entrar. Tampoco toca ningún tablero de HRDT.
 
@@ -44,8 +49,10 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Instalar Pillow
-        run: pip install --quiet Pillow
+      - name: Instalar dependencias
+        # Pillow para las vistas del proyecto; google-auth solo para firmar el
+        # token de la cuenta de servicio que lee las hojas de seguimiento.
+        run: pip install --quiet Pillow google-auth requests
 
       - name: Generar los tableros
         # Necesita las credenciales igual que el paso de publicar: con ellas
@@ -54,6 +61,7 @@ jobs:
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          GOOGLE_SA_JSON: ${{ secrets.GOOGLE_SA_JSON }}
         run: python panel/generar.py
 
       - name: Publicar en Supabase

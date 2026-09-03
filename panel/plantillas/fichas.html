@@ -20,12 +20,24 @@ const D = /*__DATOS__*/ null;
 const C = D.catalogo;
 const TOTAL = D.presupuesto.total;
 
+/* La escala con que la Supervisión califica un sustento. «Aprobada
+   parcialmente» es el caso corriente: el equipo cumple la especificación pero
+   queda un extremo por subsanar, así que la ficha no está cerrada y el
+   Contratista debe presentar una versión corregida. */
 const ESTADOS = [
-  { id: 'APROBADA',      etiqueta: 'Aprobada',      clase: 'bien',    color: 'var(--bien)' },
-  { id: 'OBSERVADA',     etiqueta: 'Observada',     clase: 'critico', color: 'var(--critico)' },
-  { id: 'PRESENTADA',    etiqueta: 'En revisión',   clase: 'aviso',   color: 'var(--aviso)' },
-  { id: 'SIN PRESENTAR', etiqueta: 'Sin presentar', clase: 'neutro',  color: 'var(--borde-fuerte)' }
+  { id: 'APROBADA',              etiqueta: 'Aprobada',              clase: 'bien',    color: 'var(--bien)' },
+  { id: 'APROBADA PARCIALMENTE', etiqueta: 'Aprobada parcialmente', clase: 'serio',   color: 'var(--serio)' },
+  { id: 'OBSERVADA',             etiqueta: 'Observada',             clase: 'critico', color: 'var(--critico)' },
+  { id: 'NO CUMPLE',             etiqueta: 'No cumple',             clase: 'critico', color: 'var(--critico)' },
+  { id: 'PRESENTADA',            etiqueta: 'En revisión',           clase: 'aviso',   color: 'var(--aviso)' },
+  { id: 'SIN PRESENTAR',         etiqueta: 'Sin presentar',         clase: 'neutro',  color: 'var(--borde-fuerte)' }
 ];
+const SIN_ESTADO = { id: '?', etiqueta: 'Sin clasificar', clase: 'neutro', color: 'var(--borde-fuerte)' };
+const estadoDe = (c) => ESTADOS.find((x) => x.id === c.ficha) || SIN_ESTADO;
+
+/* Una ficha está en trámite mientras no esté aprobada del todo ni por
+   presentar: ahí es donde el seguimiento tiene algo que vigilar. */
+const EN_TRAMITE = ['PRESENTADA', 'OBSERVADA', 'APROBADA PARCIALMENTE', 'NO CUMPLE'];
 
 const FAMILIAS = { D: 'D · Dispositivos y equipos', M: 'M · Mobiliario', E: 'E · Electromecánicos',
                    I: 'I · Instrumental', O: 'O · Otros', V: 'V · Vehículos' };
@@ -130,6 +142,7 @@ const unid = (l) => l.reduce((s, c) => s + c.cant, 0);
 const aprobadas = por('APROBADA');
 const observadas = por('OBSERVADA');
 const enRevision = por('PRESENTADA');
+const enTramite = C.filter((c) => EN_TRAMITE.includes(c.ficha));
 const sinPresentar = por('SIN PRESENTAR');
 const faltanAprobar = C.filter((c) => c.ficha !== 'APROBADA');
 const pctAprobado = (monto(aprobadas) / TOTAL) * 100;
@@ -244,11 +257,12 @@ h += `<div class="seccion">
   <div id="resumen"></div>
   <div class="tabla-caja"><div class="tabla-scroll" style="max-height:620px;overflow-y:auto">
     <table class="datos" id="t-cat">
-      <thead><tr><th>Código</th><th>Denominación</th><th>Grupo</th><th class="num">Cant.</th><th class="num">P. unitario</th><th class="num">Parcial</th><th class="num">Incid.</th><th>Ficha técnica</th></tr></thead>
+      <thead><tr><th>Código</th><th>Denominación</th><th>Grupo</th><th class="num">Cant.</th><th class="num">P. unitario</th><th class="num">Parcial</th><th class="num">Incid.</th><th>Ficha técnica</th><th>Ver.</th></tr></thead>
       <tbody>${C.map((c) => {
-        const e = ESTADOS.find((x) => x.id === c.ficha);
+        const e = estadoDe(c);
         return `<tr class="clic" data-cod="${esc(c.cod)}"
           data-f-codigo="${esc(c.cod)}"
+          data-f-version="${c.version ? 'v' + c.version : 'Sin presentar'}"
           data-f-grupo="${esc(c.grupo)}"
           data-f-familia="${esc(familiaDe(c.cod))}"
           data-f-ficha="${esc(e.etiqueta)}"
@@ -261,10 +275,11 @@ h += `<div class="seccion">
           <td class="num">${soles(c.parcial)}</td>
           <td class="num">${(c.parcial / TOTAL * 100).toFixed(2)}%</td>
           <td>${insignia(e.etiqueta, e.clase, e.clase === 'neutro' ? 'neutro' : e.clase)}</td>
+          <td class="cod" style="font-size:.74rem">${c.version ? 'v' + c.version : '—'}</td>
         </tr>`;
       }).join('')}
       </tbody>
-      <tfoot><tr><td colspan="3">${C.length} códigos</td><td class="num">${num(unid(C))}</td><td></td><td class="num">${soles(TOTAL)}</td><td class="num">100%</td><td></td></tr></tfoot>
+      <tfoot><tr><td colspan="3">${C.length} códigos</td><td class="num">${num(unid(C))}</td><td></td><td class="num">${soles(TOTAL)}</td><td class="num">100%</td><td></td><td></td></tr></tfoot>
     </table>
   </div></div>
 </div>`;
@@ -328,7 +343,7 @@ barrasH(document.getElementById('graf-grupo'),
 /* ---------- Ventanas ---------- */
 function fichaItem(cod) {
   const c = C.find((x) => x.cod === cod);
-  const e = ESTADOS.find((x) => x.id === c.ficha);
+  const e = estadoDe(c);
   abrirVentana(`${c.cod} — ${c.den}`, `${esc(c.grupo)} · ${insignia(e.etiqueta, e.clase, e.clase === 'neutro' ? 'neutro' : e.clase)}`,
     `<dl class="dl">
       <dt>Código</dt><dd class="cod">${esc(c.cod)}</dd>
@@ -339,9 +354,27 @@ function fichaItem(cod) {
       <dt>Parcial del ítem</dt><dd><b>${soles(c.parcial)}</b></dd>
       <dt>Incidencia en el presupuesto</dt><dd>${(c.parcial / TOTAL * 100).toFixed(2)}%</dd>
       <dt>Estado de la ficha técnica</dt><dd>${insignia(e.etiqueta, e.clase, e.clase === 'neutro' ? 'neutro' : e.clase)}</dd>
+      ${c.version ? `<dt>Versión del sustento</dt><dd>v${c.version}${c.versiones > 1 ? ` — de ${c.versiones} presentadas` : ' — primera presentación'}</dd>` : ''}
+      ${c.marca ? `<dt>Marca y fabricante</dt><dd>${esc(c.marca)}${c.modelo ? ' · ' + esc(c.modelo) : ''}${c.fabricante ? '<br><span style="font-size:.8rem;color:var(--tinta-suave)">' + esc(c.fabricante) + '</span>' : ''}</dd>` : ''}
+      ${c.verificacionWeb ? `<dt>Verificación del fabricante</dt><dd>${insigniaEstado(c.verificacionWeb === 'AUTENTICO' ? 'AUTÉNTICO' : c.verificacionWeb)}</dd>` : ''}
       <dt>Unidades entregadas en obra</dt><dd>0</dd>
       <dt>Monto valorizable</dt><dd>${soles(0)}</dd>
     </dl>
+    ${c.queFalta ? `<div class="aviso-caja" style="margin-top:16px;border-style:solid;border-color:var(--serio)"><b>Qué falta para aprobar la ficha.</b> ${esc(c.queFalta)}</div>` : ''}
+    ${(c.historial || []).length > 1 ? `
+      <div class="cifra-rotulo" style="margin:20px 0 10px">Versiones presentadas (${c.historial.length})</div>
+      <div class="tabla-caja"><table class="datos">
+        <thead><tr><th>Versión</th><th>Fecha</th><th>Carta del Contratista</th><th>Informe que la califica</th><th>Resultado</th></tr></thead>
+        <tbody>${c.historial.map((v) => `<tr>
+          <td class="cod">v${v.version}</td>
+          <td style="white-space:nowrap">${v.fecha ? fechaCorta(v.fecha) : '—'}</td>
+          <td style="font-size:.76rem">${esc(v.carta || '—')}</td>
+          <td class="cod" style="font-size:.72rem">${esc(v.informe || '—')}</td>
+          <td>${insignia((ESTADOS.find((x) => x.id === v.resultado) || SIN_ESTADO).etiqueta,
+                         (ESTADOS.find((x) => x.id === v.resultado) || SIN_ESTADO).clase,
+                         (ESTADOS.find((x) => x.id === v.resultado) || SIN_ESTADO).clase)}</td>
+        </tr>`).join('')}</tbody>
+      </table></div>` : ''}
     ${(() => {
       const lista = obsDe(c.cod);
       if (!lista.length) {
@@ -377,7 +410,7 @@ document.getElementById('k-faltan').addEventListener('click', () =>
   listado('Fichas técnicas por aprobar', `${faltanAprobar.length} códigos · ${soles(monto(faltanAprobar))} de valor de expediente`, faltanAprobar));
 
 document.getElementById('k-tramite').addEventListener('click', () =>
-  listado('Fichas en trámite', `${enRevision.length} en revisión · ${observadas.length} observadas`, [...enRevision, ...observadas]));
+  listado('Fichas en trámite', `${enTramite.length} en trámite · ${observadas.length} observadas · ${por('APROBADA PARCIALMENTE').length} aprobadas parcialmente`, enTramite));
 
 document.getElementById('k-presupuesto').addEventListener('click', () => {
   abrirVentana('Presupuesto de equipamiento', `${C.length} códigos · ${num(unid(C))} unidades`,
@@ -403,6 +436,7 @@ crearFiltros({
     { clave: 'grupo',    etiqueta: 'Grupo genérico' },
     { clave: 'familia',  etiqueta: 'Familia' },
     { clave: 'ficha',    etiqueta: 'Estado de ficha' },
+    { clave: 'version',  etiqueta: 'Versión del sustento' },
     { clave: 'cantidad', etiqueta: 'Cantidad' },
   ],
   excel: {

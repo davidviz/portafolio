@@ -2107,8 +2107,25 @@
       "pu": 1748.37,
       "parcial": 10490.24,
       "fila": 72,
-      "ficha": "OBSERVADA",
-      "obs": "Cumple los 4 requisitos técnicos mínimos (100 %) y su sustento fue verificado como auténtico contra la información publicada por el fabricante. Observada únicamente por la vigencia de garantía: el Anexo N° 1 declara 24 meses —lo correcto según el numeral 9 de la Memoria— pero el folio 002 consigna 18 y no se acompaña el Certificado de Garantía."
+      "ficha": "APROBADA PARCIALMENTE",
+      "obs": "Cumple los 4 requisitos técnicos mínimos (100 %) y su sustento fue verificado como auténtico contra la información publicada por el fabricante. Observada únicamente por la vigencia de garantía: el Anexo N° 1 declara 24 meses —lo correcto según el numeral 9 de la Memoria— pero el folio 002 consigna 18 y no se acompaña el Certificado de Garantía.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "DAHECO",
+      "fabricante": "Industrias Ernesto Correa S.A.C. (RUC 20610709126)",
+      "verificacionWeb": "AUTENTICO",
+      "cartaContratista": "CARTA N° 068-2026 / INFORME N° 002-2026/JCAMF-EQH-ICM",
+      "informeSupervision": "INF-SUP-RC-EQ-DLVM-002-260903",
+      "queFalta": "Certificado de Garantía por 24 meses del ítem, con folio propio y consignado en la columna SUSTENTO EN FOLIOS del Anexo N° 1.",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-02",
+          "carta": "CARTA N° 068-2026 / INFORME N° 002-2026/JCAMF-EQH-ICM",
+          "informe": "INF-SUP-RC-EQ-DLVM-002-260903",
+          "resultado": "APROBADA PARCIALMENTE"
+        }
+      ]
     },
     {
       "cod": "E-130",
@@ -3491,6 +3508,12 @@
       "codigo": "Código del equipo, p. ej. D-92",
       "ficha": "SIN PRESENTAR | PRESENTADA | OBSERVADA | APROBADA",
       "observacion": "Motivo, cuando no esté aprobada"
-    }
+    },
+    "sheets": {
+      "catalogo": "14uyd1mGwm0NnTPnaxHoSf_udS-vFDqbJh0JZgv21uhw",
+      "seguimiento": "1fFLVEzHM9kfdplK32EvBc1ZPhsLsAD6-ZuO5tqpg7zU",
+      "observaciones": "139iM1VddIgtjhiEwsrostyef_DnbXPC8GetmtShkEmQ"
+    },
+    "notaSheets": "Las tres hojas viven en 7.Panel Portafolio y las lee la cuenta de servicio lector-sheets-851@portafolio-hrdt.iam.gserviceaccount.com. La hoja 2 fija el estado de cada ficha con su fila vigente; la hoja 3 cierra una observación cuando se consigna la versión que la levanta."
   }
 }
