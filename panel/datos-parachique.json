@@ -1,5 +1,5 @@
 {
-  "_lea_esto": "FUENTE UNICA DE VERDAD del panel CS PARACHIQUE. Edite SOLO este archivo y ejecute 'python generar.py'. No edite los dashboard.html a mano: se regeneran y se pierde el cambio.",
+  "_lea_esto": "Respaldo y datos de fondo del panel CS PARACHIQUE. El estado de las fichas técnicas ya NO se gobierna aquí: manda la hoja «2 SEGUIMIENTO» del Drive, y las observaciones a fichas, la hoja «3 OBSERVACIONES». Lo que se edite aquí para un código que la hoja mencione, la hoja lo sobrescribe. Todo lo demás —etapas, documentos, expediente, presupuesto, valorización— sí se edita aquí. No edite los dashboard.html a mano: se regeneran y se pierde el cambio.",
   "meta": {
     "actualizado": "2026-09-03",
     "proyecto": "Mejoramiento de los Servicios de Salud del Establecimiento de Salud Parachique",
@@ -3507,19 +3507,28 @@
     "carpetaProyecto": "https://drive.google.com/drive/folders/1lR4TjQfw1HCh9-sMJ3VLb8M9WVh2x_X5"
   },
   "datos": {
-    "sheetCsv": "",
-    "comoConfigurar": "Para gobernar el estado de las fichas desde una hoja de cálculo: en Google Sheets use Archivo → Compartir → Publicar en la web, elija la pestaña, formato CSV, y pegue aquí la dirección. La hoja necesita las columnas «codigo» y «ficha», y opcionalmente «observacion». Mientras esté vacío, manda este archivo JSON.",
-    "columnas": {
-      "codigo": "Código del equipo, p. ej. D-92",
-      "ficha": "SIN PRESENTAR | PRESENTADA | OBSERVADA | APROBADA",
-      "observacion": "Motivo, cuando no esté aprobada"
-    },
+    "sheetsUrl": "https://portafolio-alpha-brown-61.vercel.app/api/parachique-sheets",
     "sheets": {
       "catalogo": "14uyd1mGwm0NnTPnaxHoSf_udS-vFDqbJh0JZgv21uhw",
       "seguimiento": "1fFLVEzHM9kfdplK32EvBc1ZPhsLsAD6-ZuO5tqpg7zU",
       "observaciones": "139iM1VddIgtjhiEwsrostyef_DnbXPC8GetmtShkEmQ"
     },
     "notaSheets": "Las tres hojas viven en 7.Panel Portafolio del Drive. Las lee la ruta /api/parachique-sheets del propio portafolio, que ya tiene la cuenta de servicio en Vercel (GOOGLE_SERVICE_ACCOUNT_B64, la misma de HRDT). La hoja 2 fija el estado de cada ficha con su fila vigente; la hoja 3 cierra una observación cuando se consigna la versión que la levanta.",
-    "sheetsUrl": "https://portafolio-alpha-brown-61.vercel.app/api/parachique-sheets"
+    "quienLee": "lector-sheets-851@portafolio-hrdt.iam.gserviceaccount.com — compártale toda hoja nueva o dejará de leerse.",
+    "columnas": {
+      "seguimiento": {
+        "codigo": "Código del equipo, p. ej. D-92",
+        "version": "1, 2, 3… una fila por cada vez que el Contratista presenta la ficha",
+        "vigente": "SI en la fila que manda hoy; NO en las anteriores",
+        "resultado": "SIN PRESENTAR | PRESENTADA | OBSERVADA | APROBADA PARCIALMENTE | APROBADA | NO CUMPLE",
+        "que_falta_para_aprobar": "Qué debe subsanar para cerrar la ficha"
+      },
+      "observaciones": {
+        "id": "OBS-01, OBS-02…",
+        "codigo": "Código afectado; vacío si la observación es del formato, no del equipo",
+        "version_que_la_levanta": "Número de versión que la subsana. Mientras esté vacío, la observación sigue abierta."
+      }
+    },
+    "sheetCsv": ""
   }
 }
