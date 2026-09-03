@@ -1,11 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import { supabaseServer } from "@/lib/supabase";
+import { tokenAdminValido } from "@/lib/auth";
 
 export const runtime = "nodejs";
 
 function verificarToken(req: NextRequest): boolean {
-  const token = req.cookies.get("admin_token")?.value;
-  return !!token;
+  // Valida la firma y el vencimiento del token, no solo su presencia.
+  return tokenAdminValido(req.cookies.get("admin_token")?.value);
 }
 
 export async function GET(req: NextRequest) {

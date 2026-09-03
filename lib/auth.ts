@@ -56,6 +56,43 @@ export function nombreCookie(slug: string): string {
   return "dash_" + slug.replace(/[^a-zA-Z0-9_-]/g, "_");
 }
 
+// ---------- Sesion de administracion (token firmado) ----------
+// El token de admin se firma con HMAC y lleva su propio vencimiento. Antes se
+// generaba un valor aleatorio que nunca se guardaba ni se contrastaba, de modo
+// que cualquier cookie "admin_token" no vacia era aceptada como valida.
+//
+// La clave de firma combina AUTH_SECRET con ADMIN_PASSWORD: asi el token sigue
+// siendo infalsificable aunque AUTH_SECRET no este configurado en el entorno.
+function adminSecret(): string {
+  return authSecret() + "::" + (process.env.ADMIN_PASSWORD || "");
+}
+
+const ADMIN_VIGENCIA_MS = 8 * 60 * 60 * 1000; // 8 horas
+
+export function generarTokenAdmin(): string {
+  const vence = String(Date.now() + ADMIN_VIGENCIA_MS);
+  const firma = crypto.createHmac("sha256", adminSecret()).update(vence).digest("hex");
+  return `${vence}.${firma}`;
+}
+
+export function tokenAdminValido(token: string | undefined): boolean {
+  if (!token) return false;
+  const corte = token.lastIndexOf(".");
+  if (corte <= 0) return false;
+
+  const vence = token.slice(0, corte);
+  const firma = token.slice(corte + 1);
+  const esperada = crypto.createHmac("sha256", adminSecret()).update(vence).digest("hex");
+
+  const a = Buffer.from(firma);
+  const b = Buffer.from(esperada);
+  if (a.length !== b.length) return false;
+  if (!crypto.timingSafeEqual(a, b)) return false;
+
+  const limite = Number(vence);
+  return Number.isFinite(limite) && Date.now() < limite;
+}
+
 // ---------- Hash de contrasenas por dashboard (scrypt) ----------
 export function hashPassword(password: string): string {
   const salt = crypto.randomBytes(16).toString("hex");
