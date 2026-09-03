@@ -135,6 +135,35 @@ function bloqueTraza(cod) {
     ${p.resultado ? `<div class="aviso-caja" style="margin-top:12px"><b>Resultado del pronunciamiento.</b> ${esc(p.resultado)}</div>` : ''}`).join('');
 }
 
+/* ---------- Seguimiento por código ----------
+   Lo que el Contratista presentó, lo que la Supervisión le respondió y lo que
+   le queda por levantar. Es lo que convierte el catálogo en un cuadro que el
+   Contratista puede leer de corrido y saber qué le toca. */
+function seguimientoDe(cod) {
+  const t = trazaDe(cod);
+  const ultimo = (lista) => lista.filter(Boolean).slice(-1)[0] || null;
+  return {
+    recibido: ultimo(t.map((x) => x.recibido)),
+    emitido: ultimo(t.map((x) => x.emitido)),
+    abiertas: obsDe(cod).filter((o) => !/subsanad|absuelt|conforme/i.test(o.estado)),
+  };
+}
+
+/* Celda de documento: abre la vista preliminar sin disparar la ficha del ítem. */
+const celdaDoc = (d, cod) => d
+  ? `<span class="cod" data-doc-tabla="${esc(d.id)}" data-doc-desde="${esc(cod)}"
+      style="cursor:pointer;color:var(--serie-1);text-decoration:underline;
+             text-decoration-style:dotted;text-underline-offset:3px;font-size:.72rem"
+      title="Ver ${esc(d.codigo)} en vista preliminar">${esc(d.codigo)}</span>`
+  : '<span style="color:var(--tinta-tenue)">—</span>';
+
+/* El texto completo viaja al Excel aunque en pantalla se recorte a dos líneas. */
+const celdaObs = (lista) => lista.length
+  ? `<div style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+                 overflow:hidden;font-size:.74rem;line-height:1.45;max-width:330px"
+      >${lista.map((o) => `${esc(o.n)} — ${esc(o.titulo)}`).join(' · ')}</div>`
+  : '<span style="color:var(--bien);font-size:.74rem">Sin observaciones</span>';
+
 const por = (id) => C.filter((c) => c.ficha === id);
 const monto = (l) => l.reduce((s, c) => s + (c.parcial || 0), 0);
 const unid = (l) => l.reduce((s, c) => s + c.cant, 0);
@@ -208,20 +237,22 @@ h += `<div class="rejilla g2" style="align-items:stretch">
 /* ---------- Catalogo completo ---------- */
 h += `<div class="seccion">
   <h2>Catálogo de equipamiento</h2>
-  <p class="nota">Los ${C.length} códigos del expediente con su estado de ficha técnica. Toque una fila para ver el detalle del ítem.</p>
+  <p class="nota">Cuadro de seguimiento al Contratista: los ${C.length} códigos del expediente con el informe que los presentó, la respuesta de esta Supervisión y lo que queda por levantar. <b>Toque una fila</b> para el detalle del ítem; <b>toque un código de informe</b> para verlo en vista preliminar.</p>
   <div id="filtros"></div>
   <div id="resumen"></div>
   <div class="tabla-caja"><div class="tabla-scroll" style="max-height:620px;overflow-y:auto">
     <table class="datos" id="t-cat">
-      <thead><tr><th>Código</th><th>Denominación</th><th>Grupo</th><th class="num">Cant.</th><th class="num">P. unitario</th><th class="num">Parcial</th><th class="num">Incid.</th><th>Ficha técnica</th><th>Ver.</th></tr></thead>
+      <thead><tr><th>Código</th><th>Denominación</th><th>Grupo</th><th class="num">Cant.</th><th class="num">P. unitario</th><th class="num">Parcial</th><th class="num">Incid.</th><th>Ficha técnica</th><th>Ver.</th><th>Informe del Contratista</th><th>Respuesta de la Supervisión</th><th>Observaciones por levantar</th></tr></thead>
       <tbody>${C.map((c) => {
         const e = estadoDe(c);
+        const g = seguimientoDe(c.cod);
         return `<tr class="clic" data-cod="${esc(c.cod)}"
           data-f-codigo="${esc(c.cod)}"
           data-f-version="${c.version ? 'v' + c.version : 'Sin presentar'}"
           data-f-grupo="${esc(c.grupo)}"
           data-f-familia="${esc(familiaDe(c.cod))}"
           data-f-ficha="${esc(e.etiqueta)}"
+          data-f-pendientes="${g.abiertas.length ? 'Con observaciones por levantar' : 'Sin observaciones pendientes'}"
           data-f-cantidad="${esc(rangoCant(c.cant))}">
           <td class="cod">${esc(c.cod)}</td>
           <td>${esc(c.den)}</td>
@@ -232,10 +263,13 @@ h += `<div class="seccion">
           <td class="num">${(c.parcial / TOTAL * 100).toFixed(2)}%</td>
           <td>${insignia(e.etiqueta, e.clase, e.clase === 'neutro' ? 'neutro' : e.clase)}</td>
           <td class="cod" style="font-size:.74rem">${c.version ? 'v' + c.version : '—'}</td>
+          <td>${celdaDoc(g.recibido, c.cod)}</td>
+          <td>${celdaDoc(g.emitido, c.cod)}</td>
+          <td>${celdaObs(g.abiertas)}</td>
         </tr>`;
       }).join('')}
       </tbody>
-      <tfoot><tr><td colspan="3">${C.length} códigos</td><td class="num">${num(unid(C))}</td><td></td><td class="num">${soles(TOTAL)}</td><td class="num">100%</td><td></td><td></td></tr></tfoot>
+      <tfoot><tr><td colspan="3">${C.length} códigos</td><td class="num">${num(unid(C))}</td><td></td><td class="num">${soles(TOTAL)}</td><td class="num">100%</td><td></td><td></td><td></td><td></td><td style="font-size:.74rem">${OBS_FICHA.filter((o) => !/subsanad|absuelt|conforme/i.test(o.estado)).length} observaciones por levantar</td></tr></tfoot>
     </table>
   </div></div>
 </div>`;
@@ -370,6 +404,24 @@ function fichaItem(cod) {
 }
 document.querySelectorAll('[data-cod]').forEach((el) => el.addEventListener('click', () => fichaItem(el.dataset.cod)));
 
+/* Los códigos de informe de la tabla abren su vista preliminar. Se detiene la
+   propagación para que el clic no abra además la ficha del ítem. */
+document.querySelectorAll('[data-doc-tabla]').forEach((el) => {
+  el.addEventListener('click', (ev) => {
+    ev.stopPropagation();
+    const d = DOC.find((x) => x.id === el.dataset.docTabla);
+    if (!d) return;
+    abrirFichaDocumento(d, D.etapas);
+    const meta = document.getElementById('vmeta');
+    const cod = el.dataset.docDesde;
+    if (meta && cod) {
+      meta.insertAdjacentHTML('afterbegin',
+        `<button type="button" class="btn" style="padding:3px 9px;font-size:.72rem;margin-right:8px" data-volver="${esc(cod)}">← Ver ficha de ${esc(cod)}</button>`);
+      meta.querySelector('[data-volver]').addEventListener('click', () => fichaItem(cod));
+    }
+  });
+});
+
 function listado(titulo, meta, lista) {
   abrirVentana(titulo, meta, lista.length
     ? `<div class="tabla-caja"><div class="tabla-scroll" style="max-height:60vh;overflow-y:auto"><table class="datos">
@@ -404,15 +456,16 @@ crearFiltros({
     { clave: 'codigo',   etiqueta: 'Código' },
     { clave: 'grupo',    etiqueta: 'Grupo genérico' },
     { clave: 'familia',  etiqueta: 'Familia' },
-    { clave: 'ficha',    etiqueta: 'Estado de ficha' },
+    { clave: 'ficha',      etiqueta: 'Estado de ficha' },
+    { clave: 'pendientes', etiqueta: 'Observaciones' },
     { clave: 'version',  etiqueta: 'Versión del sustento' },
     { clave: 'cantidad', etiqueta: 'Cantidad' },
   ],
   excel: {
-    hoja: 'Catálogo de equipamiento',
-    archivo: 'CS-PARACHIQUE_catalogo_equipamiento',
+    hoja: 'Seguimiento al Contratista',
+    archivo: 'CS-PARACHIQUE_seguimiento_fichas',
     proyecto: D.meta.proyecto,
-    subtitulo: `CUI N° ${D.meta.cui} · ${D.meta.ubicacion} · Nivel ${D.meta.nivelEESS} — Catálogo de equipamiento y estado de fichas técnicas`,
+    subtitulo: `CUI N° ${D.meta.cui} · ${D.meta.ubicacion} · Nivel ${D.meta.nivelEESS} — Cuadro de seguimiento de fichas técnicas: informe del Contratista, respuesta de la Supervisión y observaciones por levantar`,
     supervisor: D.meta.supervisor,
     cip: D.meta.cip,
     supervision: D.meta.supervision,
