@@ -107,6 +107,7 @@ h += `<div class="seccion">
       <tbody>${cronologico.map((d) => `
         <tr class="clic" data-doc="${esc(d.id)}"
           data-f-fecha="${esc(d.fecha)}"
+          data-f-codigo="${esc(d.codigo)}"
           data-f-etapa="${esc(d.etapa)}"
           data-f-etapanombre="${esc(nombreEtapa(d.etapa))}"
           data-f-flujo="${d.flujo === 'RECIBIDA' ? 'Recibida' : 'Emitida'}"
@@ -267,6 +268,7 @@ crearFiltros({
   contenedor: 'filtros', tabla: 't-docs', resumen: 'resumen',
   unidad: 'documentos', placeholder: 'Buscar por código, asunto o contraparte…',
   campos: [
+    { clave: 'codigo', etiqueta: 'Código' },
     { clave: 'flujo', etiqueta: 'Flujo' },
     { clave: 'clase', etiqueta: 'Clase' },
     { clave: 'area', etiqueta: 'Área' },

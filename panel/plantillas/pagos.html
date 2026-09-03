@@ -109,7 +109,7 @@ h += `<div class="seccion">
       <thead><tr><th>Producto</th><th>Fecha</th><th>Num.</th><th class="num">Neto</th><th>Situación</th><th>Recibo</th></tr></thead>
       <tbody>${productos.map((p) => {
         const s = situacionDe(p.codigo);
-        return `<tr data-f-situacion="${esc(s.txt)}" data-f-numeral="${esc(p.numeral)}">
+        return `<tr data-f-codigo="${esc(p.codigo)}" data-f-situacion="${esc(s.txt)}" data-f-numeral="${esc(p.numeral)}">
           <td class="cod">${esc(p.codigo)}<div style="font-size:.75rem;color:var(--tinta-tenue);margin-top:3px;font-family:var(--cuerpo)">${esc(p.asunto)}</div></td>
           <td style="white-space:nowrap">${fechaCorta(p.fecha)}</td>
           <td>${esc(p.numeral)}</td>
@@ -301,6 +301,7 @@ crearFiltros({
   contenedor: 'filtros-prod', tabla: 't-prod', resumen: 'resumen-prod',
   unidad: 'productos', placeholder: 'Buscar producto…',
   campos: [
+    { clave: 'codigo', etiqueta: 'Código' },
     { clave: 'situacion', etiqueta: 'Situación' },
     { clave: 'numeral', etiqueta: 'Numeral' },
   ],

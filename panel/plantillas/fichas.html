@@ -33,27 +33,61 @@ const familiaDe = (cod) => FAMILIAS[(cod.match(/^[A-Za-z]+/) || ['?'])[0].toUppe
 const rangoCant = (n) => n === 1 ? '1 unidad' : n <= 5 ? '2 a 5 unidades' : n <= 10 ? '6 a 10 unidades' : 'Más de 10 unidades';
 
 const OBS = D.observaciones.lista || [];
-const obsDe = (cod) => OBS.filter((o) => (o.codigos || []).includes(cod));
+
+/* Las observaciones llegan de dos sitios con forma distinta: las de
+   compatibilidad dirigidas al Proyectista y las de los pronunciamientos sobre
+   los sustentos del Contratista. Se normalizan para poder listarlas juntas. */
+function normalizarObs(o) {
+  const esCompat = o.n !== undefined;
+  return {
+    n: esCompat ? o.n : o.obs,
+    titulo: esCompat ? o.tipo : o.materia,
+    nivel: (o.prioridad || o.nivel || '').toUpperCase(),
+    estado: o.estado || 'Por absolver',
+    descripcion: o.descripcion || '',
+    componente: o.componente || '',
+    equipo: o.equipo || '',
+    archivo: o.archivo || '',
+    ubicacion: o.ubicacion || '',
+    folio: o.folio || '',
+    sustento: o.sustento || '',
+    recomendacion: o.recomendacion || '',
+    origen: o.origen || '',
+    fuente: o.fuente || '',
+    codigos: o.codigos || [],
+  };
+}
+
+const TONO = (nivel) =>
+  (nivel === 'CRITICA' || nivel === 'CRÍTICA' || nivel === 'ALTA') ? 'critico'
+  : (nivel === 'SUSTANCIAL' || nivel === 'MEDIA') ? 'serio' : 'aviso';
+
+const TODAS_OBS = [
+  ...OBS.map(normalizarObs),
+  ...D.pronunciamientos.flatMap((p) => (p.detalle || []).map(normalizarObs)),
+];
+
+const obsDe = (cod) => TODAS_OBS.filter((o) => o.codigos.includes(cod));
+
 const tarjetaObs = (o) => `
-  <div class="obs-item p-${esc(o.prioridad)}">
+  <div class="obs-item p-${esc(o.nivel)}">
     <div class="enc">
       <span class="n">${esc(o.n)}</span>
-      <h4>${esc(o.tipo)}</h4>
-      ${insignia(o.prioridad, o.prioridad === 'CRÍTICA' || o.prioridad === 'ALTA' ? 'critico'
-        : o.prioridad === 'SUSTANCIAL' || o.prioridad === 'MEDIA' ? 'serio' : 'aviso',
-        o.prioridad === 'CRÍTICA' || o.prioridad === 'ALTA' ? 'critico'
-        : o.prioridad === 'SUSTANCIAL' || o.prioridad === 'MEDIA' ? 'serio' : 'aviso')}
-      ${insigniaEstado(o.estado === 'Conforme' ? 'ATENDIDA' : 'PENDIENTE')}
+      <h4>${esc(o.titulo)}</h4>
+      ${insignia(o.nivel, TONO(o.nivel), TONO(o.nivel))}
+      ${insigniaEstado(/conforme|absuelt/i.test(o.estado) ? 'ATENDIDA' : 'PENDIENTE')}
     </div>
-    <div class="cuerpo">${esc(o.descripcion)}</div>
+    ${o.descripcion ? `<div class="cuerpo">${esc(o.descripcion)}</div>` : ''}
     <dl>
-      <dt>Componente</dt><dd>${esc(o.componente)}</dd>
-      <dt>Equipo / sección</dt><dd>${esc(o.equipo)}</dd>
-      <dt>Archivo</dt><dd>${esc(o.archivo)}</dd>
-      <dt>Ubicación</dt><dd>${esc(o.ubicacion)}</dd>
-      <dt>Folio escaneado</dt><dd>${esc(o.folio || 'por completar')}</dd>
-      <dt>Sustento</dt><dd>${esc(o.sustento)}</dd>
-      <dt>Se solicita</dt><dd>${esc(o.recomendacion)}</dd>
+      ${o.fuente ? `<dt>Origen</dt><dd>${esc(o.fuente)}${o.origen ? ' — ' + esc(o.origen) : ''}</dd>` : ''}
+      ${o.componente ? `<dt>Componente</dt><dd>${esc(o.componente)}</dd>` : ''}
+      ${o.equipo ? `<dt>Equipo / sección</dt><dd>${esc(o.equipo)}</dd>` : ''}
+      ${o.archivo ? `<dt>Archivo</dt><dd>${esc(o.archivo)}</dd>` : ''}
+      ${o.ubicacion ? `<dt>Ubicación</dt><dd>${esc(o.ubicacion)}</dd>` : ''}
+      ${o.folio ? `<dt>Folio escaneado</dt><dd>${esc(o.folio)}</dd>` : ''}
+      ${o.sustento ? `<dt>Sustento</dt><dd>${esc(o.sustento)}</dd>` : ''}
+      ${o.recomendacion ? `<dt>Se solicita</dt><dd>${esc(o.recomendacion)}</dd>` : ''}
+      <dt>Estado</dt><dd>${esc(o.estado)}</dd>
     </dl>
   </div>`;
 
@@ -182,6 +216,7 @@ h += `<div class="seccion">
       <tbody>${C.map((c) => {
         const e = ESTADOS.find((x) => x.id === c.ficha);
         return `<tr class="clic" data-cod="${esc(c.cod)}"
+          data-f-codigo="${esc(c.cod)}"
           data-f-grupo="${esc(c.grupo)}"
           data-f-familia="${esc(familiaDe(c.cod))}"
           data-f-ficha="${esc(e.etiqueta)}"
@@ -205,26 +240,23 @@ h += `<div class="seccion">
 /* ---------- Observaciones del expediente ---------- */
 h += `<div class="seccion">
   <h2>Observaciones del expediente</h2>
-  <p class="nota">${esc(D.observaciones.nota)} ${D.observaciones.total} en total: ${D.observaciones.criticas} críticas, ${D.observaciones.sustanciales} sustanciales y ${D.observaciones.leves} leves. Toque una fila para leerla completa.</p>
+  <p class="nota">${esc(D.observaciones.nota)} ${TODAS_OBS.length} en total, sumando las de compatibilidad al Proyectista y las de los pronunciamientos sobre el Contratista. Toque una fila para leerla completa.</p>
   <div id="filtros-obs"></div>
   <div id="resumen-obs"></div>
   <div class="tabla-caja"><div class="tabla-scroll">
     <table class="datos" id="t-obs">
       <thead><tr><th>N°</th><th>Componente</th><th>Equipo / sección</th><th>Tipo</th><th>Prioridad</th><th>Estado</th><th>Códigos</th></tr></thead>
-      <tbody>${OBS.map((o) => `
+      <tbody>${TODAS_OBS.map((o) => `
         <tr class="clic" data-obs="${esc(o.n)}"
-          data-f-componente="${esc(o.componente)}"
-          data-f-prioridad="${esc(o.prioridad)}"
+          data-f-componente="${esc(o.componente || o.fuente)}"
+          data-f-prioridad="${esc(o.nivel)}"
           data-f-estado="${esc(o.estado)}"
-          data-f-tipo="${esc(o.tipo)}">
+          data-f-codigo="${esc((o.codigos || [])[0] || 'Sin código asociado')}">
           <td class="cod">${esc(o.n)}</td>
-          <td style="font-size:.78rem">${esc(o.componente)}</td>
-          <td><b>${esc(o.equipo)}</b></td>
-          <td style="font-size:.78rem;color:var(--tinta-suave)">${esc(o.tipo)}</td>
-          <td>${insignia(o.prioridad, o.prioridad === 'CRÍTICA' || o.prioridad === 'ALTA' ? 'critico'
-            : o.prioridad === 'SUSTANCIAL' || o.prioridad === 'MEDIA' ? 'serio' : 'aviso',
-            o.prioridad === 'CRÍTICA' || o.prioridad === 'ALTA' ? 'critico'
-            : o.prioridad === 'SUSTANCIAL' || o.prioridad === 'MEDIA' ? 'serio' : 'aviso')}</td>
+          <td style="font-size:.78rem">${esc(o.componente || o.fuente)}</td>
+          <td><b>${esc(o.equipo || o.titulo)}</b></td>
+          <td style="font-size:.78rem;color:var(--tinta-suave)">${esc(o.titulo)}</td>
+          <td>${insignia(o.nivel, TONO(o.nivel), TONO(o.nivel))}</td>
           <td style="font-size:.78rem">${esc(o.estado)}</td>
           <td class="cod" style="font-size:.72rem">${(o.codigos || []).join(', ') || '—'}</td>
         </tr>`).join('')}
@@ -279,10 +311,15 @@ function fichaItem(cod) {
       <dt>Unidades entregadas en obra</dt><dd>0</dd>
       <dt>Monto valorizable</dt><dd>${soles(0)}</dd>
     </dl>
-    ${c.obs ? `<div class="aviso-caja" style="margin-top:16px;border-style:solid;border-color:var(--critico)"><b>Situación de la ficha</b><br>${esc(c.obs)}</div>` : ''}
-    ${obsDe(c.cod).length ? `
-      <div class="cifra-rotulo" style="margin:20px 0 10px">Observaciones del expediente que afectan a este código (${obsDe(c.cod).length})</div>
-      <div class="lista-obs">${obsDe(c.cod).map(tarjetaObs).join('')}</div>` : ''}
+    ${(() => {
+      const lista = obsDe(c.cod);
+      if (!lista.length && !c.obs) {
+        return '<div class="aviso-caja" style="margin-top:16px">Sin observaciones registradas sobre este código.</div>';
+      }
+      return `<div class="cifra-rotulo" style="margin:20px 0 10px">Observaciones sobre este código (${lista.length})</div>
+        <div class="lista-obs">${lista.map(tarjetaObs).join('')}</div>
+        ${c.obs ? `<div class="aviso-caja" style="margin-top:12px"><b>Resumen de la Supervisión.</b> ${esc(c.obs)}</div>` : ''}`;
+    })()}
     <div class="aviso-caja" style="margin-top:14px">
       <b>Fuente del precio:</b> ${esc(D.presupuesto.fuente)}, fila ${c.fila}.
       Precio promedio de tres cotizaciones, con IGV incluido y bajo las condiciones de garantía de 2 años,
@@ -330,6 +367,7 @@ crearFiltros({
   unidad: 'códigos de equipo',
   placeholder: 'Buscar por código o denominación…',
   campos: [
+    { clave: 'codigo',   etiqueta: 'Código' },
     { clave: 'grupo',    etiqueta: 'Grupo genérico' },
     { clave: 'familia',  etiqueta: 'Familia' },
     { clave: 'ficha',    etiqueta: 'Estado de ficha' },
@@ -348,8 +386,8 @@ crearFiltros({
 });
 document.querySelectorAll('[data-obs]').forEach((el) => {
   el.addEventListener('click', () => {
-    const o = OBS.find((x) => x.n === el.dataset.obs);
-    abrirVentana('Observación ' + o.n, esc(o.componente) + ' · ' + esc(o.prioridad),
+    const o = TODAS_OBS.find((x) => x.n === el.dataset.obs);
+    abrirVentana('Observación ' + o.n, esc(o.fuente) + ' · ' + esc(o.nivel),
       `<div class="lista-obs">${tarjetaObs(o)}</div>`);
   });
 });
@@ -358,10 +396,10 @@ crearFiltros({
   contenedor: 'filtros-obs', tabla: 't-obs', resumen: 'resumen-obs',
   unidad: 'observaciones', placeholder: 'Buscar observación, equipo o componente…',
   campos: [
+    { clave: 'codigo', etiqueta: 'Código' },
     { clave: 'prioridad', etiqueta: 'Prioridad' },
-    { clave: 'componente', etiqueta: 'Componente' },
+    { clave: 'componente', etiqueta: 'Origen' },
     { clave: 'estado', etiqueta: 'Estado' },
-    { clave: 'tipo', etiqueta: 'Tipo' },
   ],
   excel: {
     hoja: 'Observaciones del expediente',

@@ -587,7 +587,9 @@
         "estado": "Por absolver",
         "codigos": [
           "I-5"
-        ]
+        ],
+        "origen": "INF-SUP-COMPATIB-EQ-DLVM-001-2026-PARACHIQUE",
+        "fuente": "Observación de compatibilidad al Proyectista"
       },
       {
         "n": "002-EETT",
@@ -604,7 +606,9 @@
         "estado": "Por absolver",
         "codigos": [
           "I-9"
-        ]
+        ],
+        "origen": "INF-SUP-COMPATIB-EQ-DLVM-001-2026-PARACHIQUE",
+        "fuente": "Observación de compatibilidad al Proyectista"
       },
       {
         "n": "003-PLANO",
@@ -634,7 +638,9 @@
           "M-44",
           "M-45",
           "M-91"
-        ]
+        ],
+        "origen": "INF-SUP-COMPATIB-EQ-DLVM-001-2026-PARACHIQUE",
+        "fuente": "Observación de compatibilidad al Proyectista"
       },
       {
         "n": "004-PLANO",
@@ -655,7 +661,9 @@
           "M-18",
           "M-36",
           "M-45"
-        ]
+        ],
+        "origen": "INF-SUP-COMPATIB-EQ-DLVM-001-2026-PARACHIQUE",
+        "fuente": "Observación de compatibilidad al Proyectista"
       },
       {
         "n": "005-EETT",
@@ -672,7 +680,9 @@
         "estado": "Absuelta parcialmente",
         "codigos": [
           "E-130"
-        ]
+        ],
+        "origen": "INF-SUP-COMPATIB-EQ-DLVM-001-2026-PARACHIQUE",
+        "fuente": "Observación de compatibilidad al Proyectista"
       },
       {
         "n": "006-PREINST",
@@ -689,7 +699,9 @@
         "estado": "Por absolver",
         "codigos": [
           "E-130"
-        ]
+        ],
+        "origen": "INF-SUP-COMPATIB-EQ-DLVM-001-2026-PARACHIQUE",
+        "fuente": "Observación de compatibilidad al Proyectista"
       },
       {
         "n": "007-PROG",
@@ -706,7 +718,9 @@
         "estado": "Absuelta parcialmente",
         "codigos": [
           "M-160"
-        ]
+        ],
+        "origen": "INF-SUP-COMPATIB-EQ-DLVM-001-2026-PARACHIQUE",
+        "fuente": "Observación de compatibilidad al Proyectista"
       },
       {
         "n": "008-PLANO",
@@ -726,7 +740,9 @@
           "D-287",
           "M-161",
           "V-1"
-        ]
+        ],
+        "origen": "INF-SUP-COMPATIB-EQ-DLVM-001-2026-PARACHIQUE",
+        "fuente": "Observación de compatibilidad al Proyectista"
       },
       {
         "n": "009-PREINST",
@@ -743,7 +759,9 @@
         "estado": "Por absolver",
         "codigos": [
           "D-325"
-        ]
+        ],
+        "origen": "INF-SUP-COMPATIB-EQ-DLVM-001-2026-PARACHIQUE",
+        "fuente": "Observación de compatibilidad al Proyectista"
       },
       {
         "n": "010-CARGAS",
@@ -763,7 +781,9 @@
           "T-16",
           "T-50",
           "T-6"
-        ]
+        ],
+        "origen": "INF-SUP-COMPATIB-EQ-DLVM-001-2026-PARACHIQUE",
+        "fuente": "Observación de compatibilidad al Proyectista"
       },
       {
         "n": "011-PLANO",
@@ -780,7 +800,9 @@
         "estado": "Absuelta parcialmente",
         "codigos": [
           "E-81"
-        ]
+        ],
+        "origen": "INF-SUP-COMPATIB-EQ-DLVM-001-2026-PARACHIQUE",
+        "fuente": "Observación de compatibilidad al Proyectista"
       },
       {
         "n": "012-EETT",
@@ -795,7 +817,9 @@
         "recomendacion": "Se solicita al proyectista corregir el CUI, consignando 2571750, en el encabezado de la totalidad de los documentos de equipamiento derivados de hoja de cálculo: las 7 hojas de EE.TT., el Cuadro de cargas por UPS, el Consolidado, el Listado de Códigos y el Cuadro de Pre-Instalaciones.",
         "prioridad": "LEVE",
         "estado": "Por absolver",
-        "codigos": []
+        "codigos": [],
+        "origen": "INF-SUP-COMPATIB-EQ-DLVM-001-2026-PARACHIQUE",
+        "fuente": "Observación de compatibilidad al Proyectista"
       },
       {
         "n": "013-MEM",
@@ -810,7 +834,9 @@
         "recomendacion": "Se solicita al proyectista corregir la referencia al departamento, consignando Piura.",
         "prioridad": "LEVE",
         "estado": "Por absolver",
-        "codigos": []
+        "codigos": [],
+        "origen": "INF-SUP-COMPATIB-EQ-DLVM-001-2026-PARACHIQUE",
+        "fuente": "Observación de compatibilidad al Proyectista"
       },
       {
         "n": "014-MEM",
@@ -825,7 +851,9 @@
         "recomendacion": "Se solicita al proyectista reemplazar la denominación por 'CENTRO DE SALUD PARACHIQUE'.",
         "prioridad": "LEVE",
         "estado": "Por absolver",
-        "codigos": []
+        "codigos": [],
+        "origen": "INF-SUP-COMPATIB-EQ-DLVM-001-2026-PARACHIQUE",
+        "fuente": "Observación de compatibilidad al Proyectista"
       },
       {
         "n": "015-MEM",
@@ -840,7 +868,9 @@
         "recomendacion": "Se solicita al proyectista corregir la denominación del establecimiento y la cita de la fuente.",
         "prioridad": "LEVE",
         "estado": "Por absolver",
-        "codigos": []
+        "codigos": [],
+        "origen": "INF-SUP-COMPATIB-EQ-DLVM-001-2026-PARACHIQUE",
+        "fuente": "Observación de compatibilidad al Proyectista"
       },
       {
         "n": "016-MEM",
@@ -855,7 +885,9 @@
         "recomendacion": "Se solicita al proyectista precisar en el numeral 11 que el marco normativo aplicable es la NTS N° 113-MINSA/DGIEM-V.01 y que la referencia al Anexo N° 36 de la NTS N° 110 se invoca únicamente como referencia técnica de las características del acero inoxidable.",
         "prioridad": "LEVE",
         "estado": "Por absolver",
-        "codigos": []
+        "codigos": [],
+        "origen": "INF-SUP-COMPATIB-EQ-DLVM-001-2026-PARACHIQUE",
+        "fuente": "Observación de compatibilidad al Proyectista"
       },
       {
         "n": "017-MEM",
@@ -870,7 +902,9 @@
         "recomendacion": "Se solicita al proyectista corregir ambas referencias normativas del numeral 5.",
         "prioridad": "LEVE",
         "estado": "Por absolver",
-        "codigos": []
+        "codigos": [],
+        "origen": "INF-SUP-COMPATIB-EQ-DLVM-001-2026-PARACHIQUE",
+        "fuente": "Observación de compatibilidad al Proyectista"
       },
       {
         "n": "018-CARGAS",
@@ -888,7 +922,9 @@
         "codigos": [
           "D-91",
           "M-42"
-        ]
+        ],
+        "origen": "INF-SUP-COMPATIB-EQ-DLVM-001-2026-PARACHIQUE",
+        "fuente": "Observación de compatibilidad al Proyectista"
       },
       {
         "n": "019-PLANO",
@@ -905,7 +941,9 @@
         "estado": "Por absolver",
         "codigos": [
           "EQ-01"
-        ]
+        ],
+        "origen": "INF-SUP-COMPATIB-EQ-DLVM-001-2026-PARACHIQUE",
+        "fuente": "Observación de compatibilidad al Proyectista"
       },
       {
         "n": "020-PLANO",
@@ -922,7 +960,9 @@
         "estado": "Por absolver",
         "codigos": [
           "M-72"
-        ]
+        ],
+        "origen": "INF-SUP-COMPATIB-EQ-DLVM-001-2026-PARACHIQUE",
+        "fuente": "Observación de compatibilidad al Proyectista"
       }
     ],
     "nota": "Observaciones formuladas por la Supervisión en el Informe de Compatibilidad y elevadas al Proyectista. La columna «Folio Escaneado» se completa a mano tras el cotejo con el expediente firmado."
@@ -944,7 +984,12 @@
           "extremos": 3,
           "confirmadas": 1,
           "trasladadas": 2,
-          "yaAbsueltas": 0
+          "yaAbsueltas": 0,
+          "codigos": [
+            "D-104"
+          ],
+          "origen": "INF-SUP-RC-EQ-DLVM-001-260726",
+          "fuente": "Pronunciamiento sobre consultas del Contratista"
         },
         {
           "obs": "02",
@@ -953,7 +998,12 @@
           "extremos": 1,
           "confirmadas": 0,
           "trasladadas": 1,
-          "yaAbsueltas": 0
+          "yaAbsueltas": 0,
+          "codigos": [
+            "D-112"
+          ],
+          "origen": "INF-SUP-RC-EQ-DLVM-001-260726",
+          "fuente": "Pronunciamiento sobre consultas del Contratista"
         },
         {
           "obs": "03",
@@ -962,7 +1012,12 @@
           "extremos": 3,
           "confirmadas": 1,
           "trasladadas": 2,
-          "yaAbsueltas": 0
+          "yaAbsueltas": 0,
+          "codigos": [
+            "D-212"
+          ],
+          "origen": "INF-SUP-RC-EQ-DLVM-001-260726",
+          "fuente": "Pronunciamiento sobre consultas del Contratista"
         },
         {
           "obs": "04",
@@ -971,7 +1026,12 @@
           "extremos": 3,
           "confirmadas": 0,
           "trasladadas": 3,
-          "yaAbsueltas": 0
+          "yaAbsueltas": 0,
+          "codigos": [
+            "D-213"
+          ],
+          "origen": "INF-SUP-RC-EQ-DLVM-001-260726",
+          "fuente": "Pronunciamiento sobre consultas del Contratista"
         },
         {
           "obs": "05",
@@ -980,7 +1040,12 @@
           "extremos": 1,
           "confirmadas": 0,
           "trasladadas": 1,
-          "yaAbsueltas": 0
+          "yaAbsueltas": 0,
+          "codigos": [
+            "D-350"
+          ],
+          "origen": "INF-SUP-RC-EQ-DLVM-001-260726",
+          "fuente": "Pronunciamiento sobre consultas del Contratista"
         },
         {
           "obs": "06",
@@ -989,7 +1054,12 @@
           "extremos": 3,
           "confirmadas": 1,
           "trasladadas": 1,
-          "yaAbsueltas": 1
+          "yaAbsueltas": 1,
+          "codigos": [
+            "E-130"
+          ],
+          "origen": "INF-SUP-RC-EQ-DLVM-001-260726",
+          "fuente": "Pronunciamiento sobre consultas del Contratista"
         },
         {
           "obs": "07",
@@ -998,7 +1068,10 @@
           "extremos": 1,
           "confirmadas": 0,
           "trasladadas": 1,
-          "yaAbsueltas": 0
+          "yaAbsueltas": 0,
+          "codigos": [],
+          "origen": "INF-SUP-RC-EQ-DLVM-001-260726",
+          "fuente": "Pronunciamiento sobre consultas del Contratista"
         },
         {
           "obs": "08",
@@ -1007,7 +1080,12 @@
           "extremos": 1,
           "confirmadas": 0,
           "trasladadas": 1,
-          "yaAbsueltas": 0
+          "yaAbsueltas": 0,
+          "codigos": [
+            "E-210"
+          ],
+          "origen": "INF-SUP-RC-EQ-DLVM-001-260726",
+          "fuente": "Pronunciamiento sobre consultas del Contratista"
         },
         {
           "obs": "09",
@@ -1016,7 +1094,12 @@
           "extremos": 2,
           "confirmadas": 0,
           "trasladadas": 2,
-          "yaAbsueltas": 0
+          "yaAbsueltas": 0,
+          "codigos": [
+            "E-56"
+          ],
+          "origen": "INF-SUP-RC-EQ-DLVM-001-260726",
+          "fuente": "Pronunciamiento sobre consultas del Contratista"
         },
         {
           "obs": "10",
@@ -1025,7 +1108,12 @@
           "extremos": 3,
           "confirmadas": 0,
           "trasladadas": 2,
-          "yaAbsueltas": 1
+          "yaAbsueltas": 1,
+          "codigos": [
+            "E-54"
+          ],
+          "origen": "INF-SUP-RC-EQ-DLVM-001-260726",
+          "fuente": "Pronunciamiento sobre consultas del Contratista"
         },
         {
           "obs": "11",
@@ -1034,7 +1122,12 @@
           "extremos": 5,
           "confirmadas": 1,
           "trasladadas": 4,
-          "yaAbsueltas": 0
+          "yaAbsueltas": 0,
+          "codigos": [
+            "V-1"
+          ],
+          "origen": "INF-SUP-RC-EQ-DLVM-001-260726",
+          "fuente": "Pronunciamiento sobre consultas del Contratista"
         },
         {
           "obs": "12",
@@ -1043,7 +1136,12 @@
           "extremos": 1,
           "confirmadas": 1,
           "trasladadas": 0,
-          "yaAbsueltas": 0
+          "yaAbsueltas": 0,
+          "codigos": [
+            "D-145"
+          ],
+          "origen": "INF-SUP-RC-EQ-DLVM-001-260726",
+          "fuente": "Pronunciamiento sobre consultas del Contratista"
         },
         {
           "obs": "13",
@@ -1052,7 +1150,12 @@
           "extremos": 1,
           "confirmadas": 1,
           "trasladadas": 0,
-          "yaAbsueltas": 0
+          "yaAbsueltas": 0,
+          "codigos": [
+            "D-146"
+          ],
+          "origen": "INF-SUP-RC-EQ-DLVM-001-260726",
+          "fuente": "Pronunciamiento sobre consultas del Contratista"
         }
       ]
     },
@@ -1072,28 +1175,42 @@
           "nivel": "SUSTANCIAL",
           "materia": "Vigencia de garantía declarada (24 meses) sin sustento en folios; el folio 002 consigna 18 meses",
           "ubicacion": "Anexo N° 1, folio 004 vs folio 002",
-          "estado": "Por subsanar"
+          "estado": "Por subsanar",
+          "codigos": [
+            "D-92"
+          ],
+          "origen": "INF-SUP-RC-EQ-DLVM-002-260903",
+          "fuente": "Pronunciamiento sobre el sustento del Contratista"
         },
         {
           "obs": "OBS-02",
           "nivel": "LEVE",
           "materia": "Bloques de suscripción distintos del Anexo 1 aprobado del expediente",
           "ubicacion": "Anexo N° 1, folio 004",
-          "estado": "Por subsanar"
+          "estado": "Por subsanar",
+          "codigos": [],
+          "origen": "INF-SUP-RC-EQ-DLVM-002-260903",
+          "fuente": "Pronunciamiento sobre el sustento del Contratista"
         },
         {
           "obs": "OBS-03",
           "nivel": "LEVE",
           "materia": "Discordancia entre la relación del numeral II y el orden del numeral III",
           "ubicacion": "Folios 009 y 008",
-          "estado": "Por subsanar"
+          "estado": "Por subsanar",
+          "codigos": [],
+          "origen": "INF-SUP-RC-EQ-DLVM-002-260903",
+          "fuente": "Pronunciamiento sobre el sustento del Contratista"
         },
         {
           "obs": "OBS-04",
           "nivel": "LEVE",
           "materia": "Encabezado de la CARTA N° 068-2026 corresponde a otro proyecto (E.S. Tacalá, CUI 2320997)",
           "ubicacion": "Carta, primera hoja",
-          "estado": "Por subsanar"
+          "estado": "Por subsanar",
+          "codigos": [],
+          "origen": "INF-SUP-RC-EQ-DLVM-002-260903",
+          "fuente": "Pronunciamiento sobre el sustento del Contratista"
         }
       ],
       "requisitosVerificados": 4,
@@ -1124,7 +1241,8 @@
           "resultado": "CUMPLE"
         }
       ],
-      "autenticidad": "Sustento AUTÉNTICO. Fabricante Industrias Ernesto Correa S.A.C. (RUC 20610709126), marca DAHECO: domicilio, teléfono, certificación ISO 9001:2015 de SGS, rango de agujas y tiempo de destrucción coinciden con la información que el propio fabricante publica. No se advierte adulteración."
+      "autenticidad": "Sustento AUTÉNTICO. Fabricante Industrias Ernesto Correa S.A.C. (RUC 20610709126), marca DAHECO: domicilio, teléfono, certificación ISO 9001:2015 de SGS, rango de agujas y tiempo de destrucción coinciden con la información que el propio fabricante publica. No se advierte adulteración.",
+      "codigoEvaluado": "D-92"
     }
   ],
   "valorizacion": {

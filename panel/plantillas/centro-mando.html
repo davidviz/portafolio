@@ -93,6 +93,7 @@ h += `<div class="seccion">
       <tbody>${D.expediente.modulos.map((m) => {
         const tono = m.prioridad === 'ALTA' ? 'critico' : m.prioridad === 'MEDIA' ? 'serio' : m.prioridad === 'BAJA' ? 'aviso' : 'bien';
         return `<tr class="clic" data-modulo="${m.n}"
+          data-f-modulo="${m.n}. ${esc(m.nombre)}"
           data-f-obs="${m.obs === 0 ? 'Sin observaciones' : m.obs == null ? 'No revisado' : 'Con observaciones'}"
           data-f-prioridad="${esc(m.prioridad === '—' ? 'Sin prioridad' : m.prioridad)}"
           data-f-estado="${esc(m.estado)}">
@@ -252,6 +253,7 @@ crearFiltros({
   contenedor: 'filtros-mod', tabla: 't-mod', resumen: 'resumen-mod',
   unidad: 'módulos', placeholder: 'Buscar módulo del expediente…',
   campos: [
+    { clave: 'modulo', etiqueta: 'Módulo' },
     { clave: 'obs', etiqueta: 'Observaciones' },
     { clave: 'prioridad', etiqueta: 'Prioridad' },
     { clave: 'estado', etiqueta: 'Estado' },
