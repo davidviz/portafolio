@@ -1,0 +1,2784 @@
+{
+  "_lea_esto": "FUENTE UNICA DE VERDAD del panel CS PARACHIQUE. Edite SOLO este archivo y ejecute 'python generar.py'. No edite los dashboard.html a mano: se regeneran y se pierde el cambio.",
+  "meta": {
+    "actualizado": "2026-09-03",
+    "proyecto": "Mejoramiento de los Servicios de Salud del Establecimiento de Salud Parachique",
+    "cui": "2571750",
+    "ubicacion": "Distrito y provincia de Sechura — Piura",
+    "nivelEESS": "I-3",
+    "entidad": "GORE Piura — FOSPIBAY",
+    "contratista": "INGENIERÍA CIVIL MONTAJES S.A. (ICM)",
+    "proyectista": "ARQ.CONST ALFA 360",
+    "proceso": "Concurso N° 19-2026-FOSPIBAY/E (Segunda Convocatoria)",
+    "especialidad": "Equipamiento Médico",
+    "supervisor": "David Lee Vizcarra Mondragón",
+    "cip": "193686",
+    "dni": "70073468",
+    "ruc": "10700734680",
+    "jefeSupervision": "Ing. Manuel Ricardo Torres Peche",
+    "plazoDias": 60,
+    "inicioServicio": "2026-07-14",
+    "finServicio": "2026-09-12",
+    "notaPlazo": "Fin de plazo estimado: 60 días calendario contados desde el inicio de servicio registrado el 14/07/2026. La propuesta económica no fija fecha de inicio expresa, por lo que la fecha de término es referencial.",
+    "supervision": "CONSORCIO PARACHIQUE",
+    "asistenteJefeSupervision": "Ing. Wilmer Angelo Vásquez Vargas — CIP N° 94204",
+    "residenteObra": "Ing. Luis Santisteban Romero — CIP N° 81329 (ICM S.A.)",
+    "especialistaContratista": "Ing. Juan Carlos Augusto Mendiola Florez — CIP N° 201412 (ICM S.A.)",
+    "procesoObra": "Concurso por Invitación N° 52-2026/FOSPIBAY/E"
+  },
+  "membrete": {
+    "obligatorio": true,
+    "archivo": "01 A membrete CS PARACHIQUE.docx",
+    "ruta": "G:\\Mi unidad\\David Vizcarra externos\\1.Supervision\\1. CS-PARACHIQUE\\2.Informes Mensuales\\01 A membrete CS PARACHIQUE.docx",
+    "regla": "Todo documento que se emita (informe, carta, matriz impresa) se construye sobre el membrete oficial de CONSORCIO PARACHIQUE, la supervisión de la obra. Ningún entregable sale sin él."
+  },
+  "codificacion": {
+    "patron": "INF-SUP-[TIPO]-EQ-DLVM-[NNN]-[AAMMDD]",
+    "nota": "El correlativo reinicia en 001 por cada TIPO.",
+    "tipos": [
+      {
+        "tipo": "COMPATIB",
+        "descripcion": "Informe de compatibilización del expediente"
+      },
+      {
+        "tipo": "RC",
+        "descripcion": "Informe de respuesta a consultas del Contratista"
+      },
+      {
+        "tipo": "MEN",
+        "descripcion": "Informe mensual de supervisión"
+      },
+      {
+        "tipo": "RFI",
+        "descripcion": "Consultas y adicionales"
+      },
+      {
+        "tipo": "VAL",
+        "descripcion": "Valorización"
+      },
+      {
+        "tipo": "PROT",
+        "descripcion": "Protocolos de prueba"
+      }
+    ]
+  },
+  "documentos": [
+    {
+      "id": "CT-001",
+      "flujo": "EMITIDA",
+      "clase": "CARTA",
+      "codigo": "CARTA N° 01-2026-DLVM",
+      "fecha": "2026-07-22",
+      "contraparte": "Ing. Wilmer Angelo Vásquez Vargas — Asistente de Jefe de Supervisión, CONSORCIO PARACHIQUE",
+      "asunto": "Propuesta económica por servicios de especialista en equipamiento médico.",
+      "estado": "ACEPTADA",
+      "numeral": null,
+      "membrete": false,
+      "responde": null,
+      "detalle": "Fija el tarifario por producto (numerales 2.1 a 2.4) y las condiciones 3.1 a 3.6. Declarada propuesta final no sujeta a negociación. Vigencia de 15 días calendario. Es el documento base de toda liquidación posterior.",
+      "archivo": "CARTA_PROPUESTA_ECONOMICA_DLVM_PARACHIQUE (3).docx",
+      "ruta": "2.Informes Mensuales\\",
+      "url": null,
+      "etapa": "E7",
+      "drive": {
+        "informe": "1R6otADD4nkZxQ9ERrzrl7S21XxhRMzTN"
+      }
+    },
+    {
+      "id": "CT-IN-001",
+      "flujo": "RECIBIDA",
+      "clase": "INFORME DEL CONTRATISTA",
+      "codigo": "F-ICM-8.4-007 Rev. 1.0",
+      "fecha": "2026-07-21",
+      "contraparte": "INGENIERÍA CIVIL MONTAJES S.A. (ICM) — Contratista de obra",
+      "asunto": "Informe de Revisión del Expediente Técnico de Equipamiento N° 001.",
+      "estado": "ATENDIDA",
+      "numeral": "2.3",
+      "membrete": false,
+      "respondidaPor": "INF-SUP-RC-EQ-DLVM-001-260726",
+      "detalle": "13 observaciones desagregadas en 28 extremos. Absuelta íntegramente con pronunciamiento individual por extremo.",
+      "archivo": "EQUIPAMIENTO - Formato Informe de Revisión del Proyecto - ES Parachique.xlsx",
+      "ruta": "2.Informes Mensuales\\",
+      "url": null,
+      "etapa": "E2",
+      "drive": {}
+    },
+    {
+      "id": "PR-001",
+      "flujo": "EMITIDA",
+      "clase": "INFORME",
+      "codigo": "INF-SUP-COMPATIB-EQ-DLVM-001-2026-PARACHIQUE",
+      "fecha": "2026-07-26",
+      "contraparte": "GORE Piura — con copia al Proyectista ARQ.CONST ALFA 360",
+      "asunto": "Informe de Compatibilidad del Expediente Técnico — especialidad de equipamiento.",
+      "estado": "ENTREGADA",
+      "numeral": "2.1",
+      "membrete": true,
+      "responde": null,
+      "detalle": "Revisión integral de los 16 componentes. 179 códigos de equipo / 717 unidades. 178 de 179 fichas técnicas verificadas (falta I-9). 945 inserciones verificadas en plano, en 104 ambientes (lámina EQ-01). 20 observaciones formuladas: 2 críticas, 9 sustanciales, 9 leves.",
+      "archivo": "INF-SUP-COMPATIB-EQ-DLVM-001-2026-PARACHIQUE_INFORME.docx + _MATRIZ.xlsx",
+      "ruta": "2.Informes Mensuales\\1.Informe de Compatibilidad\\",
+      "url": null,
+      "etapa": "E2",
+      "drive": {
+        "informe": "13tBh9t0Zap7raHQWPKwWInJ0imcj-1Es",
+        "matriz": "1JZfEgWOXHaC1p5VytZ3x4jy7f5Jfm3QQ"
+      }
+    },
+    {
+      "id": "PR-002",
+      "flujo": "EMITIDA",
+      "clase": "INFORME",
+      "codigo": "INF-SUP-RC-EQ-DLVM-001-260726",
+      "fecha": "2026-07-26",
+      "contraparte": "Jefatura de Supervisión, para traslado al Proyectista y a la Entidad",
+      "asunto": "Informe de Respuesta a Consultas del Contratista N° 001.",
+      "estado": "ENTREGADA",
+      "numeral": "2.3",
+      "membrete": true,
+      "responde": "F-ICM-8.4-007 Rev. 1.0",
+      "detalle": "Absuelve los 28 extremos del informe del contratista: 6 confirmadas, 20 trasladadas al Proyectista y 2 ya absueltas. Incluye hoja de sustento de mercado.",
+      "archivo": "INF-SUP-RC-EQ-DLVM-001-260726_INFORME.docx + _MATRIZ.xlsx",
+      "ruta": "2.Informes Mensuales\\3.Informe de repsuestas\\",
+      "url": null,
+      "etapa": "E2",
+      "drive": {
+        "informe": "1y0Cv40ncWbKYfn-5U0tg_3CjuqsUU-RE",
+        "matriz": "1vDpYKAS4G5udXl0Fl0QUrKVdDYcDEIcD"
+      }
+    },
+    {
+      "id": "PR-003",
+      "flujo": "EMITIDA",
+      "clase": "INFORME",
+      "codigo": "INF-SUP-MEN-EQ-DLVM-001-260731",
+      "fecha": "2026-07-31",
+      "contraparte": "Jefatura de Supervisión de Obra — CONSORCIO PARACHIQUE",
+      "asunto": "Informe Mensual de Supervisión N° 001 — periodo del 01 al 31 de julio de 2026.",
+      "estado": "ENTREGADA",
+      "numeral": "2.2",
+      "membrete": true,
+      "responde": null,
+      "detalle": "Consolida el avance de julio: observaciones formuladas, estado de absolución y matriz de seguimiento de los 46 asuntos pendientes de pronunciamiento del Proyectista.",
+      "archivo": "INF-SUP-MEN-EQ-DLVM-001-260731_INFORME.docx + _MATRIZ.xlsx",
+      "ruta": "2.Informes Mensuales\\2.Informes Mensuales\\",
+      "url": null,
+      "etapa": "E7",
+      "drive": {
+        "informe": "1tPKRRkPMy6xMPGr_ucSHXt5KGBUUYX7Y",
+        "matriz": "1WtkROuseDbiyhjBrjlNvOvAsAZEe7sID"
+      }
+    },
+    {
+      "id": "CT-002",
+      "flujo": "EMITIDA",
+      "clase": "CARTA",
+      "codigo": "CARTA N° 02-2026-DLVM",
+      "fecha": "2026-07-31",
+      "contraparte": "Ing. Wilmer Angelo Vásquez Vargas — Asistente de Jefe de Supervisión, CONSORCIO PARACHIQUE",
+      "asunto": "Comunicación de productos entregados y liquidación de honorarios de julio de 2026.",
+      "estado": "COBRADA PARCIALMENTE",
+      "numeral": null,
+      "membrete": true,
+      "responde": null,
+      "detalle": "Liquida los 3 productos de julio por S/ 4,800.00 netos. Solicita la conformidad de los tres productos para activar el plazo de pago de 2 días del numeral 3.5. A la fecha se ha cobrado S/ 3,000.00; queda un saldo de S/ 1,800.00.",
+      "archivo": "CARTA_N02-2026-DLVM_LIQUIDACION_JULIO_2026.docx",
+      "ruta": "2.Informes Mensuales\\4.Proformas\\",
+      "url": null,
+      "etapa": "E7",
+      "drive": {
+        "informe": "1gNJg6MVsDCB8zh5niZIavCSpGWJ9J5TI"
+      }
+    },
+    {
+      "id": "CT-IN-002",
+      "flujo": "RECIBIDA",
+      "clase": "INFORME DEL CONTRATISTA",
+      "etapa": "E3",
+      "codigo": "CARTA N° 068-2026 / INFORME N° 002-2026/JCAMF-EQH-ICM",
+      "fecha": "2026-09-02",
+      "contraparte": "INGENIERÍA CIVIL MONTAJES S.A. (ICM) — Contratista de obra",
+      "asunto": "Propuesta de formato estandarizado para ficha técnica y documentos de sustento.",
+      "estado": "ATENDIDA",
+      "numeral": "2.3",
+      "membrete": false,
+      "respondidaPor": "INF-SUP-RC-EQ-DLVM-002-260903",
+      "detalle": "Informe del Ing. Juan Carlos Augusto Mendiola Florez (CIP 201412), Especialista en Equipamiento Hospitalario de ICM, remitido por el Residente de Obra Ing. Luis Santisteban Romero (CIP 81329). 10 folios. Recibido el 03/09/2026 a las 15:00 h. Propone la estructura de ocho documentos del sustento técnico, su orden de presentación y el criterio de foliación, con el ítem D-92 como modelo.",
+      "archivo": "CARTA N 068-2026 ICM - Propuesta de formato estandarizado de ficha tecnica.pdf",
+      "ruta": "3.Sustentos\\",
+      "url": null,
+      "drive": {
+        "informe": "1lujXbt1Fkz_JSlwFGuEhJk_VKZAEoOKj"
+      }
+    },
+    {
+      "id": "PR-004",
+      "flujo": "EMITIDA",
+      "clase": "INFORME",
+      "etapa": "E3",
+      "codigo": "INF-SUP-RC-EQ-DLVM-002-260903",
+      "fecha": "2026-09-03",
+      "contraparte": "Jefatura de Supervisión de Obra — Ing. Manuel Ricardo Torres Peche",
+      "asunto": "Informe de Respuesta a Consultas del Contratista N° 002 — formato estandarizado de ficha técnica.",
+      "estado": "ENTREGADA",
+      "numeral": "2.3",
+      "membrete": true,
+      "responde": "CARTA N° 068-2026 / INFORME N° 002-2026/JCAMF-EQH-ICM",
+      "detalle": "El equipo ofertado (DAHECO modelo 102) CUMPLE los 4 requisitos técnicos mínimos del expediente y su sustento fue verificado como auténtico contra la información publicada por el fabricante. El formato se APRUEBA por reproducir fielmente el Anexo 1 del expediente aprobado. Se formulan 4 observaciones: 1 sustancial (garantía sin sustento) y 3 leves. La ficha del D-92 queda observada solo por la garantía.",
+      "archivo": "INF-SUP-RC-EQ-DLVM-002-260903_INFORME.docx + _MATRIZ.xlsx",
+      "ruta": "2.Informes Mensuales\u0003.Informe de repsuestas\\",
+      "url": null,
+      "drive": {
+        "informe": "1rp0Mf1Jc7D3mrgTztEsKWyWmlUzKNhLb",
+        "matriz": "1H2jrbhM_dCrfwXLjb9PuEz47AYj8184y"
+      }
+    }
+  ],
+  "expediente": {
+    "componentes": 16,
+    "codigos": 179,
+    "unidades": 717,
+    "fichasVerificadas": 178,
+    "fichaFaltante": "I-9",
+    "insercionesPlano": 945,
+    "ambientesPlano": 104,
+    "lamina": "EQ-01",
+    "resumen": [
+      {
+        "n": 1,
+        "componente": "Memoria Descriptiva",
+        "obs": 3,
+        "estado": "Con observaciones",
+        "prioridad": "ALTA",
+        "archivo": "01_MEMORIA_DESCRIPTIVA_EQUIPAMIENTO_PARACHIQUE.docx"
+      },
+      {
+        "n": 2,
+        "componente": "Plazo de entrega y cronograma",
+        "obs": 1,
+        "estado": "Sujeto a obs. N° 2",
+        "prioridad": "BAJA",
+        "archivo": "01_MEMORIA_DESCRIPTIVA_EQUIPAMIENTO_PARACHIQUE.docx"
+      },
+      {
+        "n": 3,
+        "componente": "Anexos",
+        "obs": 0,
+        "estado": "Conforme",
+        "prioridad": "—",
+        "archivo": "01_MEMORIA_DESCRIPTIVA_EQUIPAMIENTO_PARACHIQUE.docx"
+      },
+      {
+        "n": 4,
+        "componente": "Cuadro de cargas por UPS",
+        "obs": 0,
+        "estado": "Conforme",
+        "prioridad": "—",
+        "archivo": "Equipamiento_Propuesto_PARACHIQUE.xlsx"
+      },
+      {
+        "n": 5,
+        "componente": "Biomédicos EETT",
+        "obs": 1,
+        "estado": "Observación menor (CUI)",
+        "prioridad": "MEDIA",
+        "archivo": "EE_TT__PARACHIQUE.xlsx"
+      },
+      {
+        "n": 6,
+        "componente": "Complementarios EETT",
+        "obs": 1,
+        "estado": "Observación formal",
+        "prioridad": "BAJA",
+        "archivo": "EE_TT__PARACHIQUE.xlsx"
+      },
+      {
+        "n": 7,
+        "componente": "Electromecánico EETT",
+        "obs": 0,
+        "estado": "Conforme",
+        "prioridad": "—",
+        "archivo": "EE_TT__PARACHIQUE.xlsx"
+      },
+      {
+        "n": 8,
+        "componente": "Instrumental EETT",
+        "obs": 2,
+        "estado": "Observaciones críticas",
+        "prioridad": "ALTA",
+        "archivo": "EE_TT__PARACHIQUE.xlsx"
+      },
+      {
+        "n": 9,
+        "componente": "Mobiliario Administrativo EETT",
+        "obs": 0,
+        "estado": "Conforme",
+        "prioridad": "—",
+        "archivo": "EE_TT__PARACHIQUE.xlsx"
+      },
+      {
+        "n": 10,
+        "componente": "Mobiliario Clínico EETT",
+        "obs": 0,
+        "estado": "Conforme",
+        "prioridad": "—",
+        "archivo": "EE_TT__PARACHIQUE.xlsx"
+      },
+      {
+        "n": 11,
+        "componente": "Vehículos EETT",
+        "obs": 1,
+        "estado": "Observación crítica",
+        "prioridad": "ALTA",
+        "archivo": "EE_TT__PARACHIQUE.xlsx"
+      },
+      {
+        "n": 12,
+        "componente": "Presupuesto referencial",
+        "obs": 0,
+        "estado": "Conforme",
+        "prioridad": "—",
+        "archivo": "Equipamiento_Propuesto_PARACHIQUE.xlsx"
+      },
+      {
+        "n": 13,
+        "componente": "Estudio de Mercado",
+        "obs": 2,
+        "estado": "Con observaciones",
+        "prioridad": "MEDIA",
+        "archivo": "13_Estudio_de_Merc.pdf + cotizaciones"
+      },
+      {
+        "n": 14,
+        "componente": "Metrado",
+        "obs": 0,
+        "estado": "Conforme",
+        "prioridad": "—",
+        "archivo": "Equipamiento_Propuesto_PARACHIQUE.xlsx"
+      },
+      {
+        "n": 15,
+        "componente": "Cuadro de Pre-Instalaciones",
+        "obs": 0,
+        "estado": "Conforme",
+        "prioridad": "—",
+        "archivo": "Equipamiento_Propuesto_PARACHIQUE.xlsx"
+      },
+      {
+        "n": 16,
+        "componente": "Planos",
+        "obs": 0,
+        "estado": "Pendiente fase campo",
+        "prioridad": "—",
+        "archivo": "Planos_digitales_pdf.pdf"
+      }
+    ]
+  },
+  "observaciones": {
+    "total": 20,
+    "criticas": 2,
+    "sustanciales": 9,
+    "leves": 9,
+    "pendientesProyectista": 46
+  },
+  "pronunciamientos": [
+    {
+      "informe": "INF-SUP-RC-EQ-DLVM-001-260726",
+      "documentoAbsuelto": "F-ICM-8.4-007 Rev. 1.0 (21/07/2026)",
+      "observaciones": 13,
+      "extremos": 28,
+      "confirmadas": 6,
+      "trasladadas": 20,
+      "yaAbsueltas": 2,
+      "detalle": [
+        {
+          "obs": "01",
+          "equipo": "D-104 — Bomba de infusión de 1 canal",
+          "ubicacion": "EETT folio 1205",
+          "extremos": 3,
+          "confirmadas": 1,
+          "trasladadas": 2,
+          "yaAbsueltas": 0
+        },
+        {
+          "obs": "02",
+          "equipo": "D-112 — Incubadora de transporte",
+          "ubicacion": "EETT folio 1202",
+          "extremos": 1,
+          "confirmadas": 0,
+          "trasladadas": 1,
+          "yaAbsueltas": 0
+        },
+        {
+          "obs": "03",
+          "equipo": "D-212 — Esterilizador con generador eléctrico de vapor de 20 L",
+          "ubicacion": "EETT folio 1196",
+          "extremos": 3,
+          "confirmadas": 1,
+          "trasladadas": 2,
+          "yaAbsueltas": 0
+        },
+        {
+          "obs": "04",
+          "equipo": "D-213 — Esterilizador con generador eléctrico de vapor de 30 L",
+          "ubicacion": "EETT folio 1195",
+          "extremos": 3,
+          "confirmadas": 0,
+          "trasladadas": 3,
+          "yaAbsueltas": 0
+        },
+        {
+          "obs": "05",
+          "equipo": "D-350 — Cuna de calor radiante",
+          "ubicacion": "EETT folio 1185",
+          "extremos": 1,
+          "confirmadas": 0,
+          "trasladadas": 1,
+          "yaAbsueltas": 0
+        },
+        {
+          "obs": "06",
+          "equipo": "E-130 — Destilador de agua",
+          "ubicacion": "EETT folio 1137 / Presupuesto folio 1011",
+          "extremos": 3,
+          "confirmadas": 1,
+          "trasladadas": 1,
+          "yaAbsueltas": 1
+        },
+        {
+          "obs": "07",
+          "equipo": "Instrumental médico — Cubeta de los sets quirúrgicos",
+          "ubicacion": "EETT folios 1118 a 1102",
+          "extremos": 1,
+          "confirmadas": 0,
+          "trasladadas": 1,
+          "yaAbsueltas": 0
+        },
+        {
+          "obs": "08",
+          "equipo": "E-210 — Lavadora centrífuga semi-industrial de 8 kg",
+          "ubicacion": "EETT folio 1124",
+          "extremos": 1,
+          "confirmadas": 0,
+          "trasladadas": 1,
+          "yaAbsueltas": 0
+        },
+        {
+          "obs": "09",
+          "equipo": "E-56 — Secadora de ropa semi-industrial de 6 kg",
+          "ubicacion": "EETT folio 1122",
+          "extremos": 2,
+          "confirmadas": 0,
+          "trasladadas": 2,
+          "yaAbsueltas": 0
+        },
+        {
+          "obs": "10",
+          "equipo": "E-54 — Planchadora con aspirante",
+          "ubicacion": "EETT folio 1123",
+          "extremos": 3,
+          "confirmadas": 0,
+          "trasladadas": 2,
+          "yaAbsueltas": 1
+        },
+        {
+          "obs": "11",
+          "equipo": "V-1 — Ambulancia Rural Tipo I",
+          "ubicacion": "EETT folio 1025",
+          "extremos": 5,
+          "confirmadas": 1,
+          "trasladadas": 4,
+          "yaAbsueltas": 0
+        },
+        {
+          "obs": "12",
+          "equipo": "D-145 — Set de riñoneras de acero quirúrgico",
+          "ubicacion": "EETT folio 1118",
+          "extremos": 1,
+          "confirmadas": 1,
+          "trasladadas": 0,
+          "yaAbsueltas": 0
+        },
+        {
+          "obs": "13",
+          "equipo": "D-146 — Set de tambores de acero quirúrgico",
+          "ubicacion": "EETT folio 1117",
+          "extremos": 1,
+          "confirmadas": 1,
+          "trasladadas": 0,
+          "yaAbsueltas": 0
+        }
+      ]
+    },
+    {
+      "informe": "INF-SUP-RC-EQ-DLVM-002-260903",
+      "documentoAbsuelto": "INFORME N° 002-2026/JCAMF-EQH-ICM (02/09/2026) — CARTA N° 068-2026",
+      "materia": "Propuesta de formato estandarizado para ficha técnica y documentos de sustento",
+      "resultado": "FORMATO APROBADO · ÍTEM D-92 CUMPLE, OBSERVADO SOLO EN GARANTÍA",
+      "observaciones": 4,
+      "extremos": 4,
+      "sustanciales": 1,
+      "leves": 3,
+      "deOficio": 0,
+      "detalle": [
+        {
+          "obs": "OBS-01",
+          "nivel": "SUSTANCIAL",
+          "materia": "Vigencia de garantía declarada (24 meses) sin sustento en folios; el folio 002 consigna 18 meses",
+          "ubicacion": "Anexo N° 1, folio 004 vs folio 002",
+          "estado": "Por subsanar"
+        },
+        {
+          "obs": "OBS-02",
+          "nivel": "LEVE",
+          "materia": "Bloques de suscripción distintos del Anexo 1 aprobado del expediente",
+          "ubicacion": "Anexo N° 1, folio 004",
+          "estado": "Por subsanar"
+        },
+        {
+          "obs": "OBS-03",
+          "nivel": "LEVE",
+          "materia": "Discordancia entre la relación del numeral II y el orden del numeral III",
+          "ubicacion": "Folios 009 y 008",
+          "estado": "Por subsanar"
+        },
+        {
+          "obs": "OBS-04",
+          "nivel": "LEVE",
+          "materia": "Encabezado de la CARTA N° 068-2026 corresponde a otro proyecto (E.S. Tacalá, CUI 2320997)",
+          "ubicacion": "Carta, primera hoja",
+          "estado": "Por subsanar"
+        }
+      ],
+      "requisitosVerificados": 4,
+      "requisitosCumplidos": 4,
+      "verificacionTecnica": [
+        {
+          "req": "A01",
+          "exigencia": "Equipo apto para la destrucción de agujas hipodérmicas usadas.",
+          "folio": "001",
+          "resultado": "CUMPLE"
+        },
+        {
+          "req": "A02",
+          "exigencia": "De fácil desplazamiento e instalación.",
+          "folio": "001",
+          "resultado": "CUMPLE"
+        },
+        {
+          "req": "A03",
+          "exigencia": "Desechos de segura manipulación (destrucción por calcinación).",
+          "folio": "001 y 003",
+          "resultado": "CUMPLE"
+        },
+        {
+          "req": "B01",
+          "exigencia": "Corriente eléctrica 220 / 60 Hz.",
+          "folio": "002",
+          "resultado": "CUMPLE"
+        }
+      ],
+      "autenticidad": "Sustento AUTÉNTICO. Fabricante Industrias Ernesto Correa S.A.C. (RUC 20610709126), marca DAHECO: domicilio, teléfono, certificación ISO 9001:2015 de SGS, rango de agujas y tiempo de destrucción coinciden con la información que el propio fabricante publica. No se advierte adulteración."
+    }
+  ],
+  "valorizacion": {
+    "estado": "NO INICIADA",
+    "nota": "La valorización de equipamiento se activa una vez aprobadas las EETT y con entregas efectivas en obra. La regla de pago es proporcional a lo efectivamente entregado y verificado: si el expediente prevé 10 unidades y se entregan 7, se valoriza 7.",
+    "universo": {
+      "codigos": 179,
+      "unidades": 717,
+      "monto": 3110019.06
+    },
+    "avance": {
+      "codigosValorizados": 0,
+      "unidadesEntregadas": 0,
+      "unidadesVerificadas": 0
+    },
+    "periodos": [],
+    "requisitosPrevios": [
+      {
+        "requisito": "Aprobación de las EETT por la Entidad",
+        "estado": "PENDIENTE",
+        "nota": "46 asuntos siguen pendientes de pronunciamiento del Proyectista. Además, ninguna ficha técnica de equipo cuenta con conformidad de la Supervisión."
+      },
+      {
+        "requisito": "Planos de preinstalación emitidos por el Contratista",
+        "estado": "PENDIENTE",
+        "nota": "Componente 16 (Planos) marcado como pendiente de fase campo."
+      },
+      {
+        "requisito": "Protocolos de prueba por equipo",
+        "estado": "PENDIENTE",
+        "nota": "La carpeta 6.Protocolos de Pruebas aún no tiene contenido."
+      },
+      {
+        "requisito": "Matriz de anexos requeridos por equipo",
+        "estado": "PARCIAL",
+        "nota": "Los 13 formatos de anexo del dossier de calidad ya fueron verificados y conformados en el informe de compatibilidad. Falta el cruce equipo por equipo."
+      }
+    ],
+    "hitos": [
+      {
+        "orden": 1,
+        "hito": "Adelanto",
+        "pct": null,
+        "condicion": "Adelanto contractual otorgado al Contratista antes de la entrega en obra.",
+        "verifica": "No corresponde a la especialidad de equipamiento; se rige por el contrato de obra.",
+        "estado": "POR DEFINIR"
+      },
+      {
+        "orden": 2,
+        "hito": "Entrega e instalación en obra",
+        "pct": null,
+        "condicion": "Bien entregado en obra e instalado en el ambiente de destino previsto en el expediente.",
+        "verifica": "Acta de recepción, verificación del ambiente y de la preinstalación ejecutada.",
+        "estado": "POR DEFINIR"
+      },
+      {
+        "orden": 3,
+        "hito": "Protocolo de prueba aprobado",
+        "pct": null,
+        "condicion": "Funcionamiento validado. Protocolo de prueba llenado por el Contratista y con V°B° de la Supervisión.",
+        "verifica": "Protocolo por equipo, con los anexos exigibles a ese equipo según la matriz de anexos.",
+        "estado": "POR DEFINIR"
+      },
+      {
+        "orden": 4,
+        "hito": "Capacitación y entrega del dossier",
+        "pct": null,
+        "condicion": "Capacitación al personal del establecimiento y entrega del dossier de calidad completo.",
+        "verifica": "Acta de capacitación con firma de asistentes y dossier con los 13 anexos conformados.",
+        "estado": "POR DEFINIR"
+      }
+    ],
+    "notaHitos": "Los porcentajes de cada hito aún no están definidos en el expediente disponible a esta Supervisión. Se deben tomar del contrato de ejecución de obra. Hasta que se fijen, el panel muestra la secuencia y las condiciones de verificación, no montos por hito.",
+    "reglaParcial": "La valorización es proporcional por unidades: si un código prevé 3 unidades y solo 2 fueron entregadas y verificadas, se valoriza el equivalente a 2 unidades en el hito alcanzado. La unidad restante queda como saldo y se valoriza cuando llegue y supere la misma verificación. Una misma unidad puede estar en un hito distinto que sus pares del mismo código."
+  },
+  "alertas": [
+    {
+      "nivel": "CRITICA",
+      "titulo": "Informe mensual de agosto no registrado",
+      "detalle": "Al 03/09/2026 no consta emitido el INF-SUP-MEN-EQ-DLVM-002-260831 correspondiente al periodo del 01 al 31 de agosto de 2026. Es el entregable ordinario del mes bajo el numeral 2.2 de la propuesta.",
+      "accion": "Emitir el informe mensual N° 002 y comunicarlo mediante CARTA N° 03-2026-DLVM.",
+      "reservada": false
+    },
+    {
+      "nivel": "SUSTANCIAL",
+      "titulo": "46 asuntos pendientes de pronunciamiento del Proyectista",
+      "detalle": "El seguimiento consta en la matriz anexa al Informe Mensual N° 001. Mientras no se absuelvan, no se puede cerrar la compatibilización ni habilitar la aprobación de las EETT.",
+      "accion": "Reiterar el traslado al Proyectista (ARQ.CONST ALFA 360) en el informe mensual N° 002.",
+      "reservada": false
+    },
+    {
+      "nivel": "SUSTANCIAL",
+      "reservada": false,
+      "titulo": "Ficha del D-92 observada solo por la vigencia de garantía",
+      "detalle": "El equipo cumple los 4 requisitos técnicos mínimos y el sustento del fabricante fue verificado como auténtico. La única traba es la garantía: el numeral 9 de la Memoria Descriptiva exige 24 meses acreditados con Certificado de Garantía por equipo; el Anexo N° 1 declara 24 meses pero el folio 002 del propio sustento consigna 18 y no se acompaña el certificado.",
+      "accion": "Requerir el Certificado de Garantía por 24 meses. El numeral 9 permite que lo emita el propio Contratista, por lo que la subsanación no depende del fabricante."
+    },
+    {
+      "nivel": "LEVE",
+      "titulo": "Discrepancia en el conteo de extremos del INF-SUP-RC-001",
+      "detalle": "La carátula de la matriz consigna «13 observaciones — 27 extremos», mientras que la hoja Consolidado y la CARTA N° 02 consignan 28 extremos. El conteo correcto es 28.",
+      "accion": "Corregir la carátula en la próxima emisión o mediante fe de erratas.",
+      "reservada": false
+    },
+    {
+      "nivel": "LEVE",
+      "titulo": "Plazo de participación próximo a vencer",
+      "detalle": "El plazo de 60 días calendario, contado desde el inicio de servicio registrado el 14/07/2026, vence el 12/09/2026. La propuesta económica no fija fecha de inicio expresa, por lo que la fecha es estimada.",
+      "accion": "Definir por escrito con la Jefatura de Supervisión la fecha de inicio y de término del plazo.",
+      "reservada": false
+    },
+    {
+      "nivel": "LEVE",
+      "reservada": false,
+      "titulo": "178 de 179 fichas técnicas aún sin presentar",
+      "detalle": "A la fecha el Contratista ha presentado un solo sustento de ficha técnica (D-92), y con carácter de muestra del formato. Los 178 códigos restantes, equivalentes a 711 unidades y a S/ 3,099,528.82 del presupuesto de equipamiento, no han sido presentados.",
+      "accion": "Requerir al Contratista un cronograma de presentación de fichas técnicas por grupo de equipamiento."
+    }
+  ],
+  "protocoloRespuesta": [
+    "Registrar el documento recibido en este panel: código, fecha, contraparte y asunto.",
+    "Verificar si genera honorario bajo el numeral 2.3 — uno por cada informe del contratista, sin importar cómo lo canalice el Consorcio.",
+    "Asignar el correlativo bajo el patrón INF-SUP-[TIPO]-EQ-DLVM-[NNN]-[AAMMDD].",
+    "Construir el documento sobre el membrete oficial de CONSORCIO PARACHIQUE. Sin membrete no sale.",
+    "Citar SIEMPRE archivo + ubicación interna (página / sección / fila / numeral). Nunca inventar folios: los editables no los tienen.",
+    "Verificar el sustento normativo contra la NTS aplicable al nivel I-3 antes de afirmar incumplimiento.",
+    "Emitir informe narrativo + matriz, conservando el código de archivo para la integridad de las referencias cruzadas.",
+    "Registrar el producto en la liquidación del mes y emitir el RHE describiendo el servicio por código de producto."
+  ],
+  "catalogo": [
+    {
+      "cod": "D-1",
+      "den": "Electrocardiógrafo",
+      "grupo": "EQUIPOS BIOMEDICOS",
+      "cant": 2,
+      "pu": 19923.07,
+      "parcial": 39846.14,
+      "fila": 4,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-103",
+      "den": "Ecógrafo portatil",
+      "grupo": "EQUIPOS BIOMEDICOS",
+      "cant": 1,
+      "pu": 124760.23,
+      "parcial": 124760.23,
+      "fila": 5,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-104",
+      "den": "Bomba de infusión de 1 canales",
+      "grupo": "EQUIPOS BIOMEDICOS",
+      "cant": 4,
+      "pu": 9934.15,
+      "parcial": 39736.59,
+      "fila": 6,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-109",
+      "den": "Coche de paro equipado",
+      "grupo": "EQUIPOS BIOMEDICOS",
+      "cant": 2,
+      "pu": 69421.4,
+      "parcial": 138842.81,
+      "fila": 7,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-112",
+      "den": "Incubadora de transporte",
+      "grupo": "EQUIPOS BIOMEDICOS",
+      "cant": 1,
+      "pu": 84142.76,
+      "parcial": 84142.76,
+      "fila": 8,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-131",
+      "den": "Pantoscopio",
+      "grupo": "EQUIPOS BIOMEDICOS",
+      "cant": 3,
+      "pu": 6930.53,
+      "parcial": 20791.58,
+      "fila": 9,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-16",
+      "den": "Monitor fetal gemelar",
+      "grupo": "EQUIPOS BIOMEDICOS",
+      "cant": 2,
+      "pu": 34898.18,
+      "parcial": 69796.35,
+      "fila": 10,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-17",
+      "den": "Pulsioxímetro",
+      "grupo": "EQUIPOS BIOMEDICOS",
+      "cant": 3,
+      "pu": 9547.59,
+      "parcial": 28642.78,
+      "fila": 11,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-18",
+      "den": "Monitor de funciones vitales de 5 parámetros",
+      "grupo": "EQUIPOS BIOMEDICOS",
+      "cant": 3,
+      "pu": 50787.58,
+      "parcial": 152362.73,
+      "fila": 12,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-212",
+      "den": "Esterilizador con generador eléctrico de vapor de 20 lt",
+      "grupo": "EQUIPOS BIOMEDICOS",
+      "cant": 1,
+      "pu": 34587.71,
+      "parcial": 34587.71,
+      "fila": 13,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-213",
+      "den": "esterilizador con generador electrico de vapor de 30 litros",
+      "grupo": "EQUIPOS BIOMEDICOS",
+      "cant": 2,
+      "pu": 43314.15,
+      "parcial": 86628.31,
+      "fila": 14,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-219",
+      "den": "Lavador ultrasónico de instrumental quirúrgico",
+      "grupo": "EQUIPOS BIOMEDICOS",
+      "cant": 1,
+      "pu": 52310.84,
+      "parcial": 52310.84,
+      "fila": 15,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-245",
+      "den": "Analizador bioquímico semiautomatico",
+      "grupo": "EQUIPOS BIOMEDICOS",
+      "cant": 1,
+      "pu": 49339.61,
+      "parcial": 49339.61,
+      "fila": 16,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-262",
+      "den": "Rotador serológico",
+      "grupo": "EQUIPOS BIOMEDICOS",
+      "cant": 1,
+      "pu": 12267.47,
+      "parcial": 12267.47,
+      "fila": 17,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-266",
+      "den": "Centrifuga universal para 24 tubos",
+      "grupo": "EQUIPOS BIOMEDICOS",
+      "cant": 1,
+      "pu": 41950.15,
+      "parcial": 41950.15,
+      "fila": 18,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-269",
+      "den": "Centrifuga para microhematocrito",
+      "grupo": "EQUIPOS BIOMEDICOS",
+      "cant": 1,
+      "pu": 14989.54,
+      "parcial": 14989.54,
+      "fila": 19,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-280",
+      "den": "Balanza analítica de precisión",
+      "grupo": "EQUIPOS BIOMEDICOS",
+      "cant": 1,
+      "pu": 10215.34,
+      "parcial": 10215.34,
+      "fila": 20,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-288",
+      "den": "Refrigeradora para medicamentos",
+      "grupo": "EQUIPOS BIOMEDICOS",
+      "cant": 2,
+      "pu": 26638.13,
+      "parcial": 53276.26,
+      "fila": 21,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-334",
+      "den": "Pulsioxímetro portátil",
+      "grupo": "EQUIPOS BIOMEDICOS",
+      "cant": 1,
+      "pu": 5160.49,
+      "parcial": 5160.49,
+      "fila": 22,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-34",
+      "den": "Lámpara quirúrgica rodable",
+      "grupo": "EQUIPOS BIOMEDICOS",
+      "cant": 2,
+      "pu": 34562.17,
+      "parcial": 69124.34,
+      "fila": 23,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-350",
+      "den": "Cuna de calor radiante",
+      "grupo": "EQUIPOS BIOMEDICOS",
+      "cant": 1,
+      "pu": 67159.17,
+      "parcial": 67159.17,
+      "fila": 24,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-369",
+      "den": "Incubadora para cultivo",
+      "grupo": "EQUIPOS BIOMEDICOS",
+      "cant": 1,
+      "pu": 41689.31,
+      "parcial": 41689.31,
+      "fila": 25,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-41",
+      "den": "Unidad dental completa",
+      "grupo": "EQUIPOS BIOMEDICOS",
+      "cant": 1,
+      "pu": 53047.1,
+      "parcial": 53047.1,
+      "fila": 26,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-60",
+      "den": "Microscopio binocular estándar",
+      "grupo": "EQUIPOS BIOMEDICOS",
+      "cant": 1,
+      "pu": 13090.56,
+      "parcial": 13090.56,
+      "fila": 27,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-86",
+      "den": "Aspirador de secreción portátil",
+      "grupo": "EQUIPOS BIOMEDICOS",
+      "cant": 1,
+      "pu": 3123.06,
+      "parcial": 3123.06,
+      "fila": 28,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-88",
+      "den": "Aspirador de secreciones rodable",
+      "grupo": "EQUIPOS BIOMEDICOS",
+      "cant": 4,
+      "pu": 13149.36,
+      "parcial": 52597.43,
+      "fila": 29,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-96",
+      "den": "Detector de latidos fetales de sobremesa",
+      "grupo": "EQUIPOS BIOMEDICOS",
+      "cant": 3,
+      "pu": 5565.53,
+      "parcial": 16696.6,
+      "fila": 30,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-152",
+      "den": "Silla de partos multifuncional",
+      "grupo": "EQUIPOS BIOMEDICOS",
+      "cant": 1,
+      "pu": 54350.34,
+      "parcial": 54350.34,
+      "fila": 31,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-123",
+      "den": "Estetoscopio neonatal",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 203.24,
+      "parcial": 203.24,
+      "fila": 34,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-125",
+      "den": "Estetoscopio adulto pediatrico",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 6,
+      "pu": 394.16,
+      "parcial": 2364.96,
+      "fila": 35,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-126",
+      "den": "Frontoluz",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 5168.09,
+      "parcial": 5168.09,
+      "fila": 36,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-128",
+      "den": "Linterna para examen clínico",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 4,
+      "pu": 131.61,
+      "parcial": 526.44,
+      "fila": 37,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-129",
+      "den": "Martillo de reflejos",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 2,
+      "pu": 230.72,
+      "parcial": 461.43,
+      "fila": 38,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-135",
+      "den": "Tensiómetro aneroide rodable adulto",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 7,
+      "pu": 1650.99,
+      "parcial": 11556.93,
+      "fila": 39,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-136",
+      "den": "Tensiómetro aneroide rodable pediátrico - neonatal",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 2,
+      "pu": 1568.48,
+      "parcial": 3136.96,
+      "fila": 40,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-140",
+      "den": "Equipo de oxigenoterapia rodable",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 5,
+      "pu": 4983.43,
+      "parcial": 24917.15,
+      "fila": 41,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-148",
+      "den": "Negatoscopio de 2 campos",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 3,
+      "pu": 1024.63,
+      "parcial": 3073.89,
+      "fila": 42,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-153",
+      "den": "Canastilla (gradilla) para transporte de muestras",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 3,
+      "pu": 996.64,
+      "parcial": 2989.91,
+      "fila": 43,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-156",
+      "den": "Reloj cronómetro para laboratorio",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 1302.76,
+      "parcial": 1302.76,
+      "fila": 44,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-158",
+      "den": "Termometro/higrómetro digital",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 240.64,
+      "parcial": 240.64,
+      "fila": 45,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-159",
+      "den": "Colchoneta  2.0 x 0.80 m",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 2,
+      "pu": 269.34,
+      "parcial": 538.69,
+      "fila": 46,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-188",
+      "den": "Balanza digital con tallímetro pediátrico",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 3030.88,
+      "parcial": 3030.88,
+      "fila": 47,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-193",
+      "den": "Bolsa perfusora",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 427.79,
+      "parcial": 427.79,
+      "fila": 48,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-196",
+      "den": "set de collarin  para politraumatizados",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 3335.38,
+      "parcial": 3335.38,
+      "fila": 49,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-201",
+      "den": "Nebulizador",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 2,
+      "pu": 3788.48,
+      "parcial": 7576.97,
+      "fila": 50,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-203",
+      "den": "Maletín de reanimación neonatal",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 5378.37,
+      "parcial": 5378.37,
+      "fila": 51,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-204",
+      "den": "Maletín de reanimación adulto pediatrico",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 6054.12,
+      "parcial": 6054.12,
+      "fila": 52,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-234",
+      "den": "Canastilla (gradilla) de coloración de 20 láminas",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 889.34,
+      "parcial": 889.34,
+      "fila": 53,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-235",
+      "den": "Contador de células",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 6396.21,
+      "parcial": 6396.21,
+      "fila": 54,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-238",
+      "den": "Pipeta automática 10 - 100 ul.",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 1563.15,
+      "parcial": 1563.15,
+      "fila": 55,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-239",
+      "den": "Pipeta automática 200 - 1000 ul.",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 1866.88,
+      "parcial": 1866.88,
+      "fila": 56,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-240",
+      "den": "Pipeta automática 5 - 50 ul.",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 1484.09,
+      "parcial": 1484.09,
+      "fila": 57,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-241",
+      "den": "Pipeta automática 50 - 200 ul.",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 1433.36,
+      "parcial": 1433.36,
+      "fila": 58,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-248",
+      "den": "Baño María de 10 a 15 lt",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 9785.97,
+      "parcial": 9785.97,
+      "fila": 59,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-259",
+      "den": "Glucómetro portátil",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 2,
+      "pu": 751.33,
+      "parcial": 1502.67,
+      "fila": 60,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-28",
+      "den": "Lámpara de examen clínico",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 6,
+      "pu": 7975.39,
+      "parcial": 47852.32,
+      "fila": 61,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-285",
+      "den": "Cooler para transporte de vacunas",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 13586.6,
+      "parcial": 13586.6,
+      "fila": 62,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-287",
+      "den": "Refrigeradora para laboratorio de 14 pies cúbicos",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 28631.11,
+      "parcial": 28631.11,
+      "fila": 63,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-325",
+      "den": "Balanza digital con tallímetro adulto",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 6,
+      "pu": 4275.07,
+      "parcial": 25650.4,
+      "fila": 64,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-326",
+      "den": "Balanza digital con tallímetro neonatal",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 5,
+      "pu": 2615.84,
+      "parcial": 13079.2,
+      "fila": 65,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-328",
+      "den": "Cinta métrica",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 45.78,
+      "parcial": 45.78,
+      "fila": 66,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-345",
+      "den": "Tallímetro pediátrico",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 603.69,
+      "parcial": 603.69,
+      "fila": 67,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-349",
+      "den": "Estetoscopio fetoscopio",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 2,
+      "pu": 260.77,
+      "parcial": 521.55,
+      "fila": 68,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-39",
+      "den": "Destartarizador ultrasónico",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 3920.91,
+      "parcial": 3920.91,
+      "fila": 69,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-449",
+      "den": "Lámpara de fotocurado",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 4208.14,
+      "parcial": 4208.14,
+      "fila": 70,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-91",
+      "den": "Calentador para sangres y soluciones",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 13559.65,
+      "parcial": 13559.65,
+      "fila": 71,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-92",
+      "den": "Destructor de agujas hipodérmicas",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 6,
+      "pu": 1748.37,
+      "parcial": 10490.24,
+      "fila": 72,
+      "ficha": "OBSERVADA",
+      "obs": "Cumple los 4 requisitos técnicos mínimos (100 %) y su sustento fue verificado como auténtico contra la información publicada por el fabricante. Observada únicamente por la vigencia de garantía: el Anexo N° 1 declara 24 meses —lo correcto según el numeral 9 de la Memoria— pero el folio 002 consigna 18 y no se acompaña el Certificado de Garantía."
+    },
+    {
+      "cod": "E-130",
+      "den": "Destilador de agua 4 litros/h",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 22894.73,
+      "parcial": 22894.73,
+      "fila": 73,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "E-191",
+      "den": "Termómetro para porta vacunas",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 248.72,
+      "parcial": 248.72,
+      "fila": 74,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-129",
+      "den": "tabla de transporte de  politraumatizado",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 5328.7,
+      "parcial": 5328.7,
+      "fila": 75,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "O-13",
+      "den": "Test de desarrollo psicomotor (TEPSI)",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 2244.22,
+      "parcial": 2244.22,
+      "fila": 76,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "O-20",
+      "den": "Test abreviado peruano (TAP)",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 3392.01,
+      "parcial": 3392.01,
+      "fila": 77,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "O-21",
+      "den": "Test EEDP (escala de evaluación de desarrollo psicomotor)",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 2158.9,
+      "parcial": 2158.9,
+      "fila": 78,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "O-5",
+      "den": "Juegos para estimulación temprana",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 203.01,
+      "parcial": 203.01,
+      "fila": 79,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "O-6",
+      "den": "Juegos para estimulación sensorial",
+      "grupo": "EQUIPOS COMPLEMENTARIO",
+      "cant": 1,
+      "pu": 8812.9,
+      "parcial": 8812.9,
+      "fila": 80,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-216",
+      "den": "Cortadora electrica de gasas",
+      "grupo": "EQUIPOS ELECTROMECANICOS",
+      "cant": 1,
+      "pu": 9854.37,
+      "parcial": 9854.37,
+      "fila": 83,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "E-103",
+      "den": "Balanza de plataforma digital, fuerza 100 kg",
+      "grupo": "EQUIPOS ELECTROMECANICOS",
+      "cant": 1,
+      "pu": 1945.31,
+      "parcial": 1945.31,
+      "fila": 84,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "E-159",
+      "den": "Refrigeradora de 4P3",
+      "grupo": "EQUIPOS ELECTROMECANICOS",
+      "cant": 2,
+      "pu": 2763.11,
+      "parcial": 5526.21,
+      "fila": 85,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "E-167",
+      "den": "Hervidor eléctrico de agua",
+      "grupo": "EQUIPOS ELECTROMECANICOS",
+      "cant": 1,
+      "pu": 346.16,
+      "parcial": 346.16,
+      "fila": 86,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "E-2",
+      "den": "selladora de bolsas",
+      "grupo": "EQUIPOS ELECTROMECANICOS",
+      "cant": 1,
+      "pu": 11481.81,
+      "parcial": 11481.81,
+      "fila": 87,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "E-210",
+      "den": "Lavadora centrifuga industrial de 8 Kg. aproximadamente.",
+      "grupo": "EQUIPOS ELECTROMECANICOS",
+      "cant": 1,
+      "pu": 44625.57,
+      "parcial": 44625.57,
+      "fila": 88,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "E-54",
+      "den": "Planchadora con aspirante",
+      "grupo": "EQUIPOS ELECTROMECANICOS",
+      "cant": 1,
+      "pu": 15486.58,
+      "parcial": 15486.58,
+      "fila": 89,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "E-56",
+      "den": "Secadora de ropa industrial de 6 kilos aproximadamente.",
+      "grupo": "EQUIPOS ELECTROMECANICOS",
+      "cant": 1,
+      "pu": 29197.3,
+      "parcial": 29197.3,
+      "fila": 90,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "E-81",
+      "den": "Cocina eléctrica de dos hornillas de mesa",
+      "grupo": "EQUIPOS ELECTROMECANICOS",
+      "cant": 1,
+      "pu": 1380.26,
+      "parcial": 1380.26,
+      "fila": 91,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "E-86",
+      "den": "Horno microondas con panel digital",
+      "grupo": "EQUIPOS ELECTROMECANICOS",
+      "cant": 1,
+      "pu": 1966.6,
+      "parcial": 1966.6,
+      "fila": 92,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-19",
+      "den": "Caja fuerte con clave tipo reloj",
+      "grupo": "EQUIPOS ELECTROMECANICOS",
+      "cant": 1,
+      "pu": 6730.97,
+      "parcial": 6730.97,
+      "fila": 93,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-145",
+      "den": "Set de riñoneras de acero quirúrgico",
+      "grupo": "INSTRUMENTAL MEDICO",
+      "cant": 10,
+      "pu": 896.3,
+      "parcial": 8962.97,
+      "fila": 97,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-146",
+      "den": "Set de tambores de acero quirúrgico",
+      "grupo": "INSTRUMENTAL MEDICO",
+      "cant": 10,
+      "pu": 1028.56,
+      "parcial": 10285.6,
+      "fila": 98,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "I-1",
+      "den": "Set de instrumental para retirar puntos",
+      "grupo": "INSTRUMENTAL MEDICO",
+      "cant": 2,
+      "pu": 5483.0,
+      "parcial": 10965.99,
+      "fila": 99,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "I-11",
+      "den": "Set instrumental para curaciones",
+      "grupo": "INSTRUMENTAL MEDICO",
+      "cant": 2,
+      "pu": 3824.06,
+      "parcial": 7648.12,
+      "fila": 100,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "I-12",
+      "den": "Set instrumental para extraccion de cuerpo extraño",
+      "grupo": "INSTRUMENTAL MEDICO",
+      "cant": 1,
+      "pu": 5576.18,
+      "parcial": 5576.18,
+      "fila": 101,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "I-18",
+      "den": "Set instrumental de inserción y retiro de DIU",
+      "grupo": "INSTRUMENTAL MEDICO",
+      "cant": 3,
+      "pu": 13142.16,
+      "parcial": 39426.47,
+      "fila": 102,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "I-2",
+      "den": "Set de instrumental para sutura",
+      "grupo": "INSTRUMENTAL MEDICO",
+      "cant": 2,
+      "pu": 4129.72,
+      "parcial": 8259.43,
+      "fila": 103,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "I-20",
+      "den": "Set instrumental de legrado uterino",
+      "grupo": "INSTRUMENTAL MEDICO",
+      "cant": 1,
+      "pu": 19035.89,
+      "parcial": 19035.89,
+      "fila": 104,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "I-21",
+      "den": "Set instrumental de parto",
+      "grupo": "INSTRUMENTAL MEDICO",
+      "cant": 2,
+      "pu": 6920.36,
+      "parcial": 13840.72,
+      "fila": 105,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "I-22",
+      "den": "Set instrumental para examen ginecológico I",
+      "grupo": "INSTRUMENTAL MEDICO",
+      "cant": 4,
+      "pu": 7450.34,
+      "parcial": 29801.35,
+      "fila": 106,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "I-23",
+      "den": "Set instrumental para revisión del cuello uterino",
+      "grupo": "INSTRUMENTAL MEDICO",
+      "cant": 3,
+      "pu": 12231.2,
+      "parcial": 36693.6,
+      "fila": 107,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "I-26",
+      "den": "Set instrumental para curación dental",
+      "grupo": "INSTRUMENTAL MEDICO",
+      "cant": 1,
+      "pu": 8639.72,
+      "parcial": 8639.72,
+      "fila": 108,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "I-27",
+      "den": "Set instrumental para diagnostico odontológico",
+      "grupo": "INSTRUMENTAL MEDICO",
+      "cant": 1,
+      "pu": 3682.14,
+      "parcial": 3682.14,
+      "fila": 109,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "I-28",
+      "den": "Set instrumental para endodoncia",
+      "grupo": "INSTRUMENTAL MEDICO",
+      "cant": 1,
+      "pu": 15253.36,
+      "parcial": 15253.36,
+      "fila": 110,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "I-29",
+      "den": "Set instrumental para exodoncia",
+      "grupo": "INSTRUMENTAL MEDICO",
+      "cant": 1,
+      "pu": 11550.36,
+      "parcial": 11550.36,
+      "fila": 111,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "I-5",
+      "den": "Set instrumental de cirugia menor",
+      "grupo": "INSTRUMENTAL MEDICO",
+      "cant": 2,
+      "pu": 8715.25,
+      "parcial": 17430.49,
+      "fila": 112,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "I-9",
+      "den": "Set instrumental de pequeñas intervenciones quirúrgicas",
+      "grupo": "INSTRUMENTAL MEDICO",
+      "cant": 1,
+      "pu": 15247.64,
+      "parcial": 15247.64,
+      "fila": 113,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-1",
+      "den": "Archivador metálico de 4 gavetas",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 4,
+      "pu": 1267.57,
+      "parcial": 5070.27,
+      "fila": 117,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-10",
+      "den": "Vitrina metálica para anuncios con puertas corredizas de vidrio",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 7,
+      "pu": 1230.25,
+      "parcial": 8611.75,
+      "fila": 118,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-101",
+      "den": "Papelera de acero inoxidable de forma cilíndrica",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 11,
+      "pu": 658.19,
+      "parcial": 7240.13,
+      "fila": 119,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-11",
+      "den": "Vitrina metálica para libros",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 1,
+      "pu": 1297.88,
+      "parcial": 1297.88,
+      "fila": 120,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-123",
+      "den": "Mesa de comedor para 4 personas",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 1,
+      "pu": 923.03,
+      "parcial": 923.03,
+      "fila": 121,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-13",
+      "den": "Cilindro de plástico con tapa de vaivén",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 6,
+      "pu": 172.61,
+      "parcial": 1035.64,
+      "fila": 122,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-14",
+      "den": "Papelera de plástico con tapa y ventana batible",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 32,
+      "pu": 48.48,
+      "parcial": 1551.25,
+      "fila": 123,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-15",
+      "den": "Papelera metálica de piso",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 22,
+      "pu": 214.55,
+      "parcial": 4720.1,
+      "fila": 124,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-164",
+      "den": "Contenedor rodable para residuos sólidos",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 4,
+      "pu": 7343.04,
+      "parcial": 29372.16,
+      "fila": 125,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-17",
+      "den": "Bandeja acrílica doble para escritorio",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 9,
+      "pu": 56.29,
+      "parcial": 506.58,
+      "fila": 126,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-18",
+      "den": "Butaca metálica de 3 cuerpos",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 25,
+      "pu": 1056.28,
+      "parcial": 26407.08,
+      "fila": 127,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-2",
+      "den": "Armario metálico de 2 puertas",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 6,
+      "pu": 1265.4,
+      "parcial": 7592.4,
+      "fila": 128,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-21",
+      "den": "Escritorio ejecutivo",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 1,
+      "pu": 1477.13,
+      "parcial": 1477.13,
+      "fila": 129,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-22",
+      "den": "Escritorio estándar",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 17,
+      "pu": 1009.71,
+      "parcial": 17165.01,
+      "fila": 130,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-25",
+      "den": "Mesa auxiliar para oficina",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 2,
+      "pu": 1124.26,
+      "parcial": 2248.52,
+      "fila": 131,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-28",
+      "den": "Mesa de madera para niños",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 2,
+      "pu": 1006.31,
+      "parcial": 2012.62,
+      "fila": 132,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-29",
+      "den": "Mesa de reuniones de 90 x 180 cm",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 1,
+      "pu": 1615.61,
+      "parcial": 1615.61,
+      "fila": 133,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-3",
+      "den": "Armario metálico de un cuerpo y dos compartimientos",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 5,
+      "pu": 652.21,
+      "parcial": 3261.05,
+      "fila": 134,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-30",
+      "den": "Mesa metálica de centro",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 2,
+      "pu": 841.94,
+      "parcial": 1683.88,
+      "fila": 135,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-33",
+      "den": "Pizarra acrílica de 150 x 100 cm para adosar en pared",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 4,
+      "pu": 796.3,
+      "parcial": 3185.19,
+      "fila": 136,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-34",
+      "den": "Silla de madera para niños",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 8,
+      "pu": 310.14,
+      "parcial": 2481.12,
+      "fila": 137,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-36",
+      "den": "Silla metálica apilable",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 62,
+      "pu": 240.04,
+      "parcial": 14882.48,
+      "fila": 138,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-37",
+      "den": "Silla metálica confortable giratoria rodable",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 2,
+      "pu": 715.25,
+      "parcial": 1430.5,
+      "fila": 139,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-38",
+      "den": "Silla metálica giratoria rodable con brazos",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 1,
+      "pu": 1466.59,
+      "parcial": 1466.59,
+      "fila": 140,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-39",
+      "den": "Silla metálica giratoria rodable",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 25,
+      "pu": 775.48,
+      "parcial": 19387,
+      "fila": 141,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-40",
+      "den": "Silla metálica giratoria rodable con asiento alto",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 9,
+      "pu": 829.24,
+      "parcial": 7463.19,
+      "fila": 142,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-42",
+      "den": "Sillón metálico confortable reclinable para reposo",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 2,
+      "pu": 1193.74,
+      "parcial": 2387.48,
+      "fila": 143,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-44",
+      "den": "Sillón metálico semiconfortable sin portabrazos 2 cuerpos",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 3,
+      "pu": 1339.31,
+      "parcial": 4017.94,
+      "fila": 144,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-45",
+      "den": "Sillón metálico semiconfortable sin portabrazos 3 cuerpos",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 2,
+      "pu": 1898.49,
+      "parcial": 3796.98,
+      "fila": 145,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-53",
+      "den": "Parihuelas para depósito",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 2,
+      "pu": 115.7,
+      "parcial": 231.4,
+      "fila": 146,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-59",
+      "den": "Estantería de acero inoxidable de 01 cuerpo 03 divisiones",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 10,
+      "pu": 2454.51,
+      "parcial": 24545.1,
+      "fila": 147,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-6",
+      "den": "Escalera de aluminio de 3 pasos",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 8,
+      "pu": 521.25,
+      "parcial": 4170,
+      "fila": 148,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-9",
+      "den": "Percha metálica de pared con 4 ganchos",
+      "grupo": "MOBILIARIO ADMINISTRATIVO",
+      "cant": 25,
+      "pu": 225.23,
+      "parcial": 5630.75,
+      "fila": 149,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-141",
+      "den": "Chata de acero inoxidable",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 7,
+      "pu": 226.79,
+      "parcial": 1587.55,
+      "fila": 153,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-143",
+      "den": "Papagayo de acero inoxidable",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 2,
+      "pu": 225.77,
+      "parcial": 451.53,
+      "fila": 154,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-330",
+      "den": "Módulos de psicomotricidad para niños de 1 a 3 años",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 1,
+      "pu": 2289.39,
+      "parcial": 2289.39,
+      "fila": 155,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-331",
+      "den": "Módulos de psicomotricidad para niños de 3 años a más",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 1,
+      "pu": 9137.75,
+      "parcial": 9137.75,
+      "fila": 156,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "D-332",
+      "den": "Módulos de psicomotricidad para niños menores de 12 años",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 1,
+      "pu": 2233.68,
+      "parcial": 2233.68,
+      "fila": 157,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-105",
+      "den": "Portasuero metálico rodable",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 9,
+      "pu": 812.66,
+      "parcial": 7313.94,
+      "fila": 158,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-108",
+      "den": "Velador metálico",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 4,
+      "pu": 546.41,
+      "parcial": 2185.63,
+      "fila": 159,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-109",
+      "den": "Silla especial para toma de muestras",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 2,
+      "pu": 2410.02,
+      "parcial": 4820.04,
+      "fila": 160,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-111",
+      "den": "Coche para transporte de ropa limpia.",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 1,
+      "pu": 3884.34,
+      "parcial": 3884.34,
+      "fila": 161,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-113",
+      "den": "Carro para útiles de limpieza",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 2,
+      "pu": 2940.54,
+      "parcial": 5881.09,
+      "fila": 162,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-114",
+      "den": "Cubo de acero inoxidable para desperdicios, con tapa accionada a pedal",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 27,
+      "pu": 844.55,
+      "parcial": 22802.76,
+      "fila": 163,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-115",
+      "den": "Porta balde de acero inoxidable rodable con balde de acero inoxidable",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 6,
+      "pu": 977.77,
+      "parcial": 5866.62,
+      "fila": 164,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-116",
+      "den": "Porta lavatorio doble metálico rodable, incluye lavatorio de acero inoxidable",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 3,
+      "pu": 1592.95,
+      "parcial": 4778.84,
+      "fila": 165,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-117",
+      "den": "Portabolsa metálica rodable, con bolsa de lona",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 2,
+      "pu": 582.79,
+      "parcial": 1165.58,
+      "fila": 166,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-124",
+      "den": "Mesa rodable para alimentos",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 2,
+      "pu": 790.38,
+      "parcial": 1580.76,
+      "fila": 167,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-133",
+      "den": "Estantes con juguetes y  material didactico diverso para niños 1 a 3 años",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 1,
+      "pu": 2530.42,
+      "parcial": 2530.42,
+      "fila": 168,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-136",
+      "den": "Piso microporoso",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 1,
+      "pu": 84.16,
+      "parcial": 84.16,
+      "fila": 169,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-159",
+      "den": "Mesa de uso  múltiple de acero inoxidable de 90 x 45 cm",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 2,
+      "pu": 2559.64,
+      "parcial": 5119.28,
+      "fila": 170,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-161",
+      "den": "Cama para trabajo de parto",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 2,
+      "pu": 4739.3,
+      "parcial": 9478.61,
+      "fila": 171,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-162",
+      "den": "Taburete de acero inoxidable con asiento giratorio rodable con respaldo",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 2,
+      "pu": 1071.55,
+      "parcial": 2143.11,
+      "fila": 172,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-47",
+      "den": "Taburete de acero inoxidable con asiento giratorio rodable",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 6,
+      "pu": 877.25,
+      "parcial": 5263.48,
+      "fila": 173,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-48",
+      "den": "Taburete metálico fijo con asiento giratorio",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 2,
+      "pu": 291.8,
+      "parcial": 583.61,
+      "fila": 174,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-55",
+      "den": "Vitrina de acero Inoxidable para instrumentos o material esteril de un cuerpo",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 8,
+      "pu": 3607.06,
+      "parcial": 28856.48,
+      "fila": 175,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-57",
+      "den": "Armario de acero inoxidable para instrumental dental de 2 cuerpos",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 1,
+      "pu": 7139.98,
+      "parcial": 7139.98,
+      "fila": 176,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-60",
+      "den": "Estantería de acero inoxidable de un 01 cuerpo 05 divisiones",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 24,
+      "pu": 3200.87,
+      "parcial": 76820.8,
+      "fila": 177,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-64",
+      "den": "Vitrina de acero inoxidable para instrumental y material estéril de dos cuerpos",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 4,
+      "pu": 5496.92,
+      "parcial": 21987.68,
+      "fila": 178,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-68",
+      "den": "Mesa (diván) para exámenes gineco obstétricos",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 2,
+      "pu": 1711.96,
+      "parcial": 3423.91,
+      "fila": 179,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-72",
+      "den": "Biombo de acero inoxidable de 2 cuerpos",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 1,
+      "pu": 1182.2,
+      "parcial": 1182.2,
+      "fila": 180,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-73",
+      "den": "Cama camilla multipropósito",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 2,
+      "pu": 19234.95,
+      "parcial": 38469.89,
+      "fila": 181,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-75",
+      "den": "Cama clinica rodable para adultos",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 2,
+      "pu": 8043.69,
+      "parcial": 16087.37,
+      "fila": 182,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-78",
+      "den": "Cama de 1 1/2 plaza",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 4,
+      "pu": 1857.21,
+      "parcial": 7428.83,
+      "fila": 183,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-81",
+      "den": "Carro metálico fichero para 20 porta historias clínicas",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 1,
+      "pu": 1521.9,
+      "parcial": 1521.9,
+      "fila": 184,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-85",
+      "den": "Cuna acrílica con base metálica rodable",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 3,
+      "pu": 3138.41,
+      "parcial": 9415.22,
+      "fila": 185,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-86",
+      "den": "Escalinata metálica 2 peldaños",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 15,
+      "pu": 518.41,
+      "parcial": 7776.1,
+      "fila": 186,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-88",
+      "den": "Mesa (diván) para exámenes y curaciones",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 4,
+      "pu": 1235.59,
+      "parcial": 4942.35,
+      "fila": 187,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-90",
+      "den": "Mesa de acero inoxidable tipo mayo",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 2,
+      "pu": 1338.66,
+      "parcial": 2677.33,
+      "fila": 188,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-91",
+      "den": "Mesa de acero inoxidable rodable para múltiples usos",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 13,
+      "pu": 2631.98,
+      "parcial": 34215.74,
+      "fila": 189,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-94",
+      "den": "Mesa de trabajo de acero inoxidable de 140 x 70 cm",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 4,
+      "pu": 2672.17,
+      "parcial": 10688.67,
+      "fila": 190,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-95",
+      "den": "mesa especial en acero inoxidable para tópico",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 2,
+      "pu": 4660.84,
+      "parcial": 9321.68,
+      "fila": 191,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-96",
+      "den": "Mesa metálica de noche",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 6,
+      "pu": 689.73,
+      "parcial": 4138.4,
+      "fila": 192,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-97",
+      "den": "Mesa metálica para exámenes y cambiar pañales",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 5,
+      "pu": 2008.8,
+      "parcial": 10043.98,
+      "fila": 193,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "M-99",
+      "den": "Mesa rodable de acero inoxidable para curaciones con tablero",
+      "grupo": "MOBILIARIO CLINICO",
+      "cant": 5,
+      "pu": 2198.28,
+      "parcial": 10991.42,
+      "fila": 194,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    },
+    {
+      "cod": "V-1",
+      "den": "Ambulancia Rural Tipo I",
+      "grupo": "VEHICULOS",
+      "cant": 1,
+      "pu": 346833.33,
+      "parcial": 346833.33,
+      "fila": 198,
+      "ficha": "SIN PRESENTAR",
+      "obs": null
+    }
+  ],
+  "presupuesto": {
+    "total": 3110019.06,
+    "moneda": "PEN",
+    "incluyeIGV": true,
+    "fuente": "Equipamiento Propuesto PARACHIQUE.xlsx — hoja «ESTUDIO DE MERCADO 05.2025»",
+    "condiciones": [
+      "Costos expresados en soles con IGV incluido.",
+      "Garantía 02 años.",
+      "Incluye instalación, capacitación, entrega de manuales y videos.",
+      "Incluye dentro del periodo de garantía, el mantenimiento de los equipos."
+    ],
+    "notaCondiciones": "Estas cuatro consideraciones constan en las filas 201 a 204 de la hoja «ESTUDIO DE MERCADO 05.2025» y son condiciones del precio, no mejoras facultativas del Contratista."
+  },
+  "etapas": [
+    {
+      "id": "E1",
+      "nombre": "Recepción del expediente",
+      "estado": "CERRADA",
+      "detalle": "Cotejo del escaneado firmado contra el digital y ordenamiento por componentes."
+    },
+    {
+      "id": "E2",
+      "nombre": "Compatibilización",
+      "estado": "CERRADA",
+      "detalle": "Revisión de los 16 componentes. 20 observaciones formuladas al Proyectista."
+    },
+    {
+      "id": "E3",
+      "nombre": "Sustentos del Contratista — especificaciones técnicas",
+      "estado": "EN CURSO",
+      "detalle": "Pronunciamiento sobre los informes del Contratista y aprobación de las fichas técnicas de los 179 códigos."
+    },
+    {
+      "id": "E4",
+      "nombre": "Planos de preinstalación",
+      "estado": "NO INICIADA",
+      "detalle": "Revisión técnica de los planos del Contratista y verificación en campo."
+    },
+    {
+      "id": "E5",
+      "nombre": "Valorización",
+      "estado": "NO INICIADA",
+      "detalle": "Valorización proporcional de lo efectivamente entregado y verificado."
+    },
+    {
+      "id": "E6",
+      "nombre": "Protocolos de prueba",
+      "estado": "NO INICIADA",
+      "detalle": "Verificación de anexos por equipo y V°B° de los protocolos llenados por el Contratista."
+    },
+    {
+      "id": "E7",
+      "nombre": "Informes mensuales",
+      "estado": "EN CURSO",
+      "detalle": "Consolidación mensual de avance, observaciones y estado de pronunciamientos."
+    }
+  ],
+  "renders": {
+    "fuente": "0.Expediente\\digital\\3. VOLUMEN 03_ARQUITECTURA Y SEÑALIZACIÓN\\1. MEMORIA DESCRIPTIVA DE ARQUITECTURA",
+    "nota": "Vistas del proyecto terminado según la memoria descriptiva de arquitectura del expediente técnico.",
+    "vistas": [
+      {
+        "archivo": "01.jpg",
+        "titulo": "Ingreso principal",
+        "detalle": "Fachada de acceso desde la vía pública, con ingreso peatonal, ingreso de ambulancia y estacionamiento."
+      },
+      {
+        "archivo": "02.jpg",
+        "titulo": "Vista aérea del conjunto",
+        "detalle": "Distribución general de los bloques y patios del establecimiento."
+      },
+      {
+        "archivo": "03.jpg",
+        "titulo": "Fachada lateral",
+        "detalle": "Frente lateral con acceso de servicio y área verde perimetral."
+      },
+      {
+        "archivo": "04.jpg",
+        "titulo": "Vista aérea posterior",
+        "detalle": "Disposición de los bloques desde el fondo del terreno."
+      },
+      {
+        "archivo": "05.jpg",
+        "titulo": "Vista aérea del ingreso",
+        "detalle": "Conjunto edificado y estacionamiento desde el frente."
+      }
+    ],
+    "portada": "01.jpg"
+  },
+  "drive": {
+    "nota": "Los documentos se abren en un visor dentro del propio tablero. Requieren que el archivo esté compartido en Google Drive con quien lo consulta; de lo contrario Drive pedirá acceso.",
+    "carpetaProyecto": "https://drive.google.com/drive/folders/1lR4TjQfw1HCh9-sMJ3VLb8M9WVh2x_X5"
+  },
+  "datos": {
+    "sheetCsv": "",
+    "comoConfigurar": "Para gobernar el estado de las fichas desde una hoja de cálculo: en Google Sheets use Archivo → Compartir → Publicar en la web, elija la pestaña, formato CSV, y pegue aquí la dirección. La hoja necesita las columnas «codigo» y «ficha», y opcionalmente «observacion». Mientras esté vacío, manda este archivo JSON.",
+    "columnas": {
+      "codigo": "Código del equipo, p. ej. D-92",
+      "ficha": "SIN PRESENTAR | PRESENTADA | OBSERVADA | APROBADA",
+      "observacion": "Motivo, cuando no esté aprobada"
+    }
+  }
+}

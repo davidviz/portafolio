@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Centro de Mando — CS Parachique</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>/*__CSS__*/</style>
+</head>
+<body>
+<div class="envoltura" id="app"></div>
+<script>/*__JS__*/</script>
+<script>
+/* Este tablero se comparte con el Consorcio y la Entidad: el generador le
+   entrega los datos SIN la informacion economica del suscrito. */
+const D = /*__DATOS__*/ null;
+const GALERIA = /*__RENDERS__*/ [];
+
+const recibidas = D.documentos.filter((d) => d.flujo === 'RECIBIDA');
+const emitidas = D.documentos.filter((d) => d.flujo === 'EMITIDA');
+const porAtender = recibidas.filter((d) => d.estado !== 'ATENDIDA').length;
+const diasRestantes = diasEntre(D.meta.actualizado, D.meta.finServicio);
+const transcurridos = diasEntre(D.meta.inicioServicio, D.meta.actualizado);
+const criticas = D.alertas.filter((a) => a.nivel === 'CRITICA').length;
+const totalExtremos = D.pronunciamientos.reduce((s, p) => s + p.extremos, 0);
+const aprobadasFicha = D.catalogo.filter((c) => c.ficha === 'APROBADA').length;
+const porAprobar = D.catalogo.filter((c) => c.ficha !== 'APROBADA');
+const montoPorAprobar = porAprobar.reduce((s, c) => s + (c.parcial || 0), 0);
+
+let h = `
+<header class="cabecera">
+  <div>
+    <p class="kicker">Supervisión de equipamiento · Centro de mando</p>
+    <h1>CS Parachique</h1>
+    <p class="sub">${esc(D.meta.proyecto)}. Vista ejecutiva del estado documental y normativo de la especialidad de equipamiento médico.</p>
+  </div>
+  ${sello(D)}
+</header>`;
+
+/* ---------- Cifras de cabecera ---------- */
+h += `<div class="rejilla g3">
+  <div class="tarjeta clic" id="k-productos">
+    <div class="cifra-rotulo">Productos entregados</div>
+    <div class="cifra">${emitidas.filter((d) => d.clase === 'INFORME').length}</div>
+    <div class="cifra-pie">Informes de la especialidad emitidos a la fecha</div>
+  </div>
+  <div class="tarjeta clic" id="k-recibidas">
+    <div class="cifra-rotulo">Por pronunciarse</div>
+    <div class="cifra" style="color:${porAtender ? 'var(--critico)' : 'var(--bien)'}">${porAtender}</div>
+    <div class="cifra-pie">${porAtender ? 'Documentos del Contratista sin absolver' : `${recibidas.length} documento(s) del Contratista, todos absueltos`}</div>
+  </div>
+  <div class="tarjeta clic" id="k-pendientes">
+    <div class="cifra-rotulo">Pendientes del Proyectista</div>
+    <div class="cifra" style="color:var(--serio)">${D.observaciones.pendientesProyectista}</div>
+    <div class="cifra-pie">Asuntos sin pronunciamiento de ${esc(D.meta.proyectista)}</div>
+  </div>
+  <div class="tarjeta clic" id="k-fichas">
+    <div class="cifra-rotulo">Fichas técnicas aprobadas</div>
+    <div class="cifra" style="color:${aprobadasFicha ? 'var(--bien)' : 'var(--critico)'}">${aprobadasFicha}<small>de ${D.catalogo.length}</small></div>
+    <div class="cifra-pie">Falta aprobar ${soles(montoPorAprobar)} del presupuesto de equipamiento</div>
+  </div>
+  <div class="tarjeta clic" id="k-plazo">
+    <div class="cifra-rotulo">Plazo de participación</div>
+    <div class="cifra">${diasRestantes}<small>días restantes</small></div>
+    <div class="cifra-pie">${transcurridos} de ${D.meta.plazoDias} días transcurridos · vence ${fechaCorta(D.meta.finServicio)}</div>
+  </div>
+</div>`;
+
+/* ---------- Avance del plazo ---------- */
+const pctPlazo = Math.min(100, Math.round((transcurridos / D.meta.plazoDias) * 100));
+h += `<div class="seccion">
+  <h2>Consumo del plazo contractual</h2>
+  <p class="nota">${esc(D.meta.notaPlazo)}</p>
+  <div class="grafico">
+    <div class="barra" data-tip="Plazo consumido|${transcurridos} de ${D.meta.plazoDias} días calendario">
+      <div style="width:${pctPlazo}%;background:var(--serie-1)">${pctPlazo}% consumido</div>
+      <div style="width:${100 - pctPlazo}%;background:var(--borde-fuerte);color:var(--tinta)">${100 - pctPlazo}%</div>
+    </div>
+    <div class="leyenda">
+      <span><i style="background:var(--serie-1)"></i>Transcurrido — ${transcurridos} días (${fechaCorta(D.meta.inicioServicio)} a ${fechaCorta(D.meta.actualizado)})</span>
+      <span><i style="background:var(--borde-fuerte)"></i>Por transcurrir — ${D.meta.plazoDias - transcurridos} días</span>
+    </div>
+  </div>
+</div>`;
+
+/* ---------- Alertas ---------- */
+h += `<div class="seccion">
+  <h2>Alertas de gestión</h2>
+  <p class="nota">${criticas} crítica${criticas === 1 ? '' : 's'} · ${D.alertas.filter((a) => a.nivel === 'SUSTANCIAL').length} sustanciales · ${D.alertas.filter((a) => a.nivel === 'LEVE').length} leves. Ordenadas por severidad. Toque una alerta para ver el detalle y la acción recomendada.</p>
+  <div id="alertas"></div>
+</div>`;
+
+/* ---------- Estado del expediente ---------- */
+h += `<div class="seccion">
+  <h2>Estado del expediente técnico</h2>
+  <p class="nota">Resultado de la Fase 2 — Compatibilización. ${D.expediente.componentes} componentes revisados sobre ${num(D.expediente.codigos)} códigos de equipo equivalentes a ${num(D.expediente.unidades)} unidades.</p>
+  <div class="rejilla g4" style="margin-bottom:14px">
+    <div class="tarjeta"><div class="cifra-rotulo">Observaciones formuladas</div><div class="cifra">${D.observaciones.total}</div><div class="cifra-pie">${D.observaciones.criticas} críticas · ${D.observaciones.sustanciales} sustanciales · ${D.observaciones.leves} leves</div></div>
+    <div class="tarjeta"><div class="cifra-rotulo">Extremos absueltos</div><div class="cifra" style="color:var(--serie-3)">${totalExtremos}</div><div class="cifra-pie">Pronunciamientos individuales sobre consultas del Contratista</div></div>
+    <div class="tarjeta"><div class="cifra-rotulo">Fichas técnicas</div><div class="cifra">${D.expediente.fichasVerificadas}<small>de ${D.expediente.codigos}</small></div><div class="cifra-pie">Falta la ficha del código ${esc(D.expediente.fichaFaltante)}</div></div>
+    <div class="tarjeta"><div class="cifra-rotulo">Inserciones en plano</div><div class="cifra">${num(D.expediente.insercionesPlano)}</div><div class="cifra-pie">En ${D.expediente.ambientesPlano} ambientes · lámina ${esc(D.expediente.lamina)}</div></div>
+  </div>
+
+  <div class="grafico">
+    <h3>Observaciones por componente del expediente</h3>
+    <p class="sub">Solo se listan los componentes con observaciones. Los ${D.expediente.resumen.filter((c) => c.obs === 0).length} restantes fueron conformados sin observación.</p>
+    <div id="graf-comp"></div>
+    <div class="leyenda">
+      <span><i style="background:var(--critico)"></i>Prioridad alta</span>
+      <span><i style="background:var(--serie-2)"></i>Prioridad media</span>
+      <span><i style="background:var(--serie-1)"></i>Prioridad baja</span>
+    </div>
+  </div>
+</div>`;
+
+/* ---------- Tabla de componentes ---------- */
+h += `<div class="seccion">
+  <h2>Detalle por componente</h2>
+  <p class="nota">Los ${D.expediente.componentes} componentes de la especialidad. Toque una fila para ver el archivo editable de origen y su estado.</p>
+  <div id="filtros-comp"></div>
+  <div id="resumen-comp"></div>
+  <div class="tabla-caja"><div class="tabla-scroll">
+    <table class="datos" id="t-comp">
+      <thead><tr><th>N°</th><th>Componente</th><th class="num">Obs.</th><th>Estado</th><th>Prioridad máx.</th></tr></thead>
+      <tbody>${D.expediente.resumen.map((c) => `
+        <tr class="clic" data-comp="${c.n}"
+          data-f-estado="${esc(c.estado)}"
+          data-f-prioridad="${esc(c.prioridad === '—' ? 'Sin prioridad' : c.prioridad)}"
+          data-f-archivo="${esc(c.archivo)}"
+          data-f-obs="${c.obs === 0 ? 'Sin observaciones' : 'Con observaciones'}">
+          <td class="num">${c.n}</td>
+          <td><b>${esc(c.componente)}</b></td>
+          <td class="num">${c.obs}</td>
+          <td>${c.obs === 0 ? insignia(c.estado, 'bien', 'bien') : insignia(c.estado, c.prioridad === 'ALTA' ? 'critico' : c.prioridad === 'MEDIA' ? 'serio' : 'aviso', c.prioridad === 'ALTA' ? 'critico' : c.prioridad === 'MEDIA' ? 'serio' : 'aviso')}</td>
+          <td>${esc(c.prioridad)}</td>
+        </tr>`).join('')}
+      </tbody>
+      <tfoot><tr><td></td><td>Total</td><td class="num">${D.expediente.resumen.reduce((s, c) => s + c.obs, 0)}</td><td colspan="2">Formuladas al Proyectista</td></tr></tfoot>
+    </table>
+  </div></div>
+</div>`;
+
+/* ---------- Galeria del proyecto ---------- */
+h += `<div class="seccion">
+  <h2>El proyecto terminado</h2>
+  <p class="nota">${esc(D.renders.nota)} Toque una vista para ampliarla sin salir del tablero.</p>
+  <div class="rejilla g3" style="gap:12px">
+    ${GALERIA.map((v, i) => `
+      <figure class="tarjeta clic" data-render="${i}" style="padding:0;overflow:hidden;margin:0">
+        <img src="${v.uri}" alt="${esc(v.titulo)}" loading="lazy"
+             style="display:block;width:100%;height:170px;object-fit:cover">
+        <figcaption style="padding:12px 14px">
+          <div style="font-weight:700;font-size:.86rem">${esc(v.titulo)}</div>
+          <div style="font-size:.78rem;color:var(--tinta-suave);margin-top:3px">${esc(v.detalle)}</div>
+        </figcaption>
+      </figure>`).join('')}
+  </div>
+  <div class="aviso-caja" style="margin-top:12px">
+    <b>Fuente:</b> memoria descriptiva de arquitectura del expediente técnico —
+    <span class="cod">${esc(D.renders.fuente)}</span>.
+    Son vistas de proyecto, no fotografías de obra ejecutada.
+  </div>
+</div>`;
+
+/* ---------- Accesos y protocolo ---------- */
+h += `<div class="seccion">
+  <h2>Accesos del proyecto</h2>
+  <p class="nota">Los cuatro tableros de detalle. El de honorarios y pagos es reservado y exige una contraseña distinta.</p>
+  <div class="rejilla g2">
+    <a class="tarjeta clic" href="/proyectos/parachique/parachique-cartas" target="_top" style="text-decoration:none;color:inherit">
+      <div class="cifra-rotulo">Tablero</div>
+      <h3 style="margin-top:8px;font-size:1.1rem">Cartas y Respuestas</h3>
+      <p style="font-size:.82rem;color:var(--tinta-suave);margin:8px 0 0">Registro bidireccional de documentos, cadena de trazabilidad y desagregado de los pronunciamientos emitidos.</p>
+      <p style="font-size:.8rem;font-weight:600;color:var(--primario);margin:12px 0 0">Abrir →</p>
+    </a>
+    <a class="tarjeta clic" href="/proyectos/parachique/parachique-fichas" target="_top" style="text-decoration:none;color:inherit">
+      <div class="cifra-rotulo">Tablero</div>
+      <h3 style="margin-top:8px;font-size:1.1rem">Fichas Técnicas</h3>
+      <p style="font-size:.82rem;color:var(--tinta-suave);margin:8px 0 0">Estado de aprobación de los ${num(D.catalogo.length)} códigos de equipo y su incidencia en el presupuesto: cuántas faltan y cuánto representan.</p>
+      <p style="font-size:.8rem;font-weight:600;color:var(--primario);margin:12px 0 0">Abrir →</p>
+    </a>
+    <a class="tarjeta clic" href="/proyectos/parachique/parachique-valorizacion" target="_top" style="text-decoration:none;color:inherit">
+      <div class="cifra-rotulo">Tablero</div>
+      <h3 style="margin-top:8px;font-size:1.1rem">Valorización</h3>
+      <p style="font-size:.82rem;color:var(--tinta-suave);margin:8px 0 0">Marco de valorización proporcional del equipamiento y requisitos previos para habilitar la etapa.</p>
+      <p style="font-size:.8rem;font-weight:600;color:var(--primario);margin:12px 0 0">Abrir →</p>
+    </a>
+    <a class="tarjeta clic" href="/proyectos/parachique/parachique-pagos" target="_top" style="text-decoration:none;color:inherit">
+      <div class="cifra-rotulo">Tablero reservado</div>
+      <h3 style="margin-top:8px;font-size:1.1rem">Honorarios y Pagos</h3>
+      <p style="font-size:.82rem;color:var(--tinta-suave);margin:8px 0 0">Control económico del suscrito. Su contenido no se replica en este tablero ni en los demás.</p>
+      <p style="font-size:.8rem;font-weight:600;color:var(--primario);margin:12px 0 0">Abrir con contraseña →</p>
+    </a>
+  </div>
+
+  <div class="rejilla g2" style="margin-top:14px">
+    <div class="tarjeta clic" id="k-protocolo">
+      <div class="cifra-rotulo">Procedimiento</div>
+      <h3 style="margin-top:8px;font-size:1.1rem">Protocolo de respuesta</h3>
+      <p style="font-size:.82rem;color:var(--tinta-suave);margin:8px 0 0">Los ${D.protocoloRespuesta.length} pasos que sigue todo documento antes de salir, incluida la regla del membrete.</p>
+      <p style="font-size:.8rem;font-weight:600;color:var(--primario);margin:12px 0 0">Ver protocolo →</p>
+    </div>
+    <div class="tarjeta clic" id="k-codigo">
+      <div class="cifra-rotulo">Referencia</div>
+      <h3 style="margin-top:8px;font-size:1.1rem">Codificación de entregables</h3>
+      <p style="font-size:.82rem;color:var(--tinta-suave);margin:8px 0 0">Patrón <span class="cod">${esc(D.codificacion.patron)}</span> y los seis tipos de informe de la especialidad.</p>
+      <p style="font-size:.8rem;font-weight:600;color:var(--primario);margin:12px 0 0">Ver referencia →</p>
+    </div>
+  </div>
+</div>`;
+
+h += pie(D);
+document.getElementById('app').innerHTML = h;
+
+/* ---------- Alertas ---------- */
+document.getElementById('alertas').innerHTML = D.alertas.map((a, i) => {
+  const [clase, icono] = MAPA_NIVEL[a.nivel] || ['neutro', 'neutro'];
+  const tono = clase === 'critico' ? 'critico' : clase === 'serio' ? 'serio' : 'aviso';
+  return `<div class="alerta n-${esc(a.nivel)} tarjeta clic" data-alerta="${i}" style="border-radius:10px">
+    <div class="ico" style="color:var(--${tono})">${ICONOS[icono]}</div>
+    <div>
+      <h4>${esc(a.titulo)}</h4>
+      <p>${esc(a.detalle)}</p>
+      <div class="accion"><b>Acción:</b> ${esc(a.accion)}</div>
+    </div>
+  </div>`;
+}).join('');
+
+document.querySelectorAll('[data-alerta]').forEach((el) => {
+  el.addEventListener('click', () => {
+    const a = D.alertas[+el.dataset.alerta];
+    const [clase, icono] = MAPA_NIVEL[a.nivel];
+    abrirVentana(a.titulo, insignia('Alerta ' + a.nivel.toLowerCase(), clase, icono),
+      `<p style="font-size:.88rem;line-height:1.6">${esc(a.detalle)}</p>
+       <div class="aviso-caja" style="margin-top:16px"><b>Acción recomendada</b><br>${esc(a.accion)}</div>`);
+  });
+});
+
+/* ---------- Grafico de componentes ---------- */
+barrasH(document.getElementById('graf-comp'),
+  D.expediente.resumen.filter((c) => c.obs > 0).sort((a, b) => b.obs - a.obs).map((c) => ({
+    etiqueta: c.componente,
+    valor: c.obs,
+    nota: c.estado,
+    color: c.prioridad === 'ALTA' ? 'var(--critico)' : c.prioridad === 'MEDIA' ? 'var(--serie-2)' : 'var(--serie-1)'
+  })),
+  { formato: (v) => v + ' obs.' });
+
+/* ---------- Ventanas ---------- */
+document.getElementById('k-productos').addEventListener('click', () => {
+  const prods = emitidas.filter((d) => d.clase === 'INFORME');
+  abrirVentana('Productos entregados', `${prods.length} informes de la especialidad`,
+    `<div class="tabla-caja"><div class="tabla-scroll"><table class="datos">
+      <thead><tr><th>Código</th><th>Fecha</th><th>Dirigido a</th><th>Estado</th></tr></thead>
+      <tbody>${prods.map((p) => `<tr><td class="cod">${esc(p.codigo)}</td><td style="white-space:nowrap">${fechaCorta(p.fecha)}</td><td style="font-size:.78rem">${esc(p.contraparte)}</td><td>${insigniaEstado(p.estado)}</td></tr>`).join('')}</tbody>
+    </table></div></div>
+    <div class="aviso-caja" style="margin-top:14px">El detalle documento por documento está en el tablero <b>Cartas y Respuestas</b>.</div>`);
+});
+
+document.getElementById('k-recibidas').addEventListener('click', () => {
+  abrirVentana('Documentos del Contratista', `${recibidas.length} recibido(s) · ${porAtender} por absolver`,
+    recibidas.map((r) => `<dl class="dl">
+      <dt>Documento</dt><dd class="cod">${esc(r.codigo)}</dd>
+      <dt>Fecha</dt><dd>${fecha(r.fecha)}</dd>
+      <dt>Estado</dt><dd>${insigniaEstado(r.estado)}</dd>
+      <dt>Atendido por</dt><dd class="cod">${esc(r.respondidaPor || '— pendiente —')}</dd>
+      <dt>Contenido</dt><dd>${esc(r.detalle)}</dd>
+    </dl>`).join('<hr style="border:0;border-top:1px solid var(--borde);margin:16px 0">'));
+});
+
+document.getElementById('k-pendientes').addEventListener('click', () => {
+  abrirVentana('Asuntos pendientes del Proyectista', `${D.observaciones.pendientesProyectista} sin pronunciamiento`,
+    `<p style="font-size:.88rem;line-height:1.6">Al cierre del último informe mensual quedan
+      <b>${D.observaciones.pendientesProyectista} asuntos</b> a la espera de pronunciamiento de
+      ${esc(D.meta.proyectista)}. Provienen de dos frentes:</p>
+     <dl class="dl" style="margin-top:14px">
+       <dt>Observaciones de compatibilidad</dt><dd>${D.observaciones.total} formuladas por la Supervisión sobre el expediente técnico.</dd>
+       <dt>Extremos trasladados</dt><dd>${D.pronunciamientos.reduce((s, p) => s + p.trasladadas, 0)} extremos de las consultas del Contratista cuya absolución corresponde al Proyectista.</dd>
+     </dl>
+     <div class="aviso-caja" style="margin-top:16px">
+       Mientras no se absuelvan, no se puede cerrar la compatibilización ni habilitar la aprobación
+       de las EETT, requisito previo de la etapa de valorización.
+     </div>`);
+});
+
+document.getElementById('k-plazo').addEventListener('click', () => {
+  abrirVentana('Plazo de participación', `${diasRestantes} días restantes`,
+    `<dl class="dl">
+      <dt>Plazo pactado</dt><dd>${D.meta.plazoDias} días calendario</dd>
+      <dt>Inicio de servicio</dt><dd>${fecha(D.meta.inicioServicio)}</dd>
+      <dt>Término estimado</dt><dd>${fecha(D.meta.finServicio)}</dd>
+      <dt>Transcurridos</dt><dd>${transcurridos} días (${pctPlazo}%)</dd>
+      <dt>Restantes</dt><dd><b>${diasRestantes} días</b></dd>
+    </dl>
+    <div class="aviso-caja" style="margin-top:16px">${esc(D.meta.notaPlazo)}</div>`);
+});
+
+document.getElementById('k-protocolo').addEventListener('click', () => {
+  abrirVentana('Protocolo de respuesta', 'Se aplica a todo documento antes de su emisión',
+    `<div class="aviso-caja" style="margin-bottom:16px;border-style:solid;border-color:var(--critico)">
+      <b>Regla del membrete — no negociable.</b><br>${esc(D.membrete.regla)}
+      <div class="ruta">${esc(D.membrete.ruta)}</div>
+      <div style="margin-top:10px"><button class="btn" onclick="copiar('${esc(D.membrete.ruta).replace(/\\/g, '\\\\')}')">Copiar ruta del membrete</button></div>
+    </div>
+    <ol class="pasos">${D.protocoloRespuesta.map((p) => `<li>${esc(p)}</li>`).join('')}</ol>`);
+});
+
+document.getElementById('k-codigo').addEventListener('click', () => {
+  abrirVentana('Codificación de entregables', esc(D.codificacion.patron),
+    `<div class="tabla-caja"><div class="tabla-scroll"><table class="datos">
+      <thead><tr><th>Tipo</th><th>Descripción</th></tr></thead>
+      <tbody>${D.codificacion.tipos.map((t) => `<tr><td class="cod">${esc(t.tipo)}</td><td>${esc(t.descripcion)}</td></tr>`).join('')}</tbody>
+    </table></div></div>
+    <p style="font-size:.82rem;color:var(--tinta-suave);margin-top:10px">${esc(D.codificacion.nota)}
+    Ejemplo: <span class="cod">INF-SUP-MEN-EQ-DLVM-002-260831</span> es el segundo informe mensual, emitido el 31/08/2026.</p>`);
+});
+
+document.getElementById('k-fichas').addEventListener('click', () => {
+  const total = D.presupuesto.total;
+  abrirVentana('Aprobación de fichas técnicas',
+    `${aprobadasFicha} de ${D.catalogo.length} códigos aprobados`,
+    `<p style="font-size:.88rem;line-height:1.6">La etapa vigente de la especialidad es la revisión de los
+      sustentos del Contratista. Cada uno de los ${D.catalogo.length} códigos de equipo requiere una ficha
+      técnica que acredite que el bien ofertado cumple la especificación del expediente.</p>
+     <dl class="dl" style="margin-top:14px">
+       <dt>Aprobadas</dt><dd>${aprobadasFicha} códigos</dd>
+       <dt>Por aprobar</dt><dd><b>${porAprobar.length} códigos</b> — ${soles(montoPorAprobar)} (${(montoPorAprobar / total * 100).toFixed(1)}% del presupuesto)</dd>
+       <dt>Presupuesto de equipamiento</dt><dd>${soles(total)} · ${D.catalogo.length} códigos · ${num(D.catalogo.reduce((s, c) => s + c.cant, 0))} unidades</dd>
+       <dt>Monto valorizable a la fecha</dt><dd>${soles(0)} — no hay entregas en obra</dd>
+     </dl>
+     <div class="aviso-caja" style="margin-top:16px">
+       Aprobar una ficha técnica <b>no habilita pago</b>. El importe asociado sirve para dimensionar el
+       avance de la revisión. El detalle código por código está en el tablero <b>Fichas Técnicas</b>.
+     </div>`);
+});
+
+document.querySelectorAll('[data-comp]').forEach((el) => {
+  el.addEventListener('click', () => {
+    const c = D.expediente.resumen.find((x) => x.n === +el.dataset.comp);
+    const tono = c.prioridad === 'ALTA' ? 'critico' : c.prioridad === 'MEDIA' ? 'serio' : 'aviso';
+    abrirVentana(`Componente ${c.n} — ${c.componente}`,
+      `${c.obs} observación${c.obs === 1 ? '' : 'es'} · prioridad máxima ${esc(c.prioridad)}`,
+      `<dl class="dl">
+        <dt>Componente</dt><dd>${esc(c.componente)}</dd>
+        <dt>Archivo editable</dt><dd class="cod">${esc(c.archivo)}</dd>
+        <dt>Observaciones</dt><dd>${c.obs}</dd>
+        <dt>Estado</dt><dd>${c.obs === 0 ? insignia(c.estado, 'bien', 'bien') : insignia(c.estado, tono, tono)}</dd>
+        <dt>Prioridad máxima</dt><dd>${esc(c.prioridad)}</dd>
+      </dl>
+      <div class="aviso-caja" style="margin-top:16px">
+        El detalle de cada observación —ubicación interna, sustento normativo y recomendación al
+        Proyectista— consta en la hoja <b>Matriz de Observaciones</b> de
+        <span class="cod">INF-SUP-COMPATIB-EQ-DLVM-001-2026-PARACHIQUE_MATRIZ.xlsx</span>.
+        La columna <b>Folio Escaneado</b> se completa a mano tras el cotejo con el expediente firmado y sellado.
+      </div>`);
+  });
+});
+
+document.querySelectorAll('[data-render]').forEach((el) => {
+  el.addEventListener('click', () => {
+    const v = GALERIA[+el.dataset.render];
+    abrirVentana(v.titulo, `Vista de proyecto · ${esc(v.archivo)}`,
+      `<img src="${v.uri}" alt="${esc(v.titulo)}" style="display:block;width:100%;border-radius:10px;border:1px solid var(--borde)">
+       <p style="font-size:.86rem;margin:14px 0 0">${esc(v.detalle)}</p>
+       <div class="aviso-caja" style="margin-top:14px">${esc(D.renders.nota)}</div>`);
+  });
+});
+
+crearFiltros({
+  contenedor: 'filtros-comp',
+  tabla: 't-comp',
+  resumen: 'resumen-comp',
+  unidad: 'componentes',
+  placeholder: 'Buscar componente…',
+  campos: [
+    { clave: 'obs',       etiqueta: 'Observaciones' },
+    { clave: 'prioridad', etiqueta: 'Prioridad' },
+    { clave: 'estado',    etiqueta: 'Estado' },
+    { clave: 'archivo',   etiqueta: 'Archivo editable' },
+  ],
+  excel: {
+    hoja: 'Componentes del expediente',
+    archivo: 'CS-PARACHIQUE_componentes_expediente',
+    proyecto: D.meta.proyecto,
+    subtitulo: `CUI N° ${D.meta.cui} · Resultado de la compatibilización por componente del expediente técnico`,
+    supervisor: D.meta.supervisor,
+    cip: D.meta.cip,
+    supervision: D.meta.supervision,
+    propietario: D.meta.supervisor,
+  },
+});
+
+activarTips(document);
+</script>
+</body>
+</html>

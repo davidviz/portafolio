@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cartas y Respuestas — CS Parachique</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>/*__CSS__*/</style>
+</head>
+<body>
+<div class="envoltura" id="app"></div>
+<script>/*__JS__*/</script>
+<script>
+/* Este tablero se comparte con el Consorcio y la Entidad: el generador le
+   entrega los datos SIN los honorarios ni la informacion economica del suscrito. */
+const D = /*__DATOS__*/ null;
+
+const recibidas = D.documentos.filter((d) => d.flujo === 'RECIBIDA');
+const emitidas = D.documentos.filter((d) => d.flujo === 'EMITIDA');
+const pendientes = recibidas.filter((d) => d.estado !== 'ATENDIDA');
+const pronunciamientos = D.documentos.filter((d) => d.numeral === '2.3' && d.flujo === 'EMITIDA');
+const sinMembrete = emitidas.filter((d) => !d.membrete && d.clase === 'INFORME').length;
+
+let h = `
+<header class="cabecera">
+  <div>
+    <p class="kicker">Supervisión de equipamiento · Trazabilidad documental</p>
+    <h1>Cartas y Respuestas</h1>
+    <p class="sub">Registro bidireccional de la especialidad: lo que entra y exige pronunciamiento, y lo que sale con el membrete oficial. Cada documento enlaza con el que responde y con el honorario que devenga.</p>
+  </div>
+  ${sello(D)}
+</header>`;
+
+h += `<div class="rejilla g4">
+  <div class="tarjeta"><div class="cifra-rotulo">Documentos recibidos</div><div class="cifra">${recibidas.length}</div><div class="cifra-pie">Informes del Contratista que exigen pronunciamiento</div></div>
+  <div class="tarjeta"><div class="cifra-rotulo">Pendientes de atender</div><div class="cifra" style="color:${pendientes.length ? 'var(--critico)' : 'var(--bien)'}">${pendientes.length}</div><div class="cifra-pie">${pendientes.length ? 'Requieren pronunciamiento' : 'Todo lo recibido está absuelto'}</div></div>
+  <div class="tarjeta"><div class="cifra-rotulo">Documentos emitidos</div><div class="cifra">${emitidas.length}</div><div class="cifra-pie">${emitidas.filter((d) => d.clase === 'INFORME').length} informes · ${emitidas.filter((d) => d.clase === 'CARTA').length} cartas</div></div>
+  <div class="tarjeta clic" id="k-23"><div class="cifra-rotulo">Extremos absueltos</div><div class="cifra" style="color:var(--serie-3)">${D.pronunciamientos.reduce((s, p) => s + p.extremos, 0)}</div><div class="cifra-pie">En ${pronunciamientos.length} pronunciamiento${pronunciamientos.length === 1 ? '' : 's'} · numeral 2.3</div></div>
+</div>`;
+
+/* ---------- Regla del membrete ---------- */
+h += `<div class="seccion">
+  <div class="alerta ${sinMembrete ? 'n-CRITICA' : ''}" style="border-left-color:${sinMembrete ? 'var(--critico)' : 'var(--bien)'}">
+    <div class="ico" style="color:var(--${sinMembrete ? 'critico' : 'bien'})">${sinMembrete ? ICONOS.critico : ICONOS.bien}</div>
+    <div>
+      <h4>Control de membrete oficial</h4>
+      <p>${sinMembrete
+        ? `${sinMembrete} documento(s) emitido(s) sin registro de membrete. Ningún entregable sale sin el membrete de la supervisión.`
+        : `Todos los informes emitidos registran el membrete oficial de ${esc(D.meta.supervision)}.`}</p>
+      <div class="accion"><b>Archivo base:</b> <span class="cod">${esc(D.membrete.archivo)}</span>
+        <button class="btn" style="margin-left:8px;padding:3px 9px" onclick="copiar('${esc(D.membrete.ruta).replace(/\\/g, '\\\\')}')">Copiar ruta</button>
+      </div>
+    </div>
+  </div>
+</div>`;
+
+/* ---------- Cadena de trazabilidad ---------- */
+h += `<div class="seccion">
+  <h2>Cadena de trazabilidad</h2>
+  <p class="nota">Qué documento responde a cuál. Toque cualquiera de las dos piezas para abrir su ficha.</p>
+  <div class="rejilla" style="gap:10px">
+  ${recibidas.map((r) => {
+    const resp = emitidas.find((e) => e.codigo === r.respondidaPor);
+    return `<div class="tarjeta" style="padding:0;overflow:hidden">
+      <div style="display:grid;grid-template-columns:1fr 44px 1fr;align-items:stretch">
+        <div class="clic" data-doc="${esc(r.id)}" style="padding:16px 18px;cursor:pointer">
+          <div class="cifra-rotulo" style="color:var(--serie-2)">Recibida · ${fechaCorta(r.fecha)}</div>
+          <div style="font-weight:700;margin-top:6px;font-size:.9rem">${esc(r.codigo)}</div>
+          <div style="font-size:.8rem;color:var(--tinta-suave);margin-top:4px">${esc(r.asunto)}</div>
+          <div style="margin-top:9px">${insigniaEstado(r.estado)}</div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;background:var(--superficie-2);border-left:1px solid var(--borde);border-right:1px solid var(--borde);color:var(--tinta-tenue);font-size:18px">&rarr;</div>
+        <div class="clic" data-doc="${resp ? esc(resp.id) : ''}" style="padding:16px 18px;cursor:${resp ? 'pointer' : 'default'}">
+          ${resp ? `
+            <div class="cifra-rotulo" style="color:var(--serie-3)">Emitida · ${fechaCorta(resp.fecha)}</div>
+            <div style="font-weight:700;margin-top:6px;font-size:.9rem" class="cod">${esc(resp.codigo)}</div>
+            <div style="font-size:.8rem;color:var(--tinta-suave);margin-top:4px">${esc(resp.asunto)}</div>
+            <div style="margin-top:9px">${insigniaEstado(resp.estado)} ${insignia('Numeral ' + resp.numeral, 'info', 'info')}</div>
+          ` : `<div class="cifra-rotulo" style="color:var(--critico)">Sin respuesta emitida</div>
+               <div style="font-size:.82rem;color:var(--tinta-suave);margin-top:8px">Pendiente de pronunciamiento de la Supervisión.</div>`}
+        </div>
+      </div>
+    </div>`;
+  }).join('')}
+  </div>
+</div>`;
+
+/* ---------- Registro completo ---------- */
+h += `<div class="seccion">
+  <h2>Registro documental</h2>
+  <p class="nota">Todos los documentos del expediente de supervisión, en orden cronológico. Toque una fila para abrir su ficha sin salir del tablero.</p>
+  <div id="filtros"></div>
+  <div id="resumen"></div>
+  <div class="tabla-caja"><div class="tabla-scroll">
+    <table class="datos" id="t-docs">
+      <thead><tr><th>Fecha</th><th>Flujo</th><th>Código</th><th>Asunto</th><th>Etapa</th><th>Estado</th><th>Num.</th><th>Membrete</th></tr></thead>
+      <tbody>${[...D.documentos].sort((a, b) => a.fecha.localeCompare(b.fecha)).map((d) => `
+        <tr class="clic" data-doc="${esc(d.id)}"
+          data-f-flujo="${d.flujo === 'RECIBIDA' ? 'Recibida' : 'Emitida'}"
+          data-f-clase="${esc(d.clase)}"
+          data-f-etapa="${esc((D.etapas.find((e) => e.id === d.etapa) || {}).nombre || 'Sin etapa')}"
+          data-f-estado="${esc(d.estado)}"
+          data-f-membrete="${d.flujo === 'RECIBIDA' ? 'No aplica' : (d.membrete ? 'Con membrete' : (d.clase === 'CARTA' ? 'No aplica' : 'Sin membrete'))}">
+          <td style="white-space:nowrap">${fechaCorta(d.fecha)}</td>
+          <td>${d.flujo === 'RECIBIDA' ? insignia('Recibida', 'serio', 'serio') : insignia('Emitida', 'info', 'info')}</td>
+          <td class="cod">${esc(d.codigo)}</td>
+          <td>${esc(d.asunto)}<div style="font-size:.75rem;color:var(--tinta-tenue);margin-top:3px">${esc(d.contraparte)}</div></td>
+          <td style="font-size:.74rem">${esc((D.etapas.find((e) => e.id === d.etapa) || {}).nombre || '—')}</td>
+          <td>${insigniaEstado(d.estado)}</td>
+          <td>${d.numeral ? esc(d.numeral) : '—'}</td>
+          <td>${insigniaMembrete(d, true)}</td>
+        </tr>`).join('')}
+      </tbody>
+      <tfoot><tr><td colspan="8">${D.documentos.length} documentos registrados · ${recibidas.length} recibido(s) y ${emitidas.length} emitido(s)</td></tr></tfoot>
+    </table>
+  </div></div>
+</div>`;
+
+/* ---------- Desagregado del pronunciamiento ---------- */
+D.pronunciamientos.forEach((p, idx) => {
+  h += `<div class="seccion">
+    <h2>Desagregado del pronunciamiento N° ${String(idx + 1).padStart(3, '0')}</h2>
+    <p class="nota"><span class="cod">${esc(p.informe)}</span> absuelve <b>${esc(p.documentoAbsuelto)}</b>: ${p.observaciones} observaciones desagregadas en ${p.extremos} extremos, con pronunciamiento individual sobre cada uno.</p>
+
+    <div class="rejilla g3" style="margin-bottom:14px">
+      <div class="tarjeta"><div class="cifra-rotulo">Confirmadas</div><div class="cifra" style="color:var(--serie-1)">${p.confirmadas}</div><div class="cifra-pie">La Supervisión hace suya la observación</div></div>
+      <div class="tarjeta"><div class="cifra-rotulo">Trasladadas al Proyectista</div><div class="cifra" style="color:var(--serie-2)">${p.trasladadas}</div><div class="cifra-pie">Corresponde absolución de ARQ.CONST ALFA 360</div></div>
+      <div class="tarjeta"><div class="cifra-rotulo">Ya absueltas</div><div class="cifra" style="color:var(--serie-3)">${p.yaAbsueltas}</div><div class="cifra-pie">Resueltas en el expediente vigente</div></div>
+    </div>
+
+    <div class="grafico" style="margin-bottom:14px">
+      <h3>Distribución de los ${p.extremos} extremos</h3>
+      <p class="sub">Cada extremo recibió pronunciamiento individual. La suma cierra en ${p.extremos}.</p>
+      <div class="barra">
+        <div data-tip="Confirmadas|${p.confirmadas} extremos" style="width:${(p.confirmadas / p.extremos * 100).toFixed(1)}%;background:var(--serie-1)">${p.confirmadas}</div>
+        <div data-tip="Trasladadas al Proyectista|${p.trasladadas} extremos" style="width:${(p.trasladadas / p.extremos * 100).toFixed(1)}%;background:var(--serie-2)">${p.trasladadas}</div>
+        <div data-tip="Ya absueltas|${p.yaAbsueltas} extremos" style="width:${(p.yaAbsueltas / p.extremos * 100).toFixed(1)}%;background:var(--serie-3)">${p.yaAbsueltas}</div>
+      </div>
+      <div class="leyenda">
+        <span><i style="background:var(--serie-1)"></i>Confirmadas — ${p.confirmadas}</span>
+        <span><i style="background:var(--serie-2)"></i>Trasladadas — ${p.trasladadas}</span>
+        <span><i style="background:var(--serie-3)"></i>Ya absueltas — ${p.yaAbsueltas}</span>
+      </div>
+    </div>
+
+    <div class="tabla-caja"><div class="tabla-scroll">
+      <table class="datos">
+        <thead><tr><th>Obs.</th><th>Equipo / materia</th><th>Ubicación en expediente</th><th class="num">Extremos</th><th class="num">Confirm.</th><th class="num">Traslad.</th><th class="num">Ya abs.</th></tr></thead>
+        <tbody>${p.detalle.map((o) => `
+          <tr>
+            <td class="cod">${esc(o.obs)}</td>
+            <td><b>${esc(o.equipo)}</b></td>
+            <td style="font-size:.76rem;color:var(--tinta-suave)">${esc(o.ubicacion)}</td>
+            <td class="num">${o.extremos}</td>
+            <td class="num">${o.confirmadas || '—'}</td>
+            <td class="num">${o.trasladadas || '—'}</td>
+            <td class="num">${o.yaAbsueltas || '—'}</td>
+          </tr>`).join('')}
+        </tbody>
+        <tfoot><tr><td colspan="3">Totales</td><td class="num">${p.extremos}</td><td class="num">${p.confirmadas}</td><td class="num">${p.trasladadas}</td><td class="num">${p.yaAbsueltas}</td></tr></tfoot>
+      </table>
+    </div></div>
+  </div>`;
+});
+
+/* ---------- Protocolo ---------- */
+h += `<div class="seccion">
+  <h2>Protocolo de respuesta</h2>
+  <p class="nota">Secuencia obligatoria antes de emitir cualquier documento de la especialidad.</p>
+  <div class="tarjeta"><ol class="pasos">${D.protocoloRespuesta.map((p) => `<li>${esc(p)}</li>`).join('')}</ol></div>
+</div>`;
+
+h += pie(D);
+document.getElementById('app').innerHTML = h;
+
+/* ---------- Interacciones ---------- */
+document.querySelectorAll('[data-doc]').forEach((el) => {
+  const id = el.dataset.doc;
+  if (!id) return;
+  el.addEventListener('click', () => {
+    const d = D.documentos.find((x) => x.id === id);
+    if (d) fichaDocumento(d, D.etapas);
+  });
+});
+
+document.getElementById('k-23').addEventListener('click', () => {
+  const p = D.pronunciamientos[0];
+  abrirVentana('Pronunciamientos de la especialidad', 'Regla de devengo del numeral 2.3',
+    `<div class="aviso-caja" style="border-style:solid;border-color:var(--primario)">
+      <b>Un pronunciamiento por cada informe del Contratista.</b><br>
+      El honorario del numeral 2.3 se devenga por cada informe, carta o sustento del Contratista que
+      requiera pronunciamiento de la especialidad. Agrupar, consolidar o reenviar varios informes en
+      una sola comunicación no reduce el número de pronunciamientos: cada uno se emite y se factura
+      de manera individual, con independencia del informe mensual de supervisión.
+    </div>
+    <div class="cifra-rotulo" style="margin:20px 0 8px">Pronunciamientos emitidos</div>
+    <div class="tabla-caja"><div class="tabla-scroll"><table class="datos">
+      <thead><tr><th>Pronunciamiento</th><th>Absuelve</th><th class="num">Extremos</th></tr></thead>
+      <tbody>${D.pronunciamientos.map((x) => `<tr><td class="cod">${esc(x.informe)}</td><td style="font-size:.78rem">${esc(x.documentoAbsuelto)}</td><td class="num">${x.extremos}</td></tr>`).join('')}</tbody>
+    </table></div></div>
+    <p style="font-size:.8rem;color:var(--tinta-suave);margin-top:10px">
+      El desglose económico de cada pronunciamiento se lleva en el tablero reservado
+      <b>Honorarios y Pagos</b>.</p>`);
+});
+
+crearFiltros({
+  contenedor: 'filtros',
+  tabla: 't-docs',
+  resumen: 'resumen',
+  unidad: 'documentos',
+  placeholder: 'Buscar por código, asunto o contraparte…',
+  campos: [
+    { clave: 'flujo',    etiqueta: 'Flujo' },
+    { clave: 'clase',    etiqueta: 'Clase' },
+    { clave: 'etapa',    etiqueta: 'Etapa' },
+    { clave: 'estado',   etiqueta: 'Estado' },
+    { clave: 'membrete', etiqueta: 'Membrete' },
+  ],
+  excel: {
+    hoja: 'Registro documental',
+    archivo: 'CS-PARACHIQUE_registro_documental',
+    proyecto: D.meta.proyecto,
+    subtitulo: `CUI N° ${D.meta.cui} · Registro bidireccional de cartas e informes de la especialidad de equipamiento`,
+    supervisor: D.meta.supervisor,
+    cip: D.meta.cip,
+    supervision: D.meta.supervision,
+    propietario: D.meta.supervisor,
+  },
+});
+activarTips(document);
+</script>
+</body>
+</html>

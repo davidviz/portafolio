@@ -1,0 +1,66 @@
+name: Publicar panel CS Parachique
+
+# Regenera los cinco tableros de CS Parachique y los publica en Supabase.
+# El portafolio los lee en cada visita, así que no hace falta desplegar nada.
+#
+# Se dispara solo:
+#   · al subir un cambio en panel/**            (edición del contenido)
+#   · cada 6 horas                              (por si cambió la hoja de cálculo)
+#   · desde el botón «Run workflow»             (a mano, cuando se quiera)
+#   · con un repository_dispatch «panel-cambio» (para un vigía como el de HRDT)
+#
+# Usa los mismos secretos que ya tiene el repositorio:
+#   SUPABASE_URL          ->  https://TU-REF.supabase.co
+#   SUPABASE_SERVICE_KEY  ->  service_role key
+#
+# Nunca toca password_hash ni es_publico: publicar contenido no cambia quién
+# puede entrar. Tampoco toca ningún tablero de HRDT.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "panel/**"
+      - ".github/workflows/publicar-parachique.yml"
+  schedule:
+    - cron: "20 */6 * * *"
+  workflow_dispatch:
+  repository_dispatch:
+    types: [panel-cambio]
+
+concurrency:
+  group: publicar-parachique
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Traer el repositorio
+        uses: actions/checkout@v4
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar Pillow
+        run: pip install --quiet Pillow
+
+      - name: Generar los tableros
+        run: python panel/generar.py
+
+      - name: Publicar en Supabase
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python panel/publicar.py
+
+      - name: Resumen
+        if: always()
+        run: |
+          echo "### Panel CS Parachique" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "Disparo: \`${{ github.event_name }}\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "https://portafolio-alpha-brown-61.vercel.app/proyectos/parachique" >> "$GITHUB_STEP_SUMMARY"

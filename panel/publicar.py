@@ -1,0 +1,114 @@
+# -*- coding: utf-8 -*-
+"""
+PUBLICADOR DEL PANEL CS PARACHIQUE  —  lo ejecuta GitHub Actions
+================================================================
+Sube a Supabase los tableros generados por `panel/generar.py` y refresca la
+ficha del proyecto. Usa la clave de servicio que ya vive como secreto del
+repositorio, de modo que nadie tiene que escribir ninguna contraseña.
+
+    SUPABASE_URL=... SUPABASE_SERVICE_KEY=... python panel/publicar.py
+
+QUÉ TOCA Y QUÉ NO
+  · Actualiza: html, nombre, objetivo, icono, orden, actualizado_en.
+  · NO toca:  password_hash ni es_publico. Publicar contenido nunca cambia
+              quién puede entrar. Las contraseñas se administran desde /admin.
+  · No toca ningún tablero que no empiece por «parachique-».
+"""
+
+import json
+import os
+import sys
+import urllib.error
+import urllib.request
+from datetime import datetime, timezone
+from pathlib import Path
+
+BASE = Path(__file__).resolve().parent
+SALIDA = BASE / "salida"
+
+URL = (os.environ.get("SUPABASE_URL") or "").rstrip("/")
+KEY = os.environ.get("SUPABASE_SERVICE_KEY") or ""
+
+
+def rest(metodo, camino, cuerpo=None, extra=None):
+    datos = json.dumps(cuerpo).encode("utf-8") if cuerpo is not None else None
+    req = urllib.request.Request(f"{URL}/rest/v1/{camino}", data=datos, method=metodo)
+    req.add_header("apikey", KEY)
+    req.add_header("Authorization", f"Bearer {KEY}")
+    req.add_header("Content-Type", "application/json")
+    req.add_header("Prefer", extra or "return=representation")
+    try:
+        with urllib.request.urlopen(req, timeout=180) as r:
+            texto = r.read().decode("utf-8")
+            return r.status, (json.loads(texto) if texto.strip() else [])
+    except urllib.error.HTTPError as e:
+        return e.code, {"error": e.read().decode("utf-8", "ignore")[:400]}
+
+
+def main() -> int:
+    if not URL or not KEY:
+        print("ERROR: faltan SUPABASE_URL o SUPABASE_SERVICE_KEY.")
+        return 1
+
+    carpetas = sorted((SALIDA / "dashboards").glob("parachique-*"))
+    if not carpetas:
+        print("ERROR: no hay tableros en panel/salida. Ejecute antes panel/generar.py")
+        return 1
+
+    estado, existentes = rest("GET", "dashboards?select=slug,id&proyecto_slug=eq.parachique")
+    if estado != 200:
+        print(f"ERROR leyendo tableros ({estado}): {existentes}")
+        return 1
+    conocidos = {d["slug"] for d in existentes}
+
+    ahora = datetime.now(timezone.utc).isoformat()
+    fallos = 0
+    for carpeta in carpetas:
+        meta = json.loads((carpeta / "meta.json").read_text(encoding="utf-8"))
+        html = (carpeta / "dashboard.html").read_text(encoding="utf-8")
+        slug = meta["slug"]
+
+        campos = {
+            "nombre": meta["nombre"],
+            "objetivo": meta["objetivo"],
+            "icono": meta["icono"],
+            "orden": meta["orden"],
+            "html": html,
+            "actualizado_en": ahora,
+        }
+
+        if slug in conocidos:
+            estado, resp = rest("PATCH", f"dashboards?slug=eq.{slug}", campos, "return=minimal")
+            accion = "actualizado"
+        else:
+            # Alta solo si aún no existe. Nace privado y sin contraseña: se le
+            # asigna desde /admin, para no dejar claves escritas en el repo.
+            campos.update({"slug": slug, "proyecto_slug": "parachique", "es_publico": False})
+            estado, resp = rest("POST", "dashboards", campos, "return=minimal")
+            accion = "creado (asigne su contraseña en /admin)"
+
+        if estado in (200, 201, 204):
+            print(f"  {slug:26s} {accion:38s} {len(html)/1024:7.0f} KB")
+        else:
+            print(f"  {slug:26s} ERROR {estado}: {resp}")
+            fallos += 1
+
+    # Portada del proyecto
+    portada = SALIDA / "portada.txt"
+    if portada.exists():
+        estado, resp = rest("PATCH", "proyectos?slug=eq.parachique",
+                            {"imagen_url": portada.read_text(encoding="utf-8").strip()},
+                            "return=minimal")
+        print(f"  portada del proyecto        {'actualizada' if estado in (200, 204) else f'ERROR {estado}: {resp}'}")
+        if estado not in (200, 204):
+            fallos += 1
+
+    if fallos:
+        print(f"\nTerminó con {fallos} error(es).")
+        return 1
+    print("\nPublicado. https://portafolio-alpha-brown-61.vercel.app/proyectos/parachique")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Valorización — CS Parachique</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>/*__CSS__*/</style>
+</head>
+<body>
+<div class="envoltura" id="app"></div>
+<script>/*__JS__*/</script>
+<script>
+const D = /*__DATOS__*/ null;
+const V = D.valorizacion;
+
+const listos = V.requisitosPrevios.filter((r) => r.estado === 'CUMPLIDO').length;
+const pctReq = Math.round((listos / V.requisitosPrevios.length) * 100);
+const pctUnid = V.universo.unidades ? Math.round((V.avance.unidadesVerificadas / V.universo.unidades) * 100) : 0;
+
+let h = `
+<header class="cabecera">
+  <div>
+    <p class="kicker">Supervisión de equipamiento · Fase 5</p>
+    <h1>Valorización</h1>
+    <p class="sub">Marco de valorización del equipamiento del CS Parachique. La etapa aún no se ha activado: este tablero deja montada la estructura, la regla de cálculo y los requisitos que deben cumplirse antes de la primera valorización.</p>
+  </div>
+  ${sello(D)}
+</header>`;
+
+/* ---------- Estado ---------- */
+h += `<div class="alerta" style="border-left-color:var(--aviso)">
+  <div class="ico" style="color:var(--aviso)">${ICONOS.reloj}</div>
+  <div>
+    <h4>Etapa ${esc(V.estado.toLowerCase())}</h4>
+    <p>${esc(V.nota)}</p>
+    <div class="accion"><b>Habilitación:</b> ${listos} de ${V.requisitosPrevios.length} requisitos previos cumplidos. La valorización no puede emitirse mientras las EETT no estén aprobadas y no existan entregas verificadas en obra.</div>
+  </div>
+</div>`;
+
+/* ---------- Cifras ---------- */
+h += `<div class="rejilla g4" style="margin-top:20px">
+  <div class="tarjeta"><div class="cifra-rotulo">Universo de códigos</div><div class="cifra">${num(V.universo.codigos)}</div><div class="cifra-pie">Códigos de equipo del expediente aprobado</div></div>
+  <div class="tarjeta"><div class="cifra-rotulo">Universo de unidades</div><div class="cifra">${num(V.universo.unidades)}</div><div class="cifra-pie">Valor de expediente: ${soles(V.universo.monto)}</div></div>
+  <div class="tarjeta"><div class="cifra-rotulo">Unidades entregadas</div><div class="cifra" style="color:var(--tinta-tenue)">${num(V.avance.unidadesEntregadas)}</div><div class="cifra-pie">Recepcionadas en obra por el Contratista</div></div>
+  <div class="tarjeta"><div class="cifra-rotulo">Unidades verificadas</div><div class="cifra" style="color:var(--tinta-tenue)">${num(V.avance.unidadesVerificadas)}</div><div class="cifra-pie">Con V°B° de la Supervisión — base de pago</div></div>
+</div>`;
+
+/* ---------- Avance ---------- */
+h += `<div class="seccion">
+  <h2>Avance de valorización</h2>
+  <p class="nota">Se valoriza únicamente lo verificado por la Supervisión, no lo simplemente entregado.</p>
+  <div class="grafico">
+    <div class="barra" data-tip="Avance de valorización|${V.avance.unidadesVerificadas} de ${num(V.universo.unidades)} unidades verificadas">
+      ${pctUnid > 0 ? `<div style="width:${pctUnid}%;background:var(--serie-3)">${pctUnid}%</div>` : ''}
+      <div style="width:${100 - pctUnid}%;background:var(--borde-fuerte);color:var(--tinta)">${100 - pctUnid}% por valorizar</div>
+    </div>
+    <div class="leyenda">
+      <span><i style="background:var(--serie-3)"></i>Verificado y valorizable — ${num(V.avance.unidadesVerificadas)} unidades</span>
+      <span><i style="background:var(--borde-fuerte)"></i>Por entregar o verificar — ${num(V.universo.unidades - V.avance.unidadesVerificadas)} unidades</span>
+    </div>
+  </div>
+</div>`;
+
+/* ---------- Regla de calculo ---------- */
+h += `<div class="seccion">
+  <h2>Regla de cálculo</h2>
+  <p class="nota">Criterio de valorización proporcional aplicado por la Supervisión de equipamiento.</p>
+  <div class="rejilla g2">
+    <div class="tarjeta">
+      <div class="cifra-rotulo">Principio</div>
+      <p style="font-size:.88rem;margin:10px 0 0;line-height:1.6">Se valoriza <b>proporcionalmente a lo efectivamente entregado y verificado</b>. La cantidad prevista en el expediente es el techo, nunca el monto automático a pagar.</p>
+      <div class="aviso-caja" style="margin-top:14px">
+        <b>Ejemplo.</b> Si una partida prevé 10 sillas y el Contratista entrega 7 conformes,
+        se valoriza el equivalente a 7 unidades. Las 3 restantes quedan como saldo por valorizar
+        en el periodo siguiente, no como observación de descuento.
+      </div>
+    </div>
+    <div class="tarjeta">
+      <div class="cifra-rotulo">Condiciones para valorizar una unidad</div>
+      <ol class="pasos" style="margin-top:10px">
+        <li>El equipo cuenta con EETT aprobadas por la Entidad.</li>
+        <li>El equipo fue entregado en obra y consta en el acta de recepción.</li>
+        <li>El protocolo de prueba correspondiente está llenado y cuenta con V°B° de la Supervisión.</li>
+        <li>Los anexos exigibles a ese equipo están completos según la matriz de anexos.</li>
+        <li>La preinstalación del ambiente destino fue verificada en campo.</li>
+      </ol>
+    </div>
+  </div>
+</div>`;
+
+/* ---------- Hitos de pago ---------- */
+h += `<div class="seccion">
+  <h2>Hitos de pago por unidad</h2>
+  <p class="nota">${esc(V.notaHitos)}</p>
+  <div class="rejilla" style="gap:10px">
+  ${V.hitos.map((x) => `
+    <div class="tarjeta" style="display:grid;grid-template-columns:44px 1fr auto;gap:16px;align-items:start">
+      <div style="width:36px;height:36px;border-radius:10px;background:var(--primario);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--display)">${x.orden}</div>
+      <div>
+        <h3 style="font-family:var(--cuerpo);font-size:.95rem">${esc(x.hito)}</h3>
+        <p style="font-size:.83rem;color:var(--tinta-suave);margin:5px 0 0">${esc(x.condicion)}</p>
+        <div class="accion" style="margin-top:8px;font-size:.79rem;background:var(--superficie-2);border:1px solid var(--borde);border-radius:7px;padding:7px 10px">
+          <b style="color:var(--primario)">Verifica la Supervisión:</b> ${esc(x.verifica)}
+        </div>
+      </div>
+      <div style="text-align:right;min-width:96px">
+        <div class="cifra-rotulo">Porcentaje</div>
+        <div style="font-family:var(--display);font-size:1.5rem;font-weight:600;margin-top:4px;color:var(--tinta-tenue)">${x.pct === null ? '—' : x.pct + '%'}</div>
+        <div style="margin-top:6px">${insigniaEstado(x.estado)}</div>
+      </div>
+    </div>`).join('')}
+  </div>
+  <div class="aviso-caja" style="margin-top:12px;border-style:solid;border-color:var(--serio)">
+    <b>Los porcentajes se toman del contrato de ejecución de obra.</b> Mientras no se incorporen, este
+    tablero muestra la secuencia y las condiciones de verificación de cada hito, no montos por hito.
+    Registre los porcentajes en <code>valorizacion.hitos[].pct</code> de
+    <code>datos-parachique.json</code> y vuelva a generar.
+  </div>
+</div>`;
+
+/* ---------- Regla de proporcionalidad ---------- */
+h += `<div class="seccion">
+  <h2>Valorización parcial por unidades</h2>
+  <p class="nota">Escenario habitual: un código con varias unidades cuya entrega se fracciona en el tiempo.</p>
+  <div class="tarjeta">
+    <p style="font-size:.88rem;margin:0;line-height:1.6">${esc(V.reglaParcial)}</p>
+    <div class="aviso-caja" style="margin-top:14px">
+      <b>Ejemplo.</b> Un código de 3 unidades: 2 llegan en el periodo, se instalan y aprueban su protocolo
+      de prueba; la tercera llega el mes siguiente. En el primer periodo se valorizan 2 unidades hasta el
+      hito de protocolo aprobado. La tercera no se valoriza. Al mes siguiente, las 2 primeras avanzan al
+      hito de capacitación y dossier, y la tercera inicia su propia secuencia. El seguimiento es por
+      unidad y por hito, no por código.
+    </div>
+  </div>
+</div>`;
+
+/* ---------- Requisitos previos ---------- */
+h += `<div class="seccion">
+  <h2>Requisitos previos para habilitar la etapa</h2>
+  <p class="nota">${listos} de ${V.requisitosPrevios.length} cumplidos (${pctReq}%). Mientras alguno siga pendiente, la valorización no puede emitirse.</p>
+  <div class="tabla-caja"><div class="tabla-scroll">
+    <table class="datos">
+      <thead><tr><th>Requisito</th><th>Estado</th><th>Situación actual</th></tr></thead>
+      <tbody>${V.requisitosPrevios.map((r) => `
+        <tr>
+          <td><b>${esc(r.requisito)}</b></td>
+          <td>${insigniaEstado(r.estado)}</td>
+          <td style="color:var(--tinta-suave)">${esc(r.nota)}</td>
+        </tr>`).join('')}
+      </tbody>
+    </table>
+  </div></div>
+</div>`;
+
+/* ---------- Estructura de la matriz futura ---------- */
+const COLUMNAS = [
+  ['Código', 'Código de equipo del expediente (p. ej. D-104).', 'Matriz Maestra de Equipos'],
+  ['Denominación', 'Nombre del equipo tal como figura en las EETT aprobadas.', 'EE.TT. PARACHIQUE.xlsx'],
+  ['Ambiente / UPSS', 'Ambiente destino según Programa Médico Arquitectónico.', 'Equipamiento Propuesto — hoja Equipamiento PROGRAMA'],
+  ['Folio escaneado', 'Folio del expediente firmado. Se llena a mano tras el cotejo.', 'Expediente escaneado (físico)'],
+  ['Cant. contractual', 'Unidades previstas en el expediente. Es el techo de la partida.', 'Metrado / Consolidado EQ'],
+  ['Cant. entregada', 'Unidades efectivamente recibidas en obra en el periodo.', 'Acta de recepción del Contratista'],
+  ['Cant. verificada', 'Unidades con V°B° de la Supervisión. Es la base de pago.', 'Protocolo de prueba con V°B°'],
+  ['P. unitario', 'Precio unitario del presupuesto referencial aprobado.', 'Presupuesto referencial'],
+  ['Monto valorizado', 'Cant. verificada × P. unitario.', 'Cálculo'],
+  ['% de avance', 'Cant. verificada acumulada ÷ Cant. contractual.', 'Cálculo'],
+  ['Saldo por valorizar', 'Cant. contractual − Cant. verificada acumulada.', 'Cálculo'],
+  ['Observaciones', 'Motivo de no valorización, si corresponde.', 'Supervisión']
+];
+
+h += `<div class="seccion">
+  <h2>Estructura de la matriz de valorización</h2>
+  <p class="nota">Columnas que tendrá la matriz cuando se active la etapa, con la fuente de cada dato. Se respeta la columna <b>Folio Escaneado</b> de llenado manual, coherente con el resto de matrices del proyecto.</p>
+  <div class="tabla-caja"><div class="tabla-scroll">
+    <table class="datos">
+      <thead><tr><th>Columna</th><th>Contenido</th><th>Fuente</th></tr></thead>
+      <tbody>${COLUMNAS.map((c) => `<tr><td><b>${esc(c[0])}</b></td><td style="color:var(--tinta-suave)">${esc(c[1])}</td><td style="font-size:.76rem">${esc(c[2])}</td></tr>`).join('')}</tbody>
+    </table>
+  </div></div>
+</div>`;
+
+/* ---------- Periodos ---------- */
+h += `<div class="seccion">
+  <h2>Periodos valorizados</h2>
+  <p class="nota">Se poblará conforme se emitan las valorizaciones bajo el código <span class="cod">INF-SUP-VAL-EQ-DLVM-[NNN]-[AAMMDD]</span>.</p>
+  ${V.periodos.length === 0
+    ? `<div class="tarjeta" style="text-align:center;padding:44px 20px;border-style:dashed">
+        <div style="color:var(--tinta-tenue);margin-bottom:10px">${ICONOS.reloj.replace('viewBox', 'width="26" height="26" viewBox')}</div>
+        <h3 style="font-size:1.05rem">Sin valorizaciones emitidas</h3>
+        <p style="font-size:.84rem;color:var(--tinta-suave);margin:8px auto 0;max-width:52ch">
+          La primera valorización se emitirá cuando se cumplan los requisitos previos y existan unidades verificadas en obra.
+          Al registrarla en <span class="cod">datos-parachique.json</span> aparecerá automáticamente en esta sección.
+        </p>
+      </div>`
+    : `<div class="tabla-caja"><div class="tabla-scroll"><table class="datos">
+        <thead><tr><th>Valorización</th><th>Periodo</th><th class="num">Unid. verificadas</th><th class="num">Monto</th><th>Estado</th></tr></thead>
+        <tbody>${V.periodos.map((p) => `<tr><td class="cod">${esc(p.codigo)}</td><td>${esc(p.periodo)}</td><td class="num">${num(p.unidades)}</td><td class="num">${soles(p.monto)}</td><td>${insigniaEstado(p.estado)}</td></tr>`).join('')}</tbody>
+      </table></div></div>`}
+</div>`;
+
+h += pie(D);
+document.getElementById('app').innerHTML = h;
+activarTips(document);
+</script>
+</body>
+</html>
