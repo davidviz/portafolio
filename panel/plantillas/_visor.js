@@ -28,21 +28,41 @@ function tipoDeArchivo(nombre) {
   return { etiqueta: 'Documento', color: 'var(--tinta-suave)' };
 }
 
-/* Piezas consultables de un documento: el informe y, si existe, su matriz. */
+/* Piezas consultables de un documento, en el orden en que conviene leerlas.
+
+   El PDF va primero y es el que se abre: es el ejemplar de paginación fija, el
+   que se imprime y se firma, y el único que se ve igual en cualquier equipo.
+   El Word queda detrás como fuente editable, porque el visor lo remaqueta y el
+   membrete se corre. La matriz cierra, en Excel, que es como se trabaja. */
 function piezasDe(d) {
   const drive = d.drive || {};
   const piezas = [];
+  const nombreBase = (d.archivo || '').split(' + ')[0];
+  const rotulo = d.clase === 'CARTA' ? 'Carta' : (d.clase === 'INFORME' ? 'Informe' : 'Documento');
+
+  if (drive.pdf) {
+    piezas.push({
+      id: drive.pdf, etiqueta: rotulo + ' (PDF)',
+      archivo: nombreBase.replace(/\.docx?$/i, '.pdf'),
+    });
+  }
   if (drive.informe) {
     piezas.push({
       id: drive.informe,
-      etiqueta: d.clase === 'CARTA' ? 'Carta' : (d.clase === 'INFORME' ? 'Informe' : 'Documento'),
-      archivo: (d.archivo || '').split(' + ')[0],
+      etiqueta: drive.pdf ? 'Editable' : rotulo,
+      archivo: nombreBase,
     });
   }
   if (drive.matriz) {
     piezas.push({
       id: drive.matriz, etiqueta: 'Matriz anexa',
       archivo: (d.archivo || '').split(' + ')[1] || 'Matriz',
+    });
+  }
+  if (drive.sustento) {
+    piezas.push({
+      id: drive.sustento, etiqueta: 'Sustento del Contratista',
+      archivo: 'Sustento remitido, escaneado y foliado',
     });
   }
   return piezas;

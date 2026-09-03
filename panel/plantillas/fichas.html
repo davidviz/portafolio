@@ -107,7 +107,7 @@ function trazaDe(cod) {
 
 function tarjetaDoc(d, rotulo, cod) {
   if (!d) return '';
-  const tieneVisor = !!((d.drive || {}).informe || (d.drive || {}).matriz);
+  const tieneVisor = Object.keys(d.drive || {}).length > 0;
   return `<div class="tarjeta ${tieneVisor ? 'clic' : ''}" ${tieneVisor ? `data-doc-ficha="${esc(d.id)}" data-doc-cod="${esc(cod)}"` : ''}>
     <div class="cifra-rotulo">${esc(rotulo)}</div>
     <div style="font-weight:600;font-size:.9rem;margin:4px 0 6px" class="cod">${esc(d.codigo)}</div>

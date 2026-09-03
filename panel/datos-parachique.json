@@ -132,7 +132,8 @@
       "etapa": "E1",
       "drive": {
         "informe": "13tBh9t0Zap7raHQWPKwWInJ0imcj-1Es",
-        "matriz": "1JZfEgWOXHaC1p5VytZ3x4jy7f5Jfm3QQ"
+        "matriz": "1JZfEgWOXHaC1p5VytZ3x4jy7f5Jfm3QQ",
+        "pdf": "1lm9tIOLkjRaowF1yZMXr_8EnTKLrwXkv"
       },
       "areas": [
         "Transversal / documental"
@@ -157,7 +158,8 @@
       "etapa": "E1",
       "drive": {
         "informe": "1y0Cv40ncWbKYfn-5U0tg_3CjuqsUU-RE",
-        "matriz": "1vDpYKAS4G5udXl0Fl0QUrKVdDYcDEIcD"
+        "matriz": "1vDpYKAS4G5udXl0Fl0QUrKVdDYcDEIcD",
+        "pdf": "1bAKVXrCNPp7PWlA0uWxQBeoORf0JLL7i"
       },
       "areas": [
         "Equipos biomédicos",
@@ -186,7 +188,8 @@
       "etapa": "E2",
       "drive": {
         "informe": "1tPKRRkPMy6xMPGr_ucSHXt5KGBUUYX7Y",
-        "matriz": "1WtkROuseDbiyhjBrjlNvOvAsAZEe7sID"
+        "matriz": "1WtkROuseDbiyhjBrjlNvOvAsAZEe7sID",
+        "pdf": "1cHwSm_DLGAJCVfV2nV2Dge0d6DXcC-31"
       },
       "areas": [
         "Transversal / documental"
@@ -234,7 +237,8 @@
       "ruta": "3.Sustentos\\",
       "url": null,
       "drive": {
-        "informe": "1lujXbt1Fkz_JSlwFGuEhJk_VKZAEoOKj"
+        "informe": "1lujXbt1Fkz_JSlwFGuEhJk_VKZAEoOKj",
+        "sustento": "1VT-aPCt0cMKjNdzPelIOVsWJ1LETUCX9"
       },
       "areas": [
         "Transversal / documental",
@@ -260,7 +264,8 @@
       "url": null,
       "drive": {
         "informe": "1rp0Mf1Jc7D3mrgTztEsKWyWmlUzKNhLb",
-        "matriz": "1H2jrbhM_dCrfwXLjb9PuEz47AYj8184y"
+        "matriz": "1H2jrbhM_dCrfwXLjb9PuEz47AYj8184y",
+        "pdf": "1zNQSJ3NPDgyFve-BCxwNPGZFSr2-ANvr"
       },
       "areas": [
         "Transversal / documental",
