@@ -32,29 +32,26 @@ const FAMILIAS = { D: 'D · Dispositivos y equipos', M: 'M · Mobiliario', E: 'E
 const familiaDe = (cod) => FAMILIAS[(cod.match(/^[A-Za-z]+/) || ['?'])[0].toUpperCase()] || 'Sin clasificar';
 const rangoCant = (n) => n === 1 ? '1 unidad' : n <= 5 ? '2 a 5 unidades' : n <= 10 ? '6 a 10 unidades' : 'Más de 10 unidades';
 
-const OBS = D.observaciones.lista || [];
+/* Este tablero trata de FICHAS TÉCNICAS. Aquí solo entran las observaciones
+   que la Supervisión formula al sustento que el Contratista presenta por cada
+   código. Las observaciones de compatibilidad del expediente están dirigidas al
+   Proyectista y viven en el Centro de Mando, junto al expediente. */
+const DOC = D.documentos || [];
+const docPorCodigo = (cod) => DOC.find((x) => x.codigo === cod);
 
-/* Las observaciones llegan de dos sitios con forma distinta: las de
-   compatibilidad dirigidas al Proyectista y las de los pronunciamientos sobre
-   los sustentos del Contratista. Se normalizan para poder listarlas juntas. */
-function normalizarObs(o) {
-  const esCompat = o.n !== undefined;
+function normalizarObs(o, p) {
   return {
-    n: esCompat ? o.n : o.obs,
-    titulo: esCompat ? o.tipo : o.materia,
-    nivel: (o.prioridad || o.nivel || '').toUpperCase(),
+    n: o.obs,
+    titulo: o.materia || o.equipo || '',
+    nivel: (o.nivel || '').toUpperCase() || 'LEVE',
     estado: o.estado || 'Por absolver',
-    descripcion: o.descripcion || '',
-    componente: o.componente || '',
-    equipo: o.equipo || '',
-    archivo: o.archivo || '',
     ubicacion: o.ubicacion || '',
-    folio: o.folio || '',
-    sustento: o.sustento || '',
-    recomendacion: o.recomendacion || '',
-    origen: o.origen || '',
-    fuente: o.fuente || '',
+    equipo: o.equipo || '',
+    origen: o.origen || (p && p.informe) || '',
+    fuente: o.fuente || 'Pronunciamiento sobre el sustento del Contratista',
+    extremos: o.extremos || null,
     codigos: o.codigos || [],
+    informe: (p && p.informe) || '',
   };
 }
 
@@ -62,12 +59,9 @@ const TONO = (nivel) =>
   (nivel === 'CRITICA' || nivel === 'CRÍTICA' || nivel === 'ALTA') ? 'critico'
   : (nivel === 'SUSTANCIAL' || nivel === 'MEDIA') ? 'serio' : 'aviso';
 
-const TODAS_OBS = [
-  ...OBS.map(normalizarObs),
-  ...D.pronunciamientos.flatMap((p) => (p.detalle || []).map(normalizarObs)),
-];
+const OBS_FICHA = D.pronunciamientos.flatMap((p) => (p.detalle || []).map((o) => normalizarObs(o, p)));
 
-const obsDe = (cod) => TODAS_OBS.filter((o) => o.codigos.includes(cod));
+const obsDe = (cod) => OBS_FICHA.filter((o) => o.codigos.includes(cod));
 
 const tarjetaObs = (o) => `
   <div class="obs-item p-${esc(o.nivel)}">
@@ -75,21 +69,59 @@ const tarjetaObs = (o) => `
       <span class="n">${esc(o.n)}</span>
       <h4>${esc(o.titulo)}</h4>
       ${insignia(o.nivel, TONO(o.nivel), TONO(o.nivel))}
-      ${insigniaEstado(/conforme|absuelt/i.test(o.estado) ? 'ATENDIDA' : 'PENDIENTE')}
+      ${insigniaEstado(/conforme|absuelt|subsanad/i.test(o.estado) ? 'ATENDIDA' : 'PENDIENTE')}
     </div>
-    ${o.descripcion ? `<div class="cuerpo">${esc(o.descripcion)}</div>` : ''}
     <dl>
-      ${o.fuente ? `<dt>Origen</dt><dd>${esc(o.fuente)}${o.origen ? ' — ' + esc(o.origen) : ''}</dd>` : ''}
-      ${o.componente ? `<dt>Componente</dt><dd>${esc(o.componente)}</dd>` : ''}
-      ${o.equipo ? `<dt>Equipo / sección</dt><dd>${esc(o.equipo)}</dd>` : ''}
-      ${o.archivo ? `<dt>Archivo</dt><dd>${esc(o.archivo)}</dd>` : ''}
-      ${o.ubicacion ? `<dt>Ubicación</dt><dd>${esc(o.ubicacion)}</dd>` : ''}
-      ${o.folio ? `<dt>Folio escaneado</dt><dd>${esc(o.folio)}</dd>` : ''}
-      ${o.sustento ? `<dt>Sustento</dt><dd>${esc(o.sustento)}</dd>` : ''}
-      ${o.recomendacion ? `<dt>Se solicita</dt><dd>${esc(o.recomendacion)}</dd>` : ''}
+      ${o.equipo ? `<dt>Equipo</dt><dd>${esc(o.equipo)}</dd>` : ''}
+      ${o.ubicacion ? `<dt>Ubicación en el sustento</dt><dd>${esc(o.ubicacion)}</dd>` : ''}
+      ${o.extremos ? `<dt>Extremos</dt><dd>${o.extremos}</dd>` : ''}
+      <dt>Absuelta en</dt><dd class="cod">${esc(o.informe)}</dd>
       <dt>Estado</dt><dd>${esc(o.estado)}</dd>
     </dl>
   </div>`;
+
+/* ---------- Trazabilidad documental de un código ----------
+   Qué carta trajo el sustento de este equipo y con qué informe se contestó.
+   Ambos abren en el visor interno; no se sale del tablero.               */
+function trazaDe(cod) {
+  return D.pronunciamientos
+    .filter((p) => (p.detalle || []).some((o) => (o.codigos || []).includes(cod)))
+    .map((p) => {
+      const emitido = docPorCodigo(p.informe) || null;
+      const recibido = emitido && emitido.responde ? docPorCodigo(emitido.responde) : null;
+      return { p, emitido, recibido };
+    });
+}
+
+function tarjetaDoc(d, rotulo, cod) {
+  if (!d) return '';
+  const tieneVisor = !!((d.drive || {}).informe || (d.drive || {}).matriz);
+  return `<div class="tarjeta ${tieneVisor ? 'clic' : ''}" ${tieneVisor ? `data-doc-ficha="${esc(d.id)}" data-doc-cod="${esc(cod)}"` : ''}>
+    <div class="cifra-rotulo">${esc(rotulo)}</div>
+    <div style="font-weight:600;font-size:.9rem;margin:4px 0 6px" class="cod">${esc(d.codigo)}</div>
+    <div style="font-size:.8rem;color:var(--tinta-suave);line-height:1.5">${esc(d.asunto || '')}</div>
+    <div style="display:flex;gap:8px;align-items:center;margin-top:10px;flex-wrap:wrap">
+      <span style="font-size:.74rem;color:var(--tinta-tenue)">${fechaCorta(d.fecha)}</span>
+      ${insigniaEstado(d.estado)}
+      ${tieneVisor ? '<span style="font-size:.74rem;color:var(--serie-1);margin-left:auto">Ver documento →</span>'
+                   : '<span style="font-size:.74rem;color:var(--tinta-tenue);margin-left:auto">Sin enlace en Drive</span>'}
+    </div>
+  </div>`;
+}
+
+function bloqueTraza(cod) {
+  const t = trazaDe(cod);
+  if (!t.length) {
+    return `<div class="aviso-caja" style="margin-top:16px">Este código todavía no ha sido materia de una carta del Contratista ni de un pronunciamiento de la Supervisión.</div>`;
+  }
+  return t.map(({ p, emitido, recibido }) => `
+    <div class="cifra-rotulo" style="margin:20px 0 10px">Trazabilidad documental</div>
+    <div class="rejilla g2" style="gap:12px">
+      ${tarjetaDoc(recibido, 'Se presentó con', cod)}
+      ${tarjetaDoc(emitido, 'Se contestó con', cod)}
+    </div>
+    ${p.resultado ? `<div class="aviso-caja" style="margin-top:12px"><b>Resultado del pronunciamiento.</b> ${esc(p.resultado)}</div>` : ''}`).join('');
+}
 
 const por = (id) => C.filter((c) => c.ficha === id);
 const monto = (l) => l.reduce((s, c) => s + (c.parcial || 0), 0);
@@ -237,28 +269,27 @@ h += `<div class="seccion">
   </div></div>
 </div>`;
 
-/* ---------- Observaciones del expediente ---------- */
+/* ---------- Observaciones a las fichas presentadas ---------- */
 h += `<div class="seccion">
-  <h2>Observaciones del expediente</h2>
-  <p class="nota">${esc(D.observaciones.nota)} ${TODAS_OBS.length} en total, sumando las de compatibilidad al Proyectista y las de los pronunciamientos sobre el Contratista. Toque una fila para leerla completa.</p>
+  <h2>Observaciones a las fichas técnicas</h2>
+  <p class="nota">Las ${OBS_FICHA.length} observaciones que la Supervisión formuló a los sustentos que el Contratista presentó por cada código. Las observaciones de compatibilidad del expediente están en el Centro de Mando. Toque una fila para leerla completa.</p>
   <div id="filtros-obs"></div>
   <div id="resumen-obs"></div>
   <div class="tabla-caja"><div class="tabla-scroll">
     <table class="datos" id="t-obs">
-      <thead><tr><th>N°</th><th>Componente</th><th>Equipo / sección</th><th>Tipo</th><th>Prioridad</th><th>Estado</th><th>Códigos</th></tr></thead>
-      <tbody>${TODAS_OBS.map((o) => `
-        <tr class="clic" data-obs="${esc(o.n)}"
-          data-f-componente="${esc(o.componente || o.fuente)}"
+      <thead><tr><th>N°</th><th>Códigos</th><th>Materia</th><th>Nivel</th><th>Estado</th><th>Informe que la absuelve</th></tr></thead>
+      <tbody>${OBS_FICHA.map((o) => `
+        <tr class="clic" data-obs="${esc(o.n)}" data-informe="${esc(o.informe)}"
+          data-f-codigo="${esc((o.codigos || [])[0] || 'Sin código asociado')}"
           data-f-prioridad="${esc(o.nivel)}"
           data-f-estado="${esc(o.estado)}"
-          data-f-codigo="${esc((o.codigos || [])[0] || 'Sin código asociado')}">
+          data-f-informe="${esc(o.informe)}">
           <td class="cod">${esc(o.n)}</td>
-          <td style="font-size:.78rem">${esc(o.componente || o.fuente)}</td>
-          <td><b>${esc(o.equipo || o.titulo)}</b></td>
-          <td style="font-size:.78rem;color:var(--tinta-suave)">${esc(o.titulo)}</td>
+          <td class="cod" style="font-size:.74rem">${(o.codigos || []).join(', ') || '—'}</td>
+          <td><b>${esc(o.titulo)}</b>${o.ubicacion ? `<div style="font-size:.74rem;color:var(--tinta-suave);margin-top:2px">${esc(o.ubicacion)}</div>` : ''}</td>
           <td>${insignia(o.nivel, TONO(o.nivel), TONO(o.nivel))}</td>
           <td style="font-size:.78rem">${esc(o.estado)}</td>
-          <td class="cod" style="font-size:.72rem">${(o.codigos || []).join(', ') || '—'}</td>
+          <td class="cod" style="font-size:.72rem">${esc(o.informe)}</td>
         </tr>`).join('')}
       </tbody>
     </table>
@@ -313,18 +344,19 @@ function fichaItem(cod) {
     </dl>
     ${(() => {
       const lista = obsDe(c.cod);
-      if (!lista.length && !c.obs) {
-        return '<div class="aviso-caja" style="margin-top:16px">Sin observaciones registradas sobre este código.</div>';
+      if (!lista.length) {
+        return '<div class="aviso-caja" style="margin-top:16px">Sin observaciones a la ficha técnica de este código.</div>';
       }
-      return `<div class="cifra-rotulo" style="margin:20px 0 10px">Observaciones sobre este código (${lista.length})</div>
-        <div class="lista-obs">${lista.map(tarjetaObs).join('')}</div>
-        ${c.obs ? `<div class="aviso-caja" style="margin-top:12px"><b>Resumen de la Supervisión.</b> ${esc(c.obs)}</div>` : ''}`;
+      return `<div class="cifra-rotulo" style="margin:20px 0 10px">Observaciones a la ficha técnica (${lista.length})</div>
+        <div class="lista-obs">${lista.map(tarjetaObs).join('')}</div>`;
     })()}
+    ${bloqueTraza(c.cod)}
     <div class="aviso-caja" style="margin-top:14px">
       <b>Fuente del precio:</b> ${esc(D.presupuesto.fuente)}, fila ${c.fila}.
       Precio promedio de tres cotizaciones, con IGV incluido y bajo las condiciones de garantía de 2 años,
       instalación, capacitación, manuales y mantenimiento en garantía.
     </div>`);
+  enlazarDocsFicha();
 }
 document.querySelectorAll('[data-cod]').forEach((el) => el.addEventListener('click', () => fichaItem(el.dataset.cod)));
 
@@ -386,26 +418,49 @@ crearFiltros({
 });
 document.querySelectorAll('[data-obs]').forEach((el) => {
   el.addEventListener('click', () => {
-    const o = TODAS_OBS.find((x) => x.n === el.dataset.obs);
+    const o = OBS_FICHA.find((x) => x.n === el.dataset.obs && x.informe === el.dataset.informe);
     abrirVentana('Observación ' + o.n, esc(o.fuente) + ' · ' + esc(o.nivel),
-      `<div class="lista-obs">${tarjetaObs(o)}</div>`);
+      `<div class="lista-obs">${tarjetaObs(o)}</div>` +
+      (o.codigos.length ? bloqueTraza(o.codigos[0]) : ''));
+    enlazarDocsFicha();
   });
 });
 
+/* Los documentos citados dentro de una ficha abren en el mismo visor, con
+   vuelta a la ficha de la que se salió. */
+function enlazarDocsFicha() {
+  document.querySelectorAll('[data-doc-ficha]').forEach((el) => {
+    if (el.dataset.enlazado) return;
+    el.dataset.enlazado = '1';
+    el.addEventListener('click', (ev) => {
+      ev.stopPropagation();
+      const d = DOC.find((x) => x.id === el.dataset.docFicha);
+      const cod = el.dataset.docCod;
+      abrirFichaDocumento(d, D.etapas);
+      const meta = document.getElementById('vmeta');
+      if (meta && cod) {
+        meta.insertAdjacentHTML('afterbegin',
+          `<button type="button" class="btn" style="padding:3px 9px;font-size:.72rem;margin-right:8px" data-volver="${esc(cod)}">← Volver a ${esc(cod)}</button>`);
+        meta.querySelector('[data-volver]').addEventListener('click', () => fichaItem(cod));
+      }
+    });
+  });
+}
+
 crearFiltros({
   contenedor: 'filtros-obs', tabla: 't-obs', resumen: 'resumen-obs',
-  unidad: 'observaciones', placeholder: 'Buscar observación, equipo o componente…',
+  unidad: 'observaciones', placeholder: 'Buscar observación, código o materia…',
   campos: [
     { clave: 'codigo', etiqueta: 'Código' },
-    { clave: 'prioridad', etiqueta: 'Prioridad' },
-    { clave: 'componente', etiqueta: 'Origen' },
+    { clave: 'prioridad', etiqueta: 'Nivel' },
     { clave: 'estado', etiqueta: 'Estado' },
+    { clave: 'informe', etiqueta: 'Informe que la absuelve' },
   ],
   excel: {
-    hoja: 'Observaciones del expediente',
-    archivo: 'CS-PARACHIQUE_observaciones',
+    hoja: 'Observaciones a fichas',
+    archivo: 'CS-PARACHIQUE_observaciones_fichas',
     proyecto: D.meta.proyecto,
-    subtitulo: `CUI N° ${D.meta.cui} · Observaciones formuladas al Proyectista en la compatibilización`,
+    subtitulo: `CUI N° ${D.meta.cui} · Observaciones a las fichas técnicas presentadas por el Contratista`,
     supervisor: D.meta.supervisor, cip: D.meta.cip,
     supervision: D.meta.supervision, propietario: D.meta.supervisor,
   },
