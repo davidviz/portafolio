@@ -48,6 +48,12 @@ jobs:
         run: pip install --quiet Pillow
 
       - name: Generar los tableros
+        # Necesita las credenciales igual que el paso de publicar: con ellas
+        # trae de la base los bloques económicos del tablero reservado y
+        # referencia las imágenes del almacenamiento en vez de incrustarlas.
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
         run: python panel/generar.py
 
       - name: Publicar en Supabase
