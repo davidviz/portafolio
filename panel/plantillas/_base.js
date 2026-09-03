@@ -168,6 +168,53 @@ function barrasH(contenedor, datos, opciones) {
   activarTips(contenedor);
 }
 
+/* ---------- Anillo de avance ----------
+   Un solo círculo para una sola pregunta: cuánto del presupuesto tiene la
+   ficha ya aprobada. Los tramos van en el orden en que se recorre el trámite
+   —sin presentar, en revisión, observada, aprobada parcialmente, aprobada—
+   para que el ojo lea el avance como un giro, y la cifra del centro dice el
+   número que importa. Cada tramo lleva rótulo en la leyenda: el color nunca
+   es el único portador del significado. */
+function anillo(contenedor, segmentos, opciones) {
+  const o = Object.assign({ cifra: '', rotulo: '', pie: '', grosor: 26 }, opciones || {});
+  const total = segmentos.reduce((s, x) => s + x.valor, 0) || 1;
+  const R = 78;
+  const CIRC = 2 * Math.PI * R;
+
+  let recorrido = 0;
+  const arcos = segmentos.filter((x) => x.valor > 0).map((x) => {
+    const largo = (x.valor / total) * CIRC;
+    const arco = `<circle cx="100" cy="100" r="${R}" fill="none"
+      stroke="${x.color}" stroke-width="${o.grosor}"
+      stroke-dasharray="${largo} ${CIRC - largo}"
+      stroke-dashoffset="${-recorrido}"
+      data-tip="${esc(x.etiqueta)}|${esc(x.nota || '')}"
+      style="cursor:default"></circle>`;
+    recorrido += largo;
+    return arco;
+  }).join('');
+
+  // La cifra se apoya sobre el anillo con posicionamiento absoluto dentro de
+  // un contenedor cuadrado: así el texto queda centrado sea cual sea el ancho
+  // de la columna, sin márgenes negativos que dejen huecos.
+  contenedor.innerHTML = `
+    <div style="position:relative;width:100%;max-width:236px;margin:4px auto 0;aspect-ratio:1">
+      <svg viewBox="0 0 200 200" style="display:block;width:100%;height:100%;transform:rotate(-90deg)"
+           role="img" aria-label="${esc(o.rotulo)}: ${esc(o.cifra)}">
+        <circle cx="100" cy="100" r="${R}" fill="none" stroke="var(--superficie-2)" stroke-width="${o.grosor}"></circle>
+        ${arcos}
+      </svg>
+      <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;
+                  justify-content:center;text-align:center;pointer-events:none;padding:0 14%">
+        <div style="font-size:2.1rem;font-weight:700;line-height:1;font-variant-numeric:tabular-nums">${esc(o.cifra)}</div>
+        <div style="font-size:.7rem;color:var(--tinta-suave);margin-top:6px;line-height:1.3;
+                    letter-spacing:.03em;text-transform:uppercase">${esc(o.rotulo)}</div>
+      </div>
+    </div>
+    ${o.pie ? `<p style="text-align:center;font-size:.78rem;color:var(--tinta-suave);margin:14px 0 0">${o.pie}</p>` : ''}`;
+  activarTips(contenedor);
+}
+
 /* ---------- Tooltips ---------- */
 function activarTips(raiz) {
   montarChasis();

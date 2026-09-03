@@ -158,65 +158,26 @@ let h = `
 </header>`;
 
 /* ---------- Cifras ---------- */
+/* Los cuatro peldaños de la escala, en el orden del trámite. La tarjeta
+   grande es la que manda hoy: 179 sin presentar. */
 h += `<div class="rejilla g4">
-  <div class="tarjeta clic" id="k-aprobadas">
-    <div class="cifra-rotulo">Fichas aprobadas</div>
-    <div class="cifra" style="color:${aprobadas.length ? 'var(--bien)' : 'var(--tinta-tenue)'}">${aprobadas.length}<small>de ${C.length}</small></div>
-    <div class="cifra-pie">${unid(aprobadas)} de ${num(unid(C))} unidades · ${pctAprobado.toFixed(1)}% del presupuesto</div>
-  </div>
-  <div class="tarjeta clic" id="k-faltan">
-    <div class="cifra-rotulo">Faltan por aprobar</div>
-    <div class="cifra" style="color:var(--critico)">${faltanAprobar.length}</div>
-    <div class="cifra-pie">${num(unid(faltanAprobar))} unidades · ${soles(monto(faltanAprobar))}</div>
-  </div>
-  <div class="tarjeta clic" id="k-tramite">
-    <div class="cifra-rotulo">En trámite</div>
-    <div class="cifra" style="color:var(--serio)">${enRevision.length + observadas.length}</div>
-    <div class="cifra-pie">${enRevision.length} en revisión · ${observadas.length} observada${observadas.length === 1 ? '' : 's'}</div>
-  </div>
-  <div class="tarjeta clic" id="k-presupuesto">
-    <div class="cifra-rotulo">Presupuesto de equipamiento</div>
-    <div class="cifra">${soles(TOTAL)}</div>
-    <div class="cifra-pie">${C.length} códigos · ${num(unid(C))} unidades · con IGV</div>
-  </div>
+  ${[
+    { id: 'APROBADA',              rotulo: 'Aprobadas',              tono: 'var(--bien)',    kpi: 'k-aprobadas' },
+    { id: 'APROBADA PARCIALMENTE', rotulo: 'Aprobadas parcialmente', tono: 'var(--serio)',   kpi: 'k-parciales' },
+    { id: 'OBSERVADA',             rotulo: 'Observadas',             tono: 'var(--critico)', kpi: 'k-observadas' },
+    { id: 'SIN PRESENTAR',         rotulo: 'Sin presentar',          tono: 'var(--tinta-tenue)', kpi: 'k-sinpresentar' },
+  ].map((e) => {
+    const l = por(e.id);
+    const pct = (monto(l) / TOTAL) * 100;
+    return `<div class="tarjeta clic" id="${e.kpi}">
+      <div class="cifra-rotulo">${e.rotulo}</div>
+      <div class="cifra" style="color:${l.length ? e.tono : 'var(--tinta-tenue)'}">${l.length}<small>de ${C.length}</small></div>
+      <div class="cifra-pie">${num(unid(l))} unidades · ${soles(monto(l))} · ${pct.toFixed(1)}% del presupuesto</div>
+    </div>`;
+  }).join('')}
 </div>`;
 
-/* ---------- Aviso de alcance ---------- */
-h += `<div class="seccion">
-  <div class="alerta" style="border-left-color:var(--serie-1)">
-    <div class="ico" style="color:var(--serie-1)">${ICONOS.info}</div>
-    <div>
-      <h4>Qué significa y qué no significa una ficha aprobada</h4>
-      <p>La aprobación de una ficha técnica acredita que el bien ofertado por el Contratista cumple los requisitos técnicos mínimos del expediente. <b>No acredita entrega, no acredita instalación y no habilita pago.</b> El importe asociado a las fichas aprobadas es el valor de expediente de esos ítems y sirve para dimensionar el avance de la revisión, no para valorizar.</p>
-      <div class="accion"><b>Monto valorizable a la fecha:</b> ${soles(0)} — no se ha efectuado entrega de bienes en obra. La valorización se rige por los hitos del tablero de <b>Valorización</b>.</div>
-    </div>
-  </div>
-</div>`;
-
-/* ---------- Avance ---------- */
-h += `<div class="seccion">
-  <h2>Avance de aprobación</h2>
-  <p class="nota">Medido sobre el valor de expediente de cada código, que es la unidad de medida que interesa a la Entidad. Los segmentos llevan su valor rotulado.</p>
-  <div class="grafico">
-    <div class="barra" style="height:34px">
-      ${ESTADOS.map((e) => {
-        const l = por(e.id);
-        if (!l.length) return '';
-        const pct = (monto(l) / TOTAL) * 100;
-        return `<div data-tip="${e.etiqueta}|${l.length} códigos · ${num(unid(l))} unidades · ${soles(monto(l))} (${pct.toFixed(1)}%)"
-          style="width:${pct}%;background:${e.color};color:${e.id === 'SIN PRESENTAR' ? 'var(--tinta)' : '#fff'}">${pct >= 8 ? pct.toFixed(1) + '%' : ''}</div>`;
-      }).join('')}
-    </div>
-    <div class="leyenda">
-      ${ESTADOS.filter((e) => por(e.id).length).map((e) => {
-        const l = por(e.id);
-        return `<span><i style="background:${e.color}"></i>${e.etiqueta} — ${l.length} cód. · ${soles(monto(l))}</span>`;
-      }).join('')}
-    </div>
-  </div>
-</div>`;
-
-/* ---------- Por grupo ---------- */
+/* ---------- Avance y composición, uno al lado del otro ---------- */
 const GRUPOS = [...new Set(C.map((c) => c.grupo))];
 const resumenGrupo = GRUPOS.map((g) => {
   const l = C.filter((c) => c.grupo === g);
@@ -224,29 +185,24 @@ const resumenGrupo = GRUPOS.map((g) => {
   return { grupo: g, cod: l.length, und: unid(l), monto: monto(l), aprob: ap.length, montoAprob: monto(ap) };
 }).sort((a, b) => b.monto - a.monto);
 
-h += `<div class="seccion">
-  <h2>Composición del presupuesto por grupo</h2>
-  <p class="nota">Dónde está concentrado el valor del equipamiento. Determina qué grupos conviene exigir primero al Contratista.</p>
+h += `<div class="rejilla g2" style="align-items:stretch">
   <div class="grafico">
+    <h3>Avance de aprobación</h3>
+    <p class="sub">Medido sobre el valor de expediente de cada código, que es la unidad que interesa a la Entidad.</p>
+    <div id="graf-anillo"></div>
+    <div class="leyenda" style="justify-content:center">
+      ${ESTADOS.filter((e) => por(e.id).length).map((e) => {
+        const l = por(e.id);
+        return `<span><i style="background:${e.color}"></i>${e.etiqueta} — ${l.length} cód.</span>`;
+      }).join('')}
+    </div>
+  </div>
+  <div class="grafico">
+    <h3>Composición del presupuesto por grupo</h3>
+    <p class="sub">Dónde está concentrado el valor. Determina qué grupos conviene exigir primero al Contratista.</p>
     <div id="graf-grupo"></div>
     <div class="leyenda"><span><i style="background:var(--serie-1)"></i>Valor de expediente por grupo (con IGV)</span></div>
   </div>
-  <div class="tabla-caja" style="margin-top:14px"><div class="tabla-scroll">
-    <table class="datos">
-      <thead><tr><th>Grupo</th><th class="num">Códigos</th><th class="num">Unidades</th><th class="num">Valor de expediente</th><th class="num">% del total</th><th class="num">Fichas aprobadas</th></tr></thead>
-      <tbody>${resumenGrupo.map((g) => `
-        <tr>
-          <td><b>${esc(g.grupo)}</b></td>
-          <td class="num">${g.cod}</td>
-          <td class="num">${num(g.und)}</td>
-          <td class="num">${soles(g.monto)}</td>
-          <td class="num">${(g.monto / TOTAL * 100).toFixed(1)}%</td>
-          <td class="num">${g.aprob} / ${g.cod}</td>
-        </tr>`).join('')}
-      </tbody>
-      <tfoot><tr><td>Total</td><td class="num">${C.length}</td><td class="num">${num(unid(C))}</td><td class="num">${soles(TOTAL)}</td><td class="num">100.0%</td><td class="num">${aprobadas.length} / ${C.length}</td></tr></tfoot>
-    </table>
-  </div></div>
 </div>`;
 
 /* ---------- Catalogo completo ---------- */
@@ -284,31 +240,38 @@ h += `<div class="seccion">
   </div></div>
 </div>`;
 
-/* ---------- Observaciones a las fichas presentadas ---------- */
+/* ---------- Resumen por grupo ---------- */
 h += `<div class="seccion">
-  <h2>Observaciones a las fichas técnicas</h2>
-  <p class="nota">Las ${OBS_FICHA.length} observaciones que la Supervisión formuló a los sustentos que el Contratista presentó por cada código. Las observaciones de compatibilidad del expediente están en el Centro de Mando. Toque una fila para leerla completa.</p>
-  <div id="filtros-obs"></div>
-  <div id="resumen-obs"></div>
-  <div class="tabla-caja"><div class="tabla-scroll">
-    <table class="datos" id="t-obs">
-      <thead><tr><th>N°</th><th>Códigos</th><th>Materia</th><th>Nivel</th><th>Estado</th><th>Informe que la absuelve</th></tr></thead>
-      <tbody>${OBS_FICHA.map((o) => `
-        <tr class="clic" data-obs="${esc(o.n)}" data-informe="${esc(o.informe)}"
-          data-f-codigo="${esc((o.codigos || [])[0] || 'Sin código asociado')}"
-          data-f-prioridad="${esc(o.nivel)}"
-          data-f-estado="${esc(o.estado)}"
-          data-f-informe="${esc(o.informe)}">
-          <td class="cod">${esc(o.n)}</td>
-          <td class="cod" style="font-size:.74rem">${(o.codigos || []).join(', ') || '—'}</td>
-          <td><b>${esc(o.titulo)}</b>${o.ubicacion ? `<div style="font-size:.74rem;color:var(--tinta-suave);margin-top:2px">${esc(o.ubicacion)}</div>` : ''}</td>
-          <td>${insignia(o.nivel, TONO(o.nivel), TONO(o.nivel))}</td>
-          <td style="font-size:.78rem">${esc(o.estado)}</td>
-          <td class="cod" style="font-size:.72rem">${esc(o.informe)}</td>
+  <h2>Resumen por grupo genérico</h2>
+  <p class="nota">Dónde está concentrado el valor del equipamiento. Determina qué grupos conviene exigir primero al Contratista.</p>
+  <div class="tabla-caja" style="margin-top:14px"><div class="tabla-scroll">
+    <table class="datos">
+      <thead><tr><th>Grupo</th><th class="num">Códigos</th><th class="num">Unidades</th><th class="num">Valor de expediente</th><th class="num">% del total</th><th class="num">Fichas aprobadas</th></tr></thead>
+      <tbody>${resumenGrupo.map((g) => `
+        <tr>
+          <td><b>${esc(g.grupo)}</b></td>
+          <td class="num">${g.cod}</td>
+          <td class="num">${num(g.und)}</td>
+          <td class="num">${soles(g.monto)}</td>
+          <td class="num">${(g.monto / TOTAL * 100).toFixed(1)}%</td>
+          <td class="num">${g.aprob} / ${g.cod}</td>
         </tr>`).join('')}
       </tbody>
+      <tfoot><tr><td>Total</td><td class="num">${C.length}</td><td class="num">${num(unid(C))}</td><td class="num">${soles(TOTAL)}</td><td class="num">100.0%</td><td class="num">${aprobadas.length} / ${C.length}</td></tr></tfoot>
     </table>
   </div></div>
+</div>`;
+
+/* ---------- Aviso de alcance ---------- */
+h += `<div class="seccion">
+  <div class="alerta" style="border-left-color:var(--serie-1)">
+    <div class="ico" style="color:var(--serie-1)">${ICONOS.info}</div>
+    <div>
+      <h4>Qué significa y qué no significa una ficha aprobada</h4>
+      <p>La aprobación de una ficha técnica acredita que el bien ofertado por el Contratista cumple los requisitos técnicos mínimos del expediente. <b>No acredita entrega, no acredita instalación y no habilita pago.</b> El importe asociado a las fichas aprobadas es el valor de expediente de esos ítems y sirve para dimensionar el avance de la revisión, no para valorizar.</p>
+      <div class="accion"><b>Monto valorizable a la fecha:</b> ${soles(0)} — no se ha efectuado entrega de bienes en obra. La valorización se rige por los hitos del tablero de <b>Valorización</b>.</div>
+    </div>
+  </div>
 </div>`;
 
 /* ---------- Condiciones del precio ---------- */
@@ -332,7 +295,21 @@ h += `<div class="seccion">
 h += pie(D);
 document.getElementById('app').innerHTML = h;
 
-/* ---------- Grafico por grupo ---------- */
+/* ---------- Los dos gráficos ---------- */
+anillo(document.getElementById('graf-anillo'),
+  ESTADOS.slice().reverse().map((e) => {
+    const l = por(e.id);
+    return {
+      etiqueta: e.etiqueta, color: e.color, valor: monto(l),
+      nota: `${l.length} códigos · ${num(unid(l))} unidades · ${soles(monto(l))} (${((monto(l) / TOTAL) * 100).toFixed(1)}%)`,
+    };
+  }),
+  {
+    cifra: `${((monto(aprobadas) / TOTAL) * 100).toFixed(1)}%`,
+    rotulo: 'del presupuesto aprobado',
+    pie: `${aprobadas.length} de ${C.length} códigos · ${soles(monto(aprobadas))} de ${soles(TOTAL)}`,
+  });
+
 barrasH(document.getElementById('graf-grupo'),
   resumenGrupo.map((g) => ({
     etiqueta: g.grupo.replace('EQUIPOS ', '').replace('MOBILIARIO ', 'MOB. '),
@@ -403,26 +380,18 @@ function listado(titulo, meta, lista) {
     : `<div class="aviso-caja">No hay códigos en esta condición.</div>`);
 }
 
-document.getElementById('k-aprobadas').addEventListener('click', () =>
-  listado('Fichas técnicas aprobadas', `${aprobadas.length} de ${C.length} códigos · ${pctAprobado.toFixed(1)}% del presupuesto`, aprobadas));
-
-document.getElementById('k-faltan').addEventListener('click', () =>
-  listado('Fichas técnicas por aprobar', `${faltanAprobar.length} códigos · ${soles(monto(faltanAprobar))} de valor de expediente`, faltanAprobar));
-
-document.getElementById('k-tramite').addEventListener('click', () =>
-  listado('Fichas en trámite', `${enTramite.length} en trámite · ${observadas.length} observadas · ${por('APROBADA PARCIALMENTE').length} aprobadas parcialmente`, enTramite));
-
-document.getElementById('k-presupuesto').addEventListener('click', () => {
-  abrirVentana('Presupuesto de equipamiento', `${C.length} códigos · ${num(unid(C))} unidades`,
-    `<div class="tabla-caja"><div class="tabla-scroll"><table class="datos">
-      <thead><tr><th>Grupo</th><th class="num">Cód.</th><th class="num">Und.</th><th class="num">Monto</th><th class="num">%</th></tr></thead>
-      <tbody>${resumenGrupo.map((g) => `<tr><td>${esc(g.grupo)}</td><td class="num">${g.cod}</td><td class="num">${num(g.und)}</td><td class="num">${soles(g.monto)}</td><td class="num">${(g.monto / TOTAL * 100).toFixed(1)}%</td></tr>`).join('')}</tbody>
-      <tfoot><tr><td>Total</td><td class="num">${C.length}</td><td class="num">${num(unid(C))}</td><td class="num">${soles(TOTAL)}</td><td class="num">100.0%</td></tr></tfoot>
-    </table></div></div>
-    <div class="aviso-caja" style="margin-top:14px">
-      <b>Fuente:</b> ${esc(D.presupuesto.fuente)}.<br>
-      Precios promedio de tres cotizaciones, expresados en soles con IGV incluido.
-    </div>`);
+[
+  { kpi: 'k-aprobadas',     id: 'APROBADA',              titulo: 'Fichas técnicas aprobadas' },
+  { kpi: 'k-parciales',     id: 'APROBADA PARCIALMENTE', titulo: 'Fichas aprobadas parcialmente' },
+  { kpi: 'k-observadas',    id: 'OBSERVADA',             titulo: 'Fichas observadas' },
+  { kpi: 'k-sinpresentar',  id: 'SIN PRESENTAR',         titulo: 'Fichas sin presentar' },
+].forEach((e) => {
+  const el = document.getElementById(e.kpi);
+  if (!el) return;
+  el.addEventListener('click', () => {
+    const l = por(e.id);
+    listado(e.titulo, `${l.length} de ${C.length} códigos · ${soles(monto(l))} de valor de expediente`, l);
+  });
 });
 
 crearFiltros({
@@ -450,16 +419,6 @@ crearFiltros({
     propietario: D.meta.supervisor,
   },
 });
-document.querySelectorAll('[data-obs]').forEach((el) => {
-  el.addEventListener('click', () => {
-    const o = OBS_FICHA.find((x) => x.n === el.dataset.obs && x.informe === el.dataset.informe);
-    abrirVentana('Observación ' + o.n, esc(o.fuente) + ' · ' + esc(o.nivel),
-      `<div class="lista-obs">${tarjetaObs(o)}</div>` +
-      (o.codigos.length ? bloqueTraza(o.codigos[0]) : ''));
-    enlazarDocsFicha();
-  });
-});
-
 /* Los documentos citados dentro de una ficha abren en el mismo visor, con
    vuelta a la ficha de la que se salió. */
 function enlazarDocsFicha() {
@@ -481,24 +440,6 @@ function enlazarDocsFicha() {
   });
 }
 
-crearFiltros({
-  contenedor: 'filtros-obs', tabla: 't-obs', resumen: 'resumen-obs',
-  unidad: 'observaciones', placeholder: 'Buscar observación, código o materia…',
-  campos: [
-    { clave: 'codigo', etiqueta: 'Código' },
-    { clave: 'prioridad', etiqueta: 'Nivel' },
-    { clave: 'estado', etiqueta: 'Estado' },
-    { clave: 'informe', etiqueta: 'Informe que la absuelve' },
-  ],
-  excel: {
-    hoja: 'Observaciones a fichas',
-    archivo: 'CS-PARACHIQUE_observaciones_fichas',
-    proyecto: D.meta.proyecto,
-    subtitulo: `CUI N° ${D.meta.cui} · Observaciones a las fichas técnicas presentadas por el Contratista`,
-    supervisor: D.meta.supervisor, cip: D.meta.cip,
-    supervision: D.meta.supervision, propietario: D.meta.supervisor,
-  },
-});
 
 activarTips(document);
 </script>
