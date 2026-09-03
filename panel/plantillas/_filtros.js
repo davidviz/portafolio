@@ -120,31 +120,33 @@ function crearFiltros(cfg) {
     return !!texto || cfg.campos.some(function (c) { return seleccion[c.clave].size > 0; });
   }
 
+  // Registra su criterio y deja que el coordinador evalúe todos los controles
+  // que filtran esta tabla: desplegables, interruptores de etapa y fechas.
   function aplicar() {
-    let visibles = 0;
-    filas.forEach(function (tr) {
+    ponerCriterio(cfg.tabla, 'desplegables', function (tr) {
       const pasaCampos = cfg.campos.every(function (c) {
         const el = seleccion[c.clave];
         return el.size === 0 || el.has(valorFila(tr, c.clave));
       });
       const pasaTexto = !texto || tr.textContent.toLowerCase().includes(texto);
-      const ver = pasaCampos && pasaTexto;
-      tr.style.display = ver ? '' : 'none';
-      if (ver) visibles++;
+      return pasaCampos && pasaTexto;
     });
+    aplicarFiltros(cfg.tabla);
+  }
 
+  alAplicarFiltros(cfg.tabla, function (visibles) {
     const r = cfg.resumen ? document.getElementById(cfg.resumen) : null;
     if (r) {
       const conteo = r.querySelector('[data-conteo]');
       if (conteo) {
-        conteo.innerHTML = 'Mostrando <b>' + num(visibles) + '</b> de <b>' + num(filas.length) + '</b> ' +
-          esc(cfg.unidad || 'registros');
+        conteo.innerHTML = 'Mostrando <b>' + num(visibles.length) + '</b> de <b>' +
+          num(filas.length) + '</b> ' + esc(cfg.unidad || 'registros');
       }
       const limpiar = r.querySelector('.limpiar');
       if (limpiar) limpiar.style.display = hayFiltro() ? '' : 'none';
     }
-    if (cfg.alFiltrar) cfg.alFiltrar(visiblesAhora());
-  }
+    if (cfg.alFiltrar) cfg.alFiltrar(visibles);
+  });
 
   function visiblesAhora() {
     return filas.filter(function (tr) { return tr.style.display !== 'none'; });

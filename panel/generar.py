@@ -103,7 +103,7 @@ TABLEROS = {
 }
 
 
-MODULOS_JS = ("_base.js", "_filtros.js", "_visor.js", "_excel.js")
+MODULOS_JS = ("_base.js", "_interruptores.js", "_filtros.js", "_visor.js", "_excel.js")
 
 
 # Claves con información económica del suscrito: solo viajan al tablero reservado.

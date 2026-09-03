@@ -79,10 +79,13 @@
       "archivo": "CARTA_PROPUESTA_ECONOMICA_DLVM_PARACHIQUE (3).docx",
       "ruta": "2.Informes Mensuales\\",
       "url": null,
-      "etapa": "E7",
+      "etapa": "E2",
       "drive": {
         "informe": "1R6otADD4nkZxQ9ERrzrl7S21XxhRMzTN"
-      }
+      },
+      "areas": [
+        "Administrativa / contractual"
+      ]
     },
     {
       "id": "CT-IN-001",
@@ -100,8 +103,15 @@
       "archivo": "EQUIPAMIENTO - Formato Informe de Revisión del Proyecto - ES Parachique.xlsx",
       "ruta": "2.Informes Mensuales\\",
       "url": null,
-      "etapa": "E2",
-      "drive": {}
+      "etapa": "E1",
+      "drive": {},
+      "areas": [
+        "Equipos biomédicos",
+        "Equipos complementarios",
+        "Equipos electromecánicos",
+        "Instrumental médico",
+        "Vehículos"
+      ]
     },
     {
       "id": "PR-001",
@@ -119,11 +129,14 @@
       "archivo": "INF-SUP-COMPATIB-EQ-DLVM-001-2026-PARACHIQUE_INFORME.docx + _MATRIZ.xlsx",
       "ruta": "2.Informes Mensuales\\1.Informe de Compatibilidad\\",
       "url": null,
-      "etapa": "E2",
+      "etapa": "E1",
       "drive": {
         "informe": "13tBh9t0Zap7raHQWPKwWInJ0imcj-1Es",
         "matriz": "1JZfEgWOXHaC1p5VytZ3x4jy7f5Jfm3QQ"
-      }
+      },
+      "areas": [
+        "Transversal / documental"
+      ]
     },
     {
       "id": "PR-002",
@@ -141,11 +154,18 @@
       "archivo": "INF-SUP-RC-EQ-DLVM-001-260726_INFORME.docx + _MATRIZ.xlsx",
       "ruta": "2.Informes Mensuales\\3.Informe de repsuestas\\",
       "url": null,
-      "etapa": "E2",
+      "etapa": "E1",
       "drive": {
         "informe": "1y0Cv40ncWbKYfn-5U0tg_3CjuqsUU-RE",
         "matriz": "1vDpYKAS4G5udXl0Fl0QUrKVdDYcDEIcD"
-      }
+      },
+      "areas": [
+        "Equipos biomédicos",
+        "Equipos complementarios",
+        "Equipos electromecánicos",
+        "Instrumental médico",
+        "Vehículos"
+      ]
     },
     {
       "id": "PR-003",
@@ -163,11 +183,14 @@
       "archivo": "INF-SUP-MEN-EQ-DLVM-001-260731_INFORME.docx + _MATRIZ.xlsx",
       "ruta": "2.Informes Mensuales\\2.Informes Mensuales\\",
       "url": null,
-      "etapa": "E7",
+      "etapa": "E2",
       "drive": {
         "informe": "1tPKRRkPMy6xMPGr_ucSHXt5KGBUUYX7Y",
         "matriz": "1WtkROuseDbiyhjBrjlNvOvAsAZEe7sID"
-      }
+      },
+      "areas": [
+        "Transversal / documental"
+      ]
     },
     {
       "id": "CT-002",
@@ -185,10 +208,13 @@
       "archivo": "CARTA_N02-2026-DLVM_LIQUIDACION_JULIO_2026.docx",
       "ruta": "2.Informes Mensuales\\4.Proformas\\",
       "url": null,
-      "etapa": "E7",
+      "etapa": "E2",
       "drive": {
         "informe": "1gNJg6MVsDCB8zh5niZIavCSpGWJ9J5TI"
-      }
+      },
+      "areas": [
+        "Administrativa / contractual"
+      ]
     },
     {
       "id": "CT-IN-002",
@@ -209,7 +235,11 @@
       "url": null,
       "drive": {
         "informe": "1lujXbt1Fkz_JSlwFGuEhJk_VKZAEoOKj"
-      }
+      },
+      "areas": [
+        "Transversal / documental",
+        "Equipos complementarios"
+      ]
     },
     {
       "id": "PR-004",
@@ -231,7 +261,11 @@
       "drive": {
         "informe": "1rp0Mf1Jc7D3mrgTztEsKWyWmlUzKNhLb",
         "matriz": "1H2jrbhM_dCrfwXLjb9PuEz47AYj8184y"
-      }
+      },
+      "areas": [
+        "Transversal / documental",
+        "Equipos complementarios"
+      ]
     }
   ],
   "expediente": {
@@ -372,14 +406,526 @@
         "prioridad": "—",
         "archivo": "Planos_digitales_pdf.pdf"
       }
-    ]
+    ],
+    "modulos": [
+      {
+        "n": 1,
+        "nombre": "Memoria Descriptiva",
+        "archivo": "1.Memoria Descriptiva.pdf",
+        "drive": "1903KziiMX3p_mMi0ccChGHvCRJRwpxG4",
+        "obs": 3,
+        "estado": "Con observaciones",
+        "prioridad": "ALTA"
+      },
+      {
+        "n": 2,
+        "nombre": "Plazo de entrega y cronograma",
+        "archivo": "2. Plazo de entrega Y cronograma.pdf",
+        "drive": "14V6OF8sTipsWjamQTBPG9n3xZlbSBA58",
+        "obs": 1,
+        "estado": "Sujeto a obs. N° 2",
+        "prioridad": "BAJA"
+      },
+      {
+        "n": 3,
+        "nombre": "Anexos",
+        "archivo": "3.Anexos.pdf",
+        "drive": "10SyNc4HplJSZ3y2989cbLobedoEBWp8o",
+        "obs": 0,
+        "estado": "Conforme",
+        "prioridad": "—"
+      },
+      {
+        "n": 4,
+        "nombre": "Cuadro de cargas por UPS",
+        "archivo": "4. Cuadro de cargas por UPS.pdf",
+        "drive": "1w8gq_93JCXJ3uCeBAonuGiAzdkP80o53",
+        "obs": 0,
+        "estado": "Conforme",
+        "prioridad": "—"
+      },
+      {
+        "n": 5,
+        "nombre": "Biomédicos — EETT",
+        "archivo": "5. Biomedicos EETT.pdf",
+        "drive": "1zphPS3ou2FPrp4LwsUP5UO5wG7avEBA0",
+        "obs": 1,
+        "estado": "Observación menor (CUI)",
+        "prioridad": "MEDIA"
+      },
+      {
+        "n": 6,
+        "nombre": "Complementarios — EETT",
+        "archivo": "6.Complementarios-EETT.pdf",
+        "drive": "1pW19d9Nx1oa7DuiVpBMSU99J4Q9BVisf",
+        "obs": 1,
+        "estado": "Observación formal",
+        "prioridad": "BAJA"
+      },
+      {
+        "n": 7,
+        "nombre": "Electromecánico — EETT",
+        "archivo": "7.Electromecanico.pdf",
+        "drive": "15py6-HynPOzcudIgYIZxWFkxt4Tdve9Y",
+        "obs": 0,
+        "estado": "Conforme",
+        "prioridad": "—"
+      },
+      {
+        "n": 8,
+        "nombre": "Instrumental — EETT",
+        "archivo": "8.Instrumental.pdf",
+        "drive": "1Xc_9nnJ4M2LXwMuVoLXq24r_6PyZt4lx",
+        "obs": 2,
+        "estado": "Observaciones críticas",
+        "prioridad": "ALTA"
+      },
+      {
+        "n": 9,
+        "nombre": "Mobiliario administrativo — EETT",
+        "archivo": "9.Mob Admin.pdf",
+        "drive": "1vt-OfcnyFvnW1la8_cGpyeCsg3EcKVod",
+        "obs": 0,
+        "estado": "Conforme",
+        "prioridad": "—"
+      },
+      {
+        "n": 10,
+        "nombre": "Mobiliario clínico — EETT",
+        "archivo": "10.Mob Clinic.pdf",
+        "drive": "1YR2jPVkwflBDbs3FDfs_mhPwh9_FN1m9",
+        "obs": 0,
+        "estado": "Conforme",
+        "prioridad": "—"
+      },
+      {
+        "n": 11,
+        "nombre": "Vehículos — EETT",
+        "archivo": "11.Vehiculos.pdf",
+        "drive": "1-3Yp0oXaJYKyYwGH6MvD9tLX5Yk3NTK8",
+        "obs": 1,
+        "estado": "Observación crítica",
+        "prioridad": "ALTA"
+      },
+      {
+        "n": 12,
+        "nombre": "Presupuesto referencial",
+        "archivo": "12.Presupues ref.pdf",
+        "drive": "1NEEv-zcmrFRjsgaJX5Suk1iOEUVuFRV4",
+        "obs": 0,
+        "estado": "Conforme",
+        "prioridad": "—"
+      },
+      {
+        "n": 13,
+        "nombre": "Estudio de Mercado",
+        "archivo": "13.Estudio de Merc.pdf",
+        "drive": "1Q23cVb6OPT53NCOVtvT_fAL5NsfJBoA6",
+        "obs": 2,
+        "estado": "Con observaciones",
+        "prioridad": "MEDIA"
+      },
+      {
+        "n": 14,
+        "nombre": "Metrado",
+        "archivo": "14.Metrado.pdf",
+        "drive": "12q1c2vPS4aJbvDOHz40Y3ld25coBwsj7",
+        "obs": 0,
+        "estado": "Conforme",
+        "prioridad": "—"
+      },
+      {
+        "n": 15,
+        "nombre": "Cuadro de Pre-Instalaciones",
+        "archivo": "15.Cuadro de PI.pdf",
+        "drive": "1tz_IcNcDFvSNgaJKFH_V1MyswgiXvO02",
+        "obs": 0,
+        "estado": "Conforme",
+        "prioridad": "—"
+      },
+      {
+        "n": 16,
+        "nombre": "Planos de equipamiento",
+        "archivo": "16.Planos.pdf",
+        "drive": "1JiCtZOSZnjEIG5YJ15sIDhfOgG54Sg1-",
+        "obs": 0,
+        "estado": "Pendiente fase campo",
+        "prioridad": "—"
+      },
+      {
+        "n": 17,
+        "nombre": "Planos digitales",
+        "archivo": "Planos digitales pdf.pdf",
+        "drive": "1_Yt4aVsR9RCVMhG_WPCFQ00AUx811kCN",
+        "obs": null,
+        "estado": "Documento del expediente",
+        "prioridad": "—"
+      }
+    ],
+    "carpetaDrive": "https://drive.google.com/drive/folders/1Vxe58e3CD_oSqRpogGWWHkLX5E-dtX3H",
+    "notaModulos": "Expediente técnico firmado, ordenado por módulos. Se abre dentro del tablero; el archivo debe estar compartido en Drive con quien lo consulta."
   },
   "observaciones": {
     "total": 20,
     "criticas": 2,
     "sustanciales": 9,
     "leves": 9,
-    "pendientesProyectista": 46
+    "pendientesProyectista": 46,
+    "lista": [
+      {
+        "n": "001-EETT",
+        "componente": "8. Instrumental EETT",
+        "archivo": "EE_TT__PARACHIQUE.xlsx",
+        "ubicacion": "Hoja 'INSTRUMENTAL', filas 345 y 383",
+        "folio": "EETT Instrumental: 1103 (I-5 cirugía menor) y 1102 (I-5 pequeñas intervenciones). Consolidado: 966.",
+        "equipo": "I-5 — Set instrumental de cirugía menor",
+        "tipo": "Duplicación de código en equipos distintos",
+        "descripcion": "La hoja INSTRUMENTAL consigna dos fichas técnicas distintas bajo un mismo código I-5: fila 345 'SET INSTRUMENTAL DE CIRUGIA MENOR' y fila 383 'SET INSTRUMENTAL DE PEQUEÑAS INTERVENCIONES QUIRURGICAS'. La duplicación impide el control unívoco del bien en las etapas de aprobación de Anexo 1, recepción, protocolo de pruebas y valorización.",
+        "sustento": "Reglamento de la Ley de Contrataciones del Estado — identificación unívoca de los bienes objeto de la prestación.",
+        "recomendacion": "Se solicita al proyectista recodificar la ficha de la fila 383 como I-9, en concordancia con la denominación consignada en el Consolidado de Equipamiento, el Estudio de Mercado y el Cuadro de Pre-Instalaciones. Ver observación 002-EETT.",
+        "prioridad": "CRÍTICA",
+        "estado": "Por absolver",
+        "codigos": [
+          "I-5"
+        ]
+      },
+      {
+        "n": "002-EETT",
+        "componente": "8. Instrumental EETT",
+        "archivo": "EE_TT__PARACHIQUE.xlsx vs Equipamiento_Propuesto_PARACHIQUE.xlsx",
+        "ubicacion": "Hoja 'INSTRUMENTAL' (EETT) vs hoja 'CONSOLIDADO EQ', hoja 'ESTUDIO DE MERCADO 05.2025' y hoja 'CUADRO PRE. INST.'",
+        "folio": "Consolidado: 966 (I-9 con 1 und). EETT Instrumental: 1118 a 1102 (rango completo del componente, sin ficha de I-9).",
+        "equipo": "I-9 — Set instrumental de pequeñas intervenciones quirúrgicas",
+        "tipo": "Bien valorizado sin especificación técnica",
+        "descripcion": "El código I-9 figura con 1 unidad en el Consolidado de Equipamiento, en el Estudio de Mercado y en el Cuadro de Pre-Instalaciones, y se encuentra asignado al ambiente TOPICO DE EMERGENCIAS + 1/2 S.H. en el Programa de Equipamiento; sin embargo carece de ficha técnica en el libro de EE.TT. La verificación total arroja 178 fichas técnicas frente a 179 códigos del Consolidado, siendo I-9 el único faltante.",
+        "sustento": "Reglamento de la Ley de Contrataciones del Estado — todo bien valorizado debe contar con especificación técnica sustentatoria que permita su verificación en recepción.",
+        "recomendacion": "Se solicita al proyectista incorporar la ficha técnica del código I-9, sea mediante la recodificación indicada en la observación 001-EETT o mediante ficha independiente, verificando que la denominación coincida exactamente con la del Consolidado.",
+        "prioridad": "CRÍTICA",
+        "estado": "Por absolver",
+        "codigos": [
+          "I-9"
+        ]
+      },
+      {
+        "n": "003-PLANO",
+        "componente": "16. Planos de Equipamiento / 14. Metrado",
+        "archivo": "07_1_EQ-PARACHIQUE__1_.dxf vs Equipamiento_Propuesto_PARACHIQUE.xlsx",
+        "ubicacion": "Lámina EQ-01, Espacio Modelo (conteo por valor de atributo de bloque, excluidos los cuadros de equipamiento del propio plano) vs hoja 'CONSOLIDADO EQ'",
+        "folio": "Consolidado: 968 a 965. Listado de Códigos: 964 a 960. Plano de equipamiento: componente 16 — folio por cotejar (el escaneado no tiene capa de texto).",
+        "equipo": "14 códigos: D-126, D-129, D-41, M-10, M-101, M-114, M-18, M-2, M-36, M-39, M-40, M-44, M-45, M-91",
+        "tipo": "Discrepancia de cantidades entre plano y presupuesto",
+        "descripcion": "El conteo del equipamiento representado en el plano arroja discrepancia de cantidad respecto del Consolidado en catorce códigos, con un exceso neto de 7 unidades en plano (206 en plano frente a 199 en expediente). Detalle (plano / expediente): D-126 2/1; D-129 1/2; D-41 2/1; M-10 8/7; M-101 13/11; M-114 26/27; M-18 29/25; M-2 5/6; M-36 66/62; M-39 24/25; M-40 8/9; M-44 2/3; M-45 3/2; M-91 12/13. Cinco de estos códigos (M-10, M-101, M-18, M-36 y M-45) fueron observados por el postor CORPORACION PRISMA S.A.C. en las consultas N° 07 a N° 11 del Acta de Absolución; los nueve restantes no fueron observados ni absueltos. Merece atención particular D-41 Unidad dental completa (2 representadas en plano, 1 valorizada), por su incidencia en preinstalaciones eléctricas, sanitarias y de aire comprimido.",
+        "sustento": "Reglamento de la Ley de Contrataciones del Estado — concordancia entre planos, metrados y presupuesto del expediente técnico.",
+        "recomendacion": "Se solicita al proyectista compatibilizar el plano de equipamiento con el metrado del Consolidado en los catorce códigos, emitiendo lámina corregida. Se deja constancia de que, mientras subsista la discrepancia, la valorización y la verificación de cantidades en obra se efectuarán conforme al metrado del presupuesto.",
+        "prioridad": "SUSTANCIAL",
+        "estado": "Por absolver",
+        "codigos": [
+          "D-126",
+          "D-129",
+          "D-41",
+          "M-10",
+          "M-101",
+          "M-114",
+          "M-18",
+          "M-2",
+          "M-36",
+          "M-39",
+          "M-40",
+          "M-44",
+          "M-45",
+          "M-91"
+        ]
+      },
+      {
+        "n": "004-PLANO",
+        "componente": "16. Planos de Equipamiento",
+        "archivo": "Acta de Absolución Concurso N° 19-2026-FOSPIBAY/E (06/04/2026); CARTA N° 10-2026-ARQ.CONST ALFA 360",
+        "ubicacion": "Consultas N° 07, 08, 09, 10 y 11 del participante CORPORACION PRISMA S.A.C.",
+        "folio": "Consolidado: 968 a 965. Plano de equipamiento: componente 16 — folio por cotejar. El Acta de Absolución del Concurso N° 19-2026-FOSPIBAY/E es documento del proceso de selección, no del expediente foliado.",
+        "equipo": "M-10, M-101, M-18, M-36, M-45",
+        "tipo": "Absolución que no ordena la corrección del plano",
+        "descripcion": "Ante las consultas N° 07 a N° 11, el proyectista respondió que 'se debe respetar el metrado expuesto en el presupuesto el mismo que es concordante con el programa de equipamiento (listado de equipos por ambiente), en ese sentido no es necesaria la actualización del presupuesto'. Esta supervisión verificó la afirmación y la confirma: el Programa de Equipamiento, filtrado por proveedor EQ, arroja 179 códigos y 717 unidades, idénticos al Consolidado, al Estudio de Mercado y al Cuadro de Pre-Instalaciones, sin discrepancia alguna. No obstante, la absolución resolvió el extremo presupuestal y no dispuso la corrección del plano de equipamiento, que es el documento donde reside la discrepancia. En consecuencia, el expediente se integra manteniendo una incompatibilidad documental vigente entre el plano y el presupuesto.",
+        "sustento": "Reglamento de la Ley de Contrataciones del Estado — integración de bases y coherencia del expediente técnico.",
+        "recomendacion": "Se solicita al proyectista emitir la lámina EQ-01 corregida conforme al metrado del presupuesto, con constancia de la fecha de sustitución, a fin de que el contratista ejecute sobre un plano concordante. Se recomienda a la Entidad incorporar la lámina corregida al expediente contractual.",
+        "prioridad": "SUSTANCIAL",
+        "estado": "Por absolver",
+        "codigos": [
+          "M-10",
+          "M-101",
+          "M-18",
+          "M-36",
+          "M-45"
+        ]
+      },
+      {
+        "n": "005-EETT",
+        "componente": "6. Complementarios EETT / 12. Presupuesto",
+        "archivo": "EE_TT__PARACHIQUE.xlsx; Equipamiento_Propuesto_PARACHIQUE.xlsx",
+        "ubicacion": "EETT hoja 'COMPLEMENTARIO' (ficha E-130); 'CONSOLIDADO EQ' fila 75; 'CODIGOS' fila 98; 'Equipamiento PROGRAMA' fila 896; 'ESTUDIO DE MERCADO 05.2025' fila 73; 'CUADRO PRE. INST.' fila 72; 'Hoja1' fila 11",
+        "folio": "Consolidado: 967. Listado de Códigos: 964 a 960 (bloque E). Cuadro de Pre-Instalaciones: 959 a 957. EETT Complementarios y Estudio de Mercado: folios por cotejar.",
+        "equipo": "E-130 — Destilador de agua",
+        "tipo": "Denominación y capacidad discordantes en seis ubicaciones",
+        "descripcion": "El código E-130 presenta cuatro denominaciones distintas dentro del expediente: 'Destilador de agua 8 litros/h' en el Consolidado (fila 75), en la hoja CODIGOS (fila 98), en el Programa de Equipamiento (fila 896) y en la ficha técnica de EE.TT.; 'Destilador de agua 4 litros/h' en el Estudio de Mercado (fila 73) y en el Cuadro de Pre-Instalaciones (fila 72); y 'Bidestilador de agua 4 litros/h' en la Hoja1 de resumen de cargas (fila 11). Mediante la absolución de la consulta N° 02 del Acta FOSPIBAY el proyectista declaró que la especificación debe decir '4 litros/h' por error material. Sin embargo, la corrección alcanza a cuatro documentos y no únicamente a la EE.TT., y la denominación 'bidestilador' designa un equipo de doble destilación, distinto de un destilador simple.",
+        "sustento": "Reglamento de la Ley de Contrataciones del Estado — precisión y coherencia de las especificaciones técnicas.",
+        "recomendacion": "Se solicita al proyectista emitir fe de erratas que uniformice la denominación y capacidad de E-130 en los seis documentos citados, precisando expresamente si el bien requerido es un destilador o un bidestilador, por tratarse de equipos de distinta prestación y costo.",
+        "prioridad": "SUSTANCIAL",
+        "estado": "Absuelta parcialmente",
+        "codigos": [
+          "E-130"
+        ]
+      },
+      {
+        "n": "006-PREINST",
+        "componente": "4. Cuadro de cargas / 15. Cuadro de Pre-Instalaciones",
+        "archivo": "Equipamiento_Propuesto_PARACHIQUE.xlsx",
+        "ubicacion": "Hoja 'Hoja1' fila 11 vs hoja 'CUADRO PRE. INST.' fila 72",
+        "folio": "Cuadro de Pre-Instalaciones: 959 a 957. La hoja de resumen de cargas («Hoja1» del archivo editable) no se ha ubicado en los componentes 4 ni 15 del expediente escaneado.",
+        "equipo": "E-130 — Destilador de agua",
+        "tipo": "Discrepancia de potencia declarada",
+        "descripcion": "Para el mismo código E-130 el resumen de cargas de la Hoja1 declara 7,000 W, mientras que el Cuadro de Pre-Instalaciones declara 4,000 W. Ambos documentos coinciden en la configuración 3F+N a 380 V. La diferencia de 3,000 W en un circuito trifásico incide directamente en el dimensionamiento del alimentador, la protección y el tablero de la UPS correspondiente, y es la carga individual más alta del expediente de equipamiento.",
+        "sustento": "NTS N° 113-MINSA/DGIEM-V.01 — consideraciones de preinstalación del equipamiento. Código Nacional de Electricidad — Utilización.",
+        "recomendacion": "Se solicita al proyectista precisar la potencia nominal definitiva de E-130 y uniformizarla en ambos documentos, y confirmar que el dimensionamiento del circuito de la especialidad de Instalaciones Eléctricas corresponde al valor definitivo.",
+        "prioridad": "SUSTANCIAL",
+        "estado": "Por absolver",
+        "codigos": [
+          "E-130"
+        ]
+      },
+      {
+        "n": "007-PROG",
+        "componente": "14. Metrado / 1. Memoria Descriptiva",
+        "archivo": "Equipamiento_Propuesto_PARACHIQUE.xlsx; 01_MEMORIA_DESCRIPTIVA_EQUIPAMIENTO_PARACHIQUE.docx; 07_1_EQ-PARACHIQUE__1_.dxf",
+        "ubicacion": "Hoja 'CODIGOS' (M-160, proveedor OC*); hoja 'Equipamiento PROGRAMA' (Archivo de Historias Clínicas); Memoria numeral 4; lámina EQ-01",
+        "folio": "Memoria Descriptiva, numeral 4: 1234. Listado de Códigos: 964 a 960 (bloque M, M-160 con proveedor OC*).",
+        "equipo": "M-160 — Estantería para historias clínicas (5 und)",
+        "tipo": "Clasificación OC* sin encuadre en el criterio de la Memoria",
+        "descripcion": "El código M-160, con 5 unidades graficadas en el plano y consignadas en el Programa de Equipamiento para el ambiente Archivo de Historias Clínicas, está clasificado con proveedor OC*, por lo que no cuenta con ficha técnica ni valorización en la especialidad de equipamiento. Ante la consulta N° 12 del Acta FOSPIBAY el proyectista remitió el bien a 'la especialidad correspondiente'. No obstante, el numeral 4 de la propia Memoria Descriptiva define el alcance de OC* únicamente para dos supuestos: equipos ofimáticos, a cargo de la especialidad de comunicaciones, y equipos sanitarios, a cargo de la especialidad de instalaciones sanitarias. Una estantería metálica para historias clínicas no encuadra en ninguno de ambos supuestos y corresponde a mobiliario administrativo.",
+        "sustento": "Criterio del numeral 4 de la Memoria Descriptiva de Equipamiento. NTS N° 113-MINSA/DGIEM-V.01 — dotación de mobiliario administrativo.",
+        "recomendacion": "Se solicita al proyectista precisar qué especialidad asume el suministro de M-160 y bajo qué partida presupuestal, o incorporar las 5 unidades a la especialidad de equipamiento con ficha técnica y valorización. Se deja constancia de que, de no definirse, el ambiente Archivo de Historias Clínicas quedaría sin mobiliario de archivo al término de la obra.",
+        "prioridad": "SUSTANCIAL",
+        "estado": "Absuelta parcialmente",
+        "codigos": [
+          "M-160"
+        ]
+      },
+      {
+        "n": "008-PLANO",
+        "componente": "16. Planos de Equipamiento",
+        "archivo": "07_1_EQ-PARACHIQUE__1_.dxf",
+        "ubicacion": "Archivo editable 07_1_EQ-PARACHIQUE__1_.dxf, Espacio Modelo. Capa correcta: 'EQ- EQUIPAMIENTO BLOQUES'. Capas mal nombradas: 'EQ - EQUIPAMIENTO BLOQUES' (con espacio de más) y 'EQUIPAMIENTO BLOQUE' (en singular).",
+        "folio": "Plano de equipamiento: componente 16 — folio por cotejar (el escaneado no tiene capa de texto). Observación formulada sobre el archivo editable DXF.",
+        "equipo": "D-287 Refrigeradora de laboratorio; D-245 Analizador bioquímico; M-161 Cama para trabajo de parto (2 und); V-1 Ambulancia Rural Tipo I",
+        "tipo": "Equipos dibujados sobre capas mal nombradas",
+        "descripcion": "En el archivo editable del plano, el equipamiento se dibuja sobre una capa denominada 'EQ- EQUIPAMIENTO BLOQUES', que contiene 724 de las 729 inserciones. Las cinco restantes quedaron dibujadas sobre dos capas cuyo nombre está mal escrito: 'EQ - EQUIPAMIENTO BLOQUES', con un espacio de más, que contiene la refrigeradora de laboratorio D-287, el analizador bioquímico D-245 y las dos camas para trabajo de parto M-161; y 'EQUIPAMIENTO BLOQUE', en singular, que contiene la ambulancia V-1. Los cinco equipos están correctamente dibujados y ubicados; el defecto es únicamente de nombre de capa. La consecuencia práctica es que cualquier conteo, filtrado o exportación que se apoye en el nombre de la capa —procedimiento habitual para elaborar metrados y planos de preinstalación por sector— omitirá estos cinco equipos, entre ellos la ambulancia y dos equipos de alto costo. Esta Supervisión detectó el hecho precisamente porque el conteo por capa arrojaba cinco unidades menos que el conteo por bloque.",
+        "sustento": "Criterio técnico de trazabilidad del expediente digital. Numeral 8 de la Memoria Descriptiva — obligación del proveedor de desarrollar planos de preinstalación por equipo, sector, UPS/UPSS, nivel o planta general a partir del plano de equipamiento.",
+        "recomendacion": "Se solicita al proyectista corregir el nombre de la capa de las cinco inserciones señaladas, reasignándolas a la capa 'EQ- EQUIPAMIENTO BLOQUES', y remitir el archivo DXF corregido. No se requiere modificar el dibujo ni la ubicación de los equipos.",
+        "prioridad": "SUSTANCIAL",
+        "estado": "Por absolver",
+        "codigos": [
+          "D-245",
+          "D-287",
+          "M-161",
+          "V-1"
+        ]
+      },
+      {
+        "n": "009-PREINST",
+        "componente": "4. Cuadro de cargas / 15. Cuadro de Pre-Instalaciones",
+        "archivo": "Equipamiento_Propuesto_PARACHIQUE.xlsx",
+        "ubicacion": "Hoja 'Hoja1' fila 8 vs hoja 'CUADRO PRE. INST.' fila 64",
+        "folio": "Cuadro de Pre-Instalaciones: 959 a 957. La hoja de resumen de cargas («Hoja1» del archivo editable) no se ha ubicado en los componentes 4 ni 15 del expediente escaneado.",
+        "equipo": "D-325 — Balanza digital con tallímetro adulto",
+        "tipo": "Discrepancia de potencia declarada",
+        "descripcion": "El resumen de cargas de la Hoja1 declara 100 W para el código D-325, mientras que el Cuadro de Pre-Instalaciones declara 150 W para el mismo código. Ambos documentos coinciden en configuración monofásica sin toma estabilizada.",
+        "sustento": "NTS N° 113-MINSA/DGIEM-V.01 — consideraciones de preinstalación del equipamiento.",
+        "recomendacion": "Se solicita al proyectista uniformizar la potencia declarada de D-325 en ambos documentos.",
+        "prioridad": "SUSTANCIAL",
+        "estado": "Por absolver",
+        "codigos": [
+          "D-325"
+        ]
+      },
+      {
+        "n": "010-CARGAS",
+        "componente": "4. Cuadro de cargas por UPS",
+        "archivo": "Equipamiento_Propuesto_PARACHIQUE.xlsx",
+        "ubicacion": "Hoja 'Hoja1', filas 12 y 13",
+        "folio": "Cuadro de cargas por UPS: 1212 a 1210. La hoja de resumen de cargas («Hoja1» del archivo editable) no se ha ubicado en los componentes 4 ni 15 del expediente escaneado.",
+        "equipo": "E-58 — Máquina lustradora tipo industrial; T-6 — Equipo de sonido",
+        "tipo": "Códigos en el resumen de cargas inexistentes en el expediente",
+        "descripcion": "La Hoja1 de resumen de cargas consigna dos códigos con potencia asignada (E-58 con 1,000 W y T-6 con 100 W) que no existen en ningún otro documento del expediente de equipamiento: no figuran en la hoja CODIGOS, ni en el Programa de Equipamiento, ni en el Consolidado, ni en el Cuadro de Pre-Instalaciones, ni se encuentran rotulados en el plano. Adicionalmente, la misma hoja consigna T-16 y T-50, códigos de proveedor OC* que tampoco figuran en el Cuadro de Pre-Instalaciones.",
+        "sustento": "Reglamento de la Ley de Contrataciones del Estado — coherencia documental del expediente técnico.",
+        "recomendacion": "Se solicita al proyectista depurar la Hoja1 de resumen de cargas, eliminando los códigos sin respaldo en el expediente o incorporándolos formalmente si corresponden a bienes efectivamente requeridos, y precisar el tratamiento de las cargas de los códigos OC*.",
+        "prioridad": "SUSTANCIAL",
+        "estado": "Por absolver",
+        "codigos": [
+          "E-58",
+          "T-16",
+          "T-50",
+          "T-6"
+        ]
+      },
+      {
+        "n": "011-PLANO",
+        "componente": "16. Planos de Equipamiento",
+        "archivo": "Acta de Absolución Concurso N° 19-2026-FOSPIBAY/E; 07_1_EQ-PARACHIQUE__1_.dxf; EE_TT__PARACHIQUE.xlsx",
+        "ubicacion": "Consulta N° 06 del participante CORPORACION PRISMA S.A.C.; ficha E-81 en hoja 'ELECTROMECANICO'",
+        "folio": "Consolidado: 967 (E-81, equipos electromecánicos). EETT Electromecánico y plano de equipamiento: folios por cotejar.",
+        "equipo": "E-81 — Cocina eléctrica de dos hornillas de mesa",
+        "tipo": "Absolución que remite entre especialidades sin compatibilizar",
+        "descripcion": "El postor observó que la EE.TT. del código E-81 requiere una cocina de mesa (requerimiento A01 'modelo de mesa') mientras que el plano de arquitectura reserva el espacio para una cocina de piso. El proyectista absolvió indicando que el bien corresponde a la especialidad de equipamiento médico y que debe respetarse lo plasmado en el plano de dicha especialidad. La absolución define la prevalencia pero no dispone la compatibilización del plano de arquitectura, por lo que la discrepancia de mobiliario y de punto de alimentación subsiste en el expediente y se trasladará a la etapa de ejecución.",
+        "sustento": "Reglamento de la Ley de Contrataciones del Estado — compatibilización entre especialidades del expediente técnico.",
+        "recomendacion": "Se solicita al proyectista disponer la compatibilización del plano de arquitectura del ambiente Comedor + Cocina con la especificación de E-81. Esta supervisión verificará la condición del mueble soporte y del punto de alimentación en la revisión de planos de preinstalación (Fase 4).",
+        "prioridad": "SUSTANCIAL",
+        "estado": "Absuelta parcialmente",
+        "codigos": [
+          "E-81"
+        ]
+      },
+      {
+        "n": "012-EETT",
+        "componente": "4 a 15. Documentos derivados de hoja de cálculo",
+        "archivo": "EE_TT__PARACHIQUE.xlsx; Equipamiento_Propuesto_PARACHIQUE.xlsx; CARGAS_ELECTRICAS_AMBIENTES_CRITICOS.xlsx",
+        "ubicacion": "Encabezado de las 7 hojas de EE.TT.; encabezado del Cuadro de cargas por UPS; encabezado del Consolidado y del Listado de Códigos; encabezado del Cuadro de Pre-Instalaciones",
+        "folio": "Verificado en: EETT Instrumental 1118 a 1102; Cuadro de cargas por UPS 1212 a 1210; Consolidado y Listado de Códigos 968 a 960; Cuadro de Pre-Instalaciones 959 a 957. La Memoria Descriptiva (1240 a 1228) consigna correctamente 2571750.",
+        "equipo": "Encabezado de los documentos de equipamiento derivados de hoja de cálculo",
+        "tipo": "Código Único de Inversiones truncado",
+        "descripcion": "El encabezado consigna 'CUI N° 257175', de seis dígitos, cuando el Código Único de Inversiones del proyecto es 2571750, de siete dígitos. El cotejo con el expediente escaneado acredita que el error no se limita a las Especificaciones Técnicas: se replica en el Cuadro de cargas por UPS (folios 1212 a 1210), en el Consolidado de Equipamiento y el Listado de Códigos (folios 968 a 960) y en el Cuadro de Pre-Instalaciones (folios 959 a 957), además de las siete hojas de EE.TT. La Memoria Descriptiva (folios 1240 a 1228) sí consigna el CUI completo, lo que confirma que el error se originó en la plantilla de los documentos elaborados en hoja de cálculo y se propagó a todos ellos.",
+        "sustento": "Reglamento de la Ley de Contrataciones del Estado — identificación del proyecto. Directiva del Sistema Nacional de Programación Multianual y Gestión de Inversiones — formato del CUI.",
+        "recomendacion": "Se solicita al proyectista corregir el CUI, consignando 2571750, en el encabezado de la totalidad de los documentos de equipamiento derivados de hoja de cálculo: las 7 hojas de EE.TT., el Cuadro de cargas por UPS, el Consolidado, el Listado de Códigos y el Cuadro de Pre-Instalaciones.",
+        "prioridad": "LEVE",
+        "estado": "Por absolver",
+        "codigos": []
+      },
+      {
+        "n": "013-MEM",
+        "componente": "1. Memoria Descriptiva",
+        "archivo": "01_MEMORIA_DESCRIPTIVA_EQUIPAMIENTO_PARACHIQUE.docx",
+        "ubicacion": "Numeral 1. GENERALIDADES, tercer párrafo",
+        "folio": "1236",
+        "equipo": "Ubicación del proyecto",
+        "tipo": "Referencia a departamento distinto al del proyecto",
+        "descripcion": "El numeral 1 señala: 'Entre los departamentos afectados se encuentra el de la Libertad. Dentro del cual se focalizo el Presente establecimiento de salud'. El proyecto se localiza en el distrito y provincia de Sechura, departamento de Piura, conforme al numeral 3 de la propia Memoria y a la denominación del proyecto. Se evidencia reutilización de plantilla de otro proyecto sin actualización.",
+        "sustento": "Reglamento de la Ley de Contrataciones del Estado — coherencia documental del expediente técnico.",
+        "recomendacion": "Se solicita al proyectista corregir la referencia al departamento, consignando Piura.",
+        "prioridad": "LEVE",
+        "estado": "Por absolver",
+        "codigos": []
+      },
+      {
+        "n": "014-MEM",
+        "componente": "2. Plazo de entrega y cronograma",
+        "archivo": "01_MEMORIA_DESCRIPTIVA_EQUIPAMIENTO_PARACHIQUE.docx",
+        "ubicacion": "Numeral 14. CRONOGRAMA DE PLAZOS Y ADQUISICIÓN DEL EQUIPAMIENTO, encabezado de la tabla",
+        "folio": "1227",
+        "equipo": "Tabla de cronograma de implementación (14 actividades / 12 meses)",
+        "tipo": "Referencia cruzada a proyecto ajeno",
+        "descripcion": "El encabezado de la columna de cronograma consigna 'CRONOGRAMA DE IMPLEMENTACION DEL CENTRO DE SALUD CRUZ DE LA ESPERANZA', denominación que no corresponde al proyecto materia de contratación. La estructura de las 14 actividades y la secuencia de 12 meses se verifican adecuadas y concordantes con el flujo de aprobación de Anexo 1, planos de preinstalación, protocolos de prueba y capacitaciones.",
+        "sustento": "Reglamento de la Ley de Contrataciones del Estado — coherencia documental del expediente técnico.",
+        "recomendacion": "Se solicita al proyectista reemplazar la denominación por 'CENTRO DE SALUD PARACHIQUE'.",
+        "prioridad": "LEVE",
+        "estado": "Por absolver",
+        "codigos": []
+      },
+      {
+        "n": "015-MEM",
+        "componente": "1. Memoria Descriptiva",
+        "archivo": "01_MEMORIA_DESCRIPTIVA_EQUIPAMIENTO_PARACHIQUE.docx",
+        "ubicacion": "Numeral 3. UBICACION, pie de la Ilustración 1",
+        "folio": "1235",
+        "equipo": "Esquema de ubicación",
+        "tipo": "Error tipográfico en la denominación del establecimiento",
+        "descripcion": "El pie de la Ilustración 1 consigna 'Esquema de ubicación del E. S. Patachique', debiendo decir 'Parachique'. Adicionalmente, la fuente se cita como 'Goggle earth'.",
+        "sustento": "Criterio de calidad documental del expediente técnico.",
+        "recomendacion": "Se solicita al proyectista corregir la denominación del establecimiento y la cita de la fuente.",
+        "prioridad": "LEVE",
+        "estado": "Por absolver",
+        "codigos": []
+      },
+      {
+        "n": "016-MEM",
+        "componente": "1. Memoria Descriptiva",
+        "archivo": "01_MEMORIA_DESCRIPTIVA_EQUIPAMIENTO_PARACHIQUE.docx",
+        "ubicacion": "Numeral 11. ESPECIFICACIONES TÉCNICAS DEL INSTRUMENTAL QUIRÚRGICO",
+        "folio": "1228",
+        "equipo": "Sustento normativo del instrumental quirúrgico",
+        "tipo": "Norma técnica citada con denominación que no le corresponde",
+        "descripcion": "El numeral 11 invoca 'la RM 660-2014/MINSA, que aprueba la NTS N°110-MINSA/DGIEM, V.01 Infraestructura y Equipamiento de los Establecimientos de Salud del Primer Nivel de Atención'. La denominación citada corresponde a la NTS N° 113-MINSA/DGIEM-V.01; la NTS N° 110-MINSA/DGIEM-V.01, aprobada por R.M. N° 660-2014/MINSA, regula los establecimientos de salud del Segundo Nivel de Atención. La cita al Anexo N° 36 de la NTS 110, referida a las características técnicas del acero inoxidable del instrumental médico quirúrgico, es admisible como referencia técnica, pero no como marco normativo del nivel de atención del establecimiento.",
+        "sustento": "NTS N° 113-MINSA/DGIEM-V.01 (R.M. N° 045-2015/MINSA y modificatorias R.M. N° 999-2016/MINSA y R.M. N° 094-2017/MINSA) — Primer Nivel de Atención. NTS N° 110-MINSA/DGIEM-V.01 (R.M. N° 660-2014/MINSA) — Segundo Nivel de Atención.",
+        "recomendacion": "Se solicita al proyectista precisar en el numeral 11 que el marco normativo aplicable es la NTS N° 113-MINSA/DGIEM-V.01 y que la referencia al Anexo N° 36 de la NTS N° 110 se invoca únicamente como referencia técnica de las características del acero inoxidable.",
+        "prioridad": "LEVE",
+        "estado": "Por absolver",
+        "codigos": []
+      },
+      {
+        "n": "017-MEM",
+        "componente": "1. Memoria Descriptiva",
+        "archivo": "01_MEMORIA_DESCRIPTIVA_EQUIPAMIENTO_PARACHIQUE.docx",
+        "ubicacion": "Numeral 5. NORMATIVA VIGENTE, segunda y última viñeta",
+        "folio": "1233 y 1232",
+        "equipo": "Listado de normativa aplicable",
+        "tipo": "Errores en la referencia de dispositivos normativos",
+        "descripcion": "El numeral 5 consigna 'R.M. 769-2607 de categorización de establecimientos de salud', con un año inexistente. Asimismo, en la última viñeta atribuye a la Resolución Ministerial N° 546-2011/MINSA la aprobación de la 'NTS N° 021-MINSA/DGIESP-V.01', cuando la versión invocada en el resto del expediente y aplicable a la categorización es la V.03 y el órgano emisor es DGSP.",
+        "sustento": "NTS N° 021-MINSA/DGSP-V.03 — Categorías de establecimientos de salud.",
+        "recomendacion": "Se solicita al proyectista corregir ambas referencias normativas del numeral 5.",
+        "prioridad": "LEVE",
+        "estado": "Por absolver",
+        "codigos": []
+      },
+      {
+        "n": "018-CARGAS",
+        "componente": "4. Cuadro de cargas / 15. Cuadro de Pre-Instalaciones",
+        "archivo": "Equipamiento_Propuesto_PARACHIQUE.xlsx",
+        "ubicacion": "Hoja 'CARGAS ELECTRICAS' filas 205 y 117 vs hoja 'CUADRO PRE. INST.' filas 31 y 134",
+        "folio": "Cuadro de cargas por UPS: 1210 (D-91) y 1211 (M-42). Cuadro de Pre-Instalaciones: 959 a 957.",
+        "equipo": "D-91 — Calentador para sangre y soluciones; M-42 — Sillón metálico confortable reclinable para reposo",
+        "tipo": "Denominaciones no uniformes entre documentos",
+        "descripcion": "El cuadro de cargas eléctricas denomina al código D-91 'Calentador para sangre/soluciones' (fila 205) mientras el Cuadro de Pre-Instalaciones lo denomina 'Calentador para sangres y soluciones' (fila 31). Análogamente, M-42 figura como 'Sillón confortable reclinable para reposo' (fila 117) y como 'Sillón metálico confortable reclinable para reposo' (fila 134). Se deja constancia de que estas son las dos únicas discrepancias detectadas en el cruce de los 156 registros del cuadro de cargas contra el Cuadro de Pre-Instalaciones, no habiéndose hallado diferencia alguna de potencia, fase ni condición de toma estabilizada.",
+        "sustento": "Criterio de uniformidad documental para la verificación en recepción y protocolos de prueba.",
+        "recomendacion": "Se solicita al proyectista uniformizar ambas denominaciones conforme a la consignada en el Consolidado de Equipamiento.",
+        "prioridad": "LEVE",
+        "estado": "Por absolver",
+        "codigos": [
+          "D-91",
+          "M-42"
+        ]
+      },
+      {
+        "n": "019-PLANO",
+        "componente": "16. Planos de Equipamiento",
+        "archivo": "Planos_digitales_pdf.pdf; 07_1_EQ-PARACHIQUE__1_.dxf",
+        "ubicacion": "Archivo digital de planos: lámina única EQ-01, escala 1/75",
+        "folio": "Plano de equipamiento: componente 16 — folio por cotejar.",
+        "equipo": "Juego de planos de la especialidad de equipamiento",
+        "tipo": "Alcance del juego de planos entregado",
+        "descripcion": "El archivo digital de planos entregado a esta supervisión contiene una lámina única, EQ-01 'PLANO DE EQUIPAMIENTO', a escala 1/75, que representa la totalidad del establecimiento. El archivo editable rotula 104 ambientes y 951 inserciones de equipamiento. Una lámina general a dicha escala resulta insuficiente para el desarrollo y verificación de los planos de preinstalación por ambiente y por UPSS que el contratista debe presentar conforme al numeral 8 de la Memoria Descriptiva.",
+        "sustento": "NTS N° 113-MINSA/DGIEM-V.01 — planos de equipamiento. Numeral 8 de la Memoria Descriptiva de Equipamiento — obligación del proveedor de entregar planos de preinstalación por equipo, sector, UPS/UPSS, nivel o planta general.",
+        "recomendacion": "Se solicita al proyectista confirmar si el juego de planos de la especialidad comprende láminas adicionales por sector o UPSS y, de ser así, remitirlas. Esta supervisión deja constancia de que la revisión de planos de preinstalación (Fase 4) se ejecutará sobre las láminas sectoriales que emita el contratista.",
+        "prioridad": "LEVE",
+        "estado": "Por absolver",
+        "codigos": [
+          "EQ-01"
+        ]
+      },
+      {
+        "n": "020-PLANO",
+        "componente": "16. Planos de Equipamiento / 14. Metrado",
+        "archivo": "07_1_EQ-PARACHIQUE__1_.dxf vs Equipamiento_Propuesto_PARACHIQUE.xlsx",
+        "ubicacion": "Lámina EQ-01, Espacio Modelo (cuadro de equipamiento del plano) vs hoja 'CONSOLIDADO EQ' y hoja 'Equipamiento PROGRAMA'",
+        "folio": "Consolidado: 965 (M-72, mobiliario clínico, 1 und). Plano de equipamiento: componente 16 — folio por cotejar.",
+        "equipo": "M-72 — Biombo de acero inoxidable de 2 cuerpos (1 und)",
+        "tipo": "Bien listado en el cuadro del plano pero no representado",
+        "descripcion": "El código M-72, con 1 unidad valorizada y asignada al ambiente CONSULTORIO DE TBC en el Programa de Equipamiento, figura listado en el cuadro de equipamiento del propio plano pero no cuenta con representación gráfica en la lámina: la verificación del archivo editable no halla inserción alguna del bloque M-72, ni directa ni anidada dentro de otro bloque. Es el único código del Consolidado en esta situación; la totalidad de los 178 códigos restantes se encuentra representada.",
+        "sustento": "NTS N° 113-MINSA/DGIEM-V.01 — el plano de equipamiento debe representar la totalidad del equipamiento programado por ambiente.",
+        "recomendacion": "Se solicita al proyectista incorporar el código M-72 al plano de equipamiento en el ambiente Consultorio de TBC, en concordancia con el cuadro de equipamiento de la propia lámina y con el Programa de Equipamiento.",
+        "prioridad": "LEVE",
+        "estado": "Por absolver",
+        "codigos": [
+          "M-72"
+        ]
+      }
+    ],
+    "nota": "Observaciones formuladas por la Supervisión en el Informe de Compatibilidad y elevadas al Proyectista. La columna «Folio Escaneado» se completa a mano tras el cotejo con el expediente firmado."
   },
   "pronunciamientos": [
     {
@@ -2695,45 +3241,93 @@
   "etapas": [
     {
       "id": "E1",
-      "nombre": "Recepción del expediente",
-      "estado": "CERRADA",
-      "detalle": "Cotejo del escaneado firmado contra el digital y ordenamiento por componentes."
+      "orden": 1,
+      "nombre": "Compatibilización del expediente",
+      "estado": "EN CURSO",
+      "descripcion": "Revisión de los 16 componentes del expediente técnico y traslado de observaciones al Proyectista.",
+      "metrica": {
+        "etiqueta": "Observaciones absueltas por el Proyectista",
+        "hecho": 0,
+        "total": 20,
+        "unidad": "observaciones"
+      },
+      "nota": "Las 20 observaciones fueron formuladas y elevadas. El Proyectista no se ha pronunciado sobre ninguna. La Supervisión hizo su parte; el avance depende de él.",
+      "responsable": "ARQ.CONST ALFA 360"
     },
     {
       "id": "E2",
-      "nombre": "Compatibilización",
-      "estado": "CERRADA",
-      "detalle": "Revisión de los 16 componentes. 20 observaciones formuladas al Proyectista."
+      "orden": 2,
+      "nombre": "Cartas del Contratista",
+      "estado": "EN CURSO",
+      "descripcion": "Pronunciamiento sobre cada informe o carta del Contratista que lo requiera.",
+      "metrica": {
+        "etiqueta": "Cartas contestadas",
+        "hecho": 2,
+        "total": 2,
+        "unidad": "cartas"
+      },
+      "nota": "Toda carta recibida tiene pronunciamiento emitido. Sin cola pendiente.",
+      "responsable": "Supervisión de Equipamiento"
     },
     {
       "id": "E3",
-      "nombre": "Sustentos del Contratista — especificaciones técnicas",
+      "orden": 3,
+      "nombre": "Fichas técnicas",
       "estado": "EN CURSO",
-      "detalle": "Pronunciamiento sobre los informes del Contratista y aprobación de las fichas técnicas de los 179 códigos."
+      "descripcion": "Aprobación de la ficha técnica de cada código de equipo del expediente.",
+      "metrica": {
+        "etiqueta": "Fichas técnicas aprobadas",
+        "hecho": 0,
+        "total": 179,
+        "unidad": "códigos"
+      },
+      "nota": "Solo el D-92 ha sido presentado, como muestra del formato, y quedó observado por la garantía. Faltan 178 códigos por presentar.",
+      "responsable": "Contratista ICM S.A."
     },
     {
       "id": "E4",
-      "nombre": "Planos de preinstalación",
+      "orden": 4,
+      "nombre": "Preinstalación",
       "estado": "NO INICIADA",
-      "detalle": "Revisión técnica de los planos del Contratista y verificación en campo."
+      "descripcion": "Revisión de los planos de preinstalación y verificación en obra de que cada punto cumple lo que exige la ficha del equipo.",
+      "metrica": {
+        "etiqueta": "Puntos de preinstalación verificados",
+        "hecho": 0,
+        "total": 54,
+        "unidad": "códigos con preinstalación"
+      },
+      "nota": "54 de los 179 códigos requieren alguna preinstalación —eléctrica, sanitaria, gases o comunicaciones— según el Cuadro de Pre-Instalaciones. Requiere planos del Contratista y visita a obra.",
+      "responsable": "Contratista ICM S.A. / Supervisión"
     },
     {
       "id": "E5",
+      "orden": 5,
       "nombre": "Valorización",
       "estado": "NO INICIADA",
-      "detalle": "Valorización proporcional de lo efectivamente entregado y verificado."
+      "descripcion": "Valorización proporcional de lo entregado y verificado en obra.",
+      "metrica": {
+        "etiqueta": "Unidades valorizadas",
+        "hecho": 0,
+        "total": 717,
+        "unidad": "unidades"
+      },
+      "nota": "No se ha efectuado entrega de bienes en obra. Se activa con las EETT aprobadas.",
+      "responsable": "Supervisión de Equipamiento"
     },
     {
       "id": "E6",
-      "nombre": "Protocolos de prueba",
+      "orden": 6,
+      "nombre": "Procura y cierre",
       "estado": "NO INICIADA",
-      "detalle": "Verificación de anexos por equipo y V°B° de los protocolos llenados por el Contratista."
-    },
-    {
-      "id": "E7",
-      "nombre": "Informes mensuales",
-      "estado": "EN CURSO",
-      "detalle": "Consolidación mensual de avance, observaciones y estado de pronunciamientos."
+      "descripcion": "Protocolos de prueba, capacitación al personal, dossier de calidad y programa de mantenimiento preventivo dentro de la garantía.",
+      "metrica": {
+        "etiqueta": "Códigos con el ciclo de cierre completo",
+        "hecho": 0,
+        "total": 179,
+        "unidad": "códigos"
+      },
+      "nota": "Cuatro entregables por equipo: protocolo de prueba con V°B°, acta de capacitación (anexos 6 a 9), dossier de calidad y programa de mantenimiento (anexos 3 y 5).",
+      "responsable": "Contratista ICM S.A. / Supervisión"
     }
   ],
   "renders": {

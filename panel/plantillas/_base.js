@@ -108,12 +108,17 @@ function montarChasis() {
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') cerrarVentana(); });
 }
 
-function abrirVentana(titulo, meta, cuerpoHtml) {
+function abrirVentana(titulo, meta, cuerpoHtml, opciones) {
   montarChasis();
+  const o = opciones || {};
   document.getElementById('vtitulo').textContent = titulo;
   document.getElementById('vmeta').innerHTML = meta || '';
   document.getElementById('vcuerpo').innerHTML = cuerpoHtml;
-  document.getElementById('velo').dataset.abierto = '1';
+  const velo = document.getElementById('velo');
+  // El modo ancho es para el visor de documentos: una hoja A4 dentro de una
+  // ventana estrecha se lee pésimo.
+  velo.querySelector('.ventana').classList.toggle('ancha', !!o.ancha);
+  velo.dataset.abierto = '1';
   document.getElementById('vcuerpo').scrollTop = 0;
 }
 
@@ -137,66 +142,10 @@ function copiar(texto) {
     .catch(() => tostar('No se pudo copiar. Selecciónela manualmente.'));
 }
 
-/* Bloque comun: como llegar al archivo fisico o verlo incrustado */
-function bloqueArchivo(archivo, ruta, url) {
-  if (!archivo && !url) return '';
-  if (url) {
-    return `<div style="margin-top:16px">
-      <div class="cifra-rotulo" style="margin-bottom:8px">Documento</div>
-      <iframe class="visor" src="${esc(url)}" title="${esc(archivo || 'Documento')}"></iframe>
-    </div>`;
-  }
-  const rutaCompleta = (ruta || '') + (archivo || '');
-  return `<div style="margin-top:16px">
-    <div class="cifra-rotulo" style="margin-bottom:8px">Archivo fuente</div>
-    <div class="aviso-caja">
-      <b>${esc(archivo)}</b>
-      <div class="ruta" id="ruta-${btoa(unescape(encodeURIComponent(rutaCompleta))).slice(0, 10)}">${esc(rutaCompleta)}</div>
-      <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
-        <button class="btn" onclick="copiar('${esc(rutaCompleta).replace(/\\/g, '\\\\')}')">Copiar ruta</button>
-      </div>
-      <div style="margin-top:10px;font-size:.78rem">
-        El archivo vive en la unidad de trabajo, no en el portafolio. Para verlo aquí dentro,
-        súbalo a <code>public/docs/</code> del repositorio y anote su ruta en el campo
-        <code>url</code> del registro dentro de <code>datos-parachique.json</code>.
-      </div>
-    </div>
-  </div>`;
-}
-
-/* ---------- Ficha de documento (ventana flotante) ---------- */
+/* ---------- Ficha de documento ----------
+   La implementación vive en _visor.js, que sabe montar el visor de Drive.   */
 function fichaDocumento(d, etapas) {
-  d._etapa = etapas ? ((etapas.find((e) => e.id === d.etapa) || {}).nombre || '') : '';
-  const filas = [
-    ['Código', `<span class="cod">${esc(d.codigo)}</span>`],
-    ['Clase', esc(d.clase)],
-    ['Flujo', d.flujo === 'RECIBIDA' ? 'Recibida — requiere pronunciamiento' : 'Emitida por la Supervisión'],
-    ['Fecha', fecha(d.fecha)],
-    ['Contraparte', esc(d.contraparte)],
-    ['Asunto', esc(d.asunto)],
-    ['Estado', insigniaEstado(d.estado)],
-    ['Etapa de supervisión', esc(d._etapa || '—')]
-  ];
-  // En el build compartido el importe no viaja: se muestra solo el numeral.
-  if (d.numeral) filas.push(['Numeral aplicable', esc(d.numeral) +
-    (typeof d.honorarioNeto === 'number' ? ` — ${soles(d.honorarioNeto)} netos` : '')]);
-  if (d.responde) filas.push(['Responde a', `<span class="cod">${esc(d.responde)}</span>`]);
-  if (d.respondidaPor) filas.push(['Atendida por', `<span class="cod">${esc(d.respondidaPor)}</span>`]);
-  filas.push(['Membrete oficial', insigniaMembrete(d, false)]);
-
-  const dl = filas.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('');
-
-  abrirVentana(
-    d.codigo,
-    `${esc(d.clase)} · ${fechaCorta(d.fecha)}`,
-    `<dl class="dl">${dl}</dl>
-     <div style="margin-top:18px">
-       <div class="cifra-rotulo" style="margin-bottom:8px">Contenido</div>
-       <p style="margin:0;font-size:.86rem;color:var(--tinta-suave)">${esc(d.detalle)}</p>
-     </div>
-     ${bloqueDocumentos(d)}`
-  );
-  activarPestanasDoc();
+  abrirFichaDocumento(d, etapas);
 }
 
 /* ---------- Grafico de barras horizontales (una serie, con rotulo directo) ---------- */

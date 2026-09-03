@@ -15,102 +15,107 @@
 <script>
 const D = /*__DATOS__*/ null;
 
-/* Si el generador corrió sin credenciales, los bloques económicos no viajaron.
-   Mejor decirlo con claridad que romperse o, peor, mostrar ceros como si fueran
-   datos reales. */
-if (!D.pagos || !D.tarifario) {
+/* Si la publicación corrió sin credenciales, los bloques económicos no viajaron.
+   Mejor decirlo con claridad que mostrar ceros como si fueran datos reales. */
+if (!D.cobranza || !D.tarifario) {
   document.getElementById('app').innerHTML = `
     <header class="cabecera">
-      <div>
-        <p class="kicker">Reservado · Información económica del suscrito</p>
-        <h1>Honorarios y Pagos</h1>
-      </div>
-      ${sello(D)}
+      <div><p class="kicker">Reservado · Información económica del suscrito</p>
+      <h1>Honorarios y Pagos</h1></div>${sello(D)}
     </header>
     <div class="alerta n-CRITICA" style="border-left-color:var(--critico)">
       <div class="ico" style="color:var(--critico)">${ICONOS.critico}</div>
-      <div>
-        <h4>Este tablero se publicó sin los datos económicos</h4>
-        <p>Los honorarios, liquidaciones, recibos y cuentas viven en la tabla privada
-        <code>panel_reservado</code> y solo se incorporan cuando la publicación corre con la clave de
-        servicio. Esta copia se generó sin ella, por lo que no muestra cifras.</p>
-        <div class="accion"><b>Cómo se corrige:</b> vuelva a lanzar el flujo
-        «Publicar panel CS Parachique» en GitHub Actions, que sí lleva la credencial.</div>
-      </div>
+      <div><h4>Este tablero se publicó sin los datos económicos</h4>
+      <p>Viven en la tabla privada <code>panel_reservado</code> y solo se incorporan cuando la
+      publicación corre con la clave de servicio.</p>
+      <div class="accion"><b>Cómo se corrige:</b> vuelva a lanzar el flujo
+      «Publicar panel CS Parachique» en GitHub Actions.</div></div>
     </div>` + pie(D);
-  throw new Error('Tablero reservado sin datos económicos: publicación incompleta.');
+  throw new Error('Tablero reservado sin datos económicos.');
 }
 
-const devengado = D.documentos.reduce((s, d) => s + (d.flujo === 'EMITIDA' ? (d.honorarioNeto || 0) : 0), 0);
-const cobrado = D.pagos.reduce((s, p) => s + p.montoNeto, 0);
-const saldo = devengado - cobrado;
+const CB = D.cobranza;
+const porFacturar = CB.porFacturar.filter((x) => x.estado === 'POR FACTURAR');
+const enSuspenso = CB.porFacturar.filter((x) => x.estado !== 'POR FACTURAR');
+const totalPorFacturar = porFacturar.reduce((s, x) => s + x.neto, 0);
 const retencion = D.pagos.reduce((s, p) => s + p.retencion, 0);
 const bruto = D.pagos.reduce((s, p) => s + p.montoBruto, 0);
-const tarifaMensual = D.tarifario.find((t) => t.numeral === '2.2').neto;
+const facturados = (codigo) => CB.porFacturar.every((x) => x.producto !== codigo);
 
 let h = `
 <header class="cabecera">
   <div>
     <p class="kicker">Reservado · Información económica del suscrito</p>
     <h1>Honorarios y Pagos</h1>
-    <p class="sub">Control de devengado, cobranza, recibos por honorarios emitidos y evidencias de abono. Base contractual: <b>CARTA N° 01-2026-DLVM</b> del 22 de julio de 2026, aceptada por ${esc(D.meta.contratista)}.</p>
+    <p class="sub">Qué se facturó, qué se cobró y qué falta por facturar. Base contractual:
+    <b>CARTA N° 01-2026-DLVM</b> del 22/07/2026, aceptada por ${esc(D.meta.supervision)}.</p>
   </div>
   ${sello(D)}
 </header>`;
 
 /* ---------- Cifras ---------- */
 h += `<div class="rejilla g4">
-  <div class="tarjeta"><div class="cifra-rotulo">Devengado</div><div class="cifra">${soles(devengado)}</div><div class="cifra-pie">Netos por productos entregados y liquidados</div></div>
-  <div class="tarjeta"><div class="cifra-rotulo">Cobrado</div><div class="cifra" style="color:var(--serie-3)">${soles(cobrado)}</div><div class="cifra-pie">${Math.round(cobrado / devengado * 100)}% de lo devengado</div></div>
-  <div class="tarjeta"><div class="cifra-rotulo">Saldo por cobrar</div><div class="cifra" style="color:${saldo > 0 ? 'var(--critico)' : 'var(--bien)'}">${soles(saldo)}</div><div class="cifra-pie">${saldo > 0 ? 'Pendiente de abono por el Consorcio' : 'Al día'}</div></div>
-  <div class="tarjeta clic" id="k-ret"><div class="cifra-rotulo">Retención de IR acumulada</div><div class="cifra">${soles(retencion)}</div><div class="cifra-pie">8% sobre ${soles(bruto)} brutos facturados</div></div>
+  <div class="tarjeta clic" id="k-estado">
+    <div class="cifra-rotulo">Estado de cobranza</div>
+    <div class="cifra" style="color:var(--bien);font-size:1.6rem">Al día</div>
+    <div class="cifra-pie">Sin saldo exigible al Consorcio</div>
+  </div>
+  <div class="tarjeta clic" id="k-cobrado">
+    <div class="cifra-rotulo">Facturado y cobrado</div>
+    <div class="cifra" style="color:var(--serie-3)">${soles(CB.cobrado)}</div>
+    <div class="cifra-pie">${D.pagos.length} abono${D.pagos.length === 1 ? '' : 's'} · último ${fechaCorta(D.pagos[D.pagos.length - 1]?.fecha)}</div>
+  </div>
+  <div class="tarjeta clic" id="k-porfacturar">
+    <div class="cifra-rotulo">Devengado por facturar</div>
+    <div class="cifra" style="color:${totalPorFacturar ? 'var(--aviso)' : 'var(--tinta-tenue)'}">${soles(totalPorFacturar)}</div>
+    <div class="cifra-pie">${porFacturar.length} producto${porFacturar.length === 1 ? '' : 's'} entregado${porFacturar.length === 1 ? '' : 's'} sin recibo emitido</div>
+  </div>
+  <div class="tarjeta clic" id="k-ret">
+    <div class="cifra-rotulo">Retención de IR acumulada</div>
+    <div class="cifra">${soles(retencion)}</div>
+    <div class="cifra-pie">8% sobre ${soles(bruto)} brutos facturados</div>
+  </div>
 </div>`;
 
-/* ---------- Barra devengado vs cobrado ---------- */
-const pctCob = Math.round(cobrado / devengado * 100);
+/* ---------- Estado ---------- */
 h += `<div class="seccion">
-  <h2>Estado de cobranza</h2>
-  <p class="nota">Comparación entre lo devengado según el tarifario y lo efectivamente abonado. Los valores están rotulados sobre cada segmento.</p>
-  <div class="grafico">
-    <div class="barra" style="height:34px">
-      <div data-tip="Cobrado|${soles(cobrado)} · ${pctCob}% de lo devengado" style="width:${pctCob}%;background:var(--serie-3)">${soles(cobrado)}</div>
-      <div data-tip="Saldo por cobrar|${soles(saldo)}" style="width:${100 - pctCob}%;background:var(--critico)">${soles(saldo)}</div>
-    </div>
-    <div class="leyenda">
-      <span><i style="background:var(--serie-3)"></i>Cobrado — ${soles(cobrado)}</span>
-      <span><i style="background:var(--critico)"></i>Saldo por cobrar — ${soles(saldo)}</span>
-      <span style="color:var(--tinta-tenue)">Total devengado — ${soles(devengado)}</span>
+  <div class="alerta" style="border-left-color:var(--bien)">
+    <div class="ico" style="color:var(--bien)">${ICONOS.bien}</div>
+    <div>
+      <h4>No hay saldo exigible al Consorcio</h4>
+      <p>${esc(CB.nota)}</p>
+      ${enSuspenso.map((x) => `<div class="accion" style="margin-top:8px"><b>${esc(x.concepto)}:</b> ${esc(x.nota)}</div>`).join('')}
     </div>
   </div>
 </div>`;
 
-/* ---------- Devengado por numeral ---------- */
-h += `<div class="seccion">
-  <h2>Devengado por numeral del tarifario</h2>
-  <p class="nota">Distribución de lo facturado según los conceptos de la propuesta económica.</p>
-  <div class="grafico">
-    <div id="graf-num"></div>
-    <div class="leyenda"><span><i style="background:var(--serie-1)"></i>Honorario neto devengado por numeral</span></div>
-  </div>
-</div>`;
+/* ---------- Situación por producto ---------- */
+const productos = D.documentos.filter((d) => d.flujo === 'EMITIDA' && d.honorarioNeto > 0);
+const situacionDe = (codigo) => {
+  const p = CB.porFacturar.find((x) => x.producto === codigo);
+  if (!p) return { txt: 'Facturado y cobrado', clase: 'bien' };
+  return p.estado === 'POR FACTURAR'
+    ? { txt: 'Por facturar', clase: 'aviso' }
+    : { txt: 'No se factura por ahora', clase: 'neutro' };
+};
 
-/* ---------- Liquidaciones ---------- */
 h += `<div class="seccion">
-  <h2>Liquidaciones emitidas</h2>
-  <p class="nota">Cada liquidación se comunica mediante carta al Jefe de Supervisión. Toque una fila para ver su desagregado.</p>
+  <h2>Situación de cada producto entregado</h2>
+  <p class="nota">Entregado, facturado y cobrado son tres cosas distintas. Esta tabla las separa para que no se confundan.</p>
+  <div id="filtros-prod"></div>
+  <div id="resumen-prod"></div>
   <div class="tabla-caja"><div class="tabla-scroll">
-    <table class="datos">
-      <thead><tr><th>Carta</th><th>Periodo</th><th>Fecha</th><th class="num">Total neto</th><th>Conformidad</th><th>Estado de cobro</th></tr></thead>
-      <tbody>${D.liquidaciones.map((l) => {
-        const pagadoL = D.pagos.filter((p) => p.liquidacion === l.id).reduce((s, p) => s + p.montoNeto, 0);
-        const estadoL = pagadoL >= l.totalNeto ? 'COBRADA' : pagadoL > 0 ? 'COBRADA PARCIALMENTE' : 'PENDIENTE';
-        return `<tr class="clic" data-liq="${esc(l.id)}">
-          <td class="cod">${esc(l.carta)}</td>
-          <td>${esc(l.periodo)}</td>
-          <td>${fechaCorta(l.fecha)}</td>
-          <td class="num">${soles(l.totalNeto)}</td>
-          <td>${l.conformidad ? insignia(fechaCorta(l.conformidad), 'bien', 'bien') : insignia('No registrada', 'critico', 'critico')}</td>
-          <td>${insigniaEstado(estadoL)} <span style="font-size:.75rem;color:var(--tinta-suave)">${soles(pagadoL)} de ${soles(l.totalNeto)}</span></td>
+    <table class="datos" id="t-prod">
+      <thead><tr><th>Producto</th><th>Fecha</th><th>Num.</th><th class="num">Neto</th><th>Situación</th><th>Recibo</th></tr></thead>
+      <tbody>${productos.map((p) => {
+        const s = situacionDe(p.codigo);
+        return `<tr data-f-situacion="${esc(s.txt)}" data-f-numeral="${esc(p.numeral)}">
+          <td class="cod">${esc(p.codigo)}<div style="font-size:.75rem;color:var(--tinta-tenue);margin-top:3px;font-family:var(--cuerpo)">${esc(p.asunto)}</div></td>
+          <td style="white-space:nowrap">${fechaCorta(p.fecha)}</td>
+          <td>${esc(p.numeral)}</td>
+          <td class="num">${soles(p.honorarioNeto)}</td>
+          <td>${insignia(s.txt, s.clase, s.clase)}</td>
+          <td class="cod">${facturados(p.codigo) ? esc(D.recibos[0] ? D.recibos[0].numero : '—') : '—'}</td>
         </tr>`;
       }).join('')}
       </tbody>
@@ -118,18 +123,17 @@ h += `<div class="seccion">
   </div></div>
 </div>`;
 
-/* ---------- Pagos ---------- */
+/* ---------- Abonos ---------- */
 h += `<div class="seccion">
   <h2>Abonos recibidos</h2>
-  <p class="nota">Toque una fila para ver la evidencia bancaria y el recibo asociado, sin salir del tablero.</p>
+  <p class="nota">Toque una fila para ver la evidencia bancaria y el recibo asociado.</p>
   <div class="tabla-caja"><div class="tabla-scroll">
     <table class="datos">
       <thead><tr><th>Fecha</th><th>Banco</th><th>Operación</th><th>Cuenta destino</th><th>Recibo</th><th class="num">Bruto</th><th class="num">Retención</th><th class="num">Neto</th></tr></thead>
       <tbody>${D.pagos.map((p) => `
         <tr class="clic" data-pago="${esc(p.id)}">
           <td style="white-space:nowrap">${fechaCorta(p.fecha)} <span style="color:var(--tinta-tenue)">${esc(p.hora)}</span></td>
-          <td>${esc(p.banco)}</td>
-          <td class="cod">${esc(p.operacion)}</td>
+          <td>${esc(p.banco)}</td><td class="cod">${esc(p.operacion)}</td>
           <td style="font-size:.78rem">${esc(p.cuentaDestino)}</td>
           <td class="cod">${esc(p.recibo)}</td>
           <td class="num">${soles(p.montoBruto)}</td>
@@ -137,7 +141,7 @@ h += `<div class="seccion">
           <td class="num"><b>${soles(p.montoNeto)}</b></td>
         </tr>`).join('')}
       </tbody>
-      <tfoot><tr><td colspan="5">Totales</td><td class="num">${soles(bruto)}</td><td class="num">−${soles(retencion)}</td><td class="num">${soles(cobrado)}</td></tr></tfoot>
+      <tfoot><tr><td colspan="5">Totales</td><td class="num">${soles(bruto)}</td><td class="num">−${soles(retencion)}</td><td class="num">${soles(CB.cobrado)}</td></tr></tfoot>
     </table>
   </div></div>
 </div>`;
@@ -150,14 +154,10 @@ h += `<div class="seccion">
   ${D.recibos.map((r) => `
     <div class="tarjeta clic" data-recibo="${esc(r.numero)}">
       <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px">
-        <div>
-          <div class="cifra-rotulo">Recibo N°</div>
-          <h3 style="font-size:1.25rem;margin-top:6px">${esc(r.numero)}</h3>
-        </div>
-        <div style="text-align:right">
-          <div class="cifra-rotulo">Neto</div>
-          <div style="font-family:var(--display);font-size:1.35rem;font-weight:600;margin-top:4px">${soles(r.neto)}</div>
-        </div>
+        <div><div class="cifra-rotulo">Recibo N°</div>
+        <h3 style="font-size:1.25rem;margin-top:6px">${esc(r.numero)}</h3></div>
+        <div style="text-align:right"><div class="cifra-rotulo">Neto</div>
+        <div style="font-family:var(--display);font-size:1.35rem;font-weight:600;margin-top:4px">${soles(r.neto)}</div></div>
       </div>
       <div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--borde);font-size:.8rem;color:var(--tinta-suave)">
         <div><b style="color:var(--tinta)">Cliente:</b> ${esc(r.cliente)}</div>
@@ -165,26 +165,6 @@ h += `<div class="seccion">
       </div>
       <p style="font-size:.8rem;font-weight:600;color:var(--primario);margin:12px 0 0">Ver detalle →</p>
     </div>`).join('')}
-  </div>
-</div>`;
-
-/* ---------- Proyeccion ---------- */
-h += `<div class="seccion">
-  <h2>Proyección de ingresos</h2>
-  <p class="nota">Lo comprometido y lo devengable a la fecha, según el tarifario vigente.</p>
-  <div class="tabla-caja"><div class="tabla-scroll">
-    <table class="datos" style="min-width:520px">
-      <thead><tr><th>Concepto</th><th>Situación</th><th class="num">Neto</th></tr></thead>
-      <tbody>
-        <tr><td><b>Saldo de la liquidación de julio</b><div style="font-size:.76rem;color:var(--tinta-suave);margin-top:3px">Informe mensual N° 001 — numeral 2.2</div></td><td>${insignia('Devengado, no cobrado', 'critico', 'critico')}</td><td class="num">${soles(saldo)}</td></tr>
-        <tr><td><b>Informe mensual N° 002 — agosto 2026</b><div style="font-size:.76rem;color:var(--tinta-suave);margin-top:3px">Numeral 2.2 · pendiente de emisión</div></td><td>${insignia('Por devengar', 'aviso', 'aviso')}</td><td class="num">${soles(tarifaMensual)}</td></tr>
-      </tbody>
-      <tfoot><tr><td colspan="2">Ingreso proyectado por regularizar</td><td class="num">${soles(saldo + tarifaMensual)}</td></tr></tfoot>
-    </table>
-  </div></div>
-  <div class="aviso-caja" style="margin-top:12px">
-    Cada informe del Contratista que se atienda suma ${soles(D.tarifario.find((t) => t.numeral === '2.3').neto)} adicionales bajo el numeral 2.3,
-    y cada visita técnica requerida suma ${soles(D.tarifario.find((t) => t.numeral === '2.4').neto)} bajo el numeral 2.4, más viáticos a cargo del Consorcio.
   </div>
 </div>`;
 
@@ -196,13 +176,9 @@ h += `<div class="seccion">
     <table class="datos">
       <thead><tr><th>Banco</th><th>Tipo de cuenta</th><th>N° de cuenta</th><th>CCI</th><th></th></tr></thead>
       <tbody>${D.cuentas.map((c) => `
-        <tr>
-          <td><b>${esc(c.banco)}</b></td>
-          <td>${esc(c.tipo)}</td>
-          <td class="cod">${esc(c.numero)}</td>
-          <td class="cod">${esc(c.cci)}</td>
-          <td><button class="btn" style="padding:4px 9px;font-size:.74rem" onclick="copiar('${esc(c.cci)}')">Copiar CCI</button></td>
-        </tr>`).join('')}
+        <tr><td><b>${esc(c.banco)}</b></td><td>${esc(c.tipo)}</td>
+        <td class="cod">${esc(c.numero)}</td><td class="cod">${esc(c.cci)}</td>
+        <td><button class="btn" style="padding:4px 9px;font-size:.74rem" onclick="copiar('${esc(c.cci)}')">Copiar CCI</button></td></tr>`).join('')}
       </tbody>
     </table>
   </div></div>
@@ -211,45 +187,81 @@ h += `<div class="seccion">
 h += pie(D);
 document.getElementById('app').innerHTML = h;
 
-/* ---------- Grafico por numeral ---------- */
-const porNumeral = D.tarifario.map((t) => ({
-  etiqueta: `${t.numeral} — ${t.concepto.split('—')[0].trim().slice(0, 34)}`,
-  valor: D.documentos.filter((d) => d.flujo === 'EMITIDA' && d.numeral === t.numeral).reduce((s, d) => s + d.honorarioNeto, 0),
-  nota: t.unidad
-})).filter((x) => x.valor >= 0);
-barrasH(document.getElementById('graf-num'), porNumeral, { formato: soles });
-
 /* ---------- Ventanas ---------- */
-document.querySelectorAll('[data-liq]').forEach((el) => {
-  el.addEventListener('click', () => {
-    const l = D.liquidaciones.find((x) => x.id === el.dataset.liq);
-    const pagos = D.pagos.filter((p) => p.liquidacion === l.id);
-    const pagado = pagos.reduce((s, p) => s + p.montoNeto, 0);
-    abrirVentana(l.carta, `Liquidación de ${esc(l.periodo)} · ${fechaCorta(l.fecha)}`,
-      `<div class="tabla-caja"><div class="tabla-scroll"><table class="datos">
-        <thead><tr><th>Num.</th><th>Concepto</th><th class="num">Cant.</th><th class="num">Unitario</th><th class="num">Subtotal</th></tr></thead>
-        <tbody>${l.lineas.map((x) => `<tr><td>${esc(x.numeral)}</td><td>${esc(x.concepto)}</td><td class="num">${x.cant}</td><td class="num">${soles(x.unitario)}</td><td class="num">${soles(x.subtotal)}</td></tr>`).join('')}</tbody>
-        <tfoot>
-          <tr><td colspan="4">Total neto liquidado</td><td class="num">${soles(l.totalNeto)}</td></tr>
-          <tr><td colspan="4">Abonado</td><td class="num">−${soles(pagado)}</td></tr>
-          <tr><td colspan="4"><b>Saldo</b></td><td class="num" style="color:${l.totalNeto - pagado > 0 ? 'var(--critico)' : 'var(--bien)'}"><b>${soles(l.totalNeto - pagado)}</b></td></tr>
-        </tfoot>
-      </table></div></div>
-      <div class="aviso-caja" style="margin-top:16px;border-style:solid;border-color:var(--critico)">
-        <b>Conformidad: ${l.conformidad ? fechaCorta(l.conformidad) : 'no registrada'}.</b><br>${esc(l.notaConformidad)}
-      </div>`);
-  });
+document.getElementById('k-estado').addEventListener('click', () => {
+  abrirVentana('Estado de cobranza', esc(CB.resumen),
+    `<dl class="dl">
+      <dt>Facturado</dt><dd>${soles(CB.facturado)}</dd>
+      <dt>Cobrado</dt><dd><b>${soles(CB.cobrado)}</b></dd>
+      <dt>Saldo exigible</dt><dd><b style="color:var(--bien)">${soles(CB.saldoExigible)}</b></dd>
+    </dl>
+    <div class="aviso-caja" style="margin-top:16px">${esc(CB.nota)}</div>
+    <div class="cifra-rotulo" style="margin:20px 0 8px">Productos entregados aún no facturados</div>
+    <div class="tabla-caja"><div class="tabla-scroll"><table class="datos" style="min-width:460px">
+      <thead><tr><th>Producto</th><th>Num.</th><th class="num">Neto</th><th>Situación</th></tr></thead>
+      <tbody>${CB.porFacturar.map((x) => `<tr>
+        <td class="cod">${esc(x.producto)}<div style="font-size:.75rem;color:var(--tinta-suave);margin-top:3px;font-family:var(--cuerpo)">${esc(x.nota)}</div></td>
+        <td>${esc(x.numeral)}</td><td class="num">${soles(x.neto)}</td>
+        <td>${x.estado === 'POR FACTURAR' ? insignia('Por facturar', 'aviso', 'aviso') : insignia('En suspenso', 'neutro', 'neutro')}</td>
+      </tr>`).join('')}</tbody>
+    </table></div></div>`);
+});
+
+document.getElementById('k-cobrado').addEventListener('click', () => {
+  abrirVentana('Lo facturado y cobrado', `${soles(CB.cobrado)} netos`,
+    `<p style="font-size:.88rem;line-height:1.6">${esc(CB.nota)}</p>
+     <div class="tabla-caja" style="margin-top:14px"><div class="tabla-scroll"><table class="datos" style="min-width:460px">
+       <thead><tr><th>Producto</th><th>Num.</th><th class="num">Neto</th></tr></thead>
+       <tbody>${productos.filter((p) => facturados(p.codigo))
+         .map((p) => `<tr><td class="cod">${esc(p.codigo)}</td><td>${esc(p.numeral)}</td><td class="num">${soles(p.honorarioNeto)}</td></tr>`).join('')}</tbody>
+       <tfoot><tr><td colspan="2">Total facturado</td><td class="num">${soles(CB.facturado)}</td></tr></tfoot>
+     </table></div></div>`);
+});
+
+document.getElementById('k-porfacturar').addEventListener('click', () => {
+  abrirVentana('Devengado por facturar', `${soles(totalPorFacturar)} netos`,
+    porFacturar.length
+      ? porFacturar.map((x) => `<dl class="dl">
+          <dt>Producto</dt><dd class="cod">${esc(x.producto)}</dd>
+          <dt>Concepto</dt><dd>${esc(x.concepto)}</dd>
+          <dt>Numeral</dt><dd>${esc(x.numeral)}</dd>
+          <dt>Neto</dt><dd><b>${soles(x.neto)}</b></dd>
+          <dt>Bruto a facturar</dt><dd>${soles(Math.round((x.neto / 0.92) * 100) / 100)}</dd>
+        </dl><div class="aviso-caja" style="margin-top:12px">${esc(x.nota)}</div>`).join('<hr style="border:0;border-top:1px solid var(--borde);margin:18px 0">')
+      : '<div class="aviso-caja">No hay productos pendientes de facturar.</div>');
+});
+
+document.getElementById('k-ret').addEventListener('click', () => {
+  const c2 = D.condiciones.find((x) => x.num === '2');
+  abrirVentana('Retención de IR y gross-up', 'Cómo se calcula el monto bruto a facturar',
+    `<div class="aviso-caja" style="border-style:solid;border-color:var(--primario)">
+      <b>Condición 2 de la CARTA N° 01-2026-DLVM</b><br>${esc(c2.texto)}</div>
+    <div class="tarjeta" style="text-align:center;padding:22px;margin-top:16px">
+      <div style="font-family:var(--display);font-size:1.5rem;font-weight:600">bruto = neto ÷ 0.92</div>
+      <div style="font-size:.82rem;color:var(--tinta-suave);margin-top:8px">La retención del 8% se aplica sobre el bruto, de modo que lo percibido iguale el neto pactado.</div>
+    </div>
+    <div class="cifra-rotulo" style="margin:20px 0 8px">Verificación de lo facturado</div>
+    <div class="tabla-caja"><div class="tabla-scroll"><table class="datos" style="min-width:460px">
+      <thead><tr><th>Recibo</th><th class="num">Bruto</th><th class="num">Retención</th><th class="num">Neto</th><th>Cuadre</th></tr></thead>
+      <tbody>${D.recibos.map((r) => {
+        const esperado = Math.round((r.neto / 0.92) * 100) / 100;
+        const ok = Math.abs(esperado - r.bruto) <= 0.02;
+        return `<tr><td class="cod">${esc(r.numero)}</td><td class="num">${soles(r.bruto)}</td>
+          <td class="num">−${soles(r.retencion)}</td><td class="num">${soles(r.neto)}</td>
+          <td>${ok ? insignia('Correcto', 'bien', 'bien') : insignia('Revisar', 'critico', 'critico')}</td></tr>`;
+      }).join('')}</tbody>
+    </table></div></div>
+    <div class="cifra-rotulo" style="margin:20px 0 8px">Tarifario neto de referencia</div>
+    <div class="tabla-caja"><div class="tabla-scroll"><table class="datos" style="min-width:460px">
+      <thead><tr><th>Num.</th><th>Concepto</th><th class="num">Neto</th><th class="num">Bruto</th></tr></thead>
+      <tbody>${D.tarifario.map((t) => `<tr><td>${esc(t.numeral)}</td><td>${esc(t.concepto)}</td>
+        <td class="num">${soles(t.neto)}</td><td class="num">${soles(Math.round((t.neto / 0.92) * 100) / 100)}</td></tr>`).join('')}</tbody>
+    </table></div></div>`);
 });
 
 document.querySelectorAll('[data-pago]').forEach((el) => {
   el.addEventListener('click', () => {
     const p = D.pagos.find((x) => x.id === el.dataset.pago);
-    const ev = p.evidencias.map((e) => e.url
-      ? `<div style="margin-top:12px"><div class="cifra-rotulo" style="margin-bottom:6px">${esc(e.tipo)}</div><iframe class="visor" src="${esc(e.url)}" title="${esc(e.tipo)}"></iframe></div>`
-      : `<div class="aviso-caja" style="margin-top:10px"><b>${esc(e.tipo)}</b><div class="ruta">${esc(e.archivo)}</div>
-         <div style="margin-top:8px;font-size:.78rem">Para verlo aquí dentro, súbalo a <code>public/docs/</code> y anote su ruta en el campo <code>url</code> de la evidencia dentro de <code>datos-parachique.json</code>.</div></div>`
-    ).join('');
-
     abrirVentana(`Abono del ${fechaCorta(p.fecha)}`, `${esc(p.banco)} · Operación ${esc(p.operacion)}`,
       `<dl class="dl">
         <dt>Fecha y hora</dt><dd>${fecha(p.fecha)} — ${esc(p.hora)}</dd>
@@ -258,13 +270,11 @@ document.querySelectorAll('[data-pago]').forEach((el) => {
         <dt>Neto recibido</dt><dd><b style="font-size:1.05rem">${soles(p.montoNeto)}</b></dd>
         <dt>Cuenta de origen</dt><dd>${esc(p.cuentaOrigen)}</dd>
         <dt>Cuenta de destino</dt><dd>${esc(p.cuentaDestino)}</dd>
-        <dt>N° de operación</dt><dd class="cod">${esc(p.operacion)}</dd>
         <dt>Recibo asociado</dt><dd class="cod">${esc(p.recibo)}</dd>
-        <dt>Liquidación</dt><dd>${esc(D.liquidaciones.find((l) => l.id === p.liquidacion)?.carta || p.liquidacion)}</dd>
       </dl>
       <div class="aviso-caja" style="margin-top:16px">${esc(p.nota)}</div>
-      <div class="cifra-rotulo" style="margin:20px 0 0">Evidencias</div>
-      ${ev}`);
+      <div class="cifra-rotulo" style="margin:20px 0 6px">Evidencias</div>
+      ${p.evidencias.map((e) => `<div class="aviso-caja" style="margin-top:8px"><b>${esc(e.tipo)}</b><div class="ruta">${esc(e.archivo)}</div></div>`).join('')}`);
   });
 });
 
@@ -280,35 +290,28 @@ document.querySelectorAll('[data-recibo]').forEach((el) => {
         <dt>Retención de IR (8%)</dt><dd style="color:var(--tinta-suave)">−${soles(r.retencion)}</dd>
         <dt>Total neto recibido</dt><dd><b style="font-size:1.05rem">${soles(r.neto)}</b></dd>
       </dl>
-      ${bloqueArchivo(r.archivo, '', r.url)}`);
+      <div class="aviso-caja" style="margin-top:16px">
+        Cubre el informe de compatibilidad (numeral 2.1, S/ 2,500.00) y el pronunciamiento N° 001
+        (numeral 2.3, S/ 500.00). La suma de ambos es exactamente el neto recibido.
+      </div>`);
   });
 });
 
-document.getElementById('k-ret').addEventListener('click', () => {
-  const c2 = D.condiciones.find((x) => x.num === '2');
-  abrirVentana('Retención de IR y gross-up', 'Cómo se calcula el monto bruto a facturar',
-    `<div class="aviso-caja" style="border-style:solid;border-color:var(--primario)">
-      <b>Condición 2 de la CARTA N° 01-2026-DLVM</b><br>${esc(c2.texto)}
-    </div>
-    <div class="cifra-rotulo" style="margin:20px 0 8px">Fórmula</div>
-    <div class="tarjeta" style="text-align:center;padding:22px">
-      <div style="font-family:var(--display);font-size:1.5rem;font-weight:600">bruto = neto ÷ 0.92</div>
-      <div style="font-size:.82rem;color:var(--tinta-suave);margin-top:8px">La retención del 8% se aplica sobre el bruto, de modo que lo percibido iguale el neto pactado.</div>
-    </div>
-    <div class="cifra-rotulo" style="margin:20px 0 8px">Verificación de lo facturado</div>
-    <div class="tabla-caja"><div class="tabla-scroll"><table class="datos" style="min-width:460px">
-      <thead><tr><th>Recibo</th><th class="num">Bruto</th><th class="num">Retención</th><th class="num">Neto</th><th>Cuadre</th></tr></thead>
-      <tbody>${D.recibos.map((r) => {
-        const esperado = Math.round((r.neto / 0.92) * 100) / 100;
-        const ok = Math.abs(esperado - r.bruto) <= 0.02;
-        return `<tr><td class="cod">${esc(r.numero)}</td><td class="num">${soles(r.bruto)}</td><td class="num">−${soles(r.retencion)}</td><td class="num">${soles(r.neto)}</td><td>${ok ? insignia('Correcto', 'bien', 'bien') : insignia('Revisar — esperado ' + soles(esperado), 'critico', 'critico')}</td></tr>`;
-      }).join('')}</tbody>
-    </table></div></div>
-    <div class="cifra-rotulo" style="margin:20px 0 8px">Tarifario neto de referencia</div>
-    <div class="tabla-caja"><div class="tabla-scroll"><table class="datos" style="min-width:460px">
-      <thead><tr><th>Num.</th><th>Concepto</th><th class="num">Neto</th><th class="num">Bruto a facturar</th></tr></thead>
-      <tbody>${D.tarifario.map((t) => `<tr><td>${esc(t.numeral)}</td><td>${esc(t.concepto)}</td><td class="num">${soles(t.neto)}</td><td class="num">${soles(Math.round((t.neto / 0.92) * 100) / 100)}</td></tr>`).join('')}</tbody>
-    </table></div></div>`);
+crearFiltros({
+  contenedor: 'filtros-prod', tabla: 't-prod', resumen: 'resumen-prod',
+  unidad: 'productos', placeholder: 'Buscar producto…',
+  campos: [
+    { clave: 'situacion', etiqueta: 'Situación' },
+    { clave: 'numeral', etiqueta: 'Numeral' },
+  ],
+  excel: {
+    hoja: 'Honorarios por producto',
+    archivo: 'CS-PARACHIQUE_honorarios',
+    proyecto: D.meta.proyecto,
+    subtitulo: `CUI N° ${D.meta.cui} · Situación de cada producto entregado — documento reservado`,
+    supervisor: D.meta.supervisor, cip: D.meta.cip,
+    supervision: D.meta.supervision, propietario: D.meta.supervisor,
+  },
 });
 
 activarTips(document);

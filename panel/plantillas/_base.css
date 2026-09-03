@@ -388,3 +388,120 @@ ol.pasos li::before {
   border-radius: 7px; padding: 6px 12px; font: inherit; font-size: 0.78rem; font-weight: 600;
 }
 .tabs-doc button[aria-selected="true"] { background: var(--primario); border-color: var(--primario); color: #fff; }
+
+
+/* =========================================================================
+   INTERRUPTORES DE ETAPA Y RANGO DE FECHAS
+   ========================================================================= */
+.interruptores {
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: stretch;
+  padding: 14px; margin-bottom: 12px;
+  background: var(--superficie); border: 1px solid var(--borde); border-radius: var(--r);
+}
+.interruptor {
+  display: flex; align-items: center; gap: 10px; cursor: pointer; user-select: none;
+  padding: 10px 14px; border: 1px solid var(--borde); border-radius: 10px;
+  background: var(--superficie-2); transition: border-color .15s, background .15s;
+  flex: 1 1 210px; min-width: 200px;
+}
+.interruptor:hover { border-color: var(--primario-claro); }
+.interruptor input { position: absolute; opacity: 0; width: 0; height: 0; }
+.interruptor .palanca {
+  flex: none; width: 34px; height: 19px; border-radius: 999px;
+  background: var(--borde-fuerte); position: relative; transition: background .18s;
+}
+.interruptor .palanca::after {
+  content: ""; position: absolute; top: 2px; left: 2px; width: 15px; height: 15px;
+  border-radius: 50%; background: #fff; transition: transform .18s;
+  box-shadow: 0 1px 3px rgba(15,28,46,.35);
+}
+.interruptor[data-encendido="1"] { border-color: var(--primario); background: rgba(15,61,92,.05); }
+.interruptor[data-encendido="1"] .palanca { background: var(--primario); }
+.interruptor[data-encendido="1"] .palanca::after { transform: translateX(15px); }
+.interruptor[data-encendido="0"] { opacity: .58; }
+.interruptor .txt { flex: 1; min-width: 0; font-size: 0.83rem; line-height: 1.35; }
+.interruptor .txt b { display: block; color: var(--tinta); font-weight: 700; }
+.interruptor .txt .detalle { color: var(--tinta-suave); font-size: 0.75rem; }
+.interruptor .cuenta {
+  flex: none; font-variant-numeric: tabular-nums; font-weight: 700; font-size: 0.9rem;
+  color: var(--primario); background: var(--superficie); border: 1px solid var(--borde);
+  border-radius: 7px; padding: 2px 9px;
+}
+
+.rango-fechas {
+  display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+  padding: 10px 14px; margin-bottom: 12px;
+  background: var(--superficie); border: 1px solid var(--borde); border-radius: var(--r);
+}
+.rango-fechas[data-activo="1"] { border-color: var(--primario); }
+.rango-fechas .rotulo {
+  font-size: 0.72rem; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--tinta-tenue); font-weight: 700;
+}
+.rango-fechas input[type="date"] {
+  padding: 7px 10px; font: inherit; font-size: 0.82rem;
+  border: 1px solid var(--borde); border-radius: 8px;
+  background: var(--superficie-2); color: var(--tinta); color-scheme: light;
+}
+.rango-fechas input[type="date"]:focus { outline: none; border-color: var(--primario-claro); }
+.rango-fechas .sep { color: var(--tinta-tenue); font-size: 0.82rem; }
+
+/* Ficha de observación en lista */
+.lista-obs { display: grid; gap: 10px; }
+.obs-item {
+  border: 1px solid var(--borde); border-left: 3px solid var(--borde-fuerte);
+  border-radius: 10px; padding: 12px 14px; background: var(--superficie);
+}
+.obs-item.p-CRÍTICA { border-left-color: var(--critico); }
+.obs-item.p-ALTA { border-left-color: var(--critico); }
+.obs-item.p-SUSTANCIAL { border-left-color: var(--serio); }
+.obs-item.p-MEDIA { border-left-color: var(--serio); }
+.obs-item.p-LEVE { border-left-color: var(--aviso); }
+.obs-item.p-BAJA { border-left-color: var(--aviso); }
+.obs-item .enc { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.obs-item .enc .n {
+  font-family: ui-monospace, Consolas, monospace; font-size: 0.76rem; font-weight: 700;
+  color: var(--primario); background: var(--superficie-2);
+  border: 1px solid var(--borde); border-radius: 6px; padding: 2px 8px;
+}
+.obs-item h4 { font-family: var(--cuerpo); font-size: 0.88rem; font-weight: 700; flex: 1; min-width: 180px; }
+.obs-item .cuerpo { margin-top: 8px; font-size: 0.82rem; color: var(--tinta-suave); line-height: 1.55; }
+.obs-item .cuerpo b { color: var(--tinta); }
+.obs-item dl { margin: 8px 0 0; display: grid; grid-template-columns: 130px 1fr; gap: 4px 10px; font-size: 0.79rem; }
+.obs-item dl dt { color: var(--tinta-tenue); font-weight: 700; }
+.obs-item dl dd { margin: 0; color: var(--tinta-suave); }
+@media (max-width: 620px) { .obs-item dl { grid-template-columns: 1fr; } }
+
+/* Ventana ancha: para el visor de documentos */
+.ventana.ancha { width: min(1180px, 100%); max-height: min(94vh, 1100px); }
+.ventana.ancha .ventana-cuerpo { padding: 0; display: flex; flex-direction: column; }
+
+.doc-barra {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  padding: 10px 16px; border-bottom: 1px solid var(--borde); background: var(--superficie-2);
+}
+.doc-barra .tabs-doc { margin: 0; }
+.doc-barra .info {
+  margin-left: auto; font-size: 0.76rem; color: var(--tinta-suave);
+  display: flex; align-items: center; gap: 8px;
+}
+.doc-marco { position: relative; flex: 1; min-height: 0; background: #f1efea; }
+.doc-marco iframe { display: block; width: 100%; height: 78vh; border: 0; }
+.ventana.ancha .doc-marco iframe { height: calc(94vh - 190px); min-height: 460px; }
+.doc-cargando {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  flex-direction: column; gap: 10px; background: var(--superficie-2); color: var(--tinta-suave);
+  font-size: 0.84rem; transition: opacity .3s; pointer-events: none;
+}
+.doc-cargando[hidden] { opacity: 0; }
+.doc-cargando .rueda {
+  width: 26px; height: 26px; border-radius: 50%;
+  border: 3px solid var(--borde-fuerte); border-top-color: var(--primario);
+  animation: girar .9s linear infinite;
+}
+@keyframes girar { to { transform: rotate(360deg); } }
+.doc-pie {
+  padding: 10px 16px; border-top: 1px solid var(--borde); background: var(--superficie-2);
+  font-size: 0.76rem; color: var(--tinta-suave);
+  display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+}
