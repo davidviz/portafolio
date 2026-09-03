@@ -320,9 +320,43 @@ def _hoja(hoja_id: str, token: str):
     return salida
 
 
+def _por_la_ruta(url: str):
+    """Pide las hojas al propio portafolio, que ya sabe autenticarse.
+
+    Es el camino preferido: la cuenta de servicio vive en Vercel desde antes
+    (`GOOGLE_SERVICE_ACCOUNT_B64`, la misma de HRDT), así que el robot no
+    necesita ninguna credencial propia. Solo hace una petición.
+    """
+    try:
+        with urllib.request.urlopen(url, timeout=60) as r:
+            j = json.loads(r.read().decode("utf-8"))
+    except Exception as e:
+        avisar(f"  aviso: no respondió {url} ({e}).")
+        return None
+    if not j.get("ok"):
+        avisar(f"  aviso: la ruta de hojas devolvió un error ({j.get('error')}).")
+        return None
+    for p in j.get("problemas", []):
+        avisar(f"  aviso: la hoja «{p.get('hoja')}» no se pudo leer ({p.get('error')}). "
+               f"Compártala con {j.get('cuenta')}.")
+    print(f"  hojas leídas por la ruta del portafolio, como {j.get('cuenta')}")
+    return j
+
+
 def datos_de_las_hojas(cfg: dict):
-    """Lee SEGUIMIENTO y OBSERVACIONES. Devuelve (seguimiento, observaciones)."""
-    hojas = (cfg or {}).get("sheets") or {}
+    """Devuelve (seguimiento, observaciones), por la ruta o por credencial propia."""
+    cfg = cfg or {}
+    ruta = cfg.get("sheetsUrl")
+    if ruta:
+        j = _por_la_ruta(ruta)
+        if j is not None:
+            seg, obs = j.get("seguimiento") or [], j.get("observaciones") or []
+            print(f"  seguimiento: {len(seg)} filas · observaciones: {len(obs)} filas")
+            return seg, obs
+
+    # Camino alterno: credencial propia en el entorno, por si algún día el
+    # panel deja de depender del portafolio.
+    hojas = cfg.get("sheets") or {}
     if not hojas.get("seguimiento") and not hojas.get("observaciones"):
         return [], []
     token = _token_de_servicio()

@@ -3514,6 +3514,7 @@
       "seguimiento": "1fFLVEzHM9kfdplK32EvBc1ZPhsLsAD6-ZuO5tqpg7zU",
       "observaciones": "139iM1VddIgtjhiEwsrostyef_DnbXPC8GetmtShkEmQ"
     },
-    "notaSheets": "Las tres hojas viven en 7.Panel Portafolio y las lee la cuenta de servicio lector-sheets-851@portafolio-hrdt.iam.gserviceaccount.com. La hoja 2 fija el estado de cada ficha con su fila vigente; la hoja 3 cierra una observación cuando se consigna la versión que la levanta."
+    "notaSheets": "Las tres hojas viven en 7.Panel Portafolio del Drive. Las lee la ruta /api/parachique-sheets del propio portafolio, que ya tiene la cuenta de servicio en Vercel (GOOGLE_SERVICE_ACCOUNT_B64, la misma de HRDT). La hoja 2 fija el estado de cada ficha con su fila vigente; la hoja 3 cierra una observación cuando se consigna la versión que la levanta.",
+    "sheetsUrl": "https://portafolio-alpha-brown-61.vercel.app/api/parachique-sheets"
   }
 }
