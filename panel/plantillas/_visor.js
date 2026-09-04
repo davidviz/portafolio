@@ -30,26 +30,35 @@ function tipoDeArchivo(nombre) {
 
 /* Piezas consultables de un documento, en el orden en que conviene leerlas.
 
-   El PDF va primero y es el que se abre: es el ejemplar de paginación fija, el
-   que se imprime y se firma, y el único que se ve igual en cualquier equipo.
-   El Word queda detrás como fuente editable, porque el visor lo remaqueta y el
-   membrete se corre. La matriz cierra, en Excel, que es como se trabaja. */
+   Manda el ejemplar FIRMADO: es el que tiene valor, el que se entregó y el
+   único oponible. Cuando existe, el PDF sin firma no se muestra —es el mismo
+   texto sin valor, y ofrecer los dos solo invita a citar el que no vale.
+
+   Sin firma todavía, se abre el PDF: paginación fija, se ve igual en cualquier
+   equipo. El Word queda detrás como fuente editable, porque el visor lo
+   remaqueta y el membrete se corre. La matriz cierra, en Excel. */
 function piezasDe(d) {
   const drive = d.drive || {};
   const piezas = [];
   const nombreBase = (d.archivo || '').split(' + ')[0];
+  const sinExt = nombreBase.replace(/\.[a-z0-9]+$/i, '');
   const rotulo = d.clase === 'CARTA' ? 'Carta' : (d.clase === 'INFORME' ? 'Informe' : 'Documento');
 
-  if (drive.pdf) {
+  if (drive.firmado) {
+    piezas.push({
+      id: drive.firmado, etiqueta: rotulo + ' firmado',
+      archivo: sinExt + '_FIRMADO.pdf',
+    });
+  } else if (drive.pdf) {
     piezas.push({
       id: drive.pdf, etiqueta: rotulo + ' (PDF)',
-      archivo: nombreBase.replace(/\.docx?$/i, '.pdf'),
+      archivo: sinExt + '.pdf',
     });
   }
   if (drive.informe) {
     piezas.push({
       id: drive.informe,
-      etiqueta: drive.pdf ? 'Editable' : rotulo,
+      etiqueta: (drive.firmado || drive.pdf) ? 'Editable' : rotulo,
       archivo: nombreBase,
     });
   }

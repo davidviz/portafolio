@@ -169,7 +169,9 @@ const ENLACE_DRIVE = (id) => `https://drive.google.com/file/d/${id}/view`;
 
 const enlaceDe = (d) => {
   const drive = d.drive || {};
-  const id = drive.pdf || drive.informe || drive.matriz || drive.sustento;
+  // El enlace del Excel apunta al ejemplar firmado si existe: es el que se
+  // le entrega al Contratista y a la Entidad.
+  const id = drive.firmado || drive.pdf || drive.informe || drive.matriz || drive.sustento;
   return id ? ENLACE_DRIVE(id) : '';
 };
 
