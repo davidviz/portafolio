@@ -52,6 +52,17 @@ function textoFila(tr) {
   });
 }
 
+/* Una celda puede llevar el documento al que apunta. El libro descargado se le
+   entrega al Contratista o a la Entidad, y de nada sirve que diga «INF-SUP-RC-
+   002» si quien lo lee no puede abrirlo: la celda va como hipervínculo.
+   El enlace se declara en el HTML con data-enlace, dentro de la celda. */
+function enlacesFila(tr) {
+  return Array.from(tr.children).map(function (td) {
+    const el = td.matches('[data-enlace]') ? td : td.querySelector('[data-enlace]');
+    return el ? el.getAttribute('data-enlace') : '';
+  });
+}
+
 async function exportarExcel(o) {
   const boton = o.boton;
   const rotuloOriginal = boton ? boton.innerHTML : '';
@@ -122,7 +133,9 @@ async function exportarExcel(o) {
 
     o.filas.forEach(function (tr, i) {
       const celdas = textoFila(tr);
-      const fila = hoja.addRow(celdas.map(function (t) {
+      const enlaces = enlacesFila(tr);
+      const fila = hoja.addRow(celdas.map(function (t, j) {
+        if (enlaces[j] && t) return { text: t, hyperlink: enlaces[j] };
         const v = valorCelda(t);
         return (v && typeof v === 'object') ? v.valor : v;
       }));
@@ -130,6 +143,18 @@ async function exportarExcel(o) {
       celdas.forEach(function (t, j) {
         const v = valorCelda(t);
         const c = fila.getCell(j + 1);
+        if (enlaces[j] && t) {
+          c.font = { name: 'Arial', size: 9, color: { argb: 'FF1155CC' }, underline: true };
+          c.alignment = { vertical: 'top', wrapText: t.length > 42 };
+          c.border = {
+            bottom: { style: 'hair', color: { argb: 'FFD9D9D9' } },
+            left: { style: 'hair', color: { argb: 'FFD9D9D9' } },
+            right: { style: 'hair', color: { argb: 'FFD9D9D9' } },
+          };
+          if (i % 2 === 1) c.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFF6F5F1' } };
+          anchos[j] = Math.min(Math.max(anchos[j], Math.min(t.length + 2, 46)), 46);
+          return;
+        }
         if (v && typeof v === 'object') {
           c.numFmt = v.formato;
           c.alignment = { vertical: 'top', horizontal: 'right' };

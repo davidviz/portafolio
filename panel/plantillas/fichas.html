@@ -161,9 +161,21 @@ function seguimientoDe(cod) {
   };
 }
 
-/* Celda de documento: abre la vista preliminar sin disparar la ficha del ítem. */
+/* Celda de documento: abre la vista preliminar sin disparar la ficha del ítem.
+   `data-enlace` es lo que recoge el exportador para que la celda del Excel sea
+   un hipervínculo: el libro se le entrega al Contratista y a la Entidad, y de
+   nada sirve que diga «INF-SUP-RC-002» si quien lo lee no puede abrirlo. */
+const ENLACE_DRIVE = (id) => `https://drive.google.com/file/d/${id}/view`;
+
+const enlaceDe = (d) => {
+  const drive = d.drive || {};
+  const id = drive.pdf || drive.informe || drive.matriz || drive.sustento;
+  return id ? ENLACE_DRIVE(id) : '';
+};
+
 const celdaDoc = (d, cod) => d
   ? `<span class="cod" data-doc-tabla="${esc(d.id)}" data-doc-desde="${esc(cod)}"
+      data-enlace="${esc(enlaceDe(d))}"
       style="cursor:pointer;color:var(--serie-1);text-decoration:underline;
              text-decoration-style:dotted;text-underline-offset:3px;font-size:.72rem"
       title="Ver ${esc(d.codigo)} en vista preliminar">${esc(d.codigo)}</span>`
@@ -256,16 +268,28 @@ h += `<div class="rejilla g2" style="align-items:stretch">
   </div>
 </div>`;
 
+/* Lo entregado primero, primero: el cuadro se lee como una fila de espera.
+   Los códigos que el Contratista todavía no presenta van al final, en el orden
+   del expediente, porque entre ellos no hay nada que ordenar. */
+const CAT_ORDEN = C.slice().sort((a, b) => {
+  const fa = a.fechaEntrega || '', fb = b.fechaEntrega || '';
+  if (fa && fb) return fa.localeCompare(fb) || a.cod.localeCompare(b.cod, 'es');
+  if (fa) return -1;
+  if (fb) return 1;
+  return 0;
+});
+
 /* ---------- Catalogo completo ---------- */
 h += `<div class="seccion">
   <h2>Catálogo de equipamiento</h2>
-  <p class="nota">Cuadro de seguimiento al Contratista: los ${C.length} códigos del expediente con el informe que presentó su ficha técnica, la respuesta de esta Supervisión y lo que queda por levantar. La raya (—) señala que el Contratista aún no ha presentado la ficha, de modo que no hay nada que revisar. <b>Toque una fila</b> para el detalle del ítem; <b>toque un código de informe</b> para verlo en vista preliminar.</p>
+  <p class="nota">Cuadro de seguimiento al Contratista, <b>ordenado por fecha de entrega</b>: lo presentado primero encabeza la tabla y los ${C.length - CAT_ORDEN.filter((c) => c.fechaEntrega).length} códigos sin entregar quedan al final. La raya (—) señala que el Contratista aún no ha presentado la ficha, de modo que no hay nada que revisar. <b>Toque una fila</b> para el detalle del ítem; <b>toque un código de informe</b> para verlo en vista preliminar. La descarga a Excel lleva esos códigos como enlace al documento.</p>
   <div id="filtros"></div>
+  <div id="fechas-cat"></div>
   <div id="resumen"></div>
   <div class="tabla-caja"><div class="tabla-scroll" style="max-height:620px;overflow-y:auto">
     <table class="datos" id="t-cat">
-      <thead><tr><th>Código</th><th>Denominación</th><th>Grupo</th><th class="num">Cant.</th><th class="num">P. unitario</th><th class="num">Parcial</th><th class="num">Incid.</th><th>Ficha técnica</th><th>Ver.</th><th>Informe del Contratista</th><th>Respuesta de la Supervisión</th><th>Observaciones por levantar</th></tr></thead>
-      <tbody>${C.map((c) => {
+      <thead><tr><th>Código</th><th>Denominación</th><th>Grupo</th><th class="num">Cant.</th><th class="num">P. unitario</th><th class="num">Parcial</th><th class="num">Incid.</th><th>Ficha técnica</th><th>Ver.</th><th>Fecha de entrega</th><th>Informe del Contratista</th><th>Respuesta de la Supervisión</th><th>Observaciones por levantar</th></tr></thead>
+      <tbody>${CAT_ORDEN.map((c) => {
         const e = estadoDe(c);
         const g = seguimientoDe(c.cod);
         return `<tr class="clic" data-cod="${esc(c.cod)}"
@@ -274,6 +298,7 @@ h += `<div class="seccion">
           data-f-grupo="${esc(c.grupo)}"
           data-f-familia="${esc(familiaDe(c.cod))}"
           data-f-ficha="${esc(e.etiqueta)}"
+          data-f-fecha="${c.fechaEntrega || ''}"
           data-f-pendientes="${!g.presentada ? 'Sin ficha presentada'
             : g.abiertas.length ? 'Con observaciones por levantar' : 'Sin observaciones pendientes'}"
           data-f-cantidad="${esc(rangoCant(c.cant))}">
@@ -286,13 +311,14 @@ h += `<div class="seccion">
           <td class="num">${(c.parcial / TOTAL * 100).toFixed(2)}%</td>
           <td>${insignia(e.etiqueta, e.clase, e.clase === 'neutro' ? 'neutro' : e.clase)}</td>
           <td class="cod" style="font-size:.74rem">${c.version ? 'v' + c.version : '—'}</td>
+          <td style="white-space:nowrap;font-size:.78rem">${c.fechaEntrega ? fechaCorta(c.fechaEntrega) : '<span style="color:var(--tinta-tenue)">—</span>'}</td>
           <td>${celdaDoc(g.recibido, c.cod)}</td>
           <td>${celdaDoc(g.emitido, c.cod)}</td>
           <td>${celdaObs(g.abiertas, g.presentada)}</td>
         </tr>`;
       }).join('')}
       </tbody>
-      <tfoot><tr><td colspan="3">${C.length} códigos</td><td class="num">${num(unid(C))}</td><td></td><td class="num">${soles(TOTAL)}</td><td class="num">100%</td><td></td><td></td><td></td><td></td><td style="font-size:.74rem">${OBS_FICHA.filter((o) => !/subsanad|absuelt|conforme/i.test(o.estado)).length} observaciones por levantar</td></tr></tfoot>
+      <tfoot><tr><td colspan="3">${C.length} códigos</td><td class="num">${num(unid(C))}</td><td></td><td class="num">${soles(TOTAL)}</td><td class="num">100%</td><td></td><td></td><td></td><td></td><td></td><td style="font-size:.74rem">${OBS_FICHA.filter((o) => !/subsanad|absuelt|conforme/i.test(o.estado)).length} observaciones por levantar</td></tr></tfoot>
     </table>
   </div></div>
 </div>`;
@@ -472,6 +498,11 @@ function listado(titulo, meta, lista) {
     listado(e.titulo, `${l.length} de ${C.length} códigos · ${soles(monto(l))} de valor de expediente`, l);
   });
 });
+
+/* El periodo mira la fecha de entrega. Al fijarlo, los códigos sin entrega
+   salen de la tabla: si se quedaran, filtrar por fechas no cambiaría nada
+   visible entre 178 filas vacías. */
+crearRangoFechas({ contenedor: 'fechas-cat', tabla: 't-cat', campo: 'fecha', sinFechaFuera: true });
 
 crearFiltros({
   contenedor: 'filtros',

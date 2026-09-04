@@ -424,6 +424,7 @@ def aplicar_seguimiento(datos: dict, filas):
             c["ficha"] = estado
             cambios += 1
         c["version"] = int(actual.get("version") or 1)
+        c["fechaEntrega"] = actual.get("fecha_presentacion") or None
         c["versiones"] = len(lista)
         c["marca"] = actual.get("marca") or None
         c["modelo"] = actual.get("modelo") or None

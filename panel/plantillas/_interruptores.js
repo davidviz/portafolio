@@ -107,8 +107,9 @@ function crearInterruptores(cfg) {
 }
 
 /* ------------------------------------------------------------ rango de fechas
-   crearRangoFechas({ contenedor, tabla, campo:'fecha' })
+   crearRangoFechas({ contenedor, tabla, campo:'fecha', sinFechaFuera:false })
    El atributo data-f-<campo> de cada fila debe traer la fecha en AAAA-MM-DD.
+   Con sinFechaFuera:true, las filas sin fecha desaparecen al fijar un periodo.
 ------------------------------------------------------------------------- */
 function crearRangoFechas(cfg) {
   const caja = document.getElementById(cfg.contenedor);
@@ -139,7 +140,10 @@ function crearRangoFechas(cfg) {
     caja.dataset.activo = (d || h) ? '1' : '0';
     ponerCriterio(cfg.tabla, 'fechas', function (tr) {
       const f = tr.getAttribute('data-f-' + cfg.campo) || '';
-      if (!f) return true;
+      // Una fila sin fecha pasa siempre, salvo que se pida lo contrario: en un
+      // cuadro donde la mayoría aún no tiene entrega, dejarlas todas haría
+      // parecer que el periodo no filtra nada.
+      if (!f) return (d || h) ? !cfg.sinFechaFuera : true;
       if (d && f < d) return false;
       if (h && f > h) return false;
       return true;
