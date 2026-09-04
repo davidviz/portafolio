@@ -71,7 +71,14 @@ const TONO = (nivel) =>
   (nivel === 'CRITICA' || nivel === 'CRÍTICA' || nivel === 'ALTA') ? 'critico'
   : (nivel === 'SUSTANCIAL' || nivel === 'MEDIA') ? 'serio' : 'aviso';
 
-const OBS_FICHA = D.pronunciamientos.flatMap((p) => (p.detalle || []).map((o) => normalizarObs(o, p)));
+/* Este tablero solo cuenta lo que el Contratista presentó COMO FICHA TÉCNICA.
+   Un pronunciamiento sobre consultas al expediente no es una presentación de
+   ficha: el Contratista pregunta, no oferta un bien. Mezclarlos hacía figurar
+   como «presentados» equipos que nadie ha presentado. Las consultas viven en el
+   tablero de Cartas y Respuestas, junto al informe que las absuelve. */
+const PRON_FICHA = D.pronunciamientos.filter((p) => (p.tipo || 'FICHA') === 'FICHA');
+
+const OBS_FICHA = PRON_FICHA.flatMap((p) => (p.detalle || []).map((o) => normalizarObs(o, p)));
 
 const obsDe = (cod) => OBS_FICHA.filter((o) => o.codigos.includes(cod));
 
@@ -96,7 +103,7 @@ const tarjetaObs = (o) => `
    Qué carta trajo el sustento de este equipo y con qué informe se contestó.
    Ambos abren en el visor interno; no se sale del tablero.               */
 function trazaDe(cod) {
-  return D.pronunciamientos
+  return PRON_FICHA
     .filter((p) => (p.detalle || []).some((o) => (o.codigos || []).includes(cod)))
     .map((p) => {
       const emitido = docPorCodigo(p.informe) || null;
@@ -124,7 +131,7 @@ function tarjetaDoc(d, rotulo, cod) {
 function bloqueTraza(cod) {
   const t = trazaDe(cod);
   if (!t.length) {
-    return `<div class="aviso-caja" style="margin-top:16px">Este código todavía no ha sido materia de una carta del Contratista ni de un pronunciamiento de la Supervisión.</div>`;
+    return `<div class="aviso-caja" style="margin-top:16px">Sin trazabilidad documental: el Contratista no ha presentado la ficha técnica de este código.</div>`;
   }
   return t.map(({ p, emitido, recibido }) => `
     <div class="cifra-rotulo" style="margin:20px 0 10px">Trazabilidad documental</div>
@@ -140,9 +147,14 @@ function bloqueTraza(cod) {
    le queda por levantar. Es lo que convierte el catálogo en un cuadro que el
    Contratista puede leer de corrido y saber qué le toca. */
 function seguimientoDe(cod) {
+  const c = C.find((x) => x.cod === cod) || {};
   const t = trazaDe(cod);
   const ultimo = (lista) => lista.filter(Boolean).slice(-1)[0] || null;
+  // Una ficha está presentada si hay versión en la hoja de seguimiento o si
+  // hubo un pronunciamiento sobre su sustento. Sin eso, no hay nada que revisar.
+  const presentada = !!(c.version || t.length);
   return {
+    presentada,
     recibido: ultimo(t.map((x) => x.recibido)),
     emitido: ultimo(t.map((x) => x.emitido)),
     abiertas: obsDe(cod).filter((o) => !/subsanad|absuelt|conforme/i.test(o.estado)),
@@ -157,12 +169,22 @@ const celdaDoc = (d, cod) => d
       title="Ver ${esc(d.codigo)} en vista preliminar">${esc(d.codigo)}</span>`
   : '<span style="color:var(--tinta-tenue)">—</span>';
 
-/* El texto completo viaja al Excel aunque en pantalla se recorte a dos líneas. */
-const celdaObs = (lista) => lista.length
-  ? `<div style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+/* El texto completo viaja al Excel aunque en pantalla se recorte a dos líneas.
+
+   Sin ficha presentada va una raya, no «Sin observaciones»: eso último diría
+   que se revisó y salió limpio, cuando la verdad es que no hay nada que
+   revisar. La diferencia importa cuando este cuadro se le entrega al
+   Contratista. */
+const celdaObs = (lista, presentada) => {
+  if (lista.length) {
+    return `<div style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
                  overflow:hidden;font-size:.74rem;line-height:1.45;max-width:330px"
-      >${lista.map((o) => `${esc(o.n)} — ${esc(o.titulo)}`).join(' · ')}</div>`
-  : '<span style="color:var(--bien);font-size:.74rem">Sin observaciones</span>';
+      >${lista.map((o) => `${esc(o.n)} — ${esc(o.titulo)}`).join(' · ')}</div>`;
+  }
+  return presentada
+    ? '<span style="color:var(--bien);font-size:.74rem">Sin observaciones</span>'
+    : '<span style="color:var(--tinta-tenue)">—</span>';
+};
 
 const por = (id) => C.filter((c) => c.ficha === id);
 const monto = (l) => l.reduce((s, c) => s + (c.parcial || 0), 0);
@@ -237,7 +259,7 @@ h += `<div class="rejilla g2" style="align-items:stretch">
 /* ---------- Catalogo completo ---------- */
 h += `<div class="seccion">
   <h2>Catálogo de equipamiento</h2>
-  <p class="nota">Cuadro de seguimiento al Contratista: los ${C.length} códigos del expediente con el informe que los presentó, la respuesta de esta Supervisión y lo que queda por levantar. <b>Toque una fila</b> para el detalle del ítem; <b>toque un código de informe</b> para verlo en vista preliminar.</p>
+  <p class="nota">Cuadro de seguimiento al Contratista: los ${C.length} códigos del expediente con el informe que presentó su ficha técnica, la respuesta de esta Supervisión y lo que queda por levantar. La raya (—) señala que el Contratista aún no ha presentado la ficha, de modo que no hay nada que revisar. <b>Toque una fila</b> para el detalle del ítem; <b>toque un código de informe</b> para verlo en vista preliminar.</p>
   <div id="filtros"></div>
   <div id="resumen"></div>
   <div class="tabla-caja"><div class="tabla-scroll" style="max-height:620px;overflow-y:auto">
@@ -252,7 +274,8 @@ h += `<div class="seccion">
           data-f-grupo="${esc(c.grupo)}"
           data-f-familia="${esc(familiaDe(c.cod))}"
           data-f-ficha="${esc(e.etiqueta)}"
-          data-f-pendientes="${g.abiertas.length ? 'Con observaciones por levantar' : 'Sin observaciones pendientes'}"
+          data-f-pendientes="${!g.presentada ? 'Sin ficha presentada'
+            : g.abiertas.length ? 'Con observaciones por levantar' : 'Sin observaciones pendientes'}"
           data-f-cantidad="${esc(rangoCant(c.cant))}">
           <td class="cod">${esc(c.cod)}</td>
           <td>${esc(c.den)}</td>
@@ -265,7 +288,7 @@ h += `<div class="seccion">
           <td class="cod" style="font-size:.74rem">${c.version ? 'v' + c.version : '—'}</td>
           <td>${celdaDoc(g.recibido, c.cod)}</td>
           <td>${celdaDoc(g.emitido, c.cod)}</td>
-          <td>${celdaObs(g.abiertas)}</td>
+          <td>${celdaObs(g.abiertas, g.presentada)}</td>
         </tr>`;
       }).join('')}
       </tbody>
@@ -389,7 +412,11 @@ function fichaItem(cod) {
     ${(() => {
       const lista = obsDe(c.cod);
       if (!lista.length) {
-        return '<div class="aviso-caja" style="margin-top:16px">Sin observaciones a la ficha técnica de este código.</div>';
+        // La misma distinción que en la tabla: no es lo mismo revisar y no
+        // encontrar nada, que no tener todavía qué revisar.
+        return seguimientoDe(c.cod).presentada
+          ? '<div class="aviso-caja" style="margin-top:16px">Ficha técnica revisada: sin observaciones pendientes.</div>'
+          : '<div class="aviso-caja" style="margin-top:16px">El Contratista aún no ha presentado la ficha técnica de este código, de modo que no hay nada que revisar.</div>';
       }
       return `<div class="cifra-rotulo" style="margin:20px 0 10px">Observaciones a la ficha técnica (${lista.length})</div>
         <div class="lista-obs">${lista.map(tarjetaObs).join('')}</div>`;

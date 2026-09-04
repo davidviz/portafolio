@@ -1162,7 +1162,9 @@
           "origen": "INF-SUP-RC-EQ-DLVM-001-260726",
           "fuente": "Pronunciamiento sobre consultas del Contratista"
         }
-      ]
+      ],
+      "tipo": "CONSULTAS",
+      "naturaleza": "Consultas y observaciones del Contratista al expediente técnico. No hay ficha técnica presentada: se absuelven consultas."
     },
     {
       "informe": "INF-SUP-RC-EQ-DLVM-002-260903",
@@ -1247,7 +1249,9 @@
         }
       ],
       "autenticidad": "Sustento AUTÉNTICO. Fabricante Industrias Ernesto Correa S.A.C. (RUC 20610709126), marca DAHECO: domicilio, teléfono, certificación ISO 9001:2015 de SGS, rango de agujas y tiempo de destrucción coinciden con la información que el propio fabricante publica. No se advierte adulteración.",
-      "codigoEvaluado": "D-92"
+      "codigoEvaluado": "D-92",
+      "tipo": "FICHA",
+      "naturaleza": "Sustento de ficha técnica presentado por el Contratista para su aprobación."
     }
   ],
   "valorizacion": {
