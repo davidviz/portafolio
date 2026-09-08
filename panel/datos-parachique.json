@@ -290,7 +290,10 @@
       "archivo": "CARTA N 073-2026 ICM - Consulta de Obra N 06 - Capacidad del equipo E-130 Destilador de agua.pdf",
       "ruta": "3.Sustentos\\",
       "url": null,
-      "drive": {},
+      "drive": {
+        "informe": "12DiRzYpLzMVx1gCXnY-ShL2NGQOrhC4o",
+        "sustento": "1nTny4EcUs9MIVXJAGH9uX3AZMDlKo79e"
+      },
       "areas": [
         "Equipos complementarios"
       ]
@@ -304,7 +307,7 @@
       "fecha": "2026-09-08",
       "contraparte": "Jefatura de Supervisión de Obra — Ing. Manuel Ricardo Torres Peche",
       "asunto": "Informe de Respuesta a Consultas del Contratista N° 003 — capacidad exigible del equipo E-130.",
-      "estado": "POR ENTREGAR",
+      "estado": "ENTREGADA",
       "numeral": "2.3",
       "membrete": true,
       "responde": "CARTA N° 073-2026 / INFORME N° 003-2026/JCAMF-EQH",
@@ -312,7 +315,11 @@
       "archivo": "INF-SUP-RC-EQ-DLVM-003-260908_INFORME.docx + _INFORME_FIRMADO.pdf",
       "ruta": "2.Informes Mensuales\u0003.Informe de repsuestas\u0003-260908\\",
       "url": null,
-      "drive": {},
+      "drive": {
+        "informe": "1ytjm5tveoMWfgQpB512ilEjhAWR2n3Ln",
+        "pdf": "1IooUmd78R3axX7EZrs_xhz9-NgiKL7Md",
+        "firmado": "1YVRkbRM8K_5Atz2lN3zWf14LJ8siv0yH"
+      },
       "areas": [
         "Equipos complementarios"
       ]
