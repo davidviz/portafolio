@@ -1,7 +1,7 @@
 {
   "_lea_esto": "Respaldo y datos de fondo del panel CS PARACHIQUE. El estado de las fichas técnicas ya NO se gobierna aquí: manda la hoja «2 SEGUIMIENTO» del Drive, y las observaciones a fichas, la hoja «3 OBSERVACIONES». Lo que se edite aquí para un código que la hoja mencione, la hoja lo sobrescribe. Todo lo demás —etapas, documentos, expediente, presupuesto, valorización— sí se edita aquí. No edite los dashboard.html a mano: se regeneran y se pierde el cambio.",
   "meta": {
-    "actualizado": "2026-09-03",
+    "actualizado": "2026-09-08",
     "proyecto": "Mejoramiento de los Servicios de Salud del Establecimiento de Salud Parachique",
     "cui": "2571750",
     "ubicacion": "Distrito y provincia de Sechura — Piura",
@@ -260,7 +260,7 @@
       "responde": "CARTA N° 068-2026 / INFORME N° 002-2026/JCAMF-EQH-ICM",
       "detalle": "El equipo ofertado (DAHECO modelo 102) CUMPLE los 4 requisitos técnicos mínimos del expediente y su sustento fue verificado como auténtico contra la información publicada por el fabricante. El formato se APRUEBA por reproducir fielmente el Anexo 1 del expediente aprobado. Se formulan 4 observaciones: 1 sustancial (garantía sin sustento) y 3 leves. La ficha del D-92 queda observada solo por la garantía.",
       "archivo": "INF-SUP-RC-EQ-DLVM-002-260903_INFORME.docx + _MATRIZ.xlsx",
-      "ruta": "2.Informes Mensuales\u0003.Informe de repsuestas\\",
+      "ruta": "2.Informes Mensuales3.Informe de repsuestas\\",
       "url": null,
       "drive": {
         "informe": "1rp0Mf1Jc7D3mrgTztEsKWyWmlUzKNhLb",
@@ -270,6 +270,50 @@
       },
       "areas": [
         "Transversal / documental",
+        "Equipos complementarios"
+      ]
+    },
+    {
+      "id": "CT-IN-003",
+      "flujo": "RECIBIDA",
+      "clase": "INFORME DEL CONTRATISTA",
+      "etapa": "E3",
+      "codigo": "CARTA N° 073-2026 / INFORME N° 003-2026/JCAMF-EQH",
+      "fecha": "2026-09-08",
+      "contraparte": "INGENIERÍA CIVIL MONTAJES S.A. (ICM) — Contratista de obra",
+      "asunto": "Consulta de Obra N° 06 — capacidad exigible del equipo complementario E-130, Destilador de agua.",
+      "estado": "ATENDIDA",
+      "numeral": "2.3",
+      "membrete": false,
+      "respondidaPor": "INF-SUP-RC-EQ-DLVM-003-260908",
+      "detalle": "Informe del Ing. Juan Carlos Augusto Mendiola Florez (CIP 201412), Especialista en Equipamiento Hospitalario de ICM, suscrito también por el Residente de Obra Ing. Luis Enrique Santisteban Romero (CIP 81329). 20 folios. Recibido el 08/09/2026 a las 11:50 h. Advierte que las EE.TT. (folio 1137) exigen 8 litros/h mientras el Estudio de Mercado (folio 1011) y el Cuadro de Pre-Instalaciones (folio 958, 4,000 W) corresponden a 4 litros/h, y solicita que la Supervisión ratifique la capacidad exigible en obra.",
+      "archivo": "CARTA N 073-2026 ICM - Consulta de Obra N 06 - Capacidad del equipo E-130 Destilador de agua.pdf",
+      "ruta": "3.Sustentos\\",
+      "url": null,
+      "drive": {},
+      "areas": [
+        "Equipos complementarios"
+      ]
+    },
+    {
+      "id": "PR-005",
+      "flujo": "EMITIDA",
+      "clase": "INFORME",
+      "etapa": "E3",
+      "codigo": "INF-SUP-RC-EQ-DLVM-003-260908",
+      "fecha": "2026-09-08",
+      "contraparte": "Jefatura de Supervisión de Obra — Ing. Manuel Ricardo Torres Peche",
+      "asunto": "Informe de Respuesta a Consultas del Contratista N° 003 — capacidad exigible del equipo E-130.",
+      "estado": "POR ENTREGAR",
+      "numeral": "2.3",
+      "membrete": true,
+      "responde": "CARTA N° 073-2026 / INFORME N° 003-2026/JCAMF-EQH",
+      "detalle": "Confirma que la capacidad exigible en obra del E-130 es de 4 litros/h, conforme a la absolución de la Consulta N° 02 del Concurso N° 19-2026-FOSPIBAY/E, que el Proyectista emitió mediante CARTA N° 10-2026-ARQ.CONST ALFA 360 y quedó en el Acta del 06/04/2026. Sin efecto sobre el precio contractual del ítem (S/ 22,894.73). Habilita al Contratista a presentar la ficha técnica del E-130. Reitera al Proyectista tres asuntos que la ratificación no cierra: la denominación aún errada en el Consolidado (folio 967) y demás documentos, la definición entre destilador y bidestilador, y la potencia nominal definitiva (4,000 W frente a 7,000 W).",
+      "archivo": "INF-SUP-RC-EQ-DLVM-003-260908_INFORME.docx + _INFORME_FIRMADO.pdf",
+      "ruta": "2.Informes Mensuales\u0003.Informe de repsuestas\u0003-260908\\",
+      "url": null,
+      "drive": {},
+      "areas": [
         "Equipos complementarios"
       ]
     }
@@ -681,9 +725,9 @@
         "tipo": "Denominación y capacidad discordantes en seis ubicaciones",
         "descripcion": "El código E-130 presenta cuatro denominaciones distintas dentro del expediente: 'Destilador de agua 8 litros/h' en el Consolidado (fila 75), en la hoja CODIGOS (fila 98), en el Programa de Equipamiento (fila 896) y en la ficha técnica de EE.TT.; 'Destilador de agua 4 litros/h' en el Estudio de Mercado (fila 73) y en el Cuadro de Pre-Instalaciones (fila 72); y 'Bidestilador de agua 4 litros/h' en la Hoja1 de resumen de cargas (fila 11). Mediante la absolución de la consulta N° 02 del Acta FOSPIBAY el proyectista declaró que la especificación debe decir '4 litros/h' por error material. Sin embargo, la corrección alcanza a cuatro documentos y no únicamente a la EE.TT., y la denominación 'bidestilador' designa un equipo de doble destilación, distinto de un destilador simple.",
         "sustento": "Reglamento de la Ley de Contrataciones del Estado — precisión y coherencia de las especificaciones técnicas.",
-        "recomendacion": "Se solicita al proyectista emitir fe de erratas que uniformice la denominación y capacidad de E-130 en los seis documentos citados, precisando expresamente si el bien requerido es un destilador o un bidestilador, por tratarse de equipos de distinta prestación y costo.",
+        "recomendacion": "Se solicita al proyectista emitir fe de erratas que uniformice la denominación y capacidad de E-130 en los seis documentos citados, precisando expresamente si el bien requerido es un destilador o un bidestilador, por tratarse de equipos de distinta prestación y costo. Reiterado mediante INF-SUP-RC-EQ-DLVM-003-260908: la absolución de la Consulta N° 02 corrigió únicamente las EE.TT., de modo que el Consolidado (folio 967) y los demás documentos siguen consignando 8 litros/h.",
         "prioridad": "SUSTANCIAL",
-        "estado": "Absuelta parcialmente",
+        "estado": "Absuelta parcialmente — reiterada al Proyectista el 08/09/2026",
         "codigos": [
           "E-130"
         ],
@@ -700,9 +744,9 @@
         "tipo": "Discrepancia de potencia declarada",
         "descripcion": "Para el mismo código E-130 el resumen de cargas de la Hoja1 declara 7,000 W, mientras que el Cuadro de Pre-Instalaciones declara 4,000 W. Ambos documentos coinciden en la configuración 3F+N a 380 V. La diferencia de 3,000 W en un circuito trifásico incide directamente en el dimensionamiento del alimentador, la protección y el tablero de la UPS correspondiente, y es la carga individual más alta del expediente de equipamiento.",
         "sustento": "NTS N° 113-MINSA/DGIEM-V.01 — consideraciones de preinstalación del equipamiento. Código Nacional de Electricidad — Utilización.",
-        "recomendacion": "Se solicita al proyectista precisar la potencia nominal definitiva de E-130 y uniformizarla en ambos documentos, y confirmar que el dimensionamiento del circuito de la especialidad de Instalaciones Eléctricas corresponde al valor definitivo.",
+        "recomendacion": "Se solicita al proyectista precisar la potencia nominal definitiva de E-130 y uniformizarla en ambos documentos, y confirmar que el dimensionamiento del circuito de la especialidad de Instalaciones Eléctricas corresponde al valor definitivo. Reiterado mediante INF-SUP-RC-EQ-DLVM-003-260908: ratificada la capacidad en 4 litros/h, los 4,000 W del Cuadro de Pre-Instalaciones son el único valor consistente, y los 7,000 W del resumen de cargas corresponden a la huella eléctrica del equipo de 8 litros/h.",
         "prioridad": "SUSTANCIAL",
-        "estado": "Por absolver",
+        "estado": "Por absolver — reiterada al Proyectista el 08/09/2026",
         "codigos": [
           "E-130"
         ],
@@ -1253,6 +1297,35 @@
       "codigoEvaluado": "D-92",
       "tipo": "FICHA",
       "naturaleza": "Sustento de ficha técnica presentado por el Contratista para su aprobación."
+    },
+    {
+      "informe": "INF-SUP-RC-EQ-DLVM-003-260908",
+      "documentoAbsuelto": "INFORME N° 003-2026/JCAMF-EQH (08/09/2026) — CARTA N° 073-2026",
+      "materia": "Consulta de Obra N° 06 — capacidad de producción exigible del equipo E-130, Destilador de agua",
+      "observaciones": 1,
+      "extremos": 1,
+      "confirmadas": 1,
+      "trasladadas": 0,
+      "yaAbsueltas": 0,
+      "detalle": [
+        {
+          "obs": "06",
+          "equipo": "E-130 — Destilador de agua",
+          "ubicacion": "EE.TT. folio 1137 frente a Estudio de Mercado folio 1011 y Cuadro de Pre-Instalaciones folio 958",
+          "extremos": 1,
+          "confirmadas": 1,
+          "trasladadas": 0,
+          "yaAbsueltas": 0,
+          "codigos": [
+            "E-130"
+          ],
+          "origen": "INF-SUP-RC-EQ-DLVM-003-260908",
+          "fuente": "Pronunciamiento sobre consultas del Contratista"
+        }
+      ],
+      "codigoEvaluado": "E-130",
+      "tipo": "CONSULTAS",
+      "naturaleza": "Consulta del Contratista al expediente técnico. No hay ficha técnica presentada para el código E-130: la consulta habilita su presentación. La capacidad exigible queda ratificada en 4 litros/h, sin variación del precio contractual. Quedan vivos, y reiterados al Proyectista, los tres extremos del código que la ratificación no cierra."
     }
   ],
   "valorizacion": {
@@ -1370,6 +1443,13 @@
       "titulo": "178 de 179 fichas técnicas aún sin presentar",
       "detalle": "A la fecha el Contratista ha presentado un solo sustento de ficha técnica (D-92), y con carácter de muestra del formato. Los 178 códigos restantes, equivalentes a 711 unidades y a S/ 3,099,528.82 del presupuesto de equipamiento, no han sido presentados.",
       "accion": "Requerir al Contratista un cronograma de presentación de fichas técnicas por grupo de equipamiento."
+    },
+    {
+      "nivel": "SUSTANCIAL",
+      "titulo": "El E-130 sigue como 8 litros/h en los documentos de recepción",
+      "detalle": "La absolución de la Consulta N° 02 corrigió la ficha de EE.TT. (folio 1137), pero el Consolidado de Equipamiento (folio 967), el listado de códigos y el Programa de Equipamiento mantienen la capacidad de 8 litros/h. La recepción y la valorización se controlan contra esos documentos, de modo que el acta de recepción de un equipo de 4 litros/h nacería con una discordancia documental.",
+      "accion": "Gestionar ante la Entidad la fe de erratas del Proyectista que uniformice el código E-130 en todos los documentos, antes de la llegada del equipo a obra.",
+      "reservada": false
     }
   ],
   "protocoloRespuesta": [
@@ -2147,7 +2227,7 @@
       "parcial": 22894.73,
       "fila": 73,
       "ficha": "SIN PRESENTAR",
-      "obs": null
+      "obs": "Capacidad exigible ratificada en 4 litros/h por INF-SUP-RC-EQ-DLVM-003-260908. Habilitado para presentar ficha técnica. Pendiente la fe de erratas que uniformice la denominación en el resto del expediente."
     },
     {
       "cod": "E-191",
