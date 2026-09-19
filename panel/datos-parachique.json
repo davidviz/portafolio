@@ -137,7 +137,8 @@
       },
       "areas": [
         "Transversal / documental"
-      ]
+      ],
+      "honorarioNeto": 2500
     },
     {
       "id": "PR-002",
@@ -167,7 +168,8 @@
         "Equipos electromecánicos",
         "Instrumental médico",
         "Vehículos"
-      ]
+      ],
+      "honorarioNeto": 500
     },
     {
       "id": "CT-002",
@@ -217,7 +219,8 @@
       },
       "areas": [
         "Transversal / documental"
-      ]
+      ],
+      "honorarioNeto": 1800
     },
     {
       "id": "CT-IN-002",
@@ -271,7 +274,8 @@
       "areas": [
         "Transversal / documental",
         "Equipos complementarios"
-      ]
+      ],
+      "honorarioNeto": 500
     },
     {
       "id": "CT-IN-003",
@@ -322,7 +326,8 @@
       },
       "areas": [
         "Equipos complementarios"
-      ]
+      ],
+      "honorarioNeto": 500
     },
     {
       "id": "CT-IN-004",
@@ -375,7 +380,8 @@
       "areas": [
         "Transversal / documental",
         "Equipos complementarios"
-      ]
+      ],
+      "honorarioNeto": 500
     },
     {
       "id": "PR-007",
@@ -402,7 +408,8 @@
       },
       "areas": [
         "Equipos complementarios"
-      ]
+      ],
+      "honorarioNeto": 500
     },
     {
       "id": "PY-IN-001",
@@ -479,7 +486,8 @@
       "areas": [
         "Equipos biomédicos",
         "Equipos complementarios"
-      ]
+      ],
+      "honorarioNeto": 500
     }
   ],
   "expediente": {
