@@ -1333,6 +1333,130 @@
       "codigoEvaluado": "E-130",
       "tipo": "CONSULTAS",
       "naturaleza": "Consulta del Contratista al expediente técnico. No hay ficha técnica presentada para el código E-130: la consulta habilita su presentación. La capacidad exigible queda ratificada en 4 litros/h, sin variación del precio contractual. Quedan vivos, y reiterados al Proyectista, los tres extremos del código que la ratificación no cierra."
+    },
+    {
+      "informe": "INF-SUP-AP-EQ-DLVM-001-260915",
+      "documentoAbsuelto": "Respuesta del Consultor Proyectista ALFA 360 (15/09/2026)",
+      "materia": "Discrepancia del Consultor Proyectista sobre la capacidad del equipo E-130",
+      "observaciones": 1,
+      "extremos": 1,
+      "confirmadas": 0,
+      "trasladadas": 1,
+      "yaAbsueltas": 0,
+      "detalle": [
+        {
+          "obs": "E-130",
+          "equipo": "E-130 — Destilador de agua",
+          "ubicacion": "Acta de absolución de consultas de abril frente a la manifestación de agosto",
+          "extremos": 1,
+          "confirmadas": 0,
+          "trasladadas": 1,
+          "yaAbsueltas": 0,
+          "codigos": [
+            "E-130"
+          ],
+          "origen": "INF-SUP-AP-EQ-DLVM-001-260915",
+          "fuente": "Elevación a la Entidad"
+        }
+      ],
+      "codigoEvaluado": "E-130",
+      "tipo": "ELEVACION",
+      "naturaleza": "No absuelve al Contratista sino que evalúa la respuesta del Consultor Proyectista. Se constató que el Proyectista declaró dos capacidades distintas para el mismo código y el asunto se elevó a la Entidad, sin dictaminar sobre el fondo."
+    },
+    {
+      "informe": "INF-SUP-FT-EQ-DLVM-001-260917",
+      "documentoAbsuelto": "INFORME N° 005-2026/JCAMF-EQH (16/09/2026) — CARTA N° 081-2026, 221 folios",
+      "materia": "Fichas técnicas de cumplimiento de veinte (20) códigos de equipamiento",
+      "observaciones": 15,
+      "extremos": 15,
+      "confirmadas": 15,
+      "trasladadas": 0,
+      "yaAbsueltas": 0,
+      "detalle": [
+        {
+          "obs": "D-219",
+          "equipo": "Lavador ultrasónico de instrumental quirúrgico",
+          "ubicacion": "ANEXO N° 1 del bloque D-219 del Informe N° 005",
+          "extremos": 3,
+          "confirmadas": 3,
+          "trasladadas": 0,
+          "yaAbsueltas": 0,
+          "codigos": [
+            "D-219"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "fuente": "Validación de fichas técnicas",
+          "items": "A11, A14, A15",
+          "estado": "APROBADA PARCIALMENTE"
+        },
+        {
+          "obs": "D-156",
+          "equipo": "Reloj cronómetro para laboratorio",
+          "ubicacion": "ANEXO N° 1 del bloque D-156 del Informe N° 005",
+          "extremos": 2,
+          "confirmadas": 2,
+          "trasladadas": 0,
+          "yaAbsueltas": 0,
+          "codigos": [
+            "D-156"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "fuente": "Validación de fichas técnicas",
+          "items": "A06, A07",
+          "estado": "APROBADA PARCIALMENTE"
+        },
+        {
+          "obs": "D-158",
+          "equipo": "Termometro/higrómetro digital",
+          "ubicacion": "ANEXO N° 1 del bloque D-158 del Informe N° 005",
+          "extremos": 2,
+          "confirmadas": 2,
+          "trasladadas": 0,
+          "yaAbsueltas": 0,
+          "codigos": [
+            "D-158"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "fuente": "Validación de fichas técnicas",
+          "items": "A03, A04",
+          "estado": "NO CUMPLE"
+        },
+        {
+          "obs": "D-188",
+          "equipo": "Balanza digital con tallímetro pediátrico",
+          "ubicacion": "ANEXO N° 1 del bloque D-188 del Informe N° 005",
+          "extremos": 1,
+          "confirmadas": 1,
+          "trasladadas": 0,
+          "yaAbsueltas": 0,
+          "codigos": [
+            "D-188"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "fuente": "Validación de fichas técnicas",
+          "items": "C01",
+          "estado": "APROBADA PARCIALMENTE"
+        },
+        {
+          "obs": "D-201",
+          "equipo": "Nebulizador",
+          "ubicacion": "ANEXO N° 1 del bloque D-201 del Informe N° 005",
+          "extremos": 1,
+          "confirmadas": 1,
+          "trasladadas": 0,
+          "yaAbsueltas": 0,
+          "codigos": [
+            "D-201"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "fuente": "Validación de fichas técnicas",
+          "items": "A05",
+          "estado": "APROBADA PARCIALMENTE"
+        }
+      ],
+      "codigoEvaluado": "20 códigos",
+      "tipo": "FICHAS TECNICAS",
+      "naturaleza": "Primera entrega masiva de fichas técnicas de la especialidad. Se contrastaron 197 requerimientos técnicos mínimos uno a uno contra los folios presentados: 15 fichas aprobadas, 4 aprobadas parcialmente y 1 no aprobada, con un cumplimiento global sustentado del 95 %. Quedan además la vigencia de garantía del D-201 y cinco incoherencias del Cuadro N° 01, en los códigos D-123, D-125, D-193, D-158 y D-201."
     }
   ],
   "valorizacion": {
@@ -1599,8 +1723,28 @@
       "pu": 52310.84,
       "parcial": 52310.84,
       "fila": 15,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA PARCIALMENTE",
+      "obs": "Cumple 17 de 20 requerimientos (85 %). Quedan por aclarar tres, todos parametros que el fabricante no declara: el A11 deduce los 300 W dividiendo entre cuatro la potencia pico de 1200 W; el A14 da por cumplido el IP 33 invocando el acero inoxidable, que no es un ensayo; y el A15 declara 20-80 °C cuando el manual del folio 009 dice 25-90 °C y el folio 004 dice desde ambiente.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "PLUSONIC (TBT) UC28",
+      "fabricante": "TBT Medical — Turkuaz Biyomedikal Teknolojileri (Ankara, Turquía)",
+      "verificacionWeb": "AUTENTICO",
+      "cartaContratista": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-001-260917",
+      "queFalta": "Carta de TBT Medical con la potencia ultrasonica efectiva en vatios, el grado IP conforme a la IEC 60529 y el rango real de control de temperatura.",
+      "itemsEvaluados": 20,
+      "itemsPendientes": "A11, A14, A15",
+      "fechaEntrega": "2026-09-16",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-16",
+          "carta": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "resultado": "APROBADA PARCIALMENTE"
+        }
+      ]
     },
     {
       "cod": "D-245",
@@ -1621,8 +1765,28 @@
       "pu": 12267.47,
       "parcial": 12267.47,
       "fila": 17,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "Cumple los 10 requerimientos (100 %). Mejoras verificadas contra el folio del fabricante: plataforma de 250 x 250 mm frente a 230 x 230 exigidos y temporizador de hasta 99 h.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "BEING BS-1",
+      "fabricante": "BEING Scientific Inc. (China)",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-001-260917",
+      "queFalta": null,
+      "itemsEvaluados": 10,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-09-16",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-16",
+          "carta": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-266",
@@ -1709,8 +1873,28 @@
       "pu": 41689.31,
       "parcial": 41689.31,
       "fila": 25,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "Cumple los 12 requerimientos (100 %). Mejoras verificadas: rango de RT + 5 °C frente al RT + 10 °C exigido y control de CO2 de 0 a 20 % frente al 0 a 10 %.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "BEING BPN-40CRH",
+      "fabricante": "BEING Scientific Inc. (China)",
+      "verificacionWeb": "AUTENTICO",
+      "cartaContratista": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-001-260917",
+      "queFalta": null,
+      "itemsEvaluados": 12,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-09-16",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-16",
+          "carta": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-41",
@@ -1786,8 +1970,28 @@
       "pu": 203.24,
       "parcial": 203.24,
       "fila": 34,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "Cumple los 11 requerimientos (100 %). El ítem A07, tubo sin látex, quedó acreditado en los folios 005 y 006, que declaran arco con olivas y tubo sin látex con fleje integrado.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "RIESTER duplex 2.0 neonatal",
+      "fabricante": "Rudolf Riester GmbH (Alemania)",
+      "verificacionWeb": "AUTENTICO",
+      "cartaContratista": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-001-260917",
+      "queFalta": null,
+      "itemsEvaluados": 11,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-09-16",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-16",
+          "carta": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-125",
@@ -1797,8 +2001,28 @@
       "pu": 394.16,
       "parcial": 2364.96,
       "fila": 35,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "Cumple los 9 requerimientos (100 %). Pendiente la corrección material de marcar la fila A04 del Anexo N° 1, que quedó en blanco en las columnas SÍ y NO aunque su sustento consta en el folio 005.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "RIESTER duplex 2.0",
+      "fabricante": "Rudolf Riester GmbH (Alemania)",
+      "verificacionWeb": "AUTENTICO",
+      "cartaContratista": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-001-260917",
+      "queFalta": null,
+      "itemsEvaluados": 9,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-09-16",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-16",
+          "carta": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-126",
@@ -1808,8 +2032,28 @@
       "pu": 5168.09,
       "parcial": 5168.09,
       "fila": 36,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "Cumple los 5 requerimientos (100 %). Mejora verificada: cuatro horas de autonomía con baterías de litio frente a las tres exigidas.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "RIESTER ri-focus LED",
+      "fabricante": "Rudolf Riester GmbH (Alemania)",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-001-260917",
+      "queFalta": null,
+      "itemsEvaluados": 5,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-09-16",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-16",
+          "carta": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-128",
@@ -1819,8 +2063,28 @@
       "pu": 131.61,
       "parcial": 526.44,
       "fila": 37,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "Cumple los 6 requerimientos (100 %).",
+      "version": 1,
+      "versiones": 1,
+      "marca": "RIESTER ri-pen",
+      "fabricante": "Rudolf Riester GmbH (Alemania)",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-001-260917",
+      "queFalta": null,
+      "itemsEvaluados": 6,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-09-16",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-16",
+          "carta": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-129",
@@ -1830,8 +2094,28 @@
       "pu": 230.72,
       "parcial": 461.43,
       "fila": 38,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "Cumple los 4 requerimientos (100 %).",
+      "version": 1,
+      "versiones": 1,
+      "marca": "RIESTER Taylor",
+      "fabricante": "Rudolf Riester GmbH (Alemania)",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-001-260917",
+      "queFalta": null,
+      "itemsEvaluados": 4,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-09-16",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-16",
+          "carta": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-135",
@@ -1841,8 +2125,28 @@
       "pu": 1650.99,
       "parcial": 11556.93,
       "fila": 39,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "Cumple los 10 requerimientos (100 %). Mejora verificada: base rodable de cinco ruedas frente a las cuatro exigidas.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "RIESTER big ben",
+      "fabricante": "Rudolf Riester GmbH (Alemania)",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-001-260917",
+      "queFalta": null,
+      "itemsEvaluados": 10,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-09-16",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-16",
+          "carta": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-136",
@@ -1852,8 +2156,28 @@
       "pu": 1568.48,
       "parcial": 3136.96,
       "fila": 40,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "Cumple los 11 requerimientos (100 %). Mejora verificada: base rodable de cinco ruedas.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "RIESTER big ben",
+      "fabricante": "Rudolf Riester GmbH (Alemania)",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-001-260917",
+      "queFalta": null,
+      "itemsEvaluados": 11,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-09-16",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-16",
+          "carta": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-140",
@@ -1896,8 +2220,28 @@
       "pu": 1302.76,
       "parcial": 1302.76,
       "fila": 44,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA PARCIALMENTE",
+      "obs": "Cumple 5 de 7 requerimientos (71 %). Quedan por aclarar dos: el A06 equipara la exactitud exigida de 0,01 minuto con el 0,01 POR CIENTO que declara el fabricante, magnitudes distintas que solo coinciden por debajo de 1,7 horas de medicion; y el A07 se rotula como Mejora cuando el alcance crece pero la resolución baja de centésimas de minuto a 1 segundo.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "TRACEABLE 5015TR",
+      "fabricante": "Traceable Products (USA), distribuido por Cole-Parmer",
+      "verificacionWeb": "AUTENTICO",
+      "cartaContratista": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-001-260917",
+      "queFalta": "Carta de Traceable Products, o de Cole-Parmer, con la exactitud en minutos o segundos y con la capacidad de lectura en minutos. Retirar el rótulo de Mejora del A07.",
+      "itemsEvaluados": 7,
+      "itemsPendientes": "A06, A07",
+      "fechaEntrega": "2026-09-16",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-16",
+          "carta": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "resultado": "APROBADA PARCIALMENTE"
+        }
+      ]
     },
     {
       "cod": "D-158",
@@ -1907,8 +2251,28 @@
       "pu": 240.64,
       "parcial": 240.64,
       "fila": 45,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "NO CUMPLE",
+      "obs": "Cumple 4 de 6 requerimientos (67 %). Los ítems A03 y A04 NO CUMPLEN y lo dice el propio folio 005 del fabricante: resolución de humedad de 1 % HR frente al 0,1 % HR exigido, y exactitud de 3 % HR frente al 2,5 % HR, y solo dentro de la banda de 30 a 75 % HR. Es un problema de prestación y no de acreditación. La ficha además consigna la marca como S/M.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "Sin marca declarada — modelo LDTH-98",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-001-260917",
+      "queFalta": "Presentar un termohigrómetro que alcance 0,1 % HR de resolución y 2,5 % HR de exactitud, con marca y fabricante identificados; o solicitar a la Entidad la variación de esos dos valores.",
+      "itemsEvaluados": 6,
+      "itemsPendientes": "A03, A04",
+      "fechaEntrega": "2026-09-16",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-16",
+          "carta": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "resultado": "NO CUMPLE"
+        }
+      ]
     },
     {
       "cod": "D-159",
@@ -1929,8 +2293,28 @@
       "pu": 3030.88,
       "parcial": 3030.88,
       "fila": 47,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA PARCIALMENTE",
+      "obs": "Cumple 8 de 9 requerimientos (89 %). El ítem C01 es el único pendiente y el propio Contratista no lo marcó: la columna SÍ/NO trae un guion. El manual nombra tres adaptadores aprobados de 100-240 VAC 50/60 Hz, pero no se identifica cuál se entregará. No se requiere espiga de tierra: son fuentes externas de 9 V de doble aislamiento.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "HEALTH O METER 500KL",
+      "fabricante": "Health o meter Professional (USA)",
+      "verificacionWeb": "AUTENTICO",
+      "cartaContratista": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-001-260917",
+      "queFalta": "Pronunciamiento del fabricante o su distribuidor con el modelo del adaptador, fotografía referencial con la etiqueta de tensión legible y declaración de que no afecta la garantía. Marcar la fila C01.",
+      "itemsEvaluados": 9,
+      "itemsPendientes": "C01",
+      "fechaEntrega": "2026-09-16",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-16",
+          "carta": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "resultado": "APROBADA PARCIALMENTE"
+        }
+      ]
     },
     {
       "cod": "D-193",
@@ -1940,8 +2324,28 @@
       "pu": 427.79,
       "parcial": 427.79,
       "fila": 48,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "Cumple los 9 requerimientos (100 %). El ítem B01 quedó acreditado en el folio 007, que declara almohadilla resistente a la presión libre de látex: esa es la pieza que contiene la presión, y el algodón es solo la funda exterior.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "RIESTER metpak 1000 mL sin látex",
+      "fabricante": "Rudolf Riester GmbH (Alemania)",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-001-260917",
+      "queFalta": null,
+      "itemsEvaluados": 9,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-09-16",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-16",
+          "carta": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-196",
@@ -1951,8 +2355,28 @@
       "pu": 3335.38,
       "parcial": 3335.38,
       "fila": 49,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "Cumple los 5 requerimientos (100 %). Cubre siete tallas entre el Perfit ACE y el Mini Perfit ACE, por encima de las tres exigidas.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "AMBU Perfit ACE / Mini Perfit ACE",
+      "fabricante": "Ambu A/S (Dinamarca)",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-001-260917",
+      "queFalta": null,
+      "itemsEvaluados": 5,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-09-16",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-16",
+          "carta": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-201",
@@ -1962,8 +2386,28 @@
       "pu": 3788.48,
       "parcial": 7576.97,
       "fila": 50,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA PARCIALMENTE",
+      "obs": "Cumple 13 de 14 requerimientos (93 %). El ítem A05 presenta los 28 l/min de caudal del compresor como si fueran el flujo en la salida del nebulizador, que se mide con el vaso conectado y a presión de trabajo. Quedan además dos materias fuera del conteo: la vigencia de garantía, porque el sello del fabricante declara un año frente a los 24 meses de la ficha, y la denominación del modelo, que debe precisarse como N32-D.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "SILFAB N32-D",
+      "fabricante": "Silvestrin Fabris S.R.L. (Argentina)",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-001-260917",
+      "queFalta": "Carta de SILFAB con el flujo en la salida del nebulizador. Declaración de que el Contratista asume los 24 meses de garantía. Corrección de la denominación a N32-D en el Cuadro N° 01, en el Anexo N° 1 y en la declaración jurada del folio 001.",
+      "itemsEvaluados": 14,
+      "itemsPendientes": "A05",
+      "fechaEntrega": "2026-09-16",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-16",
+          "carta": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "resultado": "APROBADA PARCIALMENTE"
+        }
+      ]
     },
     {
       "cod": "D-203",
@@ -2006,8 +2450,28 @@
       "pu": 6396.21,
       "parcial": 6396.21,
       "fila": 54,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "Cumple los 7 requerimientos (100 %). Mejora verificada: doce grupos de conteo frente a los ocho exigidos.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "BIOBASE BK-CC10",
+      "fabricante": "BIOBASE (China)",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-001-260917",
+      "queFalta": null,
+      "itemsEvaluados": 7,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-09-16",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-16",
+          "carta": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-238",
@@ -2061,8 +2525,28 @@
       "pu": 9785.97,
       "parcial": 9785.97,
       "fila": 59,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "Cumple los 19 requerimientos (100 %). Mejoras verificadas: rango hasta 100 °C frente a los 80 °C exigidos y seguridad de dos etapas. Se deja una precisión dimensional: el espacio útil ofrecido es de 267 x 207 x 200 mm frente a los 350 x 290 x 140 mm, que la sección C del expediente rotula como REFERENCIALES.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "MEMMERT WTB-11",
+      "fabricante": "Memmert GmbH (Alemania)",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-001-260917",
+      "queFalta": null,
+      "itemsEvaluados": 19,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-09-16",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-16",
+          "carta": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-259",
@@ -2083,8 +2567,28 @@
       "pu": 7975.39,
       "parcial": 47852.32,
       "fila": 61,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "Cumple los 12 requerimientos (100 %). El ítem A02 quedó acreditado en el folio 002, que declara base ESTÁNDAR de acero con cinco ruedas bloqueables; la base de plástico ABS01 que el folio 001 marca como opcional es la alternativa, no la ofertada.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "EASYWELL KS-Q6S",
+      "fabricante": "Shantou Easywell Electronic Technologies Co. Ltd (China)",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-001-260917",
+      "queFalta": null,
+      "itemsEvaluados": 12,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-09-16",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-16",
+          "carta": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-285",
@@ -2182,8 +2686,28 @@
       "pu": 4208.14,
       "parcial": 4208.14,
       "fila": 70,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "Cumple los 11 requerimientos (100 %). El adaptador es de 100-240 V 50/60 Hz y el expediente exime de los focos de repuesto por tratarse de fuente LED.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "WOODPECKER LED.F",
+      "fabricante": "Guilin Woodpecker Medical Instrument (China)",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-001-260917",
+      "queFalta": null,
+      "itemsEvaluados": 11,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-09-16",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-16",
+          "carta": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-91",
@@ -2204,16 +2728,16 @@
       "pu": 1748.37,
       "parcial": 10490.24,
       "fila": 72,
-      "ficha": "APROBADA PARCIALMENTE",
-      "obs": "Cumple los 4 requisitos técnicos mínimos (100 %) y su sustento fue verificado como auténtico contra la información publicada por el fabricante. Observada únicamente por la vigencia de garantía: el Anexo N° 1 declara 24 meses —lo correcto según el numeral 9 de la Memoria— pero el folio 002 consigna 18 y no se acompaña el Certificado de Garantía.",
-      "version": 1,
-      "versiones": 1,
+      "ficha": "APROBADA",
+      "obs": "APROBADA en la versión 2. Cumple los 4 requerimientos técnicos mínimos (100 %) y su sustento fue verificado como auténtico contra la información publicada por el fabricante. La OBS-01 de la versión 1, por la vigencia de garantía, quedó levantada con el INF-SUP-RC-EQ-DLVM-004-260915: el Certificado de Garantía se entrega en el acto de recepción conforme al Anexo 2 del expediente, no en la etapa de ficha técnica.",
+      "version": 2,
+      "versiones": 2,
       "marca": "DAHECO",
       "fabricante": "Industrias Ernesto Correa S.A.C. (RUC 20610709126)",
       "verificacionWeb": "AUTENTICO",
-      "cartaContratista": "CARTA N° 068-2026 / INFORME N° 002-2026/JCAMF-EQH-ICM",
-      "informeSupervision": "INF-SUP-RC-EQ-DLVM-002-260903",
-      "queFalta": "Certificado de Garantía por 24 meses del ítem, con folio propio y consignado en la columna SUSTENTO EN FOLIOS del Anexo N° 1.",
+      "cartaContratista": "CARTA N° 078-2026 / INFORME N° 004-2026/JCAMF-EQH-ICM",
+      "informeSupervision": "INF-SUP-RC-EQ-DLVM-004-260915",
+      "queFalta": null,
       "historial": [
         {
           "version": 1,
@@ -2221,9 +2745,16 @@
           "carta": "CARTA N° 068-2026 / INFORME N° 002-2026/JCAMF-EQH-ICM",
           "informe": "INF-SUP-RC-EQ-DLVM-002-260903",
           "resultado": "APROBADA PARCIALMENTE"
+        },
+        {
+          "version": 2,
+          "fecha": "2026-09-14",
+          "carta": "CARTA N° 078-2026 / INFORME N° 004-2026/JCAMF-EQH-ICM",
+          "informe": "INF-SUP-RC-EQ-DLVM-004-260915",
+          "resultado": "APROBADA"
         }
       ],
-      "fechaEntrega": "2026-09-02"
+      "fechaEntrega": "2026-09-14"
     },
     {
       "cod": "E-130",
