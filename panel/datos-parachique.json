@@ -1,7 +1,7 @@
 {
   "_lea_esto": "Respaldo y datos de fondo del panel CS PARACHIQUE. El estado de las fichas técnicas ya NO se gobierna aquí: manda la hoja «2 SEGUIMIENTO» del Drive, y las observaciones a fichas, la hoja «3 OBSERVACIONES». Lo que se edite aquí para un código que la hoja mencione, la hoja lo sobrescribe. Todo lo demás —etapas, documentos, expediente, presupuesto, valorización— sí se edita aquí. No edite los dashboard.html a mano: se regeneran y se pierde el cambio.",
   "meta": {
-    "actualizado": "2026-09-08",
+    "actualizado": "2026-09-18",
     "proyecto": "Mejoramiento de los Servicios de Salud del Establecimiento de Salud Parachique",
     "cui": "2571750",
     "ubicacion": "Distrito y provincia de Sechura — Piura",
@@ -64,30 +64,6 @@
   },
   "documentos": [
     {
-      "id": "CT-001",
-      "flujo": "EMITIDA",
-      "clase": "CARTA",
-      "codigo": "CARTA N° 01-2026-DLVM",
-      "fecha": "2026-07-22",
-      "contraparte": "Ing. Wilmer Angelo Vásquez Vargas — Asistente de Jefe de Supervisión, CONSORCIO PARACHIQUE",
-      "asunto": "Propuesta económica por servicios de especialista en equipamiento médico.",
-      "estado": "ACEPTADA",
-      "numeral": null,
-      "membrete": false,
-      "responde": null,
-      "detalle": "Fija el tarifario por producto (numerales 2.1 a 2.4) y las condiciones 3.1 a 3.6. Declarada propuesta final no sujeta a negociación. Vigencia de 15 días calendario. Es el documento base de toda liquidación posterior.",
-      "archivo": "CARTA_PROPUESTA_ECONOMICA_DLVM_PARACHIQUE (3).docx",
-      "ruta": "2.Informes Mensuales\\",
-      "url": null,
-      "etapa": "E2",
-      "drive": {
-        "informe": "1R6otADD4nkZxQ9ERrzrl7S21XxhRMzTN"
-      },
-      "areas": [
-        "Administrativa / contractual"
-      ]
-    },
-    {
       "id": "CT-IN-001",
       "flujo": "RECIBIDA",
       "clase": "INFORME DEL CONTRATISTA",
@@ -111,6 +87,30 @@
         "Equipos electromecánicos",
         "Instrumental médico",
         "Vehículos"
+      ]
+    },
+    {
+      "id": "CT-001",
+      "flujo": "EMITIDA",
+      "clase": "CARTA",
+      "codigo": "CARTA N° 01-2026-DLVM",
+      "fecha": "2026-07-22",
+      "contraparte": "Ing. Wilmer Angelo Vásquez Vargas — Asistente de Jefe de Supervisión, CONSORCIO PARACHIQUE",
+      "asunto": "Propuesta económica por servicios de especialista en equipamiento médico.",
+      "estado": "ACEPTADA",
+      "numeral": null,
+      "membrete": false,
+      "responde": null,
+      "detalle": "Fija el tarifario por producto (numerales 2.1 a 2.4) y las condiciones 3.1 a 3.6. Declarada propuesta final no sujeta a negociación. Vigencia de 15 días calendario. Es el documento base de toda liquidación posterior.",
+      "archivo": "CARTA_PROPUESTA_ECONOMICA_DLVM_PARACHIQUE (3).docx",
+      "ruta": "2.Informes Mensuales\\",
+      "url": null,
+      "etapa": "E2",
+      "drive": {
+        "informe": "1R6otADD4nkZxQ9ERrzrl7S21XxhRMzTN"
+      },
+      "areas": [
+        "Administrativa / contractual"
       ]
     },
     {
@@ -170,6 +170,30 @@
       ]
     },
     {
+      "id": "CT-002",
+      "flujo": "EMITIDA",
+      "clase": "CARTA",
+      "codigo": "CARTA N° 02-2026-DLVM",
+      "fecha": "2026-07-31",
+      "contraparte": "Ing. Wilmer Angelo Vásquez Vargas — Asistente de Jefe de Supervisión, CONSORCIO PARACHIQUE",
+      "asunto": "Comunicación de productos entregados y liquidación de honorarios de julio de 2026.",
+      "estado": "COBRADA PARCIALMENTE",
+      "numeral": null,
+      "membrete": true,
+      "responde": null,
+      "detalle": "Liquida los 3 productos de julio por S/ 4,800.00 netos. Solicita la conformidad de los tres productos para activar el plazo de pago de 2 días del numeral 3.5. A la fecha se ha cobrado S/ 3,000.00; queda un saldo de S/ 1,800.00.",
+      "archivo": "CARTA_N02-2026-DLVM_LIQUIDACION_JULIO_2026.docx",
+      "ruta": "2.Informes Mensuales\\4.Proformas\\",
+      "url": null,
+      "etapa": "E2",
+      "drive": {
+        "informe": "1gNJg6MVsDCB8zh5niZIavCSpGWJ9J5TI"
+      },
+      "areas": [
+        "Administrativa / contractual"
+      ]
+    },
+    {
       "id": "PR-003",
       "flujo": "EMITIDA",
       "clase": "INFORME",
@@ -193,30 +217,6 @@
       },
       "areas": [
         "Transversal / documental"
-      ]
-    },
-    {
-      "id": "CT-002",
-      "flujo": "EMITIDA",
-      "clase": "CARTA",
-      "codigo": "CARTA N° 02-2026-DLVM",
-      "fecha": "2026-07-31",
-      "contraparte": "Ing. Wilmer Angelo Vásquez Vargas — Asistente de Jefe de Supervisión, CONSORCIO PARACHIQUE",
-      "asunto": "Comunicación de productos entregados y liquidación de honorarios de julio de 2026.",
-      "estado": "COBRADA PARCIALMENTE",
-      "numeral": null,
-      "membrete": true,
-      "responde": null,
-      "detalle": "Liquida los 3 productos de julio por S/ 4,800.00 netos. Solicita la conformidad de los tres productos para activar el plazo de pago de 2 días del numeral 3.5. A la fecha se ha cobrado S/ 3,000.00; queda un saldo de S/ 1,800.00.",
-      "archivo": "CARTA_N02-2026-DLVM_LIQUIDACION_JULIO_2026.docx",
-      "ruta": "2.Informes Mensuales\\4.Proformas\\",
-      "url": null,
-      "etapa": "E2",
-      "drive": {
-        "informe": "1gNJg6MVsDCB8zh5niZIavCSpGWJ9J5TI"
-      },
-      "areas": [
-        "Administrativa / contractual"
       ]
     },
     {
@@ -321,6 +321,163 @@
         "firmado": "1YVRkbRM8K_5Atz2lN3zWf14LJ8siv0yH"
       },
       "areas": [
+        "Equipos complementarios"
+      ]
+    },
+    {
+      "id": "CT-IN-004",
+      "flujo": "RECIBIDA",
+      "clase": "INFORME DEL CONTRATISTA",
+      "etapa": "E3",
+      "codigo": "CARTA N° 078-2026 / INFORME N° 004-2026/JCAMF-EQH-ICM",
+      "fecha": "2026-09-14",
+      "contraparte": "INGENIERÍA CIVIL MONTAJES S.A. (ICM) — Contratista de obra",
+      "asunto": "Absolución de la OBS-01 del ítem D-92, modelo de Certificado de Garantía y cronograma de entrega de sustentos técnicos.",
+      "estado": "ATENDIDA",
+      "numeral": "2.3",
+      "membrete": false,
+      "respondidaPor": "INF-SUP-RC-EQ-DLVM-004-260915",
+      "detalle": "Informe del Ing. Juan Carlos Augusto Mendiola Florez (CIP 201412), suscrito también por el Residente de Obra Ing. Luis Enrique Santisteban Romero (CIP 81329). 09 folios. Recibido el 14/09/2026 a las 17:00 h. Sostiene que el Certificado de Garantía no es exigible en la etapa de ficha técnica, acompaña un modelo para su aprobación y presenta el cronograma requerido.",
+      "archivo": "CARTA N 078-2026 ICM - Informe 004 - Absolucion OBS-01 D-92, modelo de certificado de garantia y cronograma.pdf",
+      "ruta": "3.Sustentos\\",
+      "url": null,
+      "drive": {
+        "sustento": "1xR8wVyZMvwYlJ3H5Hxfydlo-L17EbUfw"
+      },
+      "areas": [
+        "Transversal / documental",
+        "Equipos complementarios"
+      ]
+    },
+    {
+      "id": "PR-006",
+      "flujo": "EMITIDA",
+      "clase": "INFORME",
+      "etapa": "E3",
+      "codigo": "INF-SUP-RC-EQ-DLVM-004-260915",
+      "fecha": "2026-09-15",
+      "contraparte": "Jefatura de Supervisión de Obra — Ing. Manuel Ricardo Torres Peche",
+      "asunto": "Informe de Respuesta a Consultas del Contratista N° 004 — levantamiento de la OBS-01 del D-92, modelo de Certificado de Garantía y cronograma.",
+      "estado": "ENTREGADA",
+      "numeral": "2.3",
+      "membrete": true,
+      "responde": "CARTA N° 078-2026 / INFORME N° 004-2026/JCAMF-EQH-ICM",
+      "detalle": "APRUEBA la ficha técnica del D-92, que pasa de aprobada parcialmente a aprobada: el Anexo 2 del expediente sitúa el Certificado de Garantía en el acto de recepción, instalación y prueba operativa, no en la etapa de ficha. APRUEBA el modelo de Certificado de Garantía, que rige para los 179 códigos. NO APRUEBA el cronograma: no antepone los nueve códigos con pre instalación, no consigna fechas ni cantidades por semana y omite los hitos de devolución y subsanación. Otorga siete días hábiles para reformularlo.",
+      "archivo": "INF-SUP-RC-EQ-DLVM-004-260915_INFORME.docx + _INFORME_FIRMADO.pdf",
+      "ruta": "2.Informes Mensuales\\3.Informe de repsuestas\\004-260915\\",
+      "url": null,
+      "drive": {
+        "informe": "15jAmsh7tHw2Qi05kKsGTByeGrLnBntdW",
+        "pdf": "1GD28ApWbPB4lAsmPA6cp7TDpY453yB9m",
+        "firmado": "1NzmoUB9Is3K7LPn0JL7sOhnSBpNzfKsZ",
+        "sustento": "1DX_5ahXNXUhpzrAlw1y8bN-PHDGywSN0"
+      },
+      "areas": [
+        "Transversal / documental",
+        "Equipos complementarios"
+      ]
+    },
+    {
+      "id": "PR-007",
+      "flujo": "EMITIDA",
+      "clase": "INFORME",
+      "etapa": "E1",
+      "codigo": "INF-SUP-AP-EQ-DLVM-001-260915",
+      "fecha": "2026-09-15",
+      "contraparte": "Jefatura de Supervisión de Obra — Ing. Manuel Ricardo Torres Peche",
+      "asunto": "Informe de elevación a la Entidad N° 001 — discrepancia del Consultor Proyectista sobre la capacidad del equipo E-130.",
+      "estado": "ENTREGADA",
+      "numeral": "2.3",
+      "membrete": true,
+      "responde": "Respuesta del Consultor Proyectista ALFA 360",
+      "detalle": "No absuelve al Contratista sino que evalúa la respuesta del Proyectista. Constata que el Proyectista declaró dos capacidades distintas para el mismo código, reproduce las dos manifestaciones con su fuente y eleva el asunto a la Entidad. No se pronuncia sobre el fondo ni anticipa qué corresponde hacer: la Supervisión eleva y después traslada.",
+      "archivo": "INF-SUP-AP-EQ-DLVM-001-260915_INFORME.docx + _INFORME_FIRMADO.pdf",
+      "ruta": "2.Informes Mensuales\\3.Informe de repsuestas\\AP-001-260915\\",
+      "url": null,
+      "drive": {
+        "informe": "1L6yPcbfZw9WAxbt22Laphhu2bM97a3Uv",
+        "pdf": "1c1_rqKp7M9YfhAmkoKPPiCRbtc5Ga2H9",
+        "firmado": "1-TbrM5Ec8J-58yGKDQLHLHx5sLI2zpyW",
+        "sustento": "1Rij7x6q3fEaRpuCZFwgp2Sq1BR6Bx5G7"
+      },
+      "areas": [
+        "Equipos complementarios"
+      ]
+    },
+    {
+      "id": "PY-IN-001",
+      "flujo": "RECIBIDA",
+      "clase": "RESPUESTA DEL PROYECTISTA",
+      "etapa": "E1",
+      "codigo": "Respuesta del Consultor Proyectista ALFA 360",
+      "fecha": "2026-09-15",
+      "contraparte": "ARQ.CONST ALFA 360 — Consultor Proyectista",
+      "asunto": "Posición del Proyectista sobre la capacidad exigible del equipo E-130.",
+      "estado": "ELEVADA A LA ENTIDAD",
+      "numeral": "2.3",
+      "membrete": false,
+      "respondidaPor": "INF-SUP-AP-EQ-DLVM-001-260915",
+      "detalle": "Respuesta del Proyectista a las observaciones del Informe de Compatibilidad. Sobre el código E-130 sostiene una capacidad distinta de la que él mismo consignó en el Acta de absolución de consultas de abril de 2026.",
+      "archivo": "INF-SUP-AP-EQ-DLVM-001-260915_SUSTENTO-PROYECTISTA.pdf",
+      "ruta": "2.Informes Mensuales\\3.Informe de repsuestas\\AP-001-260915\\",
+      "url": null,
+      "drive": {
+        "sustento": "1Rij7x6q3fEaRpuCZFwgp2Sq1BR6Bx5G7"
+      },
+      "areas": [
+        "Equipos complementarios"
+      ]
+    },
+    {
+      "id": "CT-IN-005",
+      "flujo": "RECIBIDA",
+      "clase": "INFORME DEL CONTRATISTA",
+      "etapa": "E3",
+      "codigo": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+      "fecha": "2026-09-16",
+      "contraparte": "INGENIERÍA CIVIL MONTAJES S.A. (ICM) — Contratista de obra",
+      "asunto": "Fichas técnicas de cumplimiento de veinte (20) códigos de equipamiento.",
+      "estado": "ATENDIDA",
+      "numeral": "2.3",
+      "membrete": false,
+      "respondidaPor": "INF-SUP-FT-EQ-DLVM-001-260917",
+      "detalle": "Informe del Ing. Juan Carlos Augusto Mendiola Florez (CIP 201412), suscrito también por el Residente de Obra Ing. Luis Enrique Santisteban Romero (CIP 81329). 221 folios. Recibido el 17/09/2026 a las 10:26 h. Primera entrega masiva de fichas técnicas: un Cuadro N° 01 con los veinte códigos y veinte bloques independientes, cada uno con la EETT del expediente, el ANEXO N° 1 de Hoja de Presentación del Producto, los folios del fabricante y la declaración jurada del proveedor.",
+      "archivo": "CARTA N 081-2026 ICM - Informe 005 - Fichas tecnicas de 20 equipos.pdf",
+      "ruta": "3.Sustentos\\",
+      "url": null,
+      "drive": {
+        "sustento": "13BKmgbkXmobBu4jcSN_NJrfNAjUHaYKY"
+      },
+      "areas": [
+        "Equipos biomédicos",
+        "Equipos complementarios"
+      ]
+    },
+    {
+      "id": "PR-008",
+      "flujo": "EMITIDA",
+      "clase": "INFORME",
+      "etapa": "E3",
+      "codigo": "INF-SUP-FT-EQ-DLVM-001-260917",
+      "fecha": "2026-09-17",
+      "contraparte": "Jefatura de Supervisión de Obra — Ing. Manuel Ricardo Torres Peche",
+      "asunto": "Informe de Validación de Fichas Técnicas N° 001 — veinte (20) códigos de equipamiento.",
+      "estado": "ENTREGADA",
+      "numeral": "2.3",
+      "membrete": true,
+      "responde": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
+      "detalle": "Contrasta 197 requerimientos técnicos mínimos uno a uno contra los folios presentados. APRUEBA quince fichas, APRUEBA PARCIALMENTE cuatro por nueve requerimientos por aclarar (D-219 en A11, A14 y A15; D-156 en A06 y A07; D-188 en C01; D-201 en A05) y NO APRUEBA el D-158, cuyos ítems A03 y A04 quedan por debajo de lo exigido según el propio folio del fabricante. Cumplimiento global sustentado del 95 %. Señala además la vigencia de garantía del D-201 y cinco incoherencias del Cuadro N° 01. Recomienda suspender la recepción de nuevos sustentos hasta que se presente y apruebe el cronograma reformulado.",
+      "archivo": "INF-SUP-FT-EQ-DLVM-001-260917_INFORME.docx + _INFORME_FIRMADO.pdf",
+      "ruta": "2.Informes Mensuales\\3.Informe de repsuestas\\FT-001-260917\\",
+      "url": null,
+      "drive": {
+        "informe": "1n0ZTs4xkfurH4vXmY1vK4JPe9QevoDCg",
+        "pdf": "1cZH8En8g3e3l0Qw0Xz_CLqaDI7OmZWcV",
+        "firmado": "1gXRbXyj7zVuMDjtRpk3dWEi3PVLWAAZT",
+        "sustento": "1Va1ex3qYdT3cHw7d8zgdqUBKvXUOI49J"
+      },
+      "areas": [
+        "Equipos biomédicos",
         "Equipos complementarios"
       ]
     }
@@ -1535,52 +1692,66 @@
   "alertas": [
     {
       "nivel": "CRITICA",
+      "reservada": false,
+      "titulo": "Cronograma de sustentos no presentado: se suspende la recepción",
+      "detalle": "El cronograma de entrega de los sustentos técnicos de los 179 códigos se requirió con el INF-SUP-RC-EQ-DLVM-002-260903 y se declaró NO APROBADO con el INF-SUP-RC-EQ-DLVM-004-260915, que otorgó siete días hábiles para reformularlo. A la fecha no ha sido presentado. Sin programación aprobada no se pueden anteponer los nueve códigos cuya pre instalación condiciona la obra civil, y el riesgo es que una pre instalación llegue antes que su ficha.",
+      "accion": "El INF-SUP-FT-EQ-DLVM-001-260917 recomienda suspender la recepción de nuevos sustentos técnicos hasta que el cronograma se presente y se apruebe. La suspensión no alcanza a la subsanación de lo ya presentado ni a la procura de los códigos aprobados."
+    },
+    {
+      "nivel": "CRITICA",
+      "reservada": false,
       "titulo": "Informe mensual de agosto no registrado",
-      "detalle": "Al 03/09/2026 no consta emitido el INF-SUP-MEN-EQ-DLVM-002-260831 correspondiente al periodo del 01 al 31 de agosto de 2026. Es el entregable ordinario del mes bajo el numeral 2.2 de la propuesta.",
-      "accion": "Emitir el informe mensual N° 002 y comunicarlo mediante CARTA N° 03-2026-DLVM.",
-      "reservada": false
+      "detalle": "El único informe mensual emitido es el N° 001, del 31/07/2026. No consta el correspondiente a agosto.",
+      "accion": "Confirmar con la Jefatura de Supervisión si corresponde emitirlo y en qué corte se valoriza."
     },
     {
       "nivel": "SUSTANCIAL",
+      "reservada": false,
+      "titulo": "Plazo de participación vencido el 12/09/2026",
+      "detalle": "La propuesta fija 60 días calendario desde el inicio de servicio del 14/07/2026, de modo que el plazo venció el 12/09/2026. Con posterioridad se emitieron tres pronunciamientos: el RC-004, el AP-001 y el FT-001.",
+      "accion": "Formalizar con el CONSORCIO PARACHIQUE la ampliación del plazo de participación, para que los pronunciamientos posteriores al 12/09 queden amparados."
+    },
+    {
+      "nivel": "SUSTANCIAL",
+      "reservada": false,
+      "titulo": "El ítem D-158 no cumple y no se resuelve con un documento",
+      "detalle": "La ficha del termohigrómetro LDTH-98 declara, en el folio 005 del propio fabricante, resolución de humedad de 1 % HR frente al 0,1 % HR exigido y exactitud de 3 % HR frente al 2,5 % HR, y esta última solo dentro de la banda de 30 a 75 % HR. Es un problema de prestación y no de acreditación. La ficha además consigna la marca como S/M, sin fabricante identificado.",
+      "accion": "Requerir al Contratista que presente un equipo que alcance los valores exigidos, con marca y fabricante identificados, o que solicite formalmente a la Entidad la variación de esos dos valores."
+    },
+    {
+      "nivel": "SUSTANCIAL",
+      "reservada": false,
       "titulo": "46 asuntos pendientes de pronunciamiento del Proyectista",
-      "detalle": "El seguimiento consta en la matriz anexa al Informe Mensual N° 001. Mientras no se absuelvan, no se puede cerrar la compatibilización ni habilitar la aprobación de las EETT.",
-      "accion": "Reiterar el traslado al Proyectista (ARQ.CONST ALFA 360) en el informe mensual N° 002.",
-      "reservada": false
+      "detalle": "De las 20 observaciones del Informe de Compatibilidad se derivan 46 asuntos que el Consultor Proyectista aún no cierra.",
+      "accion": "Reiterar el traslado a la Entidad para que el Proyectista se pronuncie."
     },
     {
       "nivel": "SUSTANCIAL",
       "reservada": false,
-      "titulo": "Ficha del D-92 observada solo por la vigencia de garantía",
-      "detalle": "El equipo cumple los 4 requisitos técnicos mínimos y el sustento del fabricante fue verificado como auténtico. La única traba es la garantía: el numeral 9 de la Memoria Descriptiva exige 24 meses acreditados con Certificado de Garantía por equipo; el Anexo N° 1 declara 24 meses pero el folio 002 del propio sustento consigna 18 y no se acompaña el certificado.",
-      "accion": "Requerir el Certificado de Garantía por 24 meses. El numeral 9 permite que lo emita el propio Contratista, por lo que la subsanación no depende del fabricante."
-    },
-    {
-      "nivel": "LEVE",
-      "titulo": "Discrepancia en el conteo de extremos del INF-SUP-RC-001",
-      "detalle": "La carátula de la matriz consigna «13 observaciones — 27 extremos», mientras que la hoja Consolidado y la CARTA N° 02 consignan 28 extremos. El conteo correcto es 28.",
-      "accion": "Corregir la carátula en la próxima emisión o mediante fe de erratas.",
-      "reservada": false
-    },
-    {
-      "nivel": "LEVE",
-      "titulo": "Plazo de participación próximo a vencer",
-      "detalle": "El plazo de 60 días calendario, contado desde el inicio de servicio registrado el 14/07/2026, vence el 12/09/2026. La propuesta económica no fija fecha de inicio expresa, por lo que la fecha es estimada.",
-      "accion": "Definir por escrito con la Jefatura de Supervisión la fecha de inicio y de término del plazo.",
-      "reservada": false
-    },
-    {
-      "nivel": "LEVE",
-      "reservada": false,
-      "titulo": "178 de 179 fichas técnicas aún sin presentar",
-      "detalle": "A la fecha el Contratista ha presentado un solo sustento de ficha técnica (D-92), y con carácter de muestra del formato. Los 178 códigos restantes, equivalentes a 711 unidades y a S/ 3,099,528.82 del presupuesto de equipamiento, no han sido presentados.",
-      "accion": "Requerir al Contratista un cronograma de presentación de fichas técnicas por grupo de equipamiento."
-    },
-    {
-      "nivel": "SUSTANCIAL",
       "titulo": "El E-130 sigue como 8 litros/h en los documentos de recepción",
-      "detalle": "La absolución de la Consulta N° 02 corrigió la ficha de EE.TT. (folio 1137), pero el Consolidado de Equipamiento (folio 967), el listado de códigos y el Programa de Equipamiento mantienen la capacidad de 8 litros/h. La recepción y la valorización se controlan contra esos documentos, de modo que el acta de recepción de un equipo de 4 litros/h nacería con una discordancia documental.",
-      "accion": "Gestionar ante la Entidad la fe de erratas del Proyectista que uniformice el código E-130 en todos los documentos, antes de la llegada del equipo a obra.",
-      "reservada": false
+      "detalle": "La capacidad exigible quedó ratificada en 4 litros/h con el INF-SUP-RC-EQ-DLVM-003-260908, pero el Proyectista sostuvo después otra cifra y el asunto se elevó a la Entidad con el INF-SUP-AP-EQ-DLVM-001-260915.",
+      "accion": "Esperar el pronunciamiento de la Entidad antes de que el Contratista remita la ficha técnica del E-130."
+    },
+    {
+      "nivel": "LEVE",
+      "reservada": false,
+      "titulo": "Cinco incoherencias entre el Cuadro N° 01 y los Anexos N° 1",
+      "detalle": "En el Informe N° 005 el Cuadro N° 01 del folio 218 nombra un producto distinto del que declara el Anexo N° 1 en los códigos D-123, D-125 y D-193, y queda incompleto en el D-158, sin marca, y en el D-201, sin la variante N32-D. No afectan el cumplimiento técnico, pero el acto de aprobación tiene que nombrar un solo producto por código.",
+      "accion": "Requerir la corrección del Cuadro N° 01 antes de que sirva de base a acto de aprobación alguno."
+    },
+    {
+      "nivel": "LEVE",
+      "reservada": false,
+      "titulo": "158 de 179 fichas técnicas aún sin presentar",
+      "detalle": "Al 18/09/2026 hay 21 códigos con ficha resuelta: 16 aprobadas, 4 aprobadas parcialmente y 1 que no cumple. Quedan 158 sin presentar.",
+      "accion": "Sin el cronograma aprobado no hay forma de programar la carga de revisión de los 158 restantes."
+    },
+    {
+      "nivel": "LEVE",
+      "reservada": false,
+      "titulo": "Discrepancia en el conteo de extremos del INF-SUP-RC-001",
+      "detalle": "El informe consigna 28 extremos sobre 13 observaciones; el detalle por observación no cuadra con ese total.",
+      "accion": "Revisar el conteo al consolidar el próximo informe mensual."
     }
   ],
   "protocoloRespuesta": [
