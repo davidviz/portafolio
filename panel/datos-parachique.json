@@ -1391,7 +1391,7 @@
           "nivel": "SUSTANCIAL",
           "materia": "Vigencia de garantía declarada (24 meses) sin sustento en folios; el folio 002 consigna 18 meses",
           "ubicacion": "Anexo N° 1, folio 004 vs folio 002",
-          "estado": "Por subsanar",
+          "estado": "Subsanada con el INF-SUP-RC-EQ-DLVM-004-260915",
           "codigos": [
             "D-92"
           ],
@@ -1460,7 +1460,8 @@
       "autenticidad": "Sustento AUTÉNTICO. Fabricante Industrias Ernesto Correa S.A.C. (RUC 20610709126), marca DAHECO: domicilio, teléfono, certificación ISO 9001:2015 de SGS, rango de agujas y tiempo de destrucción coinciden con la información que el propio fabricante publica. No se advierte adulteración.",
       "codigoEvaluado": "D-92",
       "tipo": "FICHA",
-      "naturaleza": "Sustento de ficha técnica presentado por el Contratista para su aprobación."
+      "naturaleza": "Sustento de ficha técnica presentado por el Contratista para su aprobación.",
+      "yaAbsueltas": 4
     },
     {
       "informe": "INF-SUP-RC-EQ-DLVM-003-260908",
@@ -1521,99 +1522,330 @@
       "naturaleza": "No absuelve al Contratista sino que evalúa la respuesta del Consultor Proyectista. Se constató que el Proyectista declaró dos capacidades distintas para el mismo código y el asunto se elevó a la Entidad, sin dictaminar sobre el fondo."
     },
     {
+      "informe": "INF-SUP-RC-EQ-DLVM-004-260915",
+      "documentoAbsuelto": "INFORME N° 004-2026/JCAMF-EQH-ICM (14/09/2026) — CARTA N° 078-2026",
+      "materia": "Levantamiento de la OBS-01 del ítem D-92, modelo de Certificado de Garantía y cronograma de entrega de sustentos técnicos",
+      "observaciones": 1,
+      "extremos": 1,
+      "confirmadas": 0,
+      "trasladadas": 0,
+      "yaAbsueltas": 1,
+      "detalle": [
+        {
+          "obs": "OBS-01",
+          "equipo": "D-92 — Destructor de agujas hipodérmicas",
+          "materia": "Vigencia de garantía del ítem D-92. La observación queda LEVANTADA: el Anexo 2 del expediente sitúa el Certificado de Garantía en el acto de recepción, instalación y prueba operativa, no en la etapa de ficha.",
+          "nivel": "SUSTANCIAL",
+          "estado": "Subsanada",
+          "ubicacion": "Anexo 2 del expediente, folio 1224, y numeral 9 de la Memoria Descriptiva, folio 1230",
+          "extremos": 1,
+          "codigos": [
+            "D-92"
+          ],
+          "origen": "INF-SUP-RC-EQ-DLVM-004-260915",
+          "fuente": "Validación de fichas técnicas"
+        }
+      ],
+      "codigoEvaluado": "D-92",
+      "tipo": "FICHA",
+      "resultado": "Ficha del D-92 APROBADA. Modelo de Certificado de Garantía APROBADO, rige para los 179 códigos. Cronograma de entrega de sustentos NO APROBADO, devuelto para reformulación en siete días hábiles.",
+      "naturaleza": "Segunda versión del sustento del D-92. La OBS-01 de la versión 1 queda levantada y la ficha pasa de aprobada parcialmente a aprobada."
+    },
+    {
       "informe": "INF-SUP-FT-EQ-DLVM-001-260917",
       "documentoAbsuelto": "INFORME N° 005-2026/JCAMF-EQH (16/09/2026) — CARTA N° 081-2026, 221 folios",
       "materia": "Fichas técnicas de cumplimiento de veinte (20) códigos de equipamiento",
-      "observaciones": 15,
-      "extremos": 15,
-      "confirmadas": 15,
+      "observaciones": 5,
+      "extremos": 9,
+      "confirmadas": 9,
       "trasladadas": 0,
       "yaAbsueltas": 0,
       "detalle": [
         {
+          "obs": "OK",
+          "equipo": "D-262 — Rotador serológico",
+          "materia": "Ficha aprobada: los requerimientos técnicos mínimos quedaron acreditados contra los folios presentados.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque D-262 del Informe N° 005",
+          "extremos": null,
+          "codigos": [
+            "D-262"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "D-369 — Incubadora para cultivo",
+          "materia": "Ficha aprobada: los requerimientos técnicos mínimos quedaron acreditados contra los folios presentados.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque D-369 del Informe N° 005",
+          "extremos": null,
+          "codigos": [
+            "D-369"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "D-123 — Estetoscopio neonatal",
+          "materia": "Ficha aprobada: los requerimientos técnicos mínimos quedaron acreditados contra los folios presentados.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque D-123 del Informe N° 005",
+          "extremos": null,
+          "codigos": [
+            "D-123"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "D-125 — Estetoscopio adulto pediatrico",
+          "materia": "Ficha aprobada: los requerimientos técnicos mínimos quedaron acreditados contra los folios presentados.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque D-125 del Informe N° 005",
+          "extremos": null,
+          "codigos": [
+            "D-125"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "D-126 — Frontoluz",
+          "materia": "Ficha aprobada: los requerimientos técnicos mínimos quedaron acreditados contra los folios presentados.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque D-126 del Informe N° 005",
+          "extremos": null,
+          "codigos": [
+            "D-126"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "D-128 — Linterna para examen clínico",
+          "materia": "Ficha aprobada: los requerimientos técnicos mínimos quedaron acreditados contra los folios presentados.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque D-128 del Informe N° 005",
+          "extremos": null,
+          "codigos": [
+            "D-128"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "D-129 — Martillo de reflejos",
+          "materia": "Ficha aprobada: los requerimientos técnicos mínimos quedaron acreditados contra los folios presentados.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque D-129 del Informe N° 005",
+          "extremos": null,
+          "codigos": [
+            "D-129"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "D-135 — Tensiómetro aneroide rodable adulto",
+          "materia": "Ficha aprobada: los requerimientos técnicos mínimos quedaron acreditados contra los folios presentados.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque D-135 del Informe N° 005",
+          "extremos": null,
+          "codigos": [
+            "D-135"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "D-136 — Tensiómetro aneroide rodable pediátrico - neonatal",
+          "materia": "Ficha aprobada: los requerimientos técnicos mínimos quedaron acreditados contra los folios presentados.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque D-136 del Informe N° 005",
+          "extremos": null,
+          "codigos": [
+            "D-136"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "D-193 — Bolsa perfusora",
+          "materia": "Ficha aprobada: los requerimientos técnicos mínimos quedaron acreditados contra los folios presentados.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque D-193 del Informe N° 005",
+          "extremos": null,
+          "codigos": [
+            "D-193"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "D-196 — set de collarin  para politraumatizados",
+          "materia": "Ficha aprobada: los requerimientos técnicos mínimos quedaron acreditados contra los folios presentados.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque D-196 del Informe N° 005",
+          "extremos": null,
+          "codigos": [
+            "D-196"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "D-449 — Lámpara de fotocurado",
+          "materia": "Ficha aprobada: los requerimientos técnicos mínimos quedaron acreditados contra los folios presentados.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque D-449 del Informe N° 005",
+          "extremos": null,
+          "codigos": [
+            "D-449"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "D-235 — Contador de células",
+          "materia": "Ficha aprobada: los requerimientos técnicos mínimos quedaron acreditados contra los folios presentados.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque D-235 del Informe N° 005",
+          "extremos": null,
+          "codigos": [
+            "D-235"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "D-248 — Baño María de 10 a 15 lt",
+          "materia": "Ficha aprobada: los requerimientos técnicos mínimos quedaron acreditados contra los folios presentados.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque D-248 del Informe N° 005",
+          "extremos": null,
+          "codigos": [
+            "D-248"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "D-28 — Lámpara de examen clínico",
+          "materia": "Ficha aprobada: los requerimientos técnicos mínimos quedaron acreditados contra los folios presentados.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque D-28 del Informe N° 005",
+          "extremos": null,
+          "codigos": [
+            "D-28"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
           "obs": "D-219",
-          "equipo": "Lavador ultrasónico de instrumental quirúrgico",
+          "equipo": "D-219 — Lavador ultrasónico de instrumental quirúrgico",
+          "materia": "Ítems A11, A14 y A15 por aclarar: la potencia ultrasónica, el grado IP 33 y el rango real de temperatura no están declarados por el fabricante.",
+          "nivel": "SUSTANCIAL",
+          "estado": "Por absolver",
           "ubicacion": "ANEXO N° 1 del bloque D-219 del Informe N° 005",
           "extremos": 3,
-          "confirmadas": 3,
-          "trasladadas": 0,
-          "yaAbsueltas": 0,
           "codigos": [
             "D-219"
           ],
           "origen": "INF-SUP-FT-EQ-DLVM-001-260917",
-          "fuente": "Validación de fichas técnicas",
-          "items": "A11, A14, A15",
-          "estado": "APROBADA PARCIALMENTE"
+          "fuente": "Validación de fichas técnicas"
         },
         {
           "obs": "D-156",
-          "equipo": "Reloj cronómetro para laboratorio",
+          "equipo": "D-156 — Reloj cronómetro para laboratorio",
+          "materia": "Ítems A06 y A07 por aclarar: la exactitud se declara en por ciento y no en minutos, y el alcance mayor viene con una resolución más gruesa.",
+          "nivel": "SUSTANCIAL",
+          "estado": "Por absolver",
           "ubicacion": "ANEXO N° 1 del bloque D-156 del Informe N° 005",
           "extremos": 2,
-          "confirmadas": 2,
-          "trasladadas": 0,
-          "yaAbsueltas": 0,
           "codigos": [
             "D-156"
           ],
           "origen": "INF-SUP-FT-EQ-DLVM-001-260917",
-          "fuente": "Validación de fichas técnicas",
-          "items": "A06, A07",
-          "estado": "APROBADA PARCIALMENTE"
-        },
-        {
-          "obs": "D-158",
-          "equipo": "Termometro/higrómetro digital",
-          "ubicacion": "ANEXO N° 1 del bloque D-158 del Informe N° 005",
-          "extremos": 2,
-          "confirmadas": 2,
-          "trasladadas": 0,
-          "yaAbsueltas": 0,
-          "codigos": [
-            "D-158"
-          ],
-          "origen": "INF-SUP-FT-EQ-DLVM-001-260917",
-          "fuente": "Validación de fichas técnicas",
-          "items": "A03, A04",
-          "estado": "NO CUMPLE"
+          "fuente": "Validación de fichas técnicas"
         },
         {
           "obs": "D-188",
-          "equipo": "Balanza digital con tallímetro pediátrico",
+          "equipo": "D-188 — Balanza digital con tallímetro pediátrico",
+          "materia": "Ítem C01 por aclarar: no se identifica cuál de los tres adaptadores aprobados por el fabricante se suministra. La fila quedó sin marcar.",
+          "nivel": "SUSTANCIAL",
+          "estado": "Por absolver",
           "ubicacion": "ANEXO N° 1 del bloque D-188 del Informe N° 005",
           "extremos": 1,
-          "confirmadas": 1,
-          "trasladadas": 0,
-          "yaAbsueltas": 0,
           "codigos": [
             "D-188"
           ],
           "origen": "INF-SUP-FT-EQ-DLVM-001-260917",
-          "fuente": "Validación de fichas técnicas",
-          "items": "C01",
-          "estado": "APROBADA PARCIALMENTE"
+          "fuente": "Validación de fichas técnicas"
         },
         {
           "obs": "D-201",
-          "equipo": "Nebulizador",
+          "equipo": "D-201 — Nebulizador",
+          "materia": "Ítem A05 por aclarar: el caudal del compresor se presenta como si fuera el flujo en la salida del nebulizador. Además, vigencia de garantía y variante N32-D.",
+          "nivel": "SUSTANCIAL",
+          "estado": "Por absolver",
           "ubicacion": "ANEXO N° 1 del bloque D-201 del Informe N° 005",
           "extremos": 1,
-          "confirmadas": 1,
-          "trasladadas": 0,
-          "yaAbsueltas": 0,
           "codigos": [
             "D-201"
           ],
           "origen": "INF-SUP-FT-EQ-DLVM-001-260917",
-          "fuente": "Validación de fichas técnicas",
-          "items": "A05",
-          "estado": "APROBADA PARCIALMENTE"
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "D-158",
+          "equipo": "D-158 — Termometro/higrómetro digital",
+          "materia": "Ítems A03 y A04 NO CUMPLEN: resolución de 1 % HR frente al 0,1 % exigido y exactitud de 3 % HR frente al 2,5 %. No se resuelve con un documento.",
+          "nivel": "CRITICA",
+          "estado": "Por absolver",
+          "ubicacion": "ANEXO N° 1 del bloque D-158 del Informe N° 005",
+          "extremos": 2,
+          "codigos": [
+            "D-158"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-001-260917",
+          "fuente": "Validación de fichas técnicas"
         }
       ],
       "codigoEvaluado": "20 códigos",
-      "tipo": "FICHAS TECNICAS",
-      "naturaleza": "Primera entrega masiva de fichas técnicas de la especialidad. Se contrastaron 197 requerimientos técnicos mínimos uno a uno contra los folios presentados: 15 fichas aprobadas, 4 aprobadas parcialmente y 1 no aprobada, con un cumplimiento global sustentado del 95 %. Quedan además la vigencia de garantía del D-201 y cinco incoherencias del Cuadro N° 01, en los códigos D-123, D-125, D-193, D-158 y D-201."
+      "tipo": "FICHA",
+      "naturaleza": "Primera entrega masiva de fichas técnicas de la especialidad. Se contrastaron 197 requerimientos técnicos mínimos uno a uno contra los folios presentados: 15 fichas aprobadas, 4 aprobadas parcialmente y 1 no aprobada, con un cumplimiento global sustentado del 95 %. Quedan además la vigencia de garantía del D-201 y cinco incoherencias del Cuadro N° 01, en los códigos D-123, D-125, D-193, D-158 y D-201.",
+      "resultado": "15 fichas APROBADAS, 4 APROBADAS PARCIALMENTE y 1 NO APROBADA. Cumplimiento técnico global sustentado del 95 %: 188 de 197 requerimientos acreditados. Quedan además la vigencia de garantía del D-201 y cinco incoherencias del Cuadro N° 01."
     }
   ],
   "valorizacion": {
