@@ -1,7 +1,7 @@
 {
   "_lea_esto": "Respaldo y datos de fondo del panel CS PARACHIQUE. El estado de las fichas técnicas ya NO se gobierna aquí: manda la hoja «2 SEGUIMIENTO» del Drive, y las observaciones a fichas, la hoja «3 OBSERVACIONES». Lo que se edite aquí para un código que la hoja mencione, la hoja lo sobrescribe. Todo lo demás —etapas, documentos, expediente, presupuesto, valorización— sí se edita aquí. No edite los dashboard.html a mano: se regeneran y se pierde el cambio.",
   "meta": {
-    "actualizado": "2026-09-18",
+    "actualizado": "2026-09-19",
     "proyecto": "Mejoramiento de los Servicios de Salud del Establecimiento de Salud Parachique",
     "cui": "2571750",
     "ubicacion": "Distrito y provincia de Sechura — Piura",
@@ -486,6 +486,36 @@
       "areas": [
         "Equipos biomédicos",
         "Equipos complementarios"
+      ],
+      "honorarioNeto": 500
+    },
+    {
+      "id": "PR-009",
+      "flujo": "EMITIDA",
+      "clase": "INFORME",
+      "etapa": "E3",
+      "codigo": "INF-SUP-FT-EQ-DLVM-002-260919",
+      "fecha": "2026-09-19",
+      "contraparte": "Jefatura de Supervisión de Obra — Ing. Manuel Ricardo Torres Peche",
+      "asunto": "Informe de Validación de Fichas Técnicas N° 002 — veintiséis (26) códigos de equipamiento.",
+      "estado": "ENTREGADA",
+      "numeral": "2.3",
+      "membrete": true,
+      "responde": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+      "detalle": "Contrasta 329 requerimientos uno a uno contra los folios del fabricante. APRUEBA catorce fichas, OBSERVA ocho y NO APRUEBA cuatro por siete requerimientos que el propio sustento declara por debajo de lo exigido: D-148 en A02 y A05, D-203 en B01, D-245 en A02 y D-349 en A02, A03 y A05. Cumplimiento global del 92 %. Incorpora la verificación de mercado de las pipetas, con la que el A10 de los cuatro códigos y el A12 y A13 del D-239 dejan de imputarse al Contratista. Establece que grado médico y enchufe schuko son calificaciones incompatibles y que no se exige espiga de tierra a equipos de clase de protección II. Canaliza por descargo al Comité el D-345 y el D-349, dejando constancia de que el Acta de Absolución de Consultas del 06/04/2026 no alcanza a ninguno de los dos. Reitera el cronograma con prioridad para el V-1 Ambulancia y los nueve códigos de pre instalación, y deslinda responsabilidad por ampliaciones de plazo originadas en la presentación tardía de sustentos.",
+      "archivo": "INF-SUP-FT-EQ-DLVM-002-260919_INFORME.docx + _INFORME_FIRMADO.pdf",
+      "ruta": "2.Informes Mensuales\\3.Informe de repsuestas\\FT-002-260919\\",
+      "url": null,
+      "drive": {
+        "informe": null,
+        "pdf": null,
+        "firmado": null,
+        "sustento": null
+      },
+      "areas": [
+        "Equipos biomédicos",
+        "Equipos complementarios",
+        "Mobiliario asistencial"
       ],
       "honorarioNeto": 500
     }
@@ -1854,6 +1884,386 @@
       "tipo": "FICHA",
       "naturaleza": "Primera entrega masiva de fichas técnicas de la especialidad. Se contrastaron 197 requerimientos técnicos mínimos uno a uno contra los folios presentados: 15 fichas aprobadas, 4 aprobadas parcialmente y 1 no aprobada, con un cumplimiento global sustentado del 95 %. Quedan además la vigencia de garantía del D-201 y cinco incoherencias del Cuadro N° 01, en los códigos D-123, D-125, D-193, D-158 y D-201.",
       "resultado": "15 fichas APROBADAS, 4 APROBADAS PARCIALMENTE y 1 NO APROBADA. Cumplimiento técnico global sustentado del 95 %: 188 de 197 requerimientos acreditados. Quedan además la vigencia de garantía del D-201 y cinco incoherencias del Cuadro N° 01."
+    },
+    {
+      "informe": "INF-SUP-FT-EQ-DLVM-002-260919",
+      "documentoAbsuelto": "INFORME N° 006-2026/JCAMF-EQH (18/09/2026) — CARTA N° 084-2026, 290 folios",
+      "materia": "Fichas técnicas de cumplimiento de veintiséis (26) códigos de equipamiento",
+      "observaciones": 11,
+      "extremos": 25,
+      "confirmadas": 8,
+      "trasladadas": 17,
+      "yaAbsueltas": 0,
+      "codigoEvaluado": "26 códigos",
+      "tipo": "FICHA",
+      "resultado": "14 fichas APROBADAS, 8 OBSERVADAS y 4 NO APROBADAS. Cumplimiento técnico global sustentado del 92 %: 304 de 329 requerimientos. Escala de tres estados: CUMPLE, OBSERVADO y NO CUMPLE. Solo la ficha APROBADA autoriza la procura.",
+      "naturaleza": "Segunda entrega masiva de fichas técnicas y la más extensa recibida. Con ella suman 46 de los 179 códigos. Diez requerimientos quedan en NO CUMPLE porque el propio fabricante declara la prestación inferior, y dieciséis observados. Fija cuatro criterios generales: la captura que prueba la revisión es la del folio del fabricante y no la del ANEXO N° 1, con lo observado marcado en azul; lo que el Contratista encierra en un folio es lo que se obliga a entregar; grado médico y enchufe schuko son calificaciones incompatibles, de modo que esa exigencia no se observa en ningún código; y la denominación del código, tomada de la NTS N° 113-MINSA/DGIEM-V.01, manda sobre el texto del requerimiento. Las materias que nacen del expediente se canalizan por descargo del Contratista al Comité de Evaluación y Adjudicación del FOSPIBAY. La Supervisión verificó además el mercado antes de observar valores: el ítem A10 de los cuatro códigos de pipetas pide un cambio de módulo de rango que ningún fabricante ofrece en pipetas manuales de un canal, y los ítems A12 y A13 del D-239 fijan valores que no alcanza ninguna marca de referencia. Ambas materias dejaron de imputarse al Contratista y se canalizan por descargo al Comité.",
+      "detalle": [
+        {
+          "obs": "OK",
+          "equipo": "D-103 — Ecógrafo portátil",
+          "materia": "Ficha aprobada: los 38 requerimientos acreditados. El SSD de 512 GB que el Contratista marcó en el folio 016 supera los 160 GB exigidos.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque D-103 del Informe N° 006",
+          "extremos": null,
+          "codigos": [
+            "D-103"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "D-259 — Glucómetro portátil",
+          "materia": "Ficha aprobada: 13 de 13. El cable grado médico no es exigible a un equipo alimentado solo con pila.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque D-259 del Informe N° 006",
+          "extremos": null,
+          "codigos": [
+            "D-259"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "D-285 — Cooler para transporte de vacunas",
+          "materia": "Ficha aprobada: las 43 horas de vida fría constan en el Anexo 7 de la NTS N° 136-MINSA/2017/DGIESP.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque D-285 del Informe N° 006",
+          "extremos": null,
+          "codigos": [
+            "D-285"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "D-325 — Balanza digital con tallímetro adulto",
+          "materia": "Ficha aprobada: 19 de 19.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque D-325 del Informe N° 006",
+          "extremos": null,
+          "codigos": [
+            "D-325"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-129 — Tabla de transporte de politraumatizado",
+          "materia": "Ficha aprobada: 8 de 8.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-129 del Informe N° 006",
+          "extremos": null,
+          "codigos": [
+            "M-129"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "O-5 — Juegos para estimulación temprana",
+          "materia": "Ficha aprobada: 6 de 6.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque O-5 del Informe N° 006",
+          "extremos": null,
+          "codigos": [
+            "O-5"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "O-6 — Juegos para estimulación sensorial",
+          "materia": "Ficha aprobada: 10 de 10.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque O-6 del Informe N° 006",
+          "extremos": null,
+          "codigos": [
+            "O-6"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "O-13 — Test de desarrollo psicomotor (TEPSI)",
+          "materia": "Ficha aprobada: 17 de 17. Falta consignar el aspa del ítem A14, que el folio 001 ya acredita.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque O-13 del Informe N° 006",
+          "extremos": null,
+          "codigos": [
+            "O-13"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "O-20 — Test abreviado peruano (TAP)",
+          "materia": "Ficha aprobada: 16 de 16.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque O-20 del Informe N° 006",
+          "extremos": null,
+          "codigos": [
+            "O-20"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "O-21 — Test EEDP de desarrollo psicomotor",
+          "materia": "Ficha aprobada: 13 de 13.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque O-21 del Informe N° 006",
+          "extremos": null,
+          "codigos": [
+            "O-21"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "E-167 — Hervidor eléctrico de agua",
+          "materia": "Ficha aprobada: 7 de 7.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque E-167 del Informe N° 006",
+          "extremos": null,
+          "codigos": [
+            "E-167"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "E-86 — Horno microondas con panel digital",
+          "materia": "Ficha aprobada: 9 de 9.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque E-86 del Informe N° 006",
+          "extremos": null,
+          "codigos": [
+            "E-86"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "D-287 — Refrigeradora para laboratorio de 14 pies cúbicos",
+          "materia": "Ficha aprobada: 19 de 19. El Contratista marcó en el folio 011 la variante YC-525L Stainless steel liner, coherente con el modelo del Anexo N° 1.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque D-287 del Informe N° 006",
+          "extremos": null,
+          "codigos": [
+            "D-287"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "D-326 — Balanza digital con tallímetro neonatal",
+          "materia": "Ficha aprobada: 13 de 13. El adaptador es de fábrica y está identificado en el catálogo como ADAPTADOR SECA 400; al ser clase de protección II con doble aislamiento no requiere espiga de tierra.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque D-326 del Informe N° 006",
+          "extremos": null,
+          "codigos": [
+            "D-326"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "M-13",
+          "equipo": "M-13 — Cilindro de plástico con tapa de vaivén",
+          "materia": "OBSERVADA. Los 7 requerimientos están acreditados, pero el modelo declarado es TWK3P420, que es el del hervidor E-167. El folio 001 identifica el producto real: papelera Rino Vaivén 140 L de BASA, SKU 85.",
+          "nivel": "SUSTANCIAL",
+          "estado": "Por absolver",
+          "ubicacion": "ANEXO N° 1 del bloque M-13 del Informe N° 006",
+          "extremos": 1,
+          "codigos": [
+            "M-13"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "D-238",
+          "equipo": "D-238 — Pipeta automática 10 a 100 uL",
+          "materia": "OBSERVADA en A10: la transformabilidad con cambio de control no la ofrece ningún fabricante de pipetas manuales de un canal. Va por descargo al Comité.",
+          "nivel": "SUSTANCIAL",
+          "estado": "Por absolver",
+          "ubicacion": "ANEXO N° 1 del bloque D-238 del Informe N° 006",
+          "extremos": 1,
+          "codigos": [
+            "D-238"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "D-240",
+          "equipo": "D-240 — Pipeta automática 5 a 50 uL",
+          "materia": "OBSERVADA en A10, igual que el D-238, y va al Comité por la misma razón. El ítem A12 sí está acreditado y solo le falta el aspa.",
+          "nivel": "SUSTANCIAL",
+          "estado": "Por absolver",
+          "ubicacion": "ANEXO N° 1 del bloque D-240 del Informe N° 006",
+          "extremos": 1,
+          "codigos": [
+            "D-240"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "E-191",
+          "equipo": "E-191 — Termómetro para porta vacunas",
+          "materia": "OBSERVADA en A04: el equipo se fija por imanes a superficies verticales metálicas y no consta accesorio de fijación a muro.",
+          "nivel": "SUSTANCIAL",
+          "estado": "Por absolver",
+          "ubicacion": "ANEXO N° 1 del bloque E-191 del Informe N° 006",
+          "extremos": 1,
+          "codigos": [
+            "E-191"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "D-328",
+          "equipo": "D-328 — Cinta métrica",
+          "materia": "OBSERVADA en A03: la carta del fabricante describe una escala en centímetros y otra en pulgadas, y ningún folio acredita la graduación en ambas caras.",
+          "nivel": "SUSTANCIAL",
+          "estado": "Por absolver",
+          "ubicacion": "ANEXO N° 1 del bloque D-328 del Informe N° 006",
+          "extremos": 1,
+          "codigos": [
+            "D-328"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "D-345",
+          "equipo": "D-345 — Tallímetro pediátrico",
+          "materia": "OBSERVADA en seis ítems por defecto del expediente, no del Contratista: denomina al código tallímetro pediátrico y le fija las dimensiones del tallímetro para mayores de cinco años. Va por consulta al Comité.",
+          "nivel": "SUSTANCIAL",
+          "estado": "Por absolver",
+          "ubicacion": "ANEXO N° 1 del bloque D-345 del Informe N° 006",
+          "extremos": 6,
+          "codigos": [
+            "D-345"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "D-245",
+          "equipo": "D-245 — Analizador bioquímico semiautomático",
+          "materia": "NO APROBADA en A02: fotodiodo de 320 a 1000 nm frente a los 320 a 1100 nm o mejor del expediente. Los 31 requerimientos restantes acreditados.",
+          "nivel": "CRITICA",
+          "estado": "Por absolver",
+          "ubicacion": "ANEXO N° 1 del bloque D-245 del Informe N° 006",
+          "extremos": 1,
+          "codigos": [
+            "D-245"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "D-148",
+          "equipo": "D-148 — Negatoscopio de 2 campos",
+          "materia": "NO APROBADA en A02 y A05: acero LAF de 0,5 mm frente a 1 mm y pantalla acrílica de 2 mm frente a 3 mm. A04 observado. Es uno de los nueve códigos con pre instalación.",
+          "nivel": "CRITICA",
+          "estado": "Por absolver",
+          "ubicacion": "ANEXO N° 1 del bloque D-148 del Informe N° 006",
+          "extremos": 3,
+          "codigos": [
+            "D-148"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "D-203",
+          "equipo": "D-203 — Maletín de reanimación neonatal",
+          "materia": "NO APROBADA en B01: bolsa del resucitador de 280 ml, fuera del intervalo de 150 a 250 ml. B05 y B06 observados por la iluminación del laringoscopio.",
+          "nivel": "CRITICA",
+          "estado": "Por absolver",
+          "ubicacion": "ANEXO N° 1 del bloque D-203 del Informe N° 006",
+          "extremos": 3,
+          "codigos": [
+            "D-203"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "D-239",
+          "equipo": "D-239 — Pipeta automática 200 a 1000 uL",
+          "materia": "OBSERVADA en A10, A12 y A13, por defecto del expediente. La verificación de mercado muestra que ninguna marca de referencia alcanza los valores de A12 y A13: Eppendorf, BRAND y Sartorius declaran 0,2 % de imprecisión y el expediente exige < 0,15 %. La pipeta ofertada tiene la misma exactitud que la Eppendorf Research plus. Va por descargo al Comité.",
+          "nivel": "SUSTANCIAL",
+          "estado": "Por absolver",
+          "ubicacion": "ANEXO N° 1 del bloque D-239 del Informe N° 006",
+          "extremos": 3,
+          "codigos": [
+            "D-239"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "D-241",
+          "equipo": "D-241 — Pipeta automática 50 a 200 uL",
+          "materia": "OBSERVADA en A08, codificación por color, y en A10, transformable con cambio de control, que va al Comité. Los ítems A12 y A13 CUMPLEN: emparejando volumen intermedio y nominal, la DLAB declara 0,30 % y 0,15 %, dentro de los límites, y su 0,15 % supera al 0,2 % de la Eppendorf.",
+          "nivel": "SUSTANCIAL",
+          "estado": "Por absolver",
+          "ubicacion": "ANEXO N° 1 del bloque D-241 del Informe N° 006",
+          "extremos": 2,
+          "codigos": [
+            "D-241"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "D-349",
+          "equipo": "D-349 — Estetoscopio fetoscopio",
+          "materia": "NO APROBADA en A02, A03 y A05: se oferta un doppler fetal donde el expediente pide fetoscopio tipo Pinard. La NTS 113 los trata como códigos distintos y coexistentes, D-349 y D-96. Va por consulta al Comité.",
+          "nivel": "CRITICA",
+          "estado": "Por absolver",
+          "ubicacion": "ANEXO N° 1 del bloque D-349 del Informe N° 006",
+          "extremos": 3,
+          "codigos": [
+            "D-349"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "fuente": "Validación de fichas técnicas"
+        }
+      ]
     }
   ],
   "valorizacion": {
@@ -1935,7 +2345,28 @@
       "reservada": false,
       "titulo": "Cronograma de sustentos no presentado: se suspende la recepción",
       "detalle": "El cronograma de entrega de los sustentos técnicos de los 179 códigos se requirió con el INF-SUP-RC-EQ-DLVM-002-260903 y se declaró NO APROBADO con el INF-SUP-RC-EQ-DLVM-004-260915, que otorgó siete días hábiles para reformularlo. A la fecha no ha sido presentado. Sin programación aprobada no se pueden anteponer los nueve códigos cuya pre instalación condiciona la obra civil, y el riesgo es que una pre instalación llegue antes que su ficha.",
-      "accion": "El INF-SUP-FT-EQ-DLVM-001-260917 recomienda suspender la recepción de nuevos sustentos técnicos hasta que el cronograma se presente y se apruebe. La suspensión no alcanza a la subsanación de lo ya presentado ni a la procura de los códigos aprobados."
+      "accion": "El INF-SUP-FT-EQ-DLVM-001-260917 recomendó suspender la recepción de nuevos sustentos técnicos hasta que el cronograma se presente y se apruebe, y el INF-SUP-FT-EQ-DLVM-002-260919 lo reitera. Pese a ello el Contratista remitió veintiséis fichas más el 19/09/2026. La suspensión no alcanza a la subsanación de lo ya presentado ni a la procura de los códigos aprobados."
+    },
+    {
+      "nivel": "CRITICA",
+      "reservada": false,
+      "titulo": "El D-148 no se aprueba y es uno de los nueve códigos con pre instalación",
+      "detalle": "El negatoscopio de 2 campos declara, en el folio 003 de su propio fabricante, estructura de acero LAF de 0,5 mm frente al 1 mm exigido y pantalla acrílica de 2 mm frente a los 3 mm. Su ficha quedó NO APROBADA en el INF-SUP-FT-EQ-DLVM-002-260919. La pre instalación de este código condiciona la obra civil, de modo que la definición no puede quedar pendiente.",
+      "accion": "Requerir al Contratista que presente un negatoscopio con los espesores del expediente o que tramite ante la Entidad la variación de ambos valores, y anteponer el código en el cronograma cuando se reformule."
+    },
+    {
+      "nivel": "SUSTANCIAL",
+      "reservada": false,
+      "titulo": "Dos códigos van por consulta al Comité: D-345 y D-349",
+      "detalle": "El expediente denomina al D-345 tallímetro pediátrico y le fija a la vez las dimensiones del tallímetro para personas mayores de cinco años, de modo que ningún producto puede satisfacer sus ocho ítems a la vez; el equipo ofertado corresponde exactamente al numeral 2.3 de la Guía Técnica que el propio expediente sigue. En el D-349 el Contratista oferta un doppler fetal electrónico donde el expediente define un fetoscopio mecánico tipo Pinard. Ninguna de las dos materias es una decisión de la Supervisión.",
+      "accion": "Canalizadas con el INF-SUP-FT-EQ-DLVM-002-260919 mediante consulta del Contratista al Comité de Evaluación y Adjudicación del FOSPIBAY, que es quien la remite al Consultor Proyectista, como consta en el Acta de Absolución de Consultas del 06/04/2026. El Contratista no debe remitir versión subsanada de esas dos fichas hasta que el Comité se pronuncie."
+    },
+    {
+      "nivel": "SUSTANCIAL",
+      "reservada": false,
+      "titulo": "El V-1 Ambulancia no tiene ficha y es el de mayor plazo de fabricación",
+      "detalle": "El código V-1, Ambulancia Rural Tipo I, concentra S/ 346 833,33, el mayor importe unitario del equipamiento, y su carrozado es el de mayor plazo de fabricación del proyecto. Su ficha técnica no ha sido presentada.",
+      "accion": "El INF-SUP-FT-EQ-DLVM-002-260919 reitera el cronograma con prioridad expresa para el V-1 y para los nueve códigos de pre instalación, y deja constancia de que la Supervisión no asume responsabilidad por adicionales ni ampliaciones de plazo que se originen en la presentación tardía de sustentos o en el plazo que demande su aprobación."
     },
     {
       "nivel": "CRITICA",
@@ -1948,7 +2379,7 @@
       "nivel": "SUSTANCIAL",
       "reservada": false,
       "titulo": "Plazo de participación vencido el 12/09/2026",
-      "detalle": "La propuesta fija 60 días calendario desde el inicio de servicio del 14/07/2026, de modo que el plazo venció el 12/09/2026. Con posterioridad se emitieron tres pronunciamientos: el RC-004, el AP-001 y el FT-001.",
+      "detalle": "La propuesta fija 60 días calendario desde el inicio de servicio del 14/07/2026, de modo que el plazo venció el 12/09/2026. Con posterioridad se emitieron cuatro pronunciamientos: el RC-004, el AP-001, el FT-001 y el FT-002.",
       "accion": "Formalizar con el CONSORCIO PARACHIQUE la ampliación del plazo de participación, para que los pronunciamientos posteriores al 12/09 queden amparados."
     },
     {
