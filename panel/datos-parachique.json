@@ -2455,8 +2455,29 @@
       "pu": 124760.23,
       "parcial": 124760.23,
       "fila": 5,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 38 requerimientos acreditados. El SSD de 512 GB que el Contratista encerró en el folio 016 supera los 160 GB exigidos, y ese subrayado es el que obliga.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "EDAN",
+      "modelo": "AX3",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-002-260919",
+      "queFalta": null,
+      "itemsEvaluados": 38,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-09-18",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-18",
+          "carta": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-104",
@@ -2596,8 +2617,29 @@
       "pu": 49339.61,
       "parcial": 49339.61,
       "fila": 16,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "NO CUMPLE",
+      "obs": "NO APROBADA. El fabricante declara un fotodiodo de 320 a 1000 nm y el expediente pide de 320 a 1100 nm o mejor. Los 31 requerimientos restantes están acreditados, y los seis filtros exigidos, de 340 a 620 nm, quedan comprendidos con holgura.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "ELITECH",
+      "modelo": "Microlab 300",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-002-260919",
+      "queFalta": "Carta de ELITECHGROUP con el rango real del fotodiodo, o descargo al Comité para la variación del límite superior.",
+      "itemsEvaluados": 32,
+      "itemsPendientes": "A02",
+      "fechaEntrega": "2026-09-18",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-18",
+          "carta": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "resultado": "NO CUMPLE"
+        }
+      ]
     },
     {
       "cod": "D-262",
@@ -3040,8 +3082,29 @@
       "pu": 1024.63,
       "parcial": 3073.89,
       "fila": 42,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "NO CUMPLE",
+      "obs": "NO APROBADA. El fabricante declara acero LAF de 0,5 mm frente al 1 mm exigido y pantalla acrílica de 2 mm frente a 3 mm. El ítem A04 queda observado. Es uno de los nueve códigos cuya pre instalación condiciona la obra civil.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "MEDIMATIC",
+      "modelo": "MMN-00091",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-002-260919",
+      "queFalta": "Presentar el equipo con los espesores del expediente, o descargo al Comité para la variación. Y carta de MEDIMATIC con el material y el espesor del sujetador.",
+      "itemsEvaluados": 11,
+      "itemsPendientes": "A02, A04 y A05",
+      "fechaEntrega": "2026-09-18",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-18",
+          "carta": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "resultado": "NO CUMPLE"
+        }
+      ]
     },
     {
       "cod": "D-153",
@@ -3259,8 +3322,29 @@
       "pu": 5378.37,
       "parcial": 5378.37,
       "fila": 51,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "NO CUMPLE",
+      "obs": "NO APROBADA. La bolsa del resucitador declara 280 ml y el expediente fija un intervalo de 150 a 250 ml, que en reanimación neonatal acota el volumen entregable al recién nacido. Los ítems B05 y B06 quedan observados porque el folio declara iluminación de xenón y no se presenta el mango del laringoscopio.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "ETIMSA, CAMI, BESMED y RIESTER",
+      "modelo": "varios",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-002-260919",
+      "queFalta": "Presentar un resucitador de entre 150 y 250 ml, o descargo al Comité. Y hoja de producto del mango ri-modul con fuente LED.",
+      "itemsEvaluados": 11,
+      "itemsPendientes": "B01, B05 y B06",
+      "fechaEntrega": "2026-09-18",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-18",
+          "carta": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "resultado": "NO CUMPLE"
+        }
+      ]
     },
     {
       "cod": "D-204",
@@ -3323,8 +3407,29 @@
       "pu": 1563.15,
       "parcial": 1563.15,
       "fila": 55,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "OBSERVADA",
+      "obs": "OBSERVADA en el ítem A10, pipetas transformables con cambio de control. Ningún fabricante lo ofrece en pipetas manuales de un canal, de modo que el defecto es del expediente y no del equipo.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "ACCUMAX PRO",
+      "modelo": "VAP-500",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-002-260919",
+      "queFalta": "Pronunciamiento del Comité sobre el ítem A10. Va por descargo del Contratista.",
+      "itemsEvaluados": 13,
+      "itemsPendientes": "A10",
+      "fechaEntrega": "2026-09-18",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-18",
+          "carta": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "resultado": "OBSERVADA"
+        }
+      ]
     },
     {
       "cod": "D-239",
@@ -3334,8 +3439,29 @@
       "pu": 1866.88,
       "parcial": 1866.88,
       "fila": 56,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "OBSERVADA",
+      "obs": "OBSERVADA en A10, A12 y A13, todos por defecto del expediente. La verificación de mercado muestra que ninguna marca de referencia alcanza los valores exigidos: Eppendorf, BRAND y Sartorius declaran 0,2 % de imprecisión y el expediente pide menos de 0,15 %. La pipeta ofertada tiene la misma exactitud que la Eppendorf Research plus.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "ACCUMAX PRO",
+      "modelo": "VAP-600",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-002-260919",
+      "queFalta": "Pronunciamiento del Comité sobre los tres ítems. Va por descargo del Contratista.",
+      "itemsEvaluados": 13,
+      "itemsPendientes": "A10, A12 y A13",
+      "fechaEntrega": "2026-09-18",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-18",
+          "carta": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "resultado": "OBSERVADA"
+        }
+      ]
     },
     {
       "cod": "D-240",
@@ -3345,8 +3471,29 @@
       "pu": 1484.09,
       "parcial": 1484.09,
       "fila": 57,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "OBSERVADA",
+      "obs": "OBSERVADA en el ítem A10, por la misma razón del D-238. El ítem A12 sí está acreditado en el folio 006 y solo le falta el aspa.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "ACCUMAX PRO",
+      "modelo": "VAP-200",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-002-260919",
+      "queFalta": "Pronunciamiento del Comité sobre el ítem A10. Va por descargo del Contratista.",
+      "itemsEvaluados": 13,
+      "itemsPendientes": "A10",
+      "fechaEntrega": "2026-09-18",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-18",
+          "carta": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "resultado": "OBSERVADA"
+        }
+      ]
     },
     {
       "cod": "D-241",
@@ -3356,8 +3503,29 @@
       "pu": 1433.36,
       "parcial": 1433.36,
       "fila": 58,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "OBSERVADA",
+      "obs": "OBSERVADA en A08, codificación por color, y en A10, que va al Comité. Los ítems A12 y A13 CUMPLEN: emparejando volumen intermedio y nominal la DLAB declara 0,30 % y 0,15 %, dentro de los límites, y su 0,15 % supera al 0,2 % de la Eppendorf.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "DLAB",
+      "modelo": "MicroPette Plus",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-002-260919",
+      "queFalta": "Carta de DLAB con el color asignado al rango de 50 a 200 uL, con fotografía referencial. El ítem A10 va por descargo al Comité.",
+      "itemsEvaluados": 13,
+      "itemsPendientes": "A08 y A10",
+      "fechaEntrega": "2026-09-18",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-18",
+          "carta": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "resultado": "OBSERVADA"
+        }
+      ]
     },
     {
       "cod": "D-248",
@@ -3398,8 +3566,29 @@
       "pu": 751.33,
       "parcial": 1502.67,
       "fila": 60,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 13 requerimientos acreditados. Se deja constancia de que el cable grado médico del ítem C02 no es exigible a un equipo alimentado solo con pila de litio.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NIPRO",
+      "modelo": "Premier Alpha",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-002-260919",
+      "queFalta": null,
+      "itemsEvaluados": 13,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-09-18",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-18",
+          "carta": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-28",
@@ -3440,8 +3629,29 @@
       "pu": 13586.6,
       "parcial": 13586.6,
       "fila": 62,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Las 43 horas de vida fría constan en el Anexo 7 de la NTS N° 136-MINSA/2017/DGIESP, que el propio bloque reproduce.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "BLOWKINGS",
+      "modelo": "BK-VC 2.6-CF",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-002-260919",
+      "queFalta": null,
+      "itemsEvaluados": 6,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-09-18",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-18",
+          "carta": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-287",
@@ -3451,8 +3661,29 @@
       "pu": 28631.11,
       "parcial": 28631.11,
       "fila": 63,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. El Contratista marcó en el folio 011 la variante de acero inoxidable, coherente con el modelo del Anexo N° 1. Conviene consignar la denominación completa de la variante en el Cuadro N° 01.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "MELING",
+      "modelo": "YC-525L Stainless steel liner",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-002-260919",
+      "queFalta": null,
+      "itemsEvaluados": 19,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-09-18",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-18",
+          "carta": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-325",
@@ -3462,8 +3693,29 @@
       "pu": 4275.07,
       "parcial": 25650.4,
       "fila": 64,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 19 requerimientos acreditados.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "HEALTH O METER",
+      "modelo": "500KL",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-002-260919",
+      "queFalta": null,
+      "itemsEvaluados": 19,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-09-18",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-18",
+          "carta": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-326",
@@ -3473,8 +3725,29 @@
       "pu": 2615.84,
       "parcial": 13079.2,
       "fila": 65,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. El adaptador es de fábrica y está identificado en el catálogo como ADAPTADOR SECA 400; al ser un equipo de clase de protección II con doble aislamiento no requiere espiga de tierra ni enchufe schuko.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "SECA",
+      "modelo": "374",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-002-260919",
+      "queFalta": null,
+      "itemsEvaluados": 13,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-09-18",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-18",
+          "carta": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-328",
@@ -3484,8 +3757,29 @@
       "pu": 45.78,
       "parcial": 45.78,
       "fila": 66,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "OBSERVADA",
+      "obs": "OBSERVADA en el ítem A03. La carta del fabricante declara una escala en centímetros y otra en pulgadas, y el expediente pide centímetros en ambas caras.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "SECA",
+      "modelo": "201",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-002-260919",
+      "queFalta": "Ampliación de la carta de seca gmbh del folio 001 precisando la graduación de cada cara, o fotografía del reverso con la escala legible.",
+      "itemsEvaluados": 4,
+      "itemsPendientes": "A03",
+      "fechaEntrega": "2026-09-18",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-18",
+          "carta": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "resultado": "OBSERVADA"
+        }
+      ]
     },
     {
       "cod": "D-345",
@@ -3495,8 +3789,29 @@
       "pu": 603.69,
       "parcial": 603.69,
       "fila": 67,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "OBSERVADA",
+      "obs": "OBSERVADA en seis ítems por defecto del expediente, no del Contratista: denomina al código tallímetro pediátrico y a la vez le fija las dimensiones del tallímetro para mayores de cinco años. Lo ofertado coincide uno por uno con el numeral 2.3 de la Guía Técnica del MINSA.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "S/M",
+      "modelo": "Fabricación nacional",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-002-260919",
+      "queFalta": "Pronunciamiento del Comité sobre el grupo etario del código. Va por descargo del Contratista.",
+      "itemsEvaluados": 8,
+      "itemsPendientes": "A01, A02, A05, A06, A07 y A08",
+      "fechaEntrega": "2026-09-18",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-18",
+          "carta": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "resultado": "OBSERVADA"
+        }
+      ]
     },
     {
       "cod": "D-349",
@@ -3506,8 +3821,29 @@
       "pu": 260.77,
       "parcial": 521.55,
       "fila": 68,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "NO CUMPLE",
+      "obs": "NO APROBADA. Se oferta un doppler fetal electrónico donde el expediente define un fetoscopio mecánico tipo Pinard. La NTS N° 113-MINSA/DGIEM-V.01 trata el D-349 fetoscopio y el D-96 detector de latidos como códigos distintos que coexisten en Sala de Dilatación y Sala de Parto.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "EDAN",
+      "modelo": "SonoTrax II Pro",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-002-260919",
+      "queFalta": "Ofertar un fetoscopio tipo Pinard, o descargo al Comité para la variación técnica.",
+      "itemsEvaluados": 5,
+      "itemsPendientes": "A02, A03 y A05",
+      "fechaEntrega": "2026-09-18",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-18",
+          "carta": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "resultado": "NO CUMPLE"
+        }
+      ]
     },
     {
       "cod": "D-39",
@@ -3617,8 +3953,29 @@
       "pu": 248.72,
       "parcial": 248.72,
       "fila": 74,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "OBSERVADA",
+      "obs": "OBSERVADA en el ítem A04, equipo de pared. El fabricante declara fijación por imanes a superficies verticales metálicas, que es la del gabinete de cadena de frío al que sirve; lo que no consta es un accesorio de fijación a muro.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "DELTATRAK",
+      "modelo": "12217",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-002-260919",
+      "queFalta": "Carta de DeltaTrak sobre el soporte de pared del modelo 12217, o conformidad de la Entidad con la fijación magnética.",
+      "itemsEvaluados": 5,
+      "itemsPendientes": "A04",
+      "fechaEntrega": "2026-09-18",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-18",
+          "carta": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "resultado": "OBSERVADA"
+        }
+      ]
     },
     {
       "cod": "M-129",
@@ -3628,8 +3985,29 @@
       "pu": 5328.7,
       "parcial": 5328.7,
       "fila": 75,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 8 requerimientos acreditados.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "XIEHE MEDICAL",
+      "modelo": "MQ000334",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-002-260919",
+      "queFalta": null,
+      "itemsEvaluados": 8,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-09-18",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-18",
+          "carta": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "O-13",
@@ -3639,8 +4017,29 @@
       "pu": 2244.22,
       "parcial": 2244.22,
       "fila": 76,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 17 requerimientos acreditados. Falta consignar el aspa del ítem A14, que el folio 001 ya acredita.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "S/M",
+      "modelo": "Fabricación nacional",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-002-260919",
+      "queFalta": null,
+      "itemsEvaluados": 17,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-09-18",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-18",
+          "carta": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "O-20",
@@ -3650,8 +4049,29 @@
       "pu": 3392.01,
       "parcial": 3392.01,
       "fila": 77,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 16 requerimientos acreditados.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "S/M",
+      "modelo": "Fabricación nacional",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-002-260919",
+      "queFalta": null,
+      "itemsEvaluados": 16,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-09-18",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-18",
+          "carta": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "O-21",
@@ -3661,8 +4081,29 @@
       "pu": 2158.9,
       "parcial": 2158.9,
       "fila": 78,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 13 requerimientos acreditados.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "S/M",
+      "modelo": "Fabricación nacional",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-002-260919",
+      "queFalta": null,
+      "itemsEvaluados": 13,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-09-18",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-18",
+          "carta": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "O-5",
@@ -3672,8 +4113,29 @@
       "pu": 203.01,
       "parcial": 203.01,
       "fila": 79,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 6 requerimientos acreditados.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "S/M",
+      "modelo": "Fabricación nacional",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-002-260919",
+      "queFalta": null,
+      "itemsEvaluados": 6,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-09-18",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-18",
+          "carta": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "O-6",
@@ -3683,8 +4145,29 @@
       "pu": 8812.9,
       "parcial": 8812.9,
       "fila": 80,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 10 requerimientos acreditados.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "S/M",
+      "modelo": "Fabricación nacional",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-002-260919",
+      "queFalta": null,
+      "itemsEvaluados": 10,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-09-18",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-18",
+          "carta": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-216",
@@ -3727,8 +4210,29 @@
       "pu": 346.16,
       "parcial": 346.16,
       "fila": 86,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 7 requerimientos acreditados.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "BOSCH",
+      "modelo": "TWK3P420",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-002-260919",
+      "queFalta": null,
+      "itemsEvaluados": 7,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-09-18",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-18",
+          "carta": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "E-2",
@@ -3793,8 +4297,29 @@
       "pu": 1966.6,
       "parcial": 1966.6,
       "fila": 92,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 9 requerimientos acreditados.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "LG",
+      "modelo": "NeoChef MH7032JAS",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-002-260919",
+      "queFalta": null,
+      "itemsEvaluados": 9,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-09-18",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-18",
+          "carta": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-19",
@@ -4057,8 +4582,29 @@
       "pu": 172.61,
       "parcial": 1035.64,
       "fila": 122,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "OBSERVADA",
+      "obs": "OBSERVADA. Los 7 requerimientos están acreditados, pero el Cuadro N° 01 y el Anexo N° 1 declaran el modelo TWK3P420, que es el del hervidor E-167. El folio 001 identifica el producto real.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "BASA",
+      "modelo": "Papelera Rino Vaivén 140 L (SKU 85)",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-002-260919",
+      "queFalta": "Corregir el modelo a Papelera Rino Vaivén 140 L, SKU 85, en el Cuadro N° 01 y en el Anexo N° 1.",
+      "itemsEvaluados": 7,
+      "itemsPendientes": "Modelo declarado",
+      "fechaEntrega": "2026-09-18",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-09-18",
+          "carta": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-002-260919",
+          "resultado": "OBSERVADA"
+        }
+      ]
     },
     {
       "cod": "M-14",
