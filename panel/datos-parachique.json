@@ -45,6 +45,14 @@
         "descripcion": "Informe de respuesta a consultas del Contratista"
       },
       {
+        "tipo": "AP",
+        "descripcion": "Elevación a la Entidad de la respuesta del Consultor Proyectista"
+      },
+      {
+        "tipo": "FT",
+        "descripcion": "Validación de fichas técnicas en lote"
+      },
+      {
         "tipo": "MEN",
         "descripcion": "Informe mensual de supervisión"
       },
@@ -2402,7 +2410,7 @@
       {
         "requisito": "Aprobación de las EETT por la Entidad",
         "estado": "PENDIENTE",
-        "nota": "46 asuntos siguen pendientes de pronunciamiento del Proyectista. Además, ninguna ficha técnica de equipo cuenta con conformidad de la Supervisión."
+        "nota": "46 asuntos siguen pendientes de pronunciamiento del Proyectista. De las fichas técnicas, 30 de 179 cuentan con aprobación de la Supervisión, que no sustituye la aprobación de las EETT por la Entidad."
       },
       {
         "requisito": "Planos de preinstalación emitidos por el Contratista",
@@ -2463,7 +2471,7 @@
       "reservada": false,
       "titulo": "El D-148 no se aprueba y es uno de los nueve códigos con pre instalación",
       "detalle": "El negatoscopio de 2 campos declara, en el folio 003 de su propio fabricante, estructura de acero LAF de 0,5 mm frente al 1 mm exigido y pantalla acrílica de 2 mm frente a los 3 mm. Su ficha quedó NO APROBADA en el INF-SUP-FT-EQ-DLVM-002-260919. La pre instalación de este código condiciona la obra civil, de modo que la definición no puede quedar pendiente.",
-      "accion": "Requerir al Contratista que presente un negatoscopio con los espesores del expediente o que tramite ante la Entidad la variación de ambos valores, y anteponer el código en el cronograma cuando se reformule."
+      "accion": "Requerir al Contratista que presente un negatoscopio con los espesores del expediente o que tramite ante la Entidad la variación de ambos valores. La versión subsanada debe llegar completa: el INF-SUP-RC-EQ-DLVM-005-260929 lo exige para los nueve códigos con pre instalación."
     },
     {
       "nivel": "SUSTANCIAL",
@@ -5525,11 +5533,11 @@
       "descripcion": "Pronunciamiento sobre cada informe o carta del Contratista que lo requiera.",
       "metrica": {
         "etiqueta": "Cartas contestadas",
-        "hecho": 2,
-        "total": 2,
+        "hecho": 7,
+        "total": 7,
         "unidad": "cartas"
       },
-      "nota": "Toda carta recibida tiene pronunciamiento emitido. Sin cola pendiente.",
+      "nota": "Los 7 informes recibidos del Contratista tienen pronunciamiento emitido; el último, el INF-SUP-RC-EQ-DLVM-005-260929, que aprobó el cronograma de sustentos. Sin cola pendiente.",
       "responsable": "Supervisión de Equipamiento"
     },
     {
@@ -5540,11 +5548,11 @@
       "descripcion": "Aprobación de la ficha técnica de cada código de equipo del expediente.",
       "metrica": {
         "etiqueta": "Fichas técnicas aprobadas",
-        "hecho": 0,
+        "hecho": 30,
         "total": 179,
         "unidad": "códigos"
       },
-      "nota": "Solo el D-92 ha sido presentado, como muestra del formato, y quedó observado por la garantía. Faltan 178 códigos por presentar.",
+      "nota": "47 de 179 códigos presentados en las semanas S1 y S2 del cronograma aprobado con el INF-SUP-RC-EQ-DLVM-005-260929: 30 aprobados, 4 aprobados parcialmente, 8 observados y 5 que no cumplen. Quedan 132 por presentar entre la S3 (25/09) y la S10 (13/11/2026).",
       "responsable": "Contratista ICM S.A."
     },
     {

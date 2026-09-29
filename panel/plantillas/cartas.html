@@ -19,7 +19,9 @@ const D = /*__DATOS__*/ null;
 
 const recibidas = D.documentos.filter((d) => d.flujo === 'RECIBIDA');
 const emitidas = D.documentos.filter((d) => d.flujo === 'EMITIDA');
-const sinContestar = recibidas.filter((d) => d.estado !== 'ATENDIDA');
+// Un documento con respuesta emitida está contestado aunque su estado diga otra cosa,
+// como la respuesta del Proyectista, que queda ELEVADA A LA ENTIDAD.
+const sinContestar = recibidas.filter((d) => d.estado !== 'ATENDIDA' && !d.respondidaPor);
 const sinMembrete = emitidas.filter((d) => !d.membrete && d.clase === 'INFORME').length;
 const nombreEtapa = (id) => (D.etapas.find((e) => e.id === id) || {}).nombre || 'Sin etapa';
 const cronologico = [...D.documentos].sort((a, b) => a.fecha.localeCompare(b.fecha));
