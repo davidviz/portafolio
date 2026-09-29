@@ -604,6 +604,32 @@
         "Transversal / documental"
       ],
       "honorarioNeto": 500
+    },
+    {
+      "id": "PR-011",
+      "flujo": "EMITIDA",
+      "clase": "INFORME",
+      "codigo": "INF-SUP-MEN-EQ-DLVM-002-260929",
+      "fecha": "2026-09-29",
+      "contraparte": "Jefatura de Supervisión de Obra — Ing. Manuel Ricardo Torres Peche",
+      "asunto": "Informe Mensual de Supervisión N° 002 — setiembre de 2026.",
+      "estado": "ENTREGADA",
+      "numeral": "2.2",
+      "membrete": true,
+      "detalle": "Estado de la especialidad al 29/09/2026. Siete documentos atendidos con siete pronunciamientos. Fichas: 30 aprobadas por S/ 391,533.59 (12.6 % del presupuesto), 4 aprobadas parcialmente, 8 observadas, 5 no aprobadas y 132 sin presentar. E-130 elevado a la Entidad; D-345, D-349 y pipetas por consulta al Comité, sin consulta presentada. 46 asuntos del Proyectista sin absolver; el I-5 y el I-9 condicionan la S9 del 06/11. Entrega S3 vencida el 25/09 sin recibir.",
+      "archivo": "INF-SUP-MEN-EQ-DLVM-002-260929_INFORME.docx + _INFORME_FIRMADO.pdf",
+      "ruta": "2.Informes Mensuales\\2.Informes Mensuales\\MEN-002-260929\\",
+      "url": null,
+      "etapa": "E2",
+      "drive": {
+        "informe": "1AaoO4_x-YQ1dUH2ryh5TnoKPLNnyxpTs",
+        "pdf": "1J3rrnytEqtinax3EV8WQ45YVIKvUIVU5",
+        "firmado": "11vtZtQzx42d70xOWU4EFS8mF8HQxZKCf"
+      },
+      "areas": [
+        "Transversal / documental"
+      ],
+      "honorarioNeto": 1800
     }
   ],
   "expediente": {
@@ -2491,7 +2517,7 @@
       "nivel": "CRITICA",
       "reservada": false,
       "titulo": "Informe mensual de agosto no registrado",
-      "detalle": "El único informe mensual emitido es el N° 001, del 31/07/2026. No consta el correspondiente a agosto.",
+      "detalle": "Se emitieron el Informe Mensual N° 001, del 31/07/2026, y el N° 002, de setiembre, el 29/09/2026. No consta informe de agosto; en ese mes no se registraron documentos del Contratista.",
       "accion": "Confirmar con la Jefatura de Supervisión si corresponde emitirlo y en qué corte se valoriza."
     },
     {
