@@ -1,7 +1,7 @@
 {
   "_lea_esto": "Respaldo y datos de fondo del panel CS PARACHIQUE. El estado de las fichas técnicas ya NO se gobierna aquí: manda la hoja «2 SEGUIMIENTO» del Drive, y las observaciones a fichas, la hoja «3 OBSERVACIONES». Lo que se edite aquí para un código que la hoja mencione, la hoja lo sobrescribe. Todo lo demás —etapas, documentos, expediente, presupuesto, valorización— sí se edita aquí. No edite los dashboard.html a mano: se regeneran y se pierde el cambio.",
   "meta": {
-    "actualizado": "2026-09-19",
+    "actualizado": "2026-09-29",
     "proyecto": "Mejoramiento de los Servicios de Salud del Establecimiento de Salud Parachique",
     "cui": "2571750",
     "ubicacion": "Distrito y provincia de Sechura — Piura",
@@ -490,6 +490,32 @@
       "honorarioNeto": 500
     },
     {
+      "id": "CT-IN-006",
+      "flujo": "RECIBIDA",
+      "clase": "INFORME DEL CONTRATISTA",
+      "etapa": "E3",
+      "codigo": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
+      "fecha": "2026-09-19",
+      "contraparte": "INGENIERÍA CIVIL MONTAJES S.A. (ICM) — Contratista de obra",
+      "asunto": "Fichas técnicas de cumplimiento de veintiséis (26) códigos de equipamiento.",
+      "estado": "ATENDIDA",
+      "numeral": "2.3",
+      "membrete": false,
+      "respondidaPor": "INF-SUP-FT-EQ-DLVM-002-260919",
+      "detalle": "Informe del Ing. Juan Carlos Augusto Mendiola Florez (CIP 201412), suscrito también por el Residente de Obra Ing. Luis Enrique Santisteban Romero (CIP 81329). 290 folios. Recibido el 19/09/2026 a las 11:00 h, cargo N° 00290701/26. Segunda entrega masiva de fichas técnicas: corresponde a la S2 del cronograma aprobado después con el INF-SUP-RC-EQ-DLVM-005-260929.",
+      "archivo": "CARTA N 084-2026 ICM - Informe 006 - Fichas tecnicas de 26 equipos.pdf",
+      "ruta": "3.Sustentos\\",
+      "url": null,
+      "drive": {
+        "sustento": "1tHEn1j5an3XAnjgJlkCZF3RZkflvOtuX"
+      },
+      "areas": [
+        "Equipos biomédicos",
+        "Equipos complementarios",
+        "Mobiliario asistencial"
+      ]
+    },
+    {
       "id": "PR-009",
       "flujo": "EMITIDA",
       "clase": "INFORME",
@@ -507,15 +533,67 @@
       "ruta": "2.Informes Mensuales\\3.Informe de repsuestas\\FT-002-260919\\",
       "url": null,
       "drive": {
-        "informe": null,
-        "pdf": null,
-        "firmado": null,
-        "sustento": null
+        "informe": "1sV_ep3bQstDyRHPBoOz-SeU19zO3mCSN",
+        "pdf": "10GVceP6HEKc12ClQawTvOXmoAsWtq5j9",
+        "firmado": "1vjGmsq3GsM1M-JxzBzdOq7go1pwyVTBi",
+        "sustento": "1ebu4QAmMNny0RtyCQPQQClXXkuM5foc4"
       },
       "areas": [
         "Equipos biomédicos",
         "Equipos complementarios",
         "Mobiliario asistencial"
+      ],
+      "honorarioNeto": 500
+    },
+    {
+      "id": "CT-IN-007",
+      "flujo": "RECIBIDA",
+      "clase": "INFORME DEL CONTRATISTA",
+      "etapa": "E3",
+      "codigo": "CARTA N° 085-2026 / INFORME N° 007-2026/JCAMF-EQH",
+      "fecha": "2026-09-23",
+      "contraparte": "INGENIERÍA CIVIL MONTAJES S.A. (ICM) — Contratista de obra",
+      "asunto": "Cronograma reformulado de entrega de sustentos técnicos de los 179 códigos.",
+      "estado": "ATENDIDA",
+      "numeral": "2.3",
+      "membrete": false,
+      "respondidaPor": "INF-SUP-RC-EQ-DLVM-005-260929",
+      "detalle": "Informe del Ing. Juan Carlos Augusto Mendiola Florez (CIP 201412), suscrito también por el Residente de Obra Ing. Luis Enrique Santisteban Romero (CIP 81329). 08 folios. Recibido el 23/09/2026 a las 17:10 h. Reformula el cronograma no aprobado con el INF-SUP-RC-EQ-DLVM-004-260915: una fila por código y diez entregas semanales con fecha, del 11/09 al 13/11/2026. Lo presenta con carácter referencial.",
+      "archivo": "CARTA N 085-2026 ICM - Informe 007 - Cronograma de entrega de sustentos tecnicos.pdf",
+      "ruta": "3.Sustentos\\",
+      "url": null,
+      "drive": {
+        "sustento": "1kimPdxc8vNV7bo3JQ45Kz7Fvtlv8f8cb"
+      },
+      "areas": [
+        "Transversal / documental"
+      ]
+    },
+    {
+      "id": "PR-010",
+      "flujo": "EMITIDA",
+      "clase": "INFORME",
+      "etapa": "E3",
+      "codigo": "INF-SUP-RC-EQ-DLVM-005-260929",
+      "fecha": "2026-09-29",
+      "contraparte": "Jefatura de Supervisión de Obra — Ing. Manuel Ricardo Torres Peche",
+      "asunto": "Informe de Respuesta a Consultas del Contratista N° 005 — cronograma de entrega de sustentos técnicos.",
+      "estado": "ENTREGADA",
+      "numeral": "2.3",
+      "membrete": true,
+      "responde": "CARTA N° 085-2026 / INFORME N° 007-2026/JCAMF-EQH",
+      "detalle": "APRUEBA el cronograma reformulado: lista los 179 códigos sin omisiones ni repeticiones, con fecha y cantidad por semana. La S1 y la S2 ya están cumplidas con las cartas 081 y 084; quedan 132 códigos entre la S3 y la S10. Los nueve códigos con pre instalación quedan entre la S2 y la S8, y el V-1 en la S10, el 13/11/2026, con deslinde de responsabilidad por el plazo de su fabricación. Precisa que la denominación de 8 litros/h del E-130 en la lista no altera el criterio de 4 litros/h. Levanta la suspensión de la recepción de nuevos sustentos.",
+      "archivo": "INF-SUP-RC-EQ-DLVM-005-260929_INFORME.docx + _INFORME_FIRMADO.pdf",
+      "ruta": "2.Informes Mensuales\\3.Informe de repsuestas\\005-260929\\",
+      "url": null,
+      "drive": {
+        "informe": "1pWikKO7Rk2XxiWxv-K_Q7OTUusvmNHl_",
+        "pdf": "1dVL8DcSX0AliEJEMfghInmkgm03ufuyQ",
+        "firmado": "1a7vEyUSXX4HnBXa2OFKhDh-i8-0SQGnN",
+        "sustento": "1z3sfIiQuOiaEqjGUeeBowmHD1widTDd8"
+      },
+      "areas": [
+        "Transversal / documental"
       ],
       "honorarioNeto": 500
     }
@@ -2264,6 +2342,46 @@
           "fuente": "Validación de fichas técnicas"
         }
       ]
+    },
+    {
+      "informe": "INF-SUP-RC-EQ-DLVM-005-260929",
+      "documentoAbsuelto": "INFORME N° 007-2026/JCAMF-EQH (23/09/2026) — CARTA N° 085-2026, 08 folios",
+      "materia": "Cronograma reformulado de entrega de sustentos técnicos de los 179 códigos",
+      "observaciones": 1,
+      "extremos": 1,
+      "confirmadas": 0,
+      "trasladadas": 0,
+      "yaAbsueltas": 1,
+      "detalle": [
+        {
+          "obs": "CRON",
+          "equipo": "179 códigos — Cronograma de entrega de sustentos técnicos",
+          "materia": "Cronograma requerido con el INF-SUP-RC-EQ-DLVM-002-260903 y no aprobado con el INF-SUP-RC-EQ-DLVM-004-260915. La versión reformulada queda APROBADA.",
+          "nivel": "SUSTANCIAL",
+          "estado": "Subsanada",
+          "ubicacion": "Anexo N° 01 del Informe N° 007-2026/JCAMF-EQH, folios 04 al 01",
+          "extremos": 1,
+          "yaAbsueltas": 1,
+          "codigos": [
+            "E-54",
+            "E-56",
+            "E-210",
+            "D-18",
+            "D-41",
+            "D-148",
+            "E-130",
+            "M-9",
+            "M-10",
+            "V-1"
+          ],
+          "origen": "INF-SUP-RC-EQ-DLVM-005-260929",
+          "fuente": "Pronunciamiento sobre consultas del Contratista"
+        }
+      ],
+      "codigoEvaluado": "179 códigos",
+      "tipo": "CONSULTAS",
+      "resultado": "Cronograma de entrega de sustentos técnicos APROBADO: 179 códigos en diez entregas semanales, del 11/09 al 13/11/2026. Se levanta la suspensión de la recepción de nuevos sustentos.",
+      "naturaleza": "Segunda versión del cronograma. Pasa de un orden por familia sin fechas a una lista por código anclada a fechas calendario. Queda como programación de control de cada entrega semanal."
     }
   ],
   "valorizacion": {
@@ -2343,13 +2461,6 @@
     {
       "nivel": "CRITICA",
       "reservada": false,
-      "titulo": "Cronograma de sustentos no presentado: se suspende la recepción",
-      "detalle": "El cronograma de entrega de los sustentos técnicos de los 179 códigos se requirió con el INF-SUP-RC-EQ-DLVM-002-260903 y se declaró NO APROBADO con el INF-SUP-RC-EQ-DLVM-004-260915, que otorgó siete días hábiles para reformularlo. A la fecha no ha sido presentado. Sin programación aprobada no se pueden anteponer los nueve códigos cuya pre instalación condiciona la obra civil, y el riesgo es que una pre instalación llegue antes que su ficha.",
-      "accion": "El INF-SUP-FT-EQ-DLVM-001-260917 recomendó suspender la recepción de nuevos sustentos técnicos hasta que el cronograma se presente y se apruebe, y el INF-SUP-FT-EQ-DLVM-002-260919 lo reitera. Pese a ello el Contratista remitió veintiséis fichas más el 19/09/2026. La suspensión no alcanza a la subsanación de lo ya presentado ni a la procura de los códigos aprobados."
-    },
-    {
-      "nivel": "CRITICA",
-      "reservada": false,
       "titulo": "El D-148 no se aprueba y es uno de los nueve códigos con pre instalación",
       "detalle": "El negatoscopio de 2 campos declara, en el folio 003 de su propio fabricante, estructura de acero LAF de 0,5 mm frente al 1 mm exigido y pantalla acrílica de 2 mm frente a los 3 mm. Su ficha quedó NO APROBADA en el INF-SUP-FT-EQ-DLVM-002-260919. La pre instalación de este código condiciona la obra civil, de modo que la definición no puede quedar pendiente.",
       "accion": "Requerir al Contratista que presente un negatoscopio con los espesores del expediente o que tramite ante la Entidad la variación de ambos valores, y anteponer el código en el cronograma cuando se reformule."
@@ -2364,9 +2475,9 @@
     {
       "nivel": "SUSTANCIAL",
       "reservada": false,
-      "titulo": "El V-1 Ambulancia no tiene ficha y es el de mayor plazo de fabricación",
-      "detalle": "El código V-1, Ambulancia Rural Tipo I, concentra S/ 346 833,33, el mayor importe unitario del equipamiento, y su carrozado es el de mayor plazo de fabricación del proyecto. Su ficha técnica no ha sido presentada.",
-      "accion": "El INF-SUP-FT-EQ-DLVM-002-260919 reitera el cronograma con prioridad expresa para el V-1 y para los nueve códigos de pre instalación, y deja constancia de que la Supervisión no asume responsabilidad por adicionales ni ampliaciones de plazo que se originen en la presentación tardía de sustentos o en el plazo que demande su aprobación."
+      "titulo": "El V-1 Ambulancia queda en la última semana del cronograma",
+      "detalle": "El código V-1, Ambulancia Rural Tipo I, concentra S/ 346 833,33, el mayor importe unitario del equipamiento, y su carrozado es el de mayor plazo de fabricación del proyecto. El cronograma aprobado con el INF-SUP-RC-EQ-DLVM-005-260929 lo programa en la S10, el 13/11/2026.",
+      "accion": "El INF-SUP-RC-EQ-DLVM-005-260929 deja constancia de que esa fecha es decisión del Contratista y de que la Supervisión no asume responsabilidad por ampliaciones de plazo que se originen en el plazo de fabricación del V-1."
     },
     {
       "nivel": "CRITICA",
@@ -2379,7 +2490,7 @@
       "nivel": "SUSTANCIAL",
       "reservada": false,
       "titulo": "Plazo de participación vencido el 12/09/2026",
-      "detalle": "La propuesta fija 60 días calendario desde el inicio de servicio del 14/07/2026, de modo que el plazo venció el 12/09/2026. Con posterioridad se emitieron cuatro pronunciamientos: el RC-004, el AP-001, el FT-001 y el FT-002.",
+      "detalle": "La propuesta fija 60 días calendario desde el inicio de servicio del 14/07/2026, de modo que el plazo venció el 12/09/2026. Con posterioridad se emitieron cinco pronunciamientos: el RC-004, el AP-001, el FT-001, el FT-002 y el RC-005.",
       "accion": "Formalizar con el CONSORCIO PARACHIQUE la ampliación del plazo de participación, para que los pronunciamientos posteriores al 12/09 queden amparados."
     },
     {
@@ -2400,7 +2511,7 @@
       "nivel": "SUSTANCIAL",
       "reservada": false,
       "titulo": "El E-130 sigue como 8 litros/h en los documentos de recepción",
-      "detalle": "La capacidad exigible quedó ratificada en 4 litros/h con el INF-SUP-RC-EQ-DLVM-003-260908, pero el Proyectista sostuvo después otra cifra y el asunto se elevó a la Entidad con el INF-SUP-AP-EQ-DLVM-001-260915.",
+      "detalle": "La capacidad exigible quedó ratificada en 4 litros/h con el INF-SUP-RC-EQ-DLVM-003-260908, pero el Proyectista sostuvo después otra cifra y el asunto se elevó a la Entidad con el INF-SUP-AP-EQ-DLVM-001-260915. El cronograma de la CARTA N° 085-2026 vuelve a denominarlo de 8 litros/h y lo programa en la S6, el 16/10/2026; el INF-SUP-RC-EQ-DLVM-005-260929 precisa que su aprobación no altera el criterio.",
       "accion": "Esperar el pronunciamiento de la Entidad antes de que el Contratista remita la ficha técnica del E-130."
     },
     {
@@ -2411,11 +2522,11 @@
       "accion": "Requerir la corrección del Cuadro N° 01 antes de que sirva de base a acto de aprobación alguno."
     },
     {
-      "nivel": "LEVE",
+      "nivel": "SUSTANCIAL",
       "reservada": false,
-      "titulo": "158 de 179 fichas técnicas aún sin presentar",
-      "detalle": "Al 18/09/2026 hay 21 códigos con ficha resuelta: 16 aprobadas, 4 aprobadas parcialmente y 1 que no cumple. Quedan 158 sin presentar.",
-      "accion": "Sin el cronograma aprobado no hay forma de programar la carga de revisión de los 158 restantes."
+      "titulo": "Cronograma aprobado: 132 fichas por presentar hasta el 13/11/2026",
+      "detalle": "El INF-SUP-RC-EQ-DLVM-005-260929 aprobó el cronograma de la CARTA N° 085-2026: 179 códigos en diez entregas semanales. La S1 y la S2 están cumplidas con 47 fichas. La S3, de 17 códigos, vencía el 25/09/2026 y al 29/09/2026 no consta en la carpeta 3.Sustentos. La S4, de 17 códigos con el E-56, vence el 02/10/2026.",
+      "accion": "Controlar cada entrega contra el cronograma. Toda reprogramación debe comunicarse por escrito antes de la fecha afectada, según la recomendación TERCERA del INF-SUP-RC-EQ-DLVM-005-260929."
     },
     {
       "nivel": "LEVE",
