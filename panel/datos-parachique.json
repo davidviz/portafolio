@@ -653,7 +653,7 @@
       },
       "areas": [
         "Equipos biomédicos",
-        "Mobiliario asistencial"
+        "Mobiliario administrativo"
       ]
     },
     {
@@ -681,7 +681,7 @@
       },
       "areas": [
         "Equipos biomédicos",
-        "Mobiliario asistencial"
+        "Mobiliario administrativo"
       ],
       "honorarioNeto": 500
     }
