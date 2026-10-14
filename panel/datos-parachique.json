@@ -1,7 +1,7 @@
 {
   "_lea_esto": "Respaldo y datos de fondo del panel CS PARACHIQUE. El estado de las fichas técnicas ya NO se gobierna aquí: manda la hoja «2 SEGUIMIENTO» del Drive, y las observaciones a fichas, la hoja «3 OBSERVACIONES». Lo que se edite aquí para un código que la hoja mencione, la hoja lo sobrescribe. Todo lo demás —etapas, documentos, expediente, presupuesto, valorización— sí se edita aquí. No edite los dashboard.html a mano: se regeneran y se pierde el cambio.",
   "meta": {
-    "actualizado": "2026-10-01",
+    "actualizado": "2026-10-14",
     "proyecto": "Mejoramiento de los Servicios de Salud del Establecimiento de Salud Parachique",
     "cui": "2571750",
     "ubicacion": "Distrito y provincia de Sechura — Piura",
@@ -669,8 +669,8 @@
       "numeral": "2.3",
       "membrete": true,
       "responde": "CARTA N° 092-2026 / INFORME N° 008-2026/JCAMF-EQH",
-      "detalle": "Contrasta 210 requerimientos contra los folios del fabricante. APRUEBA siete fichas (D-17, D-88, M-14, M-17, M-28, M-34 y M-53) y OBSERVA seis (D-1, D-104, D-18, D-269, D-334 y M-164); ninguna queda NO APROBADA. Cumplimiento global del 98 %: 206 de 210. En el M-14 y el M-17 acepta como mejora variaciones que no reducen la prestación. Pide el plano de pre instalación específico del D-18 con fundamento en el numeral 7 de la Memoria (folio 1232) y la actividad 3 del cronograma (folio 1227). Controla la entrega contra la S3 del cronograma aprobado y requiere fecha para sus nueve códigos faltantes.",
-      "archivo": "INF-SUP-FT-EQ-DLVM-003-261001_INFORME.docx + _INFORME_FIRMADO.pdf",
+      "detalle": "Contrasta 210 requerimientos contra los folios del fabricante. APRUEBA siete fichas (D-17, D-88, M-14, M-17, M-28, M-34 y M-53) y OBSERVA seis (D-1, D-104, D-18, D-269, D-334 y M-164); ninguna queda NO APROBADA. Cumplimiento global del 98 %: 206 de 210. En el M-14 y el M-17 acepta como mejora variaciones que no reducen la prestación. Pide el plano de pre instalación específico del D-18 con fundamento en el numeral 7 de la Memoria (folio 1232) y la actividad 3 del cronograma (folio 1227). Controla la entrega contra la S3 del cronograma aprobado y requiere fecha para sus nueve códigos faltantes. Versión firmada corregida por el suscrito el 13/10/2026.",
+      "archivo": "INF-SUP-FT-EQ-DLVM-003-261001_INFORME_FIRMADO.pdf",
       "ruta": "2.Informes Mensuales\\3.Informe de repsuestas\\FT-003-261001\\",
       "url": null,
       "drive": {
@@ -678,6 +678,60 @@
         "pdf": "1uszsyNY9SE9ijqTy9gDoxZxSIlZEpjP5",
         "firmado": "1S6ermYcPggMCSbMhusAZ2EEAY-1sJRMz",
         "sustento": "1Y1b6yHh8O_hsAcEFLDJgEfv_UM5aB1Bx"
+      },
+      "areas": [
+        "Equipos biomédicos",
+        "Mobiliario administrativo"
+      ],
+      "honorarioNeto": 500
+    },
+    {
+      "id": "CT-IN-009",
+      "flujo": "RECIBIDA",
+      "clase": "INFORME DEL CONTRATISTA",
+      "etapa": "E3",
+      "codigo": "CARTA N° 101-2026 / INFORME N° 009-2026/JCAMF-EQH",
+      "fecha": "2026-10-06",
+      "contraparte": "INGENIERÍA CIVIL MONTAJES S.A. (ICM) — Contratista de obra",
+      "asunto": "Fichas técnicas de cumplimiento de diez (10) códigos de equipamiento.",
+      "estado": "ATENDIDA",
+      "numeral": "2.3",
+      "membrete": false,
+      "respondidaPor": "INF-SUP-FT-EQ-DLVM-004-261009",
+      "detalle": "Informe del Ing. Juan Carlos Augusto Mendiola Florez (CIP 201412), suscrito también por el Residente de Obra Ing. Luis Enrique Santisteban Romero (CIP 81329). 124 folios. Recibido el 06/10/2026 a las 16:29 h. Cuarta entrega de fichas técnicas: trae siete de los nueve códigos que faltaban de la S3, dos de la S4 y adelanta el D-41 de la S5, con pre instalación. No acompaña la reprogramación escrita.",
+      "archivo": "CARTA N 101-2026 ICM - Informe 009 - Fichas tecnicas de 10 equipos.pdf",
+      "ruta": "3.Sustentos\\",
+      "url": null,
+      "drive": {
+        "sustento": "153nKc0X4ntysZwPw_3avplk1IN12WhUJ"
+      },
+      "areas": [
+        "Equipos biomédicos",
+        "Mobiliario administrativo"
+      ]
+    },
+    {
+      "id": "PR-013",
+      "flujo": "EMITIDA",
+      "clase": "INFORME",
+      "etapa": "E3",
+      "codigo": "INF-SUP-FT-EQ-DLVM-004-261009",
+      "fecha": "2026-10-09",
+      "contraparte": "Jefatura de Supervisión de Obra — Ing. Manuel Ricardo Torres Peche",
+      "asunto": "Informe de Validación de Fichas Técnicas N° 004 — diez (10) códigos de equipamiento.",
+      "estado": "ENTREGADA",
+      "numeral": "2.3",
+      "membrete": true,
+      "responde": "CARTA N° 101-2026 / INFORME N° 009-2026/JCAMF-EQH",
+      "detalle": "Contrasta 152 requerimientos contra los folios del fabricante. APRUEBA nueve fichas (D-60, D-131, M-123, M-2, M-21, M-22, M-25, M-29 y M-36) y OBSERVA una, el D-41 Dabi Atlante Personal 2, en B03, B06, B14, C03, C04, C06 y pre instalación; ninguna queda NO APROBADA. Cumplimiento global del 96 %: 146 de 152. Lo que el fabricante marca como opcional no se presume incluido. Pide el plano de pre instalación específico del D-41 y controla la entrega contra la S3 y la S4 del cronograma aprobado. Versión firmada corregida por el suscrito el 14/10/2026.",
+      "archivo": "INF-SUP-FT-EQ-DLVM-004-261009_INFORME_FIRMADO.pdf",
+      "ruta": "2.Informes Mensuales\\3.Informe de repsuestas\\FT-004-261009\\",
+      "url": null,
+      "drive": {
+        "informe": "1nl4rPgzbXQxKJC1E-irSfMK8ExmftxyX",
+        "pdf": "176CcMfby06rmIHCwgWiy70tf5MHNCJ_e",
+        "firmado": "1pwwFy1J8y3llC9ltpQeynS04i0sk7k7M",
+        "sustento": "1bZ4jMAE6oDjs01oXcl6zA48b6k8xBSkO"
       },
       "areas": [
         "Equipos biomédicos",
@@ -2544,7 +2598,7 @@
         {
           "obs": "OK",
           "equipo": "M-28 — Mesa de madera para niños",
-          "materia": "Ficha aprobada. Los 11 requerimientos acreditados. Fabricación nacional en caoba; en la recepción, acreditar el origen legal de la madera.",
+          "materia": "Ficha aprobada. Los 11 requerimientos acreditados. Fabricación nacional en caoba.",
           "nivel": "LEVE",
           "estado": "Conforme",
           "ubicacion": "ANEXO N° 1 del bloque M-28 del Informe N° 008",
@@ -2668,6 +2722,162 @@
           "fuente": "Validación de fichas técnicas"
         }
       ]
+    },
+    {
+      "informe": "INF-SUP-FT-EQ-DLVM-004-261009",
+      "documentoAbsuelto": "INFORME N° 009-2026/JCAMF-EQH (06/10/2026) — CARTA N° 101-2026, 124 folios",
+      "materia": "Fichas técnicas de cumplimiento de diez (10) códigos de equipamiento",
+      "observaciones": 1,
+      "extremos": 7,
+      "confirmadas": 7,
+      "trasladadas": 0,
+      "yaAbsueltas": 0,
+      "codigoEvaluado": "10 códigos",
+      "tipo": "FICHA",
+      "resultado": "9 fichas APROBADAS y 1 OBSERVADA, ninguna NO APROBADA. Cumplimiento técnico global sustentado del 96 %: 146 de 152 requerimientos. Solo la ficha APROBADA autoriza la procura.",
+      "naturaleza": "Cuarta entrega de fichas técnicas: completa siete de los nueve códigos pendientes de la S3, trae dos de la S4 y adelanta el D-41 de la S5. Con ella suman 70 de los 179 códigos. Ningún requerimiento queda en NO CUMPLE: lo pendiente es el D-41, con seis requerimientos que descansan en componentes que Dabi Atlante marca como opcionales, y que cierra un solo documento del proveedor, más su plano de pre instalación. Constancias: el D-131 no requiere mantenimiento especial (manual Riester, numeral 19) y el M-21 se aprueba en 1,60 x 1,60 m.",
+      "detalle": [
+        {
+          "obs": "OK",
+          "equipo": "D-60 — Microscopio binocular estándar",
+          "materia": "Ficha aprobada. Los 32 requerimientos acreditados.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque D-60 del Informe N° 009",
+          "extremos": null,
+          "codigos": [
+            "D-60"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-004-261009",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "D-131 — Pantoscopio",
+          "materia": "Ficha aprobada. Los 18 requerimientos acreditados, con el cargador enchufable y la batería ri-accu L que el Contratista encasilló (folio 003). No se le exige mantenimiento preventivo: el manual de Riester declara que no requiere mantenimiento especial.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque D-131 del Informe N° 009",
+          "extremos": null,
+          "codigos": [
+            "D-131"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-004-261009",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-123 — Mesa de comedor para 4 personas",
+          "materia": "Ficha aprobada. Los 6 requerimientos acreditados.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-123 del Informe N° 009",
+          "extremos": null,
+          "codigos": [
+            "M-123"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-004-261009",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-2 — Armario metálico de 2 puertas",
+          "materia": "Ficha aprobada. Los 7 requerimientos acreditados.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-2 del Informe N° 009",
+          "extremos": null,
+          "codigos": [
+            "M-2"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-004-261009",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-21 — Escritorio ejecutivo",
+          "materia": "Ficha aprobada. Los 11 requerimientos acreditados, en 1,60 x 1,60 m, que fijan los ítems A03, B01 y B02; el 1,80 m del A02 es error material del expediente.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-21 del Informe N° 009",
+          "extremos": null,
+          "codigos": [
+            "M-21"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-004-261009",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-22 — Escritorio estándar",
+          "materia": "Ficha aprobada. Los 8 requerimientos acreditados.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-22 del Informe N° 009",
+          "extremos": null,
+          "codigos": [
+            "M-22"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-004-261009",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-25 — Mesa auxiliar para oficina",
+          "materia": "Ficha aprobada. Los 9 requerimientos acreditados.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-25 del Informe N° 009",
+          "extremos": null,
+          "codigos": [
+            "M-25"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-004-261009",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-29 — Mesa de reuniones de 90 x 180 cm",
+          "materia": "Ficha aprobada. Los 9 requerimientos acreditados.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-29 del Informe N° 009",
+          "extremos": null,
+          "codigos": [
+            "M-29"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-004-261009",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-36 — Silla metálica apilable",
+          "materia": "Ficha aprobada. Los 8 requerimientos acreditados.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-36 del Informe N° 009",
+          "extremos": null,
+          "codigos": [
+            "M-36"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-004-261009",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "D-41",
+          "equipo": "D-41 — Unidad dental completa",
+          "materia": "OBSERVADA. 38 de 44. Seis requerimientos descansan en componentes que los manuales de Dabi Atlante marcan como opcionales (terminales y jeringa triple, negatoscopio, brazo de alcance para asistente, protector de la piecera) y ningún folio fija la dotación del Personal 2. No se cuestiona la posibilidad técnica de incorporarlos. Código con pre instalación: falta el plano específico, que exige el numeral 7 de la Memoria (folio 1232).",
+          "nivel": "SUSTANCIAL",
+          "estado": "Por absolver",
+          "ubicacion": "Bloque D-41 del Informe N° 009",
+          "extremos": 7,
+          "codigos": [
+            "D-41"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-004-261009",
+          "fuente": "Validación de fichas técnicas"
+        }
+      ]
     }
   ],
   "valorizacion": {
@@ -2688,7 +2898,7 @@
       {
         "requisito": "Aprobación de las EETT por la Entidad",
         "estado": "PENDIENTE",
-        "nota": "46 asuntos siguen pendientes de pronunciamiento del Proyectista. De las fichas técnicas, 37 de 179 cuentan con aprobación de la Supervisión, que no sustituye la aprobación de las EETT por la Entidad."
+        "nota": "46 asuntos siguen pendientes de pronunciamiento del Proyectista. De las fichas técnicas, 46 de 179 cuentan con aprobación de la Supervisión, que no sustituye la aprobación de las EETT por la Entidad."
       },
       {
         "requisito": "Planos de preinstalación emitidos por el Contratista",
@@ -2776,7 +2986,7 @@
       "nivel": "SUSTANCIAL",
       "reservada": false,
       "titulo": "Plazo de participación vencido el 12/09/2026",
-      "detalle": "La propuesta fija 60 días calendario desde el inicio de servicio del 14/07/2026, de modo que el plazo venció el 12/09/2026. Con posterioridad se emitieron seis pronunciamientos: el RC-004, el AP-001, el FT-001, el FT-002, el RC-005 y el FT-003.",
+      "detalle": "La propuesta fija 60 días calendario desde el inicio de servicio del 14/07/2026, de modo que el plazo venció el 12/09/2026. Con posterioridad se emitieron siete pronunciamientos: el RC-004, el AP-001, el FT-001, el FT-002, el RC-005, el FT-003 y el FT-004.",
       "accion": "Formalizar con el CONSORCIO PARACHIQUE la ampliación del plazo de participación, para que los pronunciamientos posteriores al 12/09 queden amparados."
     },
     {
@@ -2810,9 +3020,9 @@
     {
       "nivel": "SUSTANCIAL",
       "reservada": false,
-      "titulo": "Cronograma: la S3 llegó incompleta; 119 fichas por presentar hasta el 13/11/2026",
-      "detalle": "El INF-SUP-RC-EQ-DLVM-005-260929 aprobó el cronograma de la CARTA N° 085-2026: 179 códigos en diez entregas semanales. La S1 y la S2 están cumplidas con 47 fichas. La S3 llegó el 30/09/2026 con la CARTA N° 092-2026, cinco días tarde y con 8 de sus 17 códigos; faltan D-60, D-204, E-2, M-123, M-2, M-21, M-22, M-25 y M-29, sin reprogramación escrita. Adelantó D-18, M-164, M-34, M-53 y M-17. La S4, de 17 códigos con el E-56, vence el 02/10/2026.",
-      "accion": "Obtener del Contratista la fecha de los nueve códigos faltantes de la S3, como pide la recomendación CUARTA del INF-SUP-FT-EQ-DLVM-003-261001, y controlar la S4 del 02/10/2026."
+      "titulo": "Cronograma: la S4 venció con 5 de 17 códigos; 109 fichas por presentar hasta el 13/11/2026",
+      "detalle": "El INF-SUP-RC-EQ-DLVM-005-260929 aprobó el cronograma de la CARTA N° 085-2026: 179 códigos en diez entregas semanales. La S1 y la S2 están cumplidas con 47 fichas. Con las CARTAS N° 092 y 101-2026, la S3 lleva 15 de 17 (faltan D-204 y E-2) y la S4, vencida el 02/10/2026, 5 de 17: faltan D-159, D-234, D-16, D-212, D-213, D-266, E-56, D-153, M-15, D-86, D-96, D-140. El E-56 tiene pre instalación. De la S5, del 09/10/2026, van 2 de 17, adelantados el D-18 y el D-41. Ninguna de las dos cartas trae la reprogramación escrita, y no hay carta registrada después de la N° 101.",
+      "accion": "Obtener del Contratista la fecha escrita de los códigos faltantes de la S3 y la S4, con prioridad del E-56, como pide la recomendación CUARTA del INF-SUP-FT-EQ-DLVM-004-261009, y cotejar la S5 del 09/10/2026 y la S6 del 16/10/2026."
     },
     {
       "nivel": "LEVE",
@@ -2824,9 +3034,9 @@
     {
       "nivel": "SUSTANCIAL",
       "reservada": false,
-      "titulo": "El D-18, con pre instalación, sigue sin plano de pre instalación",
-      "detalle": "El monitor Biolight Q5 quedó OBSERVADO en el INF-SUP-FT-EQ-DLVM-003-261001: el registrador no se declara incluido y falta el plano de pre instalación específico. El Cuadro de Pre Instalaciones (folio 959) le fija toma estabilizada de 220 V, punto de datos y refuerzo si se ubica sobre drywall, y el numeral 7 de la Memoria (folio 1232) obliga al proveedor a entregar los requerimientos finales al confirmar marca y modelo.",
-      "accion": "Exigir con la subsanación el plano de pre instalación específico del D-18 y la hoja del soporte de pared, antes de cerrar los muros donde va el monitor."
+      "titulo": "El D-18 y el D-41, con pre instalación, siguen sin plano de pre instalación",
+      "detalle": "El monitor Biolight Q5 (D-18) quedó OBSERVADO en el INF-SUP-FT-EQ-DLVM-003-261001 y la unidad dental Dabi Atlante Personal 2 (D-41) en el INF-SUP-FT-EQ-DLVM-004-261009. A los dos les falta el plano de pre instalación específico. El Cuadro de Pre Instalaciones (folio 959) fija para el D-18 toma estabilizada de 220 V, punto de datos y refuerzo si va sobre drywall, y para el D-41 toma estabilizada de 220 V y 1000 W, agua blanda de 1/2\", desagüe de 2\" y un punto monofásico de 1 kW para la compresora. El numeral 7 de la Memoria (folio 1232) obliga al proveedor a entregar los requerimientos finales al confirmar marca y modelo.",
+      "accion": "Exigir con la subsanación los planos de pre instalación del D-18, con la hoja del soporte de pared, y del D-41, con la caja de conexión, el agua, el desagüe, la compresora y el recorrido de la línea de aire, antes de cerrar muros y contrapisos del consultorio dental."
     }
   ],
   "protocoloRespuesta": [
@@ -2922,7 +3132,7 @@
       "verificacionWeb": "zonemedical.com.au (01/10/2026): HP-60 de 0,10 a 2000 ml/h con equipo de 20 gotas/ml.",
       "cartaContratista": "CARTA N° 092-2026 / INFORME N° 008-2026/JCAMF-EQH",
       "informeSupervision": "INF-SUP-FT-EQ-DLVM-003-261001",
-      "queFalta": "Página del manual o carta de MEDCAPTAIN con la alarma de puerta abierta.",
+      "queFalta": "Página del manual o carta de MEDCAPTAIN con la alarma audiovisual de puerta abierta.",
       "itemsEvaluados": 18,
       "itemsPendientes": "A10",
       "fechaEntrega": "2026-09-30",
@@ -2966,8 +3176,29 @@
       "pu": 6930.53,
       "parcial": 20791.58,
       "fila": 9,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 18 requerimientos acreditados, con el cargador enchufable y la batería ri-accu L que el Contratista encasilló (folio 003). No se le exige mantenimiento preventivo: el manual de Riester declara que no requiere mantenimiento especial.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "RIESTER",
+      "modelo": "ri-scope L 3820-203",
+      "fabricante": null,
+      "verificacionWeb": "tigermedical.com/cdn/shop/files/RIE3779-Manual.pdf (09/10/2026): manual Riester ri-scope L, numeral 19, sin mantenimiento especial.",
+      "cartaContratista": "CARTA N° 101-2026 / INFORME N° 009-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-004-261009",
+      "queFalta": null,
+      "itemsEvaluados": 18,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-06",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-06",
+          "carta": "CARTA N° 101-2026 / INFORME N° 009-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-004-261009",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-16",
@@ -3189,7 +3420,7 @@
       "verificacionWeb": null,
       "cartaContratista": "CARTA N° 092-2026 / INFORME N° 008-2026/JCAMF-EQH",
       "informeSupervision": "INF-SUP-FT-EQ-DLVM-003-261001",
-      "queFalta": "Variante del MF 220 y su código de pedido en el Anexo N° 1 y en la declaración jurada.",
+      "queFalta": "Modelo del MF 220 y su código de pedido en el Anexo N° 1 y en la declaración jurada.",
       "itemsEvaluados": 21,
       "itemsPendientes": "Modelo declarado",
       "fechaEntrega": "2026-09-30",
@@ -3318,8 +3549,29 @@
       "pu": 53047.1,
       "parcial": 53047.1,
       "fila": 26,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "OBSERVADA",
+      "obs": "OBSERVADA. 38 de 44. Seis requerimientos descansan en componentes que los manuales de Dabi Atlante marcan como opcionales (terminales y jeringa triple, negatoscopio, brazo de alcance para asistente, protector de la piecera) y ningún folio fija la dotación del Personal 2. No se cuestiona la posibilidad técnica de incorporarlos. Código con pre instalación: falta el plano específico, que exige el numeral 7 de la Memoria (folio 1232).",
+      "version": 1,
+      "versiones": 1,
+      "marca": "DABI ATLANTE",
+      "modelo": "PERSONAL 2",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 101-2026 / INFORME N° 009-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-004-261009",
+      "queFalta": "Declaración jurada de BIOMEDICAL CARE SYSTEMS S.A.C. o carta de Dabi Atlante con la configuración de entrega del Personal 2: dos terminales para piezas de mano, micromotor, jeringa triple, pedal, negatoscopio, brazo de alcance para asistente (señalado en la imagen) y protector de la piecera. Y plano de pre instalación específico del D-41.",
+      "itemsEvaluados": 44,
+      "itemsPendientes": "B03, B06, B14, C03, C04, C06 y pre instalación",
+      "fechaEntrega": "2026-10-06",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-06",
+          "carta": "CARTA N° 101-2026 / INFORME N° 009-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-004-261009",
+          "resultado": "OBSERVADA"
+        }
+      ]
     },
     {
       "cod": "D-60",
@@ -3329,8 +3581,29 @@
       "pu": 13090.56,
       "parcial": 13090.56,
       "fila": 27,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 32 requerimientos acreditados.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "BESTSCOPE",
+      "modelo": "BS-2044B",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 101-2026 / INFORME N° 009-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-004-261009",
+      "queFalta": null,
+      "itemsEvaluados": 32,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-06",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-06",
+          "carta": "CARTA N° 101-2026 / INFORME N° 009-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-004-261009",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-86",
@@ -5122,8 +5395,29 @@
       "pu": 923.03,
       "parcial": 923.03,
       "fila": 121,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 6 requerimientos acreditados.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "FAMETAL",
+      "modelo": "S/M",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 101-2026 / INFORME N° 009-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-004-261009",
+      "queFalta": null,
+      "itemsEvaluados": 6,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-06",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-06",
+          "carta": "CARTA N° 101-2026 / INFORME N° 009-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-004-261009",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-13",
@@ -5283,8 +5577,29 @@
       "pu": 1265.4,
       "parcial": 7592.4,
       "fila": 128,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 7 requerimientos acreditados.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "FAMETAL",
+      "modelo": "S/M",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 101-2026 / INFORME N° 009-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-004-261009",
+      "queFalta": null,
+      "itemsEvaluados": 7,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-06",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-06",
+          "carta": "CARTA N° 101-2026 / INFORME N° 009-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-004-261009",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-21",
@@ -5294,8 +5609,29 @@
       "pu": 1477.13,
       "parcial": 1477.13,
       "fila": 129,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 11 requerimientos acreditados, en 1,60 x 1,60 m, que fijan los ítems A03, B01 y B02; el 1,80 m del A02 es error material del expediente.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "FAMETAL",
+      "modelo": "S/M",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 101-2026 / INFORME N° 009-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-004-261009",
+      "queFalta": null,
+      "itemsEvaluados": 11,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-06",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-06",
+          "carta": "CARTA N° 101-2026 / INFORME N° 009-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-004-261009",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-22",
@@ -5305,8 +5641,29 @@
       "pu": 1009.71,
       "parcial": 17165.01,
       "fila": 130,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 8 requerimientos acreditados.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "FAMETAL",
+      "modelo": "S/M",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 101-2026 / INFORME N° 009-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-004-261009",
+      "queFalta": null,
+      "itemsEvaluados": 8,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-06",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-06",
+          "carta": "CARTA N° 101-2026 / INFORME N° 009-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-004-261009",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-25",
@@ -5316,8 +5673,29 @@
       "pu": 1124.26,
       "parcial": 2248.52,
       "fila": 131,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 9 requerimientos acreditados.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "FAMETAL",
+      "modelo": "S/M",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 101-2026 / INFORME N° 009-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-004-261009",
+      "queFalta": null,
+      "itemsEvaluados": 9,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-06",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-06",
+          "carta": "CARTA N° 101-2026 / INFORME N° 009-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-004-261009",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-28",
@@ -5328,7 +5706,7 @@
       "parcial": 2012.62,
       "fila": 132,
       "ficha": "APROBADA",
-      "obs": "APROBADA. Los 11 requerimientos acreditados. Fabricación nacional en caoba; en la recepción, acreditar el origen legal de la madera.",
+      "obs": "APROBADA. Los 11 requerimientos acreditados. Fabricación nacional en caoba.",
       "version": 1,
       "versiones": 1,
       "marca": "MEDINA",
@@ -5359,8 +5737,29 @@
       "pu": 1615.61,
       "parcial": 1615.61,
       "fila": 133,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 9 requerimientos acreditados.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "FAMETAL",
+      "modelo": "S/M",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 101-2026 / INFORME N° 009-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-004-261009",
+      "queFalta": null,
+      "itemsEvaluados": 9,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-06",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-06",
+          "carta": "CARTA N° 101-2026 / INFORME N° 009-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-004-261009",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-3",
@@ -5435,8 +5834,29 @@
       "pu": 240.04,
       "parcial": 14882.48,
       "fila": 138,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 8 requerimientos acreditados.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "FAMETAL",
+      "modelo": "S/M",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 101-2026 / INFORME N° 009-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-004-261009",
+      "queFalta": null,
+      "itemsEvaluados": 8,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-06",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-06",
+          "carta": "CARTA N° 101-2026 / INFORME N° 009-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-004-261009",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-37",
@@ -6091,11 +6511,11 @@
       "descripcion": "Pronunciamiento sobre cada informe o carta del Contratista que lo requiera.",
       "metrica": {
         "etiqueta": "Cartas contestadas",
-        "hecho": 8,
-        "total": 8,
+        "hecho": 9,
+        "total": 9,
         "unidad": "cartas"
       },
-      "nota": "Los 8 informes recibidos del Contratista tienen pronunciamiento emitido; el último, el INF-SUP-FT-EQ-DLVM-003-261001, sobre las fichas de la S3. Sin cola pendiente.",
+      "nota": "Los 9 informes recibidos del Contratista tienen pronunciamiento emitido; el último, el INF-SUP-FT-EQ-DLVM-004-261009, sobre las fichas de la S3 y la S4. Sin cola pendiente.",
       "responsable": "Supervisión de Equipamiento"
     },
     {
@@ -6106,11 +6526,11 @@
       "descripcion": "Aprobación de la ficha técnica de cada código de equipo del expediente.",
       "metrica": {
         "etiqueta": "Fichas técnicas aprobadas",
-        "hecho": 37,
+        "hecho": 46,
         "total": 179,
         "unidad": "códigos"
       },
-      "nota": "60 de 179 códigos presentados: 37 aprobados, 4 aprobados parcialmente, 14 observados y 5 que no cumplen. La S3 llegó el 30/09/2026 con 8 de sus 17 códigos. Quedan 119 por presentar hasta la S10 (13/11/2026).",
+      "nota": "70 de 179 códigos presentados: 46 aprobados, 4 aprobados parcialmente, 15 observados y 5 que no cumplen. La S3 lleva 15 de 17 y la S4, vencida, 5 de 17. Quedan 109 por presentar hasta la S10 (13/11/2026).",
       "responsable": "Contratista ICM S.A."
     },
     {
