@@ -36,11 +36,20 @@ if (!D.cobranza || !D.tarifario) {
 
 const CB = D.cobranza;
 const porFacturar = CB.porFacturar.filter((x) => x.estado === 'POR FACTURAR');
-const enSuspenso = CB.porFacturar.filter((x) => x.estado !== 'POR FACTURAR');
+/* FACTURADO: el recibo ya se emitió, pero el abono todavía no llega. */
+const porCobrar = CB.porFacturar.filter((x) => x.estado === 'FACTURADO');
+const enSuspenso = CB.porFacturar.filter((x) => x.estado !== 'POR FACTURAR' && x.estado !== 'FACTURADO');
 const totalPorFacturar = porFacturar.reduce((s, x) => s + x.neto, 0);
+const totalPorCobrar = porCobrar.reduce((s, x) => s + x.neto, 0);
+const recibosPorCobrar = [...new Set(porCobrar.map((x) => x.recibo).filter(Boolean))];
 const retencion = D.pagos.reduce((s, p) => s + p.retencion, 0);
 const bruto = D.pagos.reduce((s, p) => s + p.montoBruto, 0);
-const facturados = (codigo) => CB.porFacturar.every((x) => x.producto !== codigo);
+const cobrados = (codigo) => CB.porFacturar.every((x) => x.producto !== codigo);
+const reciboDe = (codigo) => {
+  const p = CB.porFacturar.find((x) => x.producto === codigo);
+  if (!p) return D.recibos[0] ? D.recibos[0].numero : '—';
+  return p.estado === 'FACTURADO' ? (p.recibo || '—') : '—';
+};
 
 let h = `
 <header class="cabecera">
@@ -57,8 +66,11 @@ let h = `
 h += `<div class="rejilla g4">
   <div class="tarjeta clic" id="k-estado">
     <div class="cifra-rotulo">Estado de cobranza</div>
-    <div class="cifra" style="color:var(--bien);font-size:1.6rem">Al día</div>
-    <div class="cifra-pie">Sin saldo exigible al Consorcio</div>
+    ${totalPorCobrar
+      ? `<div class="cifra" style="color:var(--aviso)">${soles(totalPorCobrar)}</div>
+    <div class="cifra-pie">Facturado, por cobrar · ${esc(recibosPorCobrar.join(', '))}${CB.cobroAnunciado ? ` · abono anunciado ${fechaCorta(CB.cobroAnunciado)}` : ''}</div>`
+      : `<div class="cifra" style="color:var(--bien);font-size:1.6rem">Al día</div>
+    <div class="cifra-pie">Sin saldo exigible al Consorcio</div>`}
   </div>
   <div class="tarjeta clic" id="k-cobrado">
     <div class="cifra-rotulo">Facturado y cobrado</div>
@@ -79,10 +91,12 @@ h += `<div class="rejilla g4">
 
 /* ---------- Estado ---------- */
 h += `<div class="seccion">
-  <div class="alerta" style="border-left-color:var(--bien)">
-    <div class="ico" style="color:var(--bien)">${ICONOS.bien}</div>
+  <div class="alerta" style="border-left-color:var(${totalPorCobrar ? '--aviso' : '--bien'})">
+    <div class="ico" style="color:var(${totalPorCobrar ? '--aviso' : '--bien'})">${totalPorCobrar ? ICONOS.reloj : ICONOS.bien}</div>
     <div>
-      <h4>No hay saldo exigible al Consorcio</h4>
+      <h4>${totalPorCobrar
+        ? `Facturado y pendiente de abono: ${soles(totalPorCobrar)} con el RHE ${esc(recibosPorCobrar.join(', '))}`
+        : 'No hay saldo exigible al Consorcio'}</h4>
       <p>${esc(CB.nota)}</p>
       ${enSuspenso.map((x) => `<div class="accion" style="margin-top:8px"><b>${esc(x.concepto)}:</b> ${esc(x.nota)}</div>`).join('')}
     </div>
@@ -94,6 +108,7 @@ const productos = D.documentos.filter((d) => d.flujo === 'EMITIDA' && d.honorari
 const situacionDe = (codigo) => {
   const p = CB.porFacturar.find((x) => x.producto === codigo);
   if (!p) return { txt: 'Facturado y cobrado', clase: 'bien' };
+  if (p.estado === 'FACTURADO') return { txt: 'Facturado, por cobrar', clase: 'info' };
   return p.estado === 'POR FACTURAR'
     ? { txt: 'Por facturar', clase: 'aviso' }
     : { txt: 'No se factura por ahora', clase: 'neutro' };
@@ -115,7 +130,7 @@ h += `<div class="seccion">
           <td>${esc(p.numeral)}</td>
           <td class="num">${soles(p.honorarioNeto)}</td>
           <td>${insignia(s.txt, s.clase, s.clase)}</td>
-          <td class="cod">${facturados(p.codigo) ? esc(D.recibos[0] ? D.recibos[0].numero : '—') : '—'}</td>
+          <td class="cod">${esc(reciboDe(p.codigo))}</td>
         </tr>`;
       }).join('')}
       </tbody>
@@ -193,16 +208,19 @@ document.getElementById('k-estado').addEventListener('click', () => {
     `<dl class="dl">
       <dt>Facturado</dt><dd>${soles(CB.facturado)}</dd>
       <dt>Cobrado</dt><dd><b>${soles(CB.cobrado)}</b></dd>
-      <dt>Saldo exigible</dt><dd><b style="color:var(--bien)">${soles(CB.saldoExigible)}</b></dd>
+      <dt>Facturado, por cobrar</dt><dd><b style="color:var(${totalPorCobrar ? '--aviso' : '--bien'})">${soles(totalPorCobrar)}</b>${CB.cobroAnunciado && totalPorCobrar ? ` · abono anunciado para el ${fechaCorta(CB.cobroAnunciado)}` : ''}</dd>
+      <dt>Devengado por facturar</dt><dd>${soles(totalPorFacturar)}</dd>
     </dl>
     <div class="aviso-caja" style="margin-top:16px">${esc(CB.nota)}</div>
-    <div class="cifra-rotulo" style="margin:20px 0 8px">Productos entregados aún no facturados</div>
+    <div class="cifra-rotulo" style="margin:20px 0 8px">Productos entregados aún no cobrados</div>
     <div class="tabla-caja"><div class="tabla-scroll"><table class="datos" style="min-width:460px">
       <thead><tr><th>Producto</th><th>Num.</th><th class="num">Neto</th><th>Situación</th></tr></thead>
       <tbody>${CB.porFacturar.map((x) => `<tr>
         <td class="cod">${esc(x.producto)}<div style="font-size:.75rem;color:var(--tinta-suave);margin-top:3px;font-family:var(--cuerpo)">${esc(x.nota)}</div></td>
         <td>${esc(x.numeral)}</td><td class="num">${soles(x.neto)}</td>
-        <td>${x.estado === 'POR FACTURAR' ? insignia('Por facturar', 'aviso', 'aviso') : insignia('En suspenso', 'neutro', 'neutro')}</td>
+        <td>${x.estado === 'POR FACTURAR' ? insignia('Por facturar', 'aviso', 'aviso')
+          : x.estado === 'FACTURADO' ? insignia(`Por cobrar · ${x.recibo || ''}`, 'info', 'reloj')
+          : insignia('En suspenso', 'neutro', 'neutro')}</td>
       </tr>`).join('')}</tbody>
     </table></div></div>`);
 });
@@ -212,9 +230,9 @@ document.getElementById('k-cobrado').addEventListener('click', () => {
     `<p style="font-size:.88rem;line-height:1.6">${esc(CB.nota)}</p>
      <div class="tabla-caja" style="margin-top:14px"><div class="tabla-scroll"><table class="datos" style="min-width:460px">
        <thead><tr><th>Producto</th><th>Num.</th><th class="num">Neto</th></tr></thead>
-       <tbody>${productos.filter((p) => facturados(p.codigo))
+       <tbody>${productos.filter((p) => cobrados(p.codigo))
          .map((p) => `<tr><td class="cod">${esc(p.codigo)}</td><td>${esc(p.numeral)}</td><td class="num">${soles(p.honorarioNeto)}</td></tr>`).join('')}</tbody>
-       <tfoot><tr><td colspan="2">Total facturado</td><td class="num">${soles(CB.facturado)}</td></tr></tfoot>
+       <tfoot><tr><td colspan="2">Total cobrado</td><td class="num">${soles(CB.cobrado)}</td></tr></tfoot>
      </table></div></div>`);
 });
 
@@ -290,10 +308,7 @@ document.querySelectorAll('[data-recibo]').forEach((el) => {
         <dt>Retención de IR (8%)</dt><dd style="color:var(--tinta-suave)">−${soles(r.retencion)}</dd>
         <dt>Total neto recibido</dt><dd><b style="font-size:1.05rem">${soles(r.neto)}</b></dd>
       </dl>
-      <div class="aviso-caja" style="margin-top:16px">
-        Cubre el informe de compatibilidad (numeral 2.1, S/ 2,500.00) y el pronunciamiento N° 001
-        (numeral 2.3, S/ 500.00). La suma de ambos es exactamente el neto recibido.
-      </div>`);
+      ${r.cubre ? `<div class="aviso-caja" style="margin-top:16px">${esc(r.cubre)}</div>` : ''}`);
   });
 });
 
