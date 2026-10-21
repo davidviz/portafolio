@@ -54,6 +54,7 @@ const MAPA_ESTADO = {
   'COBRADA':              ['bien', 'bien'],
   'COBRADA PARCIALMENTE': ['aviso', 'aviso'],
   'EN PROCESO':           ['info', 'reloj'],
+  'POR ENTREGAR':         ['info', 'reloj'],
   'PENDIENTE':            ['serio', 'serio'],
   'OBSERVADA':            ['critico', 'critico'],
   'VENCIDA':              ['critico', 'critico'],
