@@ -858,7 +858,7 @@
       "numeral": "2.3",
       "membrete": false,
       "respondidaPor": "INF-SUP-FT-EQ-DLVM-007-261021",
-      "detalle": "Informe N° 013 del 21/10/2026, del Ing. Juan Carlos Augusto Mendiola Florez (CIP 201412), suscrito también por el Residente de Obra Ing. Luis Enrique Santisteban Romero (CIP 81329). 15 folios. Recibido el 21/10/2026 a las 17:00 h. Versión 2 de la ficha del D-188: marca el C01 y ofrece el adaptador ADPT31 de Health o meter, con declaración jurada de MEDI MATIC S.A.C. No presenta códigos nuevos. El cuerpo de la carta menciona por error el D-219 y el Informe N° 012.",
+      "detalle": "Informe N° 013 del 21/10/2026, del Ing. Juan Carlos Augusto Mendiola Florez (CIP 201412), suscrito también por el Residente de Obra Ing. Luis Enrique Santisteban Romero (CIP 81329). 15 folios. Recibido el 21/10/2026 a las 17:00 h. Versión 2 de la ficha del D-188, aprobada: marca el C01 y ofrece el adaptador ADPT31 de Health o meter, con declaración jurada de MEDI MATIC S.A.C. No presenta códigos nuevos. El cuerpo de la carta menciona por error el D-219 y el Informe N° 012.",
       "archivo": "CARTA N 123-2026 ICM - Informe 013 - Levantamiento de observacion D-188.pdf",
       "ruta": "3.Sustentos\\",
       "url": null,
@@ -882,7 +882,7 @@
       "numeral": "2.3",
       "membrete": true,
       "responde": "CARTA N° 123-2026 / INFORME N° 013-2026/JCAMF-EQH",
-      "detalle": "La ficha del D-188, Health o meter 500KL, se mantiene OBSERVADA en el C01, con 8 de 9 requerimientos (89 %). El adaptador ofrecido, ADPT31, lleva en su fotografía oficial una etiqueta de entrada de 120 V, 60 Hz, que no coincide con los tres modelos de 100-240 VAC del manual. Se cierra con carta de Pelstar LLC o declaración jurada del proveedor por uno de los tres modelos del manual. Emitido y pendiente de entrega a la Jefatura, con los demás informes de octubre.",
+      "detalle": "Se APRUEBA la ficha del D-188, Health o meter 500KL, en su versión 2: 9 de 9 requerimientos (100 %). Queda levantado el C01: adaptador ADPT31 identificado, 100-240 VAC según el manual y 220-230 VAC según la declaración jurada del proveedor. Autoriza la procura del código. Emitido y pendiente de entrega a la Jefatura, con los demás informes de octubre.",
       "archivo": "INF-SUP-FT-EQ-DLVM-007-261021_INFORME_FIRMADO.pdf",
       "ruta": "2.Informes Mensuales\\3.Informe de repsuestas\\FT-007-261021\\",
       "url": null,
@@ -2220,7 +2220,7 @@
           "equipo": "D-188 — Balanza digital con tallímetro pediátrico",
           "materia": "Ítem C01 por aclarar: no se identifica cuál de los tres adaptadores aprobados por el fabricante se suministra. La fila quedó sin marcar.",
           "nivel": "SUSTANCIAL",
-          "estado": "Subsanada en parte con el INF-SUP-FT-EQ-DLVM-007-261021: fila marcada y adaptador identificado; el C01 sigue en ese informe",
+          "estado": "Subsanada con el INF-SUP-FT-EQ-DLVM-007-261021: C01 levantado y ficha aprobada",
           "ubicacion": "ANEXO N° 1 del bloque D-188 del Informe N° 005",
           "extremos": 1,
           "codigos": [
@@ -3213,24 +3213,24 @@
       "informe": "INF-SUP-FT-EQ-DLVM-007-261021",
       "documentoAbsuelto": "INFORME N° 013-2026/JCAMF-EQH (21/10/2026) — CARTA N° 123-2026, 15 folios",
       "materia": "Levantamiento de la observación del ítem C01 de la ficha técnica del D-188",
-      "observaciones": 1,
-      "extremos": 1,
-      "confirmadas": 1,
+      "observaciones": 0,
+      "extremos": 0,
+      "confirmadas": 0,
       "trasladadas": 0,
       "yaAbsueltas": 0,
       "codigoEvaluado": "D-188",
       "tipo": "FICHA",
-      "resultado": "Ficha del D-188 OBSERVADA en la versión 2: 8 de 9 requerimientos (89 %). Solo la ficha APROBADA autoriza la procura.",
-      "naturaleza": "Primer levantamiento de una ficha de la serie FT. El Contratista atendió la forma (marcó el C01 e identificó el adaptador), pero el adaptador ADPT31 que ofrece es, según la etiqueta que publica el propio fabricante, de 120 V. El manual aprueba otros tres modelos de 100-240 VAC: el camino de cierre es que el fabricante fije cuál corresponde hoy al ADPT31 o que el proveedor se obligue a uno de esos tres.",
+      "resultado": "Ficha del D-188 APROBADA en la versión 2: 9 de 9 requerimientos (100 %). Autoriza la procura.",
+      "naturaleza": "Levantamiento de una ficha del FT-001. El Contratista marcó el C01 e identificó el adaptador ADPT31 de Health o meter; el manual declara 100-240 VAC y el proveedor se obliga a entregarlo compatible con 220-230 VAC. La fotografía del adaptador es referencial.",
       "detalle": [
         {
-          "obs": "D-188",
+          "obs": "OK",
           "equipo": "D-188 — Balanza digital con tallímetro pediátrico",
-          "materia": "OBSERVADA en la versión 2. 8 de 9 (89 %). El C01 ya está marcado y el adaptador se identifica como ADPT31, pero la etiqueta de su fotografía oficial declara entrada de 120 V, 60 Hz, y no coincide con ninguno de los tres modelos de 100-240 VAC que aprueba el manual (folio 004). La alimentación a pilas está acreditada.",
+          "materia": "Ficha aprobada en la versión 2. C01 levantado: adaptador ADPT31 identificado y tensión declarada.",
           "nivel": "LEVE",
-          "estado": "Por absolver",
-          "ubicacion": "Bloque D-188 del Informe N° 013, folios 008, 004 y 002",
-          "extremos": 1,
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque D-188 del Informe N° 013",
+          "extremos": null,
           "codigos": [
             "D-188"
           ],
@@ -3258,7 +3258,7 @@
       {
         "requisito": "Aprobación de las EETT por la Entidad",
         "estado": "PENDIENTE",
-        "nota": "46 asuntos siguen pendientes de pronunciamiento del Proyectista. De las fichas técnicas, 49 de 179 cuentan con aprobación de la Supervisión, que no sustituye la aprobación de las EETT por la Entidad."
+        "nota": "46 asuntos siguen pendientes de pronunciamiento del Proyectista. De las fichas técnicas, 50 de 179 cuentan con aprobación de la Supervisión, que no sustituye la aprobación de las EETT por la Entidad."
       },
       {
         "requisito": "Planos de preinstalación emitidos por el Contratista",
@@ -4543,18 +4543,18 @@
       "pu": 3030.88,
       "parcial": 3030.88,
       "fila": 47,
-      "ficha": "OBSERVADA",
-      "obs": "OBSERVADA en la versión 2. 8 de 9 (89 %). El C01 ya está marcado y el adaptador se identifica como ADPT31, pero la etiqueta de su fotografía oficial declara entrada de 120 V, 60 Hz, y no coincide con ninguno de los tres modelos de 100-240 VAC que aprueba el manual (folio 004). La alimentación a pilas está acreditada.",
+      "ficha": "APROBADA",
+      "obs": "APROBADA en la versión 2. Cumple los 9 requerimientos (100 %). El C01 queda levantado: el adaptador se identifica como ADPT31 de Health o meter (folios 006 y 002), el manual declara 100-240 VAC (folio 004) y la declaración jurada obliga a entregarlo compatible con 220-230 VAC, 60 Hz (folio 001). La fotografía del adaptador es referencial. Al adaptador no se le exige toma a tierra.",
       "version": 2,
       "versiones": 2,
       "marca": "HEALTH O METER 500KL",
       "fabricante": "Health o meter Professional (USA)",
-      "verificacionWeb": "homscales.com/adpt31 (21/10/2026): la fotografía oficial del ADPT31 lleva etiqueta MODEL RHD090020, INPUT AC 120 V 60 Hz 8 W, OUTPUT DC 9 V 200 mA. Los distribuidores en EE. UU. (duraprohealth.com, tigermedical.com) lo venden como adaptador de 120 V. El manual del 500KL aprueba otros tres modelos de 100-240 VAC.",
+      "verificacionWeb": "AUTENTICO",
       "cartaContratista": "CARTA N° 123-2026 / INFORME N° 013-2026/JCAMF-EQH",
       "informeSupervision": "INF-SUP-FT-EQ-DLVM-007-261021",
-      "queFalta": "Carta de Pelstar LLC con el modelo que hoy corresponde al ADPT31 y su entrada de 220-230 VAC, 60 Hz; o declaración jurada del proveedor que se obligue a entregar uno de los tres modelos del manual (folio 004), identificado por su número. En ambos casos, fotografía legible de la etiqueta.",
+      "queFalta": null,
       "itemsEvaluados": 9,
-      "itemsPendientes": "C01",
+      "itemsPendientes": null,
       "fechaEntrega": "2026-10-21",
       "historial": [
         {
@@ -4569,7 +4569,7 @@
           "fecha": "2026-10-21",
           "carta": "CARTA N° 123-2026 / INFORME N° 013-2026/JCAMF-EQH",
           "informe": "INF-SUP-FT-EQ-DLVM-007-261021",
-          "resultado": "OBSERVADA"
+          "resultado": "APROBADA"
         }
       ]
     },
@@ -7096,11 +7096,11 @@
       "descripcion": "Aprobación de la ficha técnica de cada código de equipo del expediente.",
       "metrica": {
         "etiqueta": "Fichas técnicas aprobadas",
-        "hecho": 49,
+        "hecho": 50,
         "total": 179,
         "unidad": "códigos"
       },
-      "nota": "79 de 179 códigos presentados: 49 aprobados, 2 aprobados parcialmente, 21 observados y 7 que no cumplen. Vencidas la S4 (9 de 17), la S5 (4 de 17) y la S6 (0 de 17). Quedan 100 por presentar hasta la S10 (13/11/2026).",
+      "nota": "79 de 179 códigos presentados: 50 aprobados, 2 aprobados parcialmente, 20 observados y 7 que no cumplen. Vencidas la S4 (9 de 17), la S5 (4 de 17) y la S6 (0 de 17). Quedan 100 por presentar hasta la S10 (13/11/2026).",
       "responsable": "Contratista ICM S.A."
     },
     {
