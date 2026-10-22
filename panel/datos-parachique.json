@@ -948,6 +948,58 @@
         "Equipos complementarios"
       ],
       "honorarioNeto": 500
+    },
+    {
+      "id": "CT-IN-015",
+      "flujo": "RECIBIDA",
+      "clase": "INFORME DEL CONTRATISTA",
+      "etapa": "E3",
+      "codigo": "CARTA N° 126-2026 / INFORME N° 015-2026/JCAMF-EQH",
+      "fecha": "2026-10-22",
+      "contraparte": "INGENIERÍA CIVIL MONTAJES S.A. (ICM) — Contratista de obra",
+      "asunto": "Levantamiento de las observaciones de la ficha técnica del D-158, Termómetro / higrómetro digital, con cambio de equipo.",
+      "estado": "ATENDIDA",
+      "numeral": "2.3",
+      "membrete": false,
+      "respondidaPor": "INF-SUP-FT-EQ-DLVM-009-261022",
+      "detalle": "Informe N° 015 del 22/10/2026, del Ing. Juan Carlos Augusto Mendiola Florez (CIP 201412), suscrito también por el Residente de Obra Ing. Luis Enrique Santisteban Romero (CIP 81329). 11 folios. Recibido el 22/10/2026 a las 14:35 h. Versión 2 de la ficha del D-158: reemplaza el LDTH-98 sin marca por el EXTECH RH390, con hoja de producto, manual del usuario y declaración jurada de MEDI MATIC S.A.C. por el cargador y la batería recargable. No presenta códigos nuevos.",
+      "archivo": "CARTA N 126-2026 ICM - Informe 015 - Levantamiento de observacion D-158.pdf",
+      "ruta": "3.Sustentos\\",
+      "url": null,
+      "drive": {
+        "sustento": "1K1r9XlXYBIjpmBEe5aOa3Pw_VpHV1lch"
+      },
+      "areas": [
+        "Equipos complementarios"
+      ]
+    },
+    {
+      "id": "PR-018",
+      "flujo": "EMITIDA",
+      "clase": "INFORME",
+      "etapa": "E3",
+      "codigo": "INF-SUP-FT-EQ-DLVM-009-261022",
+      "fecha": "2026-10-22",
+      "contraparte": "Jefatura de Supervisión de Obra — Ing. Manuel Ricardo Torres Peche",
+      "asunto": "Informe de Validación de Fichas Técnicas N° 009 — versión 2 del D-158, termohigrómetro EXTECH RH390.",
+      "estado": "POR ENTREGAR",
+      "numeral": "2.3",
+      "membrete": true,
+      "responde": "CARTA N° 126-2026 / INFORME N° 015-2026/JCAMF-EQH",
+      "detalle": "Se APRUEBA la ficha del D-158, termohigrómetro EXTECH RH390, en su versión 2: 6 de 6 requerimientos (100 %). Queda levantada la no aprobación del FT-001: el RH390 alcanza 0,1 % HR de resolución y ±2 % HR de exactitud en todo el rango de uso, con marca y fabricante identificados. Constancias del cargador con batería recargable y del mantenimiento. Autoriza la procura. Emitido y pendiente de entrega a la Jefatura, con los demás informes de octubre.",
+      "archivo": "INF-SUP-FT-EQ-DLVM-009-261022_INFORME_FIRMADO.pdf",
+      "ruta": "2.Informes Mensuales\\3.Informe de repsuestas\\FT-009-261022\\",
+      "url": null,
+      "drive": {
+        "informe": "1rKTkwaucaYtuFJmi3urcFUNjX7tXcU_t",
+        "pdf": "1udPjjDsOxda5DKmvamZA3hfVlp7mTaOE",
+        "firmado": "1fqq_Z6hjk_Ueapsd9dzQsk4zBdeeGJeW",
+        "sustento": "1x4j0p7grIrc1Y6BvJ9IMfZ8mdcy84L6Y"
+      },
+      "areas": [
+        "Equipos complementarios"
+      ],
+      "honorarioNeto": 500
     }
   ],
   "expediente": {
@@ -2300,7 +2352,7 @@
           "equipo": "D-158 — Termometro/higrómetro digital",
           "materia": "Ítems A03 y A04 NO CUMPLEN: resolución de 1 % HR frente al 0,1 % exigido y exactitud de 3 % HR frente al 2,5 %. No se resuelve con un documento.",
           "nivel": "CRITICA",
-          "estado": "Por absolver",
+          "estado": "Subsanada con el INF-SUP-FT-EQ-DLVM-009-261022: cambio de equipo al EXTECH RH390 y ficha aprobada",
           "ubicacion": "ANEXO N° 1 del bloque D-158 del Informe N° 005",
           "extremos": 2,
           "codigos": [
@@ -3320,6 +3372,36 @@
           "fuente": "Validación de fichas técnicas"
         }
       ]
+    },
+    {
+      "informe": "INF-SUP-FT-EQ-DLVM-009-261022",
+      "documentoAbsuelto": "INFORME N° 015-2026/JCAMF-EQH (22/10/2026) — CARTA N° 126-2026, 11 folios",
+      "materia": "Versión 2 de la ficha técnica del D-158, con cambio de equipo al EXTECH RH390",
+      "observaciones": 0,
+      "extremos": 0,
+      "confirmadas": 0,
+      "trasladadas": 0,
+      "yaAbsueltas": 0,
+      "codigoEvaluado": "D-158",
+      "tipo": "FICHA",
+      "resultado": "Ficha del D-158 APROBADA en la versión 2: 6 de 6 requerimientos (100 %). Autoriza la procura.",
+      "naturaleza": "El FT-001 no aprobó el LDTH-98 porque su propio fabricante declaraba menos resolución y menos exactitud de humedad que las exigidas. El Contratista tomó la vía que se le dio: cambiar de equipo. El RH390 se evaluó de nuevo en sus seis requerimientos y la exactitud se verificó en el manual del fabricante, que la declara en una banda que cubre todo el rango de uso del expediente.",
+      "detalle": [
+        {
+          "obs": "OK",
+          "equipo": "D-158 — Termometro/higrómetro digital",
+          "materia": "Ficha aprobada en la versión 2 con el EXTECH RH390. A03 y A04 levantados; marca y fabricante identificados. Constancias: cargador y batería recargable por declaración jurada; sin mantenimiento preventivo.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "Bloque D-158 del Informe N° 015, folios 005, 004, 002 y 001",
+          "extremos": null,
+          "codigos": [
+            "D-158"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-009-261022",
+          "fuente": "Validación de fichas técnicas"
+        }
+      ]
     }
   ],
   "valorizacion": {
@@ -3340,7 +3422,7 @@
       {
         "requisito": "Aprobación de las EETT por la Entidad",
         "estado": "PENDIENTE",
-        "nota": "46 asuntos siguen pendientes de pronunciamiento del Proyectista. De las fichas técnicas, 52 de 179 cuentan con aprobación de la Supervisión, que no sustituye la aprobación de las EETT por la Entidad."
+        "nota": "46 asuntos siguen pendientes de pronunciamiento del Proyectista. De las fichas técnicas, 53 de 179 cuentan con aprobación de la Supervisión, que no sustituye la aprobación de las EETT por la Entidad."
       },
       {
         "requisito": "Planos de preinstalación emitidos por el Contratista",
@@ -3428,15 +3510,8 @@
       "nivel": "SUSTANCIAL",
       "reservada": false,
       "titulo": "Plazo de participación vencido el 12/09/2026",
-      "detalle": "La propuesta fija 60 días calendario desde el inicio de servicio del 14/07/2026, de modo que el plazo venció el 12/09/2026. Con posterioridad se emitieron once pronunciamientos: el RC-004, el AP-001, el FT-001, el FT-002, el RC-005, el FT-003, el FT-004, el FT-005, el FT-006, el FT-007 y el FT-008.",
+      "detalle": "La propuesta fija 60 días calendario desde el inicio de servicio del 14/07/2026, de modo que el plazo venció el 12/09/2026. Con posterioridad se emitieron doce pronunciamientos: el RC-004, el AP-001, el FT-001, el FT-002, el RC-005, el FT-003, el FT-004, el FT-005, el FT-006, el FT-007, el FT-008 y el FT-009.",
       "accion": "Formalizar con el CONSORCIO PARACHIQUE la ampliación del plazo de participación, para que los pronunciamientos posteriores al 12/09 queden amparados."
-    },
-    {
-      "nivel": "SUSTANCIAL",
-      "reservada": false,
-      "titulo": "El ítem D-158 no cumple y no se resuelve con un documento",
-      "detalle": "La ficha del termohigrómetro LDTH-98 declara, en el folio 005 del propio fabricante, resolución de humedad de 1 % HR frente al 0,1 % HR exigido y exactitud de 3 % HR frente al 2,5 % HR, y esta última solo dentro de la banda de 30 a 75 % HR. Es un problema de prestación y no de acreditación. La ficha además consigna la marca como S/M, sin fabricante identificado.",
-      "accion": "Requerir al Contratista que presente un equipo que alcance los valores exigidos, con marca y fabricante identificados, o que solicite formalmente a la Entidad la variación de esos dos valores."
     },
     {
       "nivel": "SUSTANCIAL",
@@ -3456,7 +3531,7 @@
       "nivel": "LEVE",
       "reservada": false,
       "titulo": "Cinco incoherencias entre el Cuadro N° 01 y los Anexos N° 1",
-      "detalle": "En el Informe N° 005 el Cuadro N° 01 del folio 218 nombra un producto distinto del que declara el Anexo N° 1 en los códigos D-123, D-125 y D-193, y queda incompleto en el D-158, sin marca, y en el D-201, sin la variante N32-D. No afectan el cumplimiento técnico, pero el acto de aprobación tiene que nombrar un solo producto por código.",
+      "detalle": "En el Informe N° 005 el Cuadro N° 01 del folio 218 nombra un producto distinto del que declara el Anexo N° 1 en los códigos D-123, D-125 y D-193, y queda incompleto en el D-158, sin marca, y en el D-201, sin la variante N32-D. No afectan el cumplimiento técnico, pero el acto de aprobación tiene que nombrar un solo producto por código. La del D-158 quedó levantada con el FT-009: la versión 2 declara marca EXTECH y modelo RH390.",
       "accion": "Requerir la corrección del Cuadro N° 01 antes de que sirva de base a acto de aprobación alguno."
     },
     {
@@ -4590,19 +4665,19 @@
       "pu": 240.64,
       "parcial": 240.64,
       "fila": 45,
-      "ficha": "NO CUMPLE",
-      "obs": "Cumple 4 de 6 requerimientos (67 %). Los ítems A03 y A04 NO CUMPLEN y lo dice el propio folio 005 del fabricante: resolución de humedad de 1 % HR frente al 0,1 % HR exigido, y exactitud de 3 % HR frente al 2,5 % HR, y solo dentro de la banda de 30 a 75 % HR. Es un problema de prestación y no de acreditación. La ficha además consigna la marca como S/M.",
-      "version": 1,
-      "versiones": 1,
-      "marca": "Sin marca declarada — modelo LDTH-98",
-      "fabricante": null,
-      "verificacionWeb": null,
-      "cartaContratista": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
-      "informeSupervision": "INF-SUP-FT-EQ-DLVM-001-260917",
-      "queFalta": "Presentar un termohigrómetro que alcance 0,1 % HR de resolución y 2,5 % HR de exactitud, con marca y fabricante identificados; o solicitar a la Entidad la variación de esos dos valores.",
+      "ficha": "APROBADA",
+      "obs": "APROBADA en la versión 2, con cambio de equipo al EXTECH RH390. Cumple los 6 requerimientos (100 %). Resolución de 0,1 % HR y 0,1 °C (A03) y exactitud de ±2 % HR y ±1 °C (A04), folio 004; el manual del fabricante da esa exactitud entre 20 y 90 % HR y entre -20 y 70 °C, que cubre todo el rango del A02. Constancias: el cargador y la batería recargable de 9 V los entrega el proveedor por declaración jurada (folio 001); no se exige mantenimiento preventivo, el manual solo prevé limpieza y cambio de batería.",
+      "version": 2,
+      "versiones": 2,
+      "marca": "EXTECH — modelo RH390",
+      "fabricante": "Extech Instruments, a FLIR company (EE.UU.)",
+      "verificacionWeb": "AUTENTICO",
+      "cartaContratista": "CARTA N° 126-2026 / INFORME N° 015-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-009-261022",
+      "queFalta": null,
       "itemsEvaluados": 6,
-      "itemsPendientes": "A03, A04",
-      "fechaEntrega": "2026-09-16",
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-22",
       "historial": [
         {
           "version": 1,
@@ -4610,6 +4685,13 @@
           "carta": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
           "informe": "INF-SUP-FT-EQ-DLVM-001-260917",
           "resultado": "NO CUMPLE"
+        },
+        {
+          "version": 2,
+          "fecha": "2026-10-22",
+          "carta": "CARTA N° 126-2026 / INFORME N° 015-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-009-261022",
+          "resultado": "APROBADA"
         }
       ]
     },
@@ -7170,11 +7252,11 @@
       "descripcion": "Pronunciamiento sobre cada informe o carta del Contratista que lo requiera.",
       "metrica": {
         "etiqueta": "Cartas contestadas",
-        "hecho": 13,
-        "total": 13,
+        "hecho": 14,
+        "total": 14,
         "unidad": "cartas"
       },
-      "nota": "Los 13 informes recibidos del Contratista tienen pronunciamiento emitido; el último, el INF-SUP-FT-EQ-DLVM-008-261022, sobre el levantamiento del D-156. Los de octubre (FT-003 a FT-008) están emitidos y pendientes de entrega a la Jefatura.",
+      "nota": "Los 14 informes recibidos del Contratista tienen pronunciamiento emitido; el último, el INF-SUP-FT-EQ-DLVM-009-261022, sobre la versión 2 del D-158. Los de octubre (FT-003 a FT-009) están emitidos y pendientes de entrega a la Jefatura.",
       "responsable": "Supervisión de Equipamiento"
     },
     {
@@ -7185,11 +7267,11 @@
       "descripcion": "Aprobación de la ficha técnica de cada código de equipo del expediente.",
       "metrica": {
         "etiqueta": "Fichas técnicas aprobadas",
-        "hecho": 52,
+        "hecho": 53,
         "total": 179,
         "unidad": "códigos"
       },
-      "nota": "79 de 179 códigos presentados: 52 aprobados, 1 aprobados parcialmente, 19 observados y 7 que no cumplen. Vencidas la S4 (9 de 17), la S5 (4 de 17) y la S6 (0 de 17). Quedan 100 por presentar hasta la S10 (13/11/2026).",
+      "nota": "79 de 179 códigos presentados: 53 aprobados, 1 aprobados parcialmente, 19 observados y 6 que no cumplen. Vencidas la S4 (9 de 17), la S5 (4 de 17) y la S6 (0 de 17). Quedan 100 por presentar hasta la S10 (13/11/2026).",
       "responsable": "Contratista ICM S.A."
     },
     {
