@@ -1,7 +1,7 @@
 {
   "_lea_esto": "Respaldo y datos de fondo del panel CS PARACHIQUE. El estado de las fichas técnicas ya NO se gobierna aquí: manda la hoja «2 SEGUIMIENTO» del Drive, y las observaciones a fichas, la hoja «3 OBSERVACIONES». Lo que se edite aquí para un código que la hoja mencione, la hoja lo sobrescribe. Todo lo demás —etapas, documentos, expediente, presupuesto, valorización— sí se edita aquí. No edite los dashboard.html a mano: se regeneran y se pierde el cambio.",
   "meta": {
-    "actualizado": "2026-10-21",
+    "actualizado": "2026-10-22",
     "proyecto": "Mejoramiento de los Servicios de Salud del Establecimiento de Salud Parachique",
     "cui": "2571750",
     "ubicacion": "Distrito y provincia de Sechura — Piura",
@@ -830,7 +830,7 @@
       "numeral": "2.3",
       "membrete": true,
       "responde": "CARTA N° 121-2026 / INFORME N° 012-2026/JCAMF-EQH",
-      "detalle": "Levanta el A11 y el A14 del D-219 PLUSONIC UC28 con la carta de TBT Medical del 12/10/2026 y mantiene OBSERVADO el A15: TBT declara el control de temperatura desde ambiente en el catálogo y de 25 a 90 °C en el manual, y la fotografía del Contratista no fija cuál rige. La ficha queda OBSERVADA con 19 de 20 (95 %), y no autoriza la procura. Emitido y pendiente de entrega a la Jefatura, con los demás informes de octubre.",
+      "detalle": "Se APRUEBA la ficha del D-219, PLUSONIC UC28 de TBT Medical, en su versión 2: 20 de 20 requerimientos (100 %). El A11 y el A14 se levantan con la carta de TBT Medical del 12/10/2026; el A15, con el control de temperatura desde ambiente del catálogo y de la hoja de producto vigente de TBT, y la fotografía del panel en 20 °C, con constancia de que no rige el límite de 25 °C del manual. Autoriza la procura. Versión definitiva del 22/10/2026, con el A15 aprobado por el suscrito. Emitido y pendiente de entrega a la Jefatura, con los demás informes de octubre.",
       "archivo": "INF-SUP-FT-EQ-DLVM-006-261021_INFORME_FIRMADO.pdf",
       "ruta": "2.Informes Mensuales\\3.Informe de repsuestas\\FT-006-261021\\",
       "url": null,
@@ -2192,7 +2192,7 @@
           "equipo": "D-219 — Lavador ultrasónico de instrumental quirúrgico",
           "materia": "Ítems A11, A14 y A15 por aclarar: la potencia ultrasónica, el grado IP 33 y el rango real de temperatura no están declarados por el fabricante.",
           "nivel": "SUSTANCIAL",
-          "estado": "Subsanada en parte con el INF-SUP-FT-EQ-DLVM-006-261021: A11 y A14 levantados; el A15 sigue en ese informe",
+          "estado": "Subsanada con el INF-SUP-FT-EQ-DLVM-006-261021: A11, A14 y A15 levantados y ficha aprobada",
           "ubicacion": "ANEXO N° 1 del bloque D-219 del Informe N° 005",
           "extremos": 3,
           "codigos": [
@@ -3183,24 +3183,24 @@
       "informe": "INF-SUP-FT-EQ-DLVM-006-261021",
       "documentoAbsuelto": "INFORME N° 012-2026/JCAMF-EQH (20/10/2026) — CARTA N° 121-2026, 20 folios",
       "materia": "Levantamiento de las observaciones de la ficha técnica del D-219",
-      "observaciones": 1,
-      "extremos": 1,
-      "confirmadas": 1,
+      "observaciones": 0,
+      "extremos": 0,
+      "confirmadas": 0,
       "trasladadas": 0,
-      "yaAbsueltas": 2,
+      "yaAbsueltas": 0,
       "codigoEvaluado": "D-219",
       "tipo": "FICHA",
-      "resultado": "Ficha OBSERVADA en su versión 2: 19 de 20 requerimientos (95 %). Se levantan el A11 y el A14; sigue el A15. Solo la ficha APROBADA autoriza la procura.",
-      "naturaleza": "Primer levantamiento de una ficha del FT-001. La carta de TBT Medical del 12/10/2026 declara la potencia de alta frecuencia y el grado IP que faltaban. El A15 se respondió con una fotografía del panel y una explicación del Contratista, que no cierran una discrepancia entre dos documentos del fabricante: lo que el fabricante declara de dos maneras, solo el fabricante lo cierra.",
+      "resultado": "Ficha del D-219 APROBADA en la versión 2: 20 de 20 requerimientos (100 %). Autoriza la procura.",
+      "naturaleza": "Primer levantamiento de una ficha del FT-001. La carta de TBT Medical del 12/10/2026 declara la potencia de alta frecuencia y el grado IP que faltaban. En el A15, TBT declara el control de temperatura desde ambiente en el catálogo y desde 25 °C en el manual de 2023; se acepta el catálogo, que confirma la hoja de producto vigente de TBT, con la fotografía del panel en 20 °C. El tramo de 20 a 25 °C no tiene uso en el lavado ultrasónico de instrumental.",
       "detalle": [
         {
-          "obs": "D-219",
+          "obs": "OK",
           "equipo": "D-219 — Lavador ultrasónico de instrumental quirúrgico",
-          "materia": "Ítem A15 observado: TBT declara el control de temperatura desde ambiente en el catálogo (folio 006) y de 25 a 90 °C en el manual (folio 010); la fotografía del Contratista no fija cuál rige. A11 y A14 levantados.",
+          "materia": "Ficha aprobada en la versión 2. A11 y A14 levantados con la carta de TBT; A15 aceptado con el catálogo y la hoja de producto vigente, sin que rija el límite de 25 °C del manual.",
           "nivel": "LEVE",
-          "estado": "Por absolver",
-          "ubicacion": "Bloque D-219 del Informe N° 012, folios 006, 010 y 002",
-          "extremos": 1,
+          "estado": "Conforme",
+          "ubicacion": "Bloque D-219 del Informe N° 012, folios 003, 006 y 002",
+          "extremos": null,
           "codigos": [
             "D-219"
           ],
@@ -3258,7 +3258,7 @@
       {
         "requisito": "Aprobación de las EETT por la Entidad",
         "estado": "PENDIENTE",
-        "nota": "46 asuntos siguen pendientes de pronunciamiento del Proyectista. De las fichas técnicas, 50 de 179 cuentan con aprobación de la Supervisión, que no sustituye la aprobación de las EETT por la Entidad."
+        "nota": "46 asuntos siguen pendientes de pronunciamiento del Proyectista. De las fichas técnicas, 51 de 179 cuentan con aprobación de la Supervisión, que no sustituye la aprobación de las EETT por la Entidad."
       },
       {
         "requisito": "Planos de preinstalación emitidos por el Contratista",
@@ -3735,8 +3735,8 @@
       "pu": 52310.84,
       "parcial": 52310.84,
       "fila": 15,
-      "ficha": "OBSERVADA",
-      "obs": "OBSERVADA. 19 de 20 (95 %). Versión 2. El A11 y el A14 se levantan con la carta de TBT Medical del 12/10/2026 (300 W de alta frecuencia; IP33 conforme a la IEC 60529). Sigue el A15: TBT declara el control de temperatura desde ambiente en el catálogo (folio 006) y de 25 a 90 °C en el manual (folio 010), y la fotografía del Contratista (folio 002) no fija cuál rige.",
+      "ficha": "APROBADA",
+      "obs": "APROBADA en la versión 2. Cumple los 20 requerimientos (100 %). El A11 y el A14 se levantan con la carta de TBT Medical del 12/10/2026 (300 W de alta frecuencia; IP33 conforme a la IEC 60529). El A15 se acepta con el control desde ambiente hasta 90 °C del catálogo (folio 006) y de la hoja de producto vigente de TBT, y la fotografía del panel en 20 °C (folio 002). Constancia: no rige el límite de 25 °C del manual (folio 010); en la recepción se verifica la consigna de 20 °C.",
       "version": 2,
       "versiones": 2,
       "marca": "PLUSONIC (TBT) UC28",
@@ -3744,9 +3744,9 @@
       "verificacionWeb": "AUTENTICO. tbtmedical.com/images/urun_images/dosya_1_169.pdf (21/10/2026): hoja de producto PLUSONIC TBTÜB.03 rev. EN 00003-2026, control de temperatura desde ambiente hasta 90 °C.",
       "cartaContratista": "CARTA N° 121-2026 / INFORME N° 012-2026/JCAMF-EQH",
       "informeSupervision": "INF-SUP-FT-EQ-DLVM-006-261021",
-      "queFalta": "Carta de TBT Medical que fije el rango de ajuste de la temperatura del PLUSONIC UC28, Ref. 111004, y precise cuál de sus dos declaraciones rige: desde ambiente (folio 006) o desde 25 °C (folio 010).",
+      "queFalta": null,
       "itemsEvaluados": 20,
-      "itemsPendientes": "A15",
+      "itemsPendientes": null,
       "fechaEntrega": "2026-10-20",
       "historial": [
         {
@@ -3761,7 +3761,7 @@
           "fecha": "2026-10-20",
           "carta": "CARTA N° 121-2026 / INFORME N° 012-2026/JCAMF-EQH",
           "informe": "INF-SUP-FT-EQ-DLVM-006-261021",
-          "resultado": "OBSERVADA"
+          "resultado": "APROBADA"
         }
       ]
     },
@@ -7096,11 +7096,11 @@
       "descripcion": "Aprobación de la ficha técnica de cada código de equipo del expediente.",
       "metrica": {
         "etiqueta": "Fichas técnicas aprobadas",
-        "hecho": 50,
+        "hecho": 51,
         "total": 179,
         "unidad": "códigos"
       },
-      "nota": "79 de 179 códigos presentados: 50 aprobados, 2 aprobados parcialmente, 20 observados y 7 que no cumplen. Vencidas la S4 (9 de 17), la S5 (4 de 17) y la S6 (0 de 17). Quedan 100 por presentar hasta la S10 (13/11/2026).",
+      "nota": "79 de 179 códigos presentados: 51 aprobados, 2 aprobados parcialmente, 19 observados y 7 que no cumplen. Vencidas la S4 (9 de 17), la S5 (4 de 17) y la S6 (0 de 17). Quedan 100 por presentar hasta la S10 (13/11/2026).",
       "responsable": "Contratista ICM S.A."
     },
     {
