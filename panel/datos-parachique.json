@@ -896,6 +896,58 @@
         "Equipos complementarios"
       ],
       "honorarioNeto": 500
+    },
+    {
+      "id": "CT-IN-014",
+      "flujo": "RECIBIDA",
+      "clase": "INFORME DEL CONTRATISTA",
+      "etapa": "E3",
+      "codigo": "CARTA N° 124-2026 / INFORME N° 014-2026/JCAMF-EQH",
+      "fecha": "2026-10-22",
+      "contraparte": "INGENIERÍA CIVIL MONTAJES S.A. (ICM) — Contratista de obra",
+      "asunto": "Levantamiento de las observaciones de los ítems A06 y A07 de la ficha técnica del D-156, Reloj cronómetro para laboratorio.",
+      "estado": "ATENDIDA",
+      "numeral": "2.3",
+      "membrete": false,
+      "respondidaPor": "INF-SUP-FT-EQ-DLVM-008-261022",
+      "detalle": "Informe N° 014 del 22/10/2026, del Ing. Juan Carlos Augusto Mendiola Florez (CIP 201412), suscrito también por el Residente de Obra Ing. Luis Enrique Santisteban Romero (CIP 81329). 13 folios. Recibido el 22/10/2026 a las 14:30 h. Versión 2 de la ficha del D-156, Traceable 5015TR: no trae carta del fabricante; sustenta la equivalencia del A06 y el A07 con un cuadro comparativo de cinco modelos de cuatro marcas. No presenta códigos nuevos.",
+      "archivo": "CARTA N 124-2026 ICM - Informe 014 - Levantamiento de observacion D-156.pdf",
+      "ruta": "3.Sustentos\\",
+      "url": null,
+      "drive": {
+        "sustento": "13oUkrb3bYsK3BFJLv4sUhy-_j9iaHuUy"
+      },
+      "areas": [
+        "Equipos complementarios"
+      ]
+    },
+    {
+      "id": "PR-017",
+      "flujo": "EMITIDA",
+      "clase": "INFORME",
+      "etapa": "E3",
+      "codigo": "INF-SUP-FT-EQ-DLVM-008-261022",
+      "fecha": "2026-10-22",
+      "contraparte": "Jefatura de Supervisión de Obra — Ing. Manuel Ricardo Torres Peche",
+      "asunto": "Informe de Validación de Fichas Técnicas N° 008 — levantamiento del A06 y el A07 del D-156.",
+      "estado": "POR ENTREGAR",
+      "numeral": "2.3",
+      "membrete": true,
+      "responde": "CARTA N° 124-2026 / INFORME N° 014-2026/JCAMF-EQH",
+      "detalle": "Se APRUEBA la ficha del D-156, reloj cronómetro Traceable 5015TR, en su versión 2: 7 de 7 requerimientos (100 %). El A06 y el A07 se aprueban por equivalencia funcional, sin exigir la unidad literal del expediente: ±0,01 % equivale a 0,36 s por hora y 23 h 59 min 59 s a 1439,98 minutos. Constancia: no se reconoce el rótulo de mejora. Autoriza la procura. Emitido y pendiente de entrega a la Jefatura, con los demás informes de octubre.",
+      "archivo": "INF-SUP-FT-EQ-DLVM-008-261022_INFORME_FIRMADO.pdf",
+      "ruta": "2.Informes Mensuales\\3.Informe de repsuestas\\FT-008-261022\\",
+      "url": null,
+      "drive": {
+        "informe": "1JVLfq7JCQzRZcxF_tVPUmdLVs4SE9B2S",
+        "pdf": "1baYdoUYo-oURtkSNcA-AzE0ecdjC4DFq",
+        "firmado": "1SilwP6Uqay-fn7eF2-kkhg8I3EzG5MRa",
+        "sustento": "1kXtjmru-6brivddM04d3s11IV9WwKc7h"
+      },
+      "areas": [
+        "Equipos complementarios"
+      ],
+      "honorarioNeto": 500
     }
   ],
   "expediente": {
@@ -2206,7 +2258,7 @@
           "equipo": "D-156 — Reloj cronómetro para laboratorio",
           "materia": "Ítems A06 y A07 por aclarar: la exactitud se declara en por ciento y no en minutos, y el alcance mayor viene con una resolución más gruesa.",
           "nivel": "SUSTANCIAL",
-          "estado": "Por absolver",
+          "estado": "Subsanada con el INF-SUP-FT-EQ-DLVM-008-261022: A06 y A07 levantados y ficha aprobada",
           "ubicacion": "ANEXO N° 1 del bloque D-156 del Informe N° 005",
           "extremos": 2,
           "codigos": [
@@ -3238,6 +3290,36 @@
           "fuente": "Validación de fichas técnicas"
         }
       ]
+    },
+    {
+      "informe": "INF-SUP-FT-EQ-DLVM-008-261022",
+      "documentoAbsuelto": "INFORME N° 014-2026/JCAMF-EQH (22/10/2026) — CARTA N° 124-2026, 13 folios",
+      "materia": "Levantamiento de las observaciones de los ítems A06 y A07 de la ficha técnica del D-156",
+      "observaciones": 0,
+      "extremos": 0,
+      "confirmadas": 0,
+      "trasladadas": 0,
+      "yaAbsueltas": 0,
+      "codigoEvaluado": "D-156",
+      "tipo": "FICHA",
+      "resultado": "Ficha del D-156 APROBADA en la versión 2: 7 de 7 requerimientos (100 %). Autoriza la procura.",
+      "naturaleza": "El expediente pide la precisión y la lectura en minutos con centésimas, ambas con la palabra aproximadamente; el 5015TR mide en horas, minutos y segundos. Se aprueba por equivalencia de la prestación y no por coincidencia de unidades: la exactitud de ±0,01 % cabe en 0,01 minuto hasta 100 minutos de medición, que cubre los tiempos de un laboratorio de primer nivel, y el alcance de 1439,98 minutos supera los 999,99. El cuadro comparativo del Contratista sirve de contexto de mercado.",
+      "detalle": [
+        {
+          "obs": "OK",
+          "equipo": "D-156 — Reloj cronómetro para laboratorio",
+          "materia": "Ficha aprobada en la versión 2. A06 y A07 aprobados por equivalencia funcional; no se reconoce el rótulo de mejora del A07.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "Bloque D-156 del Informe N° 014, folios 004, 002 y 001",
+          "extremos": null,
+          "codigos": [
+            "D-156"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-008-261022",
+          "fuente": "Validación de fichas técnicas"
+        }
+      ]
     }
   ],
   "valorizacion": {
@@ -3258,7 +3340,7 @@
       {
         "requisito": "Aprobación de las EETT por la Entidad",
         "estado": "PENDIENTE",
-        "nota": "46 asuntos siguen pendientes de pronunciamiento del Proyectista. De las fichas técnicas, 51 de 179 cuentan con aprobación de la Supervisión, que no sustituye la aprobación de las EETT por la Entidad."
+        "nota": "46 asuntos siguen pendientes de pronunciamiento del Proyectista. De las fichas técnicas, 52 de 179 cuentan con aprobación de la Supervisión, que no sustituye la aprobación de las EETT por la Entidad."
       },
       {
         "requisito": "Planos de preinstalación emitidos por el Contratista",
@@ -3346,7 +3428,7 @@
       "nivel": "SUSTANCIAL",
       "reservada": false,
       "titulo": "Plazo de participación vencido el 12/09/2026",
-      "detalle": "La propuesta fija 60 días calendario desde el inicio de servicio del 14/07/2026, de modo que el plazo venció el 12/09/2026. Con posterioridad se emitieron diez pronunciamientos: el RC-004, el AP-001, el FT-001, el FT-002, el RC-005, el FT-003, el FT-004, el FT-005, el FT-006 y el FT-007.",
+      "detalle": "La propuesta fija 60 días calendario desde el inicio de servicio del 14/07/2026, de modo que el plazo venció el 12/09/2026. Con posterioridad se emitieron once pronunciamientos: el RC-004, el AP-001, el FT-001, el FT-002, el RC-005, el FT-003, el FT-004, el FT-005, el FT-006, el FT-007 y el FT-008.",
       "accion": "Formalizar con el CONSORCIO PARACHIQUE la ampliación del plazo de participación, para que los pronunciamientos posteriores al 12/09 queden amparados."
     },
     {
@@ -4470,19 +4552,19 @@
       "pu": 1302.76,
       "parcial": 1302.76,
       "fila": 44,
-      "ficha": "APROBADA PARCIALMENTE",
-      "obs": "Cumple 5 de 7 requerimientos (71 %). Quedan por aclarar dos: el A06 equipara la exactitud exigida de 0,01 minuto con el 0,01 POR CIENTO que declara el fabricante, magnitudes distintas que solo coinciden por debajo de 1,7 horas de medicion; y el A07 se rotula como Mejora cuando el alcance crece pero la resolución baja de centésimas de minuto a 1 segundo.",
-      "version": 1,
-      "versiones": 1,
+      "ficha": "APROBADA",
+      "obs": "APROBADA en la versión 2. Cumple los 7 requerimientos (100 %). El A06 y el A07 se aprueban por equivalencia funcional: la exactitud de ±0,01 % equivale a 0,36 s por hora y queda dentro de 0,01 minuto en mediciones de hasta 100 minutos; la lectura de 23 h 59 min 59 s equivale a 1439,98 minutos y cubre los 999,99 del expediente (folio 004 y cuadro comparativo de los folios 002 y 001). Constancia: no se reconoce el rótulo de mejora del A07; en la recepción se verifica el certificado de calibración trazable.",
+      "version": 2,
+      "versiones": 2,
       "marca": "TRACEABLE 5015TR",
       "fabricante": "Traceable Products (USA), distribuido por Cole-Parmer",
       "verificacionWeb": "AUTENTICO",
-      "cartaContratista": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
-      "informeSupervision": "INF-SUP-FT-EQ-DLVM-001-260917",
-      "queFalta": "Carta de Traceable Products, o de Cole-Parmer, con la exactitud en minutos o segundos y con la capacidad de lectura en minutos. Retirar el rótulo de Mejora del A07.",
+      "cartaContratista": "CARTA N° 124-2026 / INFORME N° 014-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-008-261022",
+      "queFalta": null,
       "itemsEvaluados": 7,
-      "itemsPendientes": "A06, A07",
-      "fechaEntrega": "2026-09-16",
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-22",
       "historial": [
         {
           "version": 1,
@@ -4490,6 +4572,13 @@
           "carta": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
           "informe": "INF-SUP-FT-EQ-DLVM-001-260917",
           "resultado": "APROBADA PARCIALMENTE"
+        },
+        {
+          "version": 2,
+          "fecha": "2026-10-22",
+          "carta": "CARTA N° 124-2026 / INFORME N° 014-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-008-261022",
+          "resultado": "APROBADA"
         }
       ]
     },
@@ -7081,11 +7170,11 @@
       "descripcion": "Pronunciamiento sobre cada informe o carta del Contratista que lo requiera.",
       "metrica": {
         "etiqueta": "Cartas contestadas",
-        "hecho": 12,
-        "total": 12,
+        "hecho": 13,
+        "total": 13,
         "unidad": "cartas"
       },
-      "nota": "Los 12 informes recibidos del Contratista tienen pronunciamiento emitido; el último, el INF-SUP-FT-EQ-DLVM-007-261021, sobre el levantamiento del D-188. Los de octubre (FT-003 a FT-007) están emitidos y pendientes de entrega a la Jefatura.",
+      "nota": "Los 13 informes recibidos del Contratista tienen pronunciamiento emitido; el último, el INF-SUP-FT-EQ-DLVM-008-261022, sobre el levantamiento del D-156. Los de octubre (FT-003 a FT-008) están emitidos y pendientes de entrega a la Jefatura.",
       "responsable": "Supervisión de Equipamiento"
     },
     {
@@ -7096,11 +7185,11 @@
       "descripcion": "Aprobación de la ficha técnica de cada código de equipo del expediente.",
       "metrica": {
         "etiqueta": "Fichas técnicas aprobadas",
-        "hecho": 51,
+        "hecho": 52,
         "total": 179,
         "unidad": "códigos"
       },
-      "nota": "79 de 179 códigos presentados: 51 aprobados, 2 aprobados parcialmente, 19 observados y 7 que no cumplen. Vencidas la S4 (9 de 17), la S5 (4 de 17) y la S6 (0 de 17). Quedan 100 por presentar hasta la S10 (13/11/2026).",
+      "nota": "79 de 179 códigos presentados: 52 aprobados, 1 aprobados parcialmente, 19 observados y 7 que no cumplen. Vencidas la S4 (9 de 17), la S5 (4 de 17) y la S6 (0 de 17). Quedan 100 por presentar hasta la S10 (13/11/2026).",
       "responsable": "Contratista ICM S.A."
     },
     {
