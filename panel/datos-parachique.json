@@ -1,7 +1,7 @@
 {
   "_lea_esto": "Respaldo y datos de fondo del panel CS PARACHIQUE. El estado de las fichas técnicas ya NO se gobierna aquí: manda la hoja «2 SEGUIMIENTO» del Drive, y las observaciones a fichas, la hoja «3 OBSERVACIONES». Lo que se edite aquí para un código que la hoja mencione, la hoja lo sobrescribe. Todo lo demás —etapas, documentos, expediente, presupuesto, valorización— sí se edita aquí. No edite los dashboard.html a mano: se regeneran y se pierde el cambio.",
   "meta": {
-    "actualizado": "2026-10-20",
+    "actualizado": "2026-10-21",
     "proyecto": "Mejoramiento de los Servicios de Salud del Establecimiento de Salud Parachique",
     "cui": "2571750",
     "ubicacion": "Distrito y provincia de Sechura — Piura",
@@ -790,6 +790,58 @@
       "areas": [
         "Equipos biomédicos",
         "Equipos electromecánicos"
+      ],
+      "honorarioNeto": 500
+    },
+    {
+      "id": "CT-IN-012",
+      "flujo": "RECIBIDA",
+      "clase": "INFORME DEL CONTRATISTA",
+      "etapa": "E3",
+      "codigo": "CARTA N° 121-2026 / INFORME N° 012-2026/JCAMF-EQH",
+      "fecha": "2026-10-21",
+      "contraparte": "INGENIERÍA CIVIL MONTAJES S.A. (ICM) — Contratista de obra",
+      "asunto": "Levantamiento de las observaciones de la ficha técnica del D-219, lavador ultrasónico de instrumental quirúrgico.",
+      "estado": "ATENDIDA",
+      "numeral": "2.3",
+      "membrete": false,
+      "respondidaPor": "INF-SUP-FT-EQ-DLVM-006-261021",
+      "detalle": "Informe N° 012 del 20/10/2026, del Ing. Juan Carlos Augusto Mendiola Florez (CIP 201412), suscrito también por el Residente de Obra Ing. Luis Enrique Santisteban Romero (CIP 81329). 20 folios. Recibido el 21/10/2026 a las 17:00 h. Responde a las observaciones A11, A14 y A15 del INF-SUP-FT-EQ-DLVM-001-260917 con la versión 2 de la ficha: carta de TBT Medical del 12/10/2026 y una hoja de verificación del ajuste de temperatura. No trae fichas nuevas.",
+      "archivo": "CARTA N 121-2026 ICM - Informe 012 - Levantamiento de observaciones D-219.pdf",
+      "ruta": "3.Sustentos\\",
+      "url": null,
+      "drive": {
+        "sustento": "1A59vwI823TLlLfx3kqE8_gRoBqZIl3O7"
+      },
+      "areas": [
+        "Equipos biomédicos"
+      ]
+    },
+    {
+      "id": "PR-015",
+      "flujo": "EMITIDA",
+      "clase": "INFORME",
+      "etapa": "E3",
+      "codigo": "INF-SUP-FT-EQ-DLVM-006-261021",
+      "fecha": "2026-10-21",
+      "contraparte": "Jefatura de Supervisión de Obra — Ing. Manuel Ricardo Torres Peche",
+      "asunto": "Informe de Validación de Fichas Técnicas N° 006 — levantamiento de observaciones del D-219.",
+      "estado": "POR ENTREGAR",
+      "numeral": "2.3",
+      "membrete": true,
+      "responde": "CARTA N° 121-2026 / INFORME N° 012-2026/JCAMF-EQH",
+      "detalle": "Levanta el A11 y el A14 del D-219 PLUSONIC UC28 con la carta de TBT Medical del 12/10/2026 y mantiene OBSERVADO el A15: TBT declara el control de temperatura desde ambiente en el catálogo y de 25 a 90 °C en el manual, y la fotografía del Contratista no fija cuál rige. La ficha queda OBSERVADA con 19 de 20 (95 %), y no autoriza la procura. Emitido y pendiente de entrega a la Jefatura, con los demás informes de octubre.",
+      "archivo": "INF-SUP-FT-EQ-DLVM-006-261021_INFORME_FIRMADO.pdf",
+      "ruta": "2.Informes Mensuales\\3.Informe de repsuestas\\FT-006-261021\\",
+      "url": null,
+      "drive": {
+        "informe": "12kTPjhaMWF0bsWrZi2FbWL6ujGUpMt66",
+        "pdf": "1Ym5Fd6Ld4O7SbfgKvenBUNylLx4vvn3m",
+        "firmado": "1wX-Qv2rkUSYd5pqNbV6DTBiKNksnL30Q",
+        "sustento": "1B5MymE1mmnlD5ZK11MWYSbbQF5yWXwdV"
+      },
+      "areas": [
+        "Equipos biomédicos"
       ],
       "honorarioNeto": 500
     }
@@ -2088,7 +2140,7 @@
           "equipo": "D-219 — Lavador ultrasónico de instrumental quirúrgico",
           "materia": "Ítems A11, A14 y A15 por aclarar: la potencia ultrasónica, el grado IP 33 y el rango real de temperatura no están declarados por el fabricante.",
           "nivel": "SUSTANCIAL",
-          "estado": "Por absolver",
+          "estado": "Subsanada en parte con el INF-SUP-FT-EQ-DLVM-006-261021: A11 y A14 levantados; el A15 sigue en ese informe",
           "ubicacion": "ANEXO N° 1 del bloque D-219 del Informe N° 005",
           "extremos": 3,
           "codigos": [
@@ -3074,6 +3126,36 @@
           "fuente": "Validación de fichas técnicas"
         }
       ]
+    },
+    {
+      "informe": "INF-SUP-FT-EQ-DLVM-006-261021",
+      "documentoAbsuelto": "INFORME N° 012-2026/JCAMF-EQH (20/10/2026) — CARTA N° 121-2026, 20 folios",
+      "materia": "Levantamiento de las observaciones de la ficha técnica del D-219",
+      "observaciones": 1,
+      "extremos": 1,
+      "confirmadas": 1,
+      "trasladadas": 0,
+      "yaAbsueltas": 2,
+      "codigoEvaluado": "D-219",
+      "tipo": "FICHA",
+      "resultado": "Ficha OBSERVADA en su versión 2: 19 de 20 requerimientos (95 %). Se levantan el A11 y el A14; sigue el A15. Solo la ficha APROBADA autoriza la procura.",
+      "naturaleza": "Primer levantamiento de una ficha del FT-001. La carta de TBT Medical del 12/10/2026 declara la potencia de alta frecuencia y el grado IP que faltaban. El A15 se respondió con una fotografía del panel y una explicación del Contratista, que no cierran una discrepancia entre dos documentos del fabricante: lo que el fabricante declara de dos maneras, solo el fabricante lo cierra.",
+      "detalle": [
+        {
+          "obs": "D-219",
+          "equipo": "D-219 — Lavador ultrasónico de instrumental quirúrgico",
+          "materia": "Ítem A15 observado: TBT declara el control de temperatura desde ambiente en el catálogo (folio 006) y de 25 a 90 °C en el manual (folio 010); la fotografía del Contratista no fija cuál rige. A11 y A14 levantados.",
+          "nivel": "LEVE",
+          "estado": "Por absolver",
+          "ubicacion": "Bloque D-219 del Informe N° 012, folios 006, 010 y 002",
+          "extremos": 1,
+          "codigos": [
+            "D-219"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-006-261021",
+          "fuente": "Validación de fichas técnicas"
+        }
+      ]
     }
   ],
   "valorizacion": {
@@ -3182,7 +3264,7 @@
       "nivel": "SUSTANCIAL",
       "reservada": false,
       "titulo": "Plazo de participación vencido el 12/09/2026",
-      "detalle": "La propuesta fija 60 días calendario desde el inicio de servicio del 14/07/2026, de modo que el plazo venció el 12/09/2026. Con posterioridad se emitieron ocho pronunciamientos: el RC-004, el AP-001, el FT-001, el FT-002, el RC-005, el FT-003, el FT-004 y el FT-005.",
+      "detalle": "La propuesta fija 60 días calendario desde el inicio de servicio del 14/07/2026, de modo que el plazo venció el 12/09/2026. Con posterioridad se emitieron nueve pronunciamientos: el RC-004, el AP-001, el FT-001, el FT-002, el RC-005, el FT-003, el FT-004, el FT-005 y el FT-006.",
       "accion": "Formalizar con el CONSORCIO PARACHIQUE la ampliación del plazo de participación, para que los pronunciamientos posteriores al 12/09 queden amparados."
     },
     {
@@ -3217,7 +3299,7 @@
       "nivel": "SUSTANCIAL",
       "reservada": false,
       "titulo": "Cronograma: vencidas la S4, la S5 y la S6 con 13 de 51 códigos; 100 fichas por presentar hasta el 13/11/2026",
-      "detalle": "El INF-SUP-RC-EQ-DLVM-005-260929 aprobó el cronograma de la CARTA N° 085-2026: 179 códigos en diez entregas semanales. La S1 y la S2 están cumplidas con 47 fichas. Con las CARTAS N° 092, 101 y 111-2026, la S3 lleva 16 de 17 (falta D-204); la S4, vencida el 02/10/2026, 9 de 17: faltan D-159, D-234, D-212, E-56, D-153, M-15, D-96, D-140; la S5, vencida el 09/10/2026, 4 de 17; y la S6, vencida el 16/10/2026, 0 de 17, con el E-130 y el M-10, que tienen pre instalación. El E-56 de la S4 también la tiene. La CARTA N° 111 adelanta el D-288 de la S7 y el D-34 de la S8. Ninguna carta trae la reprogramación escrita, y no hay carta registrada después de la N° 111.",
+      "detalle": "El INF-SUP-RC-EQ-DLVM-005-260929 aprobó el cronograma de la CARTA N° 085-2026: 179 códigos en diez entregas semanales. La S1 y la S2 están cumplidas con 47 fichas. Con las CARTAS N° 092, 101 y 111-2026, la S3 lleva 16 de 17 (falta D-204); la S4, vencida el 02/10/2026, 9 de 17: faltan D-159, D-234, D-212, E-56, D-153, M-15, D-96, D-140; la S5, vencida el 09/10/2026, 4 de 17; y la S6, vencida el 16/10/2026, 0 de 17, con el E-130 y el M-10, que tienen pre instalación. El E-56 de la S4 también la tiene. La CARTA N° 111 adelanta el D-288 de la S7 y el D-34 de la S8. Ninguna carta trae la reprogramación escrita, y después de la N° 111 solo han llegado levantamientos de observaciones, sin fichas nuevas.",
       "accion": "Obtener del Contratista la fecha escrita de los códigos faltantes de la S3 a la S6, con prioridad del E-56, el E-130 y el M-10 por su pre instalación, como pide la recomendación CUARTA del INF-SUP-FT-EQ-DLVM-005-261014, y cotejar la S7 del 23/10/2026."
     },
     {
@@ -3571,19 +3653,19 @@
       "pu": 52310.84,
       "parcial": 52310.84,
       "fila": 15,
-      "ficha": "APROBADA PARCIALMENTE",
-      "obs": "Cumple 17 de 20 requerimientos (85 %). Quedan por aclarar tres, todos parametros que el fabricante no declara: el A11 deduce los 300 W dividiendo entre cuatro la potencia pico de 1200 W; el A14 da por cumplido el IP 33 invocando el acero inoxidable, que no es un ensayo; y el A15 declara 20-80 °C cuando el manual del folio 009 dice 25-90 °C y el folio 004 dice desde ambiente.",
-      "version": 1,
-      "versiones": 1,
+      "ficha": "OBSERVADA",
+      "obs": "OBSERVADA. 19 de 20 (95 %). Versión 2. El A11 y el A14 se levantan con la carta de TBT Medical del 12/10/2026 (300 W de alta frecuencia; IP33 conforme a la IEC 60529). Sigue el A15: TBT declara el control de temperatura desde ambiente en el catálogo (folio 006) y de 25 a 90 °C en el manual (folio 010), y la fotografía del Contratista (folio 002) no fija cuál rige.",
+      "version": 2,
+      "versiones": 2,
       "marca": "PLUSONIC (TBT) UC28",
       "fabricante": "TBT Medical — Turkuaz Biyomedikal Teknolojileri (Ankara, Turquía)",
-      "verificacionWeb": "AUTENTICO",
-      "cartaContratista": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
-      "informeSupervision": "INF-SUP-FT-EQ-DLVM-001-260917",
-      "queFalta": "Carta de TBT Medical con la potencia ultrasonica efectiva en vatios, el grado IP conforme a la IEC 60529 y el rango real de control de temperatura.",
+      "verificacionWeb": "AUTENTICO. tbtmedical.com/images/urun_images/dosya_1_169.pdf (21/10/2026): hoja de producto PLUSONIC TBTÜB.03 rev. EN 00003-2026, control de temperatura desde ambiente hasta 90 °C.",
+      "cartaContratista": "CARTA N° 121-2026 / INFORME N° 012-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-006-261021",
+      "queFalta": "Carta de TBT Medical que fije el rango de ajuste de la temperatura del PLUSONIC UC28, Ref. 111004, y precise cuál de sus dos declaraciones rige: desde ambiente (folio 006) o desde 25 °C (folio 010).",
       "itemsEvaluados": 20,
-      "itemsPendientes": "A11, A14, A15",
-      "fechaEntrega": "2026-09-16",
+      "itemsPendientes": "A15",
+      "fechaEntrega": "2026-10-20",
       "historial": [
         {
           "version": 1,
@@ -3591,6 +3673,13 @@
           "carta": "CARTA N° 081-2026 / INFORME N° 005-2026/JCAMF-EQH",
           "informe": "INF-SUP-FT-EQ-DLVM-001-260917",
           "resultado": "APROBADA PARCIALMENTE"
+        },
+        {
+          "version": 2,
+          "fecha": "2026-10-20",
+          "carta": "CARTA N° 121-2026 / INFORME N° 012-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-006-261021",
+          "resultado": "OBSERVADA"
         }
       ]
     },
@@ -6903,11 +6992,11 @@
       "descripcion": "Pronunciamiento sobre cada informe o carta del Contratista que lo requiera.",
       "metrica": {
         "etiqueta": "Cartas contestadas",
-        "hecho": 10,
-        "total": 10,
+        "hecho": 11,
+        "total": 11,
         "unidad": "cartas"
       },
-      "nota": "Los 10 informes recibidos del Contratista tienen pronunciamiento emitido; el último, el INF-SUP-FT-EQ-DLVM-005-261014, sobre las fichas de la S3 a la S5. Los tres de octubre (FT-003, FT-004 y FT-005) están emitidos y pendientes de entrega a la Jefatura.",
+      "nota": "Los 11 informes recibidos del Contratista tienen pronunciamiento emitido; el último, el INF-SUP-FT-EQ-DLVM-006-261021, sobre el levantamiento del D-219. Los de octubre (FT-003 a FT-006) están emitidos y pendientes de entrega a la Jefatura.",
       "responsable": "Supervisión de Equipamiento"
     },
     {
@@ -6922,7 +7011,7 @@
         "total": 179,
         "unidad": "códigos"
       },
-      "nota": "79 de 179 códigos presentados: 49 aprobados, 4 aprobados parcialmente, 19 observados y 7 que no cumplen. Vencidas la S4 (9 de 17), la S5 (4 de 17) y la S6 (0 de 17). Quedan 100 por presentar hasta la S10 (13/11/2026).",
+      "nota": "79 de 179 códigos presentados: 49 aprobados, 3 aprobados parcialmente, 20 observados y 7 que no cumplen. Vencidas la S4 (9 de 17), la S5 (4 de 17) y la S6 (0 de 17). Quedan 100 por presentar hasta la S10 (13/11/2026).",
       "responsable": "Contratista ICM S.A."
     },
     {
