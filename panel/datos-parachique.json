@@ -1052,6 +1052,60 @@
         "Equipos biomédicos"
       ],
       "honorarioNeto": 500
+    },
+    {
+      "id": "CT-IN-017",
+      "flujo": "RECIBIDA",
+      "clase": "INFORME DEL CONTRATISTA",
+      "etapa": "E3",
+      "codigo": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+      "fecha": "2026-10-26",
+      "contraparte": "INGENIERÍA CIVIL MONTAJES S.A. (ICM) — Contratista de obra",
+      "asunto": "Fichas técnicas de cumplimiento de dieciséis (16) códigos de equipamiento.",
+      "estado": "ATENDIDA",
+      "numeral": "2.3",
+      "membrete": false,
+      "respondidaPor": "INF-SUP-FT-EQ-DLVM-011-261026",
+      "detalle": "Informe N° 017 del 24/10/2026, del Ing. Juan Carlos Augusto Mendiola Florez (CIP 201412), suscrito también por el Residente de Obra Ing. Luis Enrique Santisteban Romero (CIP 81329). 141 folios. Recibido el 26/10/2026 a las 16:34 h. Sexta entrega de fichas técnicas nuevas: cuatro biomédicos (D-212, D-112, D-350, D-96) y doce de mobiliario administrativo de fabricación nacional. Trae dos códigos de la S4, uno de la S5, cuatro de la S6 (entre ellos el M-10, con pre instalación) y seis de la S7, y adelanta tres de la S8. No acompaña la reprogramación escrita.",
+      "archivo": "CARTA N 134-2026 ICM - Informe 017 - Fichas tecnicas de 16 equipos.pdf",
+      "ruta": "3.Sustentos\\",
+      "url": null,
+      "drive": {
+        "sustento": "14pbCfI55G1hOAxkpiHIwOjP8v5lpraGy"
+      },
+      "areas": [
+        "Equipos biomédicos",
+        "Mobiliario administrativo"
+      ]
+    },
+    {
+      "id": "PR-020",
+      "flujo": "EMITIDA",
+      "clase": "INFORME",
+      "etapa": "E3",
+      "codigo": "INF-SUP-FT-EQ-DLVM-011-261026",
+      "fecha": "2026-10-26",
+      "contraparte": "Jefatura de Supervisión de Obra — Ing. Manuel Ricardo Torres Peche",
+      "asunto": "Informe de Validación de Fichas Técnicas N° 011 — dieciséis (16) códigos de equipamiento.",
+      "estado": "POR ENTREGAR",
+      "numeral": "2.3",
+      "membrete": true,
+      "responde": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+      "detalle": "Contrasta 225 requerimientos contra los folios del fabricante. APRUEBA trece fichas (D-96 y los doce de mobiliario M-1, M-10, M-101, M-11, M-18, M-37, M-38, M-39, M-40, M-42, M-44 y M-45) y OBSERVA tres: D-212 GETIDY JN-29 en D2, A14, A16 y A08; D-112 NINGBO DAVID TI-2000 en D01 (segunda batería); y D-350 NINGBO DAVID HKN-93CS en A12 (balanza opcional). Ninguna NO APROBADA. Cumplimiento global del 97 %: 219 de 225. Emitido el 26/10/2026, por entregar a la Jefatura.",
+      "archivo": "INF-SUP-FT-EQ-DLVM-011-261026_INFORME_FIRMADO.pdf",
+      "ruta": "2.Informes Mensuales\\3.Informe de repsuestas\\FT-011-261026\\",
+      "url": null,
+      "drive": {
+        "informe": "1bEgQMQu_kZiMoePU5atm3zhYvic7nK7T",
+        "pdf": "12hXJ2H8cZ6QZuFyDf9x4rWRtzrTtMVla",
+        "firmado": "1raz7yEuJPYf1rRgINs0nc9PbPtKO3W5O",
+        "sustento": "1d3kMGe2s-IfOWI6pfs_Z26yrXsppLNEw"
+      },
+      "areas": [
+        "Equipos biomédicos",
+        "Mobiliario administrativo"
+      ],
+      "honorarioNeto": 500
     }
   ],
   "expediente": {
@@ -3484,6 +3538,246 @@
           "fuente": "Validación de fichas técnicas"
         }
       ]
+    },
+    {
+      "informe": "INF-SUP-FT-EQ-DLVM-011-261026",
+      "documentoAbsuelto": "INFORME N° 017-2026/JCAMF-EQH (24/10/2026) — CARTA N° 134-2026, 141 folios",
+      "materia": "Fichas técnicas de cumplimiento de dieciséis (16) códigos de equipamiento",
+      "observaciones": 3,
+      "extremos": 6,
+      "confirmadas": 6,
+      "trasladadas": 0,
+      "yaAbsueltas": 0,
+      "codigoEvaluado": "16 códigos",
+      "tipo": "FICHA",
+      "resultado": "13 fichas APROBADAS y 3 OBSERVADAS (D-212, D-112 y D-350); ninguna NO APROBADA. Cumplimiento técnico global sustentado del 97 %: 219 de 225 requerimientos. Solo la ficha APROBADA autoriza la procura.",
+      "naturaleza": "Sexta entrega de fichas técnicas nuevas: trae dos códigos de la S4, uno de la S5, cuatro de la S6 y seis de la S7, y adelanta tres de la S8. Con ella suman 95 de los 179 códigos. El mobiliario de fabricación nacional se aprueba con la ficha del proveedor, que transcribe el expediente, y se verifica en la recepción. Las tres observadas se cierran con un documento, sin cambiar de equipo: dos componentes que el fabricante marca como opcionales (segunda batería de la TI-2000 y balanza de la HKN-93CS) y, en el esterilizador JN-29, valores del fabricante que se contradicen y un certificado PED vencido.",
+      "detalle": [
+        {
+          "obs": "OK",
+          "equipo": "D-96 — Detector de latidos fetales de sobremesa",
+          "materia": "Ficha aprobada. Los 18 requerimientos acreditados. Constancias: los 10 mW/cm² o menos (folio 003) satisfacen el A02, que pide menor a 10 mW/cm²; la sonda tiene un año de garantía del fabricante y los 24 meses los asume el Contratista en el Certificado de Garantía.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque D-96 del Informe N° 017",
+          "extremos": null,
+          "codigos": [
+            "D-96"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-1 — Archivador metálico de 4 gavetas",
+          "materia": "Ficha aprobada. Los 12 requerimientos acreditados con la ficha de ECO HOSPITAL TECH S.A.C., fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-1 del Informe N° 017",
+          "extremos": null,
+          "codigos": [
+            "M-1"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-10 — Vitrina metálica para anuncios con puertas corredizas de vidrio",
+          "materia": "Ficha aprobada. Los 9 requerimientos acreditados con la ficha de ECO HOSPITAL TECH S.A.C., fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción. Pre instalación: refuerzo en la pared si va sobre drywall (folio 958); la ubicación de las siete vitrinas se coordina con la obra civil antes de cerrar los tabiques.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-10 del Informe N° 017",
+          "extremos": null,
+          "codigos": [
+            "M-10"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-101 — Papelera de acero inoxidable de forma cilíndrica",
+          "materia": "Ficha aprobada. Los 9 requerimientos acreditados con la ficha de ECO HOSPITAL TECH S.A.C., fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-101 del Informe N° 017",
+          "extremos": null,
+          "codigos": [
+            "M-101"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-11 — Vitrina metálica para libros",
+          "materia": "Ficha aprobada. Los 8 requerimientos acreditados con la ficha de ECO HOSPITAL TECH S.A.C., fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-11 del Informe N° 017",
+          "extremos": null,
+          "codigos": [
+            "M-11"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-18 — Butaca metálica de 3 cuerpos",
+          "materia": "Ficha aprobada. Los 10 requerimientos acreditados con la ficha de ECO HOSPITAL TECH S.A.C., fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-18 del Informe N° 017",
+          "extremos": null,
+          "codigos": [
+            "M-18"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-37 — Silla metálica confortable giratoria rodable",
+          "materia": "Ficha aprobada. Los 11 requerimientos acreditados con la ficha de ECO HOSPITAL TECH S.A.C., fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-37 del Informe N° 017",
+          "extremos": null,
+          "codigos": [
+            "M-37"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-38 — Silla metálica giratoria rodable con brazos",
+          "materia": "Ficha aprobada. Los 8 requerimientos acreditados con la ficha de ECO HOSPITAL TECH S.A.C., fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-38 del Informe N° 017",
+          "extremos": null,
+          "codigos": [
+            "M-38"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-39 — Silla metálica giratoria rodable",
+          "materia": "Ficha aprobada. Los 13 requerimientos acreditados con la ficha de ECO HOSPITAL TECH S.A.C., fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-39 del Informe N° 017",
+          "extremos": null,
+          "codigos": [
+            "M-39"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-40 — Silla metálica giratoria rodable con asiento alto",
+          "materia": "Ficha aprobada. Los 12 requerimientos acreditados con la ficha de ECO HOSPITAL TECH S.A.C., fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-40 del Informe N° 017",
+          "extremos": null,
+          "codigos": [
+            "M-40"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-42 — Sillón metálico confortable reclinable para reposo",
+          "materia": "Ficha aprobada. Los 12 requerimientos acreditados con la ficha de ECO HOSPITAL TECH S.A.C., fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-42 del Informe N° 017",
+          "extremos": null,
+          "codigos": [
+            "M-42"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-44 — Sillón metálico semiconfortable sin portabrazos 2 cuerpos",
+          "materia": "Ficha aprobada. Los 11 requerimientos acreditados con la ficha de ECO HOSPITAL TECH S.A.C., fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-44 del Informe N° 017",
+          "extremos": null,
+          "codigos": [
+            "M-44"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-45 — Sillón metálico semiconfortable sin portabrazos 3 cuerpos",
+          "materia": "Ficha aprobada. Los 11 requerimientos acreditados con la ficha de ECO HOSPITAL TECH S.A.C., fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-45 del Informe N° 017",
+          "extremos": null,
+          "codigos": [
+            "M-45"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "D-112",
+          "equipo": "D-112 — Incubadora de transporte",
+          "materia": "OBSERVADA. 29 de 30. D01: las 3 horas de batería solo se alcanzan con dos baterías (90 min con una, 180 con dos, folio 002) y ningún documento dice que se entreguen dos.",
+          "nivel": "LEVE",
+          "estado": "Por absolver",
+          "ubicacion": "Bloque D-112 del Informe N° 017",
+          "extremos": 1,
+          "codigos": [
+            "D-112"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "D-350",
+          "equipo": "D-350 — Cuna de calor radiante",
+          "materia": "OBSERVADA. 26 de 27. A12: el sistema de pesaje figura como opcional (folio 003) y ni el Anexo N° 1 ni la declaración jurada dicen que se entrega.",
+          "nivel": "LEVE",
+          "estado": "Por absolver",
+          "ubicacion": "Bloque D-350 del Informe N° 017",
+          "extremos": 1,
+          "codigos": [
+            "D-350"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "D-212",
+          "equipo": "D-212 — Esterilizador con generador eléctrico de vapor de 20 lt",
+          "materia": "OBSERVADA. 20 de 24. D2: el fabricante da 3000 W y 20 A (folio 016) y 3500 VA a 230 V (folio 005), valores que no cuadran entre sí. A14: el catálogo declara impresora incorporada y el manual una mini impresora externa o USB. A16: el consumo por ciclo lo deduce la nota (583 ml). A08: el certificado PED venció el 24/08/2026. La cámara de 29 L cumple el A09.",
+          "nivel": "LEVE",
+          "estado": "Por absolver",
+          "ubicacion": "Bloque D-212 del Informe N° 017",
+          "extremos": 4,
+          "codigos": [
+            "D-212"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "fuente": "Validación de fichas técnicas"
+        }
+      ]
     }
   ],
   "valorizacion": {
@@ -3504,7 +3798,7 @@
       {
         "requisito": "Aprobación de las EETT por la Entidad",
         "estado": "PENDIENTE",
-        "nota": "46 asuntos siguen pendientes de pronunciamiento del Proyectista. De las fichas técnicas, 54 de 179 cuentan con aprobación de la Supervisión, que no sustituye la aprobación de las EETT por la Entidad."
+        "nota": "46 asuntos siguen pendientes de pronunciamiento del Proyectista. De las fichas técnicas, 67 de 179 cuentan con aprobación de la Supervisión, que no sustituye la aprobación de las EETT por la Entidad."
       },
       {
         "requisito": "Planos de preinstalación emitidos por el Contratista",
@@ -3592,7 +3886,7 @@
       "nivel": "SUSTANCIAL",
       "reservada": false,
       "titulo": "Plazo de participación vencido el 12/09/2026",
-      "detalle": "La propuesta fija 60 días calendario desde el inicio de servicio del 14/07/2026, de modo que el plazo venció el 12/09/2026. Con posterioridad se emitieron trece pronunciamientos: el RC-004, el AP-001, el FT-001, el FT-002, el RC-005, el FT-003, el FT-004, el FT-005, el FT-006, el FT-007, el FT-008, el FT-009 y el FT-010.",
+      "detalle": "La propuesta fija 60 días calendario desde el inicio de servicio del 14/07/2026, de modo que el plazo venció el 12/09/2026. Con posterioridad se emitieron catorce pronunciamientos: el RC-004, el AP-001, el FT-001, el FT-002, el RC-005, el FT-003, el FT-004, el FT-005, el FT-006, el FT-007, el FT-008, el FT-009, el FT-010 y el FT-011.",
       "accion": "Formalizar con el CONSORCIO PARACHIQUE la ampliación del plazo de participación, para que los pronunciamientos posteriores al 12/09 queden amparados."
     },
     {
@@ -3619,9 +3913,9 @@
     {
       "nivel": "SUSTANCIAL",
       "reservada": false,
-      "titulo": "Cronograma: vencidas la S4, la S5 y la S6 con 13 de 51 códigos; 100 fichas por presentar hasta el 13/11/2026",
-      "detalle": "El INF-SUP-RC-EQ-DLVM-005-260929 aprobó el cronograma de la CARTA N° 085-2026: 179 códigos en diez entregas semanales. La S1 y la S2 están cumplidas con 47 fichas. Con las CARTAS N° 092, 101 y 111-2026, la S3 lleva 16 de 17 (falta D-204); la S4, vencida el 02/10/2026, 9 de 17: faltan D-159, D-234, D-212, E-56, D-153, M-15, D-96, D-140; la S5, vencida el 09/10/2026, 4 de 17; y la S6, vencida el 16/10/2026, 0 de 17, con el E-130 y el M-10, que tienen pre instalación. El E-56 de la S4 también la tiene. La CARTA N° 111 adelanta el D-288 de la S7 y el D-34 de la S8. Ninguna carta trae la reprogramación escrita, y después de la N° 111 solo han llegado levantamientos de observaciones, sin fichas nuevas.",
-      "accion": "Obtener del Contratista la fecha escrita de los códigos faltantes de la S3 a la S6, con prioridad del E-56, el E-130 y el M-10 por su pre instalación, como pide la recomendación CUARTA del INF-SUP-FT-EQ-DLVM-005-261014, y cotejar la S7 del 23/10/2026."
+      "titulo": "Cronograma: vencidas la S4 a la S7 con 28 de 67 códigos; 84 fichas por presentar hasta el 13/11/2026",
+      "detalle": "El INF-SUP-RC-EQ-DLVM-005-260929 aprobó el cronograma de la CARTA N° 085-2026: 179 códigos en diez entregas semanales. La S1 y la S2 están cumplidas con 47 fichas. Con las CARTAS N° 092, 101, 111 y 134-2026, la S3 lleva 16 de 17 (falta D-204); la S4, vencida el 02/10/2026, 11 de 17: faltan D-159, D-234, E-56, D-153, M-15, D-140; la S5, vencida el 09/10/2026, 5 de 17; la S6, vencida el 16/10/2026, 4 de 17, sin el E-130, que espera al Comité; y la S7, vencida el 23/10/2026, 8 de 16, sin el E-54 ni el E-210, que tienen pre instalación, como el E-56 de la S4. La S8 del 30/10/2026 lleva 4 de 16 adelantados y trae el M-9, también con pre instalación. Ninguna carta trae la reprogramación escrita.",
+      "accion": "Obtener del Contratista la fecha escrita de los códigos faltantes de la S3 a la S7, con prioridad del E-56, el E-54 y el E-210 por su pre instalación, como pide la recomendación CUARTA del INF-SUP-FT-EQ-DLVM-011-261026, y cotejar la S8 del 30/10/2026, que trae el M-9."
     },
     {
       "nivel": "LEVE",
@@ -3792,8 +4086,29 @@
       "pu": 84142.76,
       "parcial": 84142.76,
       "fila": 8,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "OBSERVADA",
+      "obs": "OBSERVADA. 29 de 30. D01: las 3 horas de batería solo se alcanzan con dos baterías (90 min con una, 180 con dos, folio 002) y ningún documento dice que se entreguen dos.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NINGBO DAVID",
+      "modelo": "TI-2000",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-011-261026",
+      "queFalta": "Declaración jurada del proveedor, o carta de NINGBO DAVID, que declare que la TI-2000 se entrega con dos baterías y 180 minutos de autonomía (D01).",
+      "itemsEvaluados": 30,
+      "itemsPendientes": "D01",
+      "fechaEntrega": "2026-10-24",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-24",
+          "carta": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "resultado": "OBSERVADA"
+        }
+      ]
     },
     {
       "cod": "D-131",
@@ -3931,8 +4246,29 @@
       "pu": 34587.71,
       "parcial": 34587.71,
       "fila": 13,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "OBSERVADA",
+      "obs": "OBSERVADA. 20 de 24. D2: el fabricante da 3000 W y 20 A (folio 016) y 3500 VA a 230 V (folio 005), valores que no cuadran entre sí. A14: el catálogo declara impresora incorporada y el manual una mini impresora externa o USB. A16: el consumo por ciclo lo deduce la nota (583 ml). A08: el certificado PED venció el 24/08/2026. La cámara de 29 L cumple el A09.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "GETIDY",
+      "modelo": "JN-29",
+      "fabricante": null,
+      "verificacionWeb": "Búsqueda del 26/10/2026: GETIDY no publica en línea el consumo de agua por ciclo del JN-29.",
+      "cartaContratista": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-011-261026",
+      "queFalta": "Carta de GETIDY que fije la potencia y la corriente nominal del JN-29 a 220 V, no mayor de 16 A (D2), declare impresora térmica incorporada (A14) y el consumo de agua por ciclo, igual o menor a 300 ml (A16); y certificado PED vigente que comprenda al JN-29 (A08).",
+      "itemsEvaluados": 24,
+      "itemsPendientes": "D2, A14, A16 y A08",
+      "fechaEntrega": "2026-10-24",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-24",
+          "carta": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "resultado": "OBSERVADA"
+        }
+      ]
     },
     {
       "cod": "D-213",
@@ -4253,8 +4589,29 @@
       "pu": 67159.17,
       "parcial": 67159.17,
       "fila": 24,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "OBSERVADA",
+      "obs": "OBSERVADA. 26 de 27. A12: el sistema de pesaje figura como opcional (folio 003) y ni el Anexo N° 1 ni la declaración jurada dicen que se entrega.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NINGBO DAVID",
+      "modelo": "HKN-93CS",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-011-261026",
+      "queFalta": "Declaración jurada del proveedor, o carta de NINGBO DAVID, que declare que la HKN-93CS se entrega con el sistema de pesaje (A12).",
+      "itemsEvaluados": 27,
+      "itemsPendientes": "A12",
+      "fechaEntrega": "2026-10-24",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-24",
+          "carta": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "resultado": "OBSERVADA"
+        }
+      ]
     },
     {
       "cod": "D-369",
@@ -4423,8 +4780,29 @@
       "pu": 5565.53,
       "parcial": 16696.6,
       "fila": 30,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 18 requerimientos acreditados. Constancias: los 10 mW/cm² o menos (folio 003) satisfacen el A02, que pide menor a 10 mW/cm²; la sonda tiene un año de garantía del fabricante y los 24 meses los asume el Contratista en el Certificado de Garantía.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "BISTOS",
+      "modelo": "BT-250",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-011-261026",
+      "queFalta": null,
+      "itemsEvaluados": 18,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-24",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-24",
+          "carta": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-152",
@@ -6181,8 +6559,29 @@
       "pu": 1267.57,
       "parcial": 5070.27,
       "fila": 117,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 12 requerimientos acreditados con la ficha de ECO HOSPITAL TECH S.A.C., fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "M-1",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-011-261026",
+      "queFalta": null,
+      "itemsEvaluados": 12,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-24",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-24",
+          "carta": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-10",
@@ -6192,8 +6591,29 @@
       "pu": 1230.25,
       "parcial": 8611.75,
       "fila": 118,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 9 requerimientos acreditados con la ficha de ECO HOSPITAL TECH S.A.C., fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción. Pre instalación: refuerzo en la pared si va sobre drywall (folio 958); la ubicación de las siete vitrinas se coordina con la obra civil antes de cerrar los tabiques.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "M-10",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-011-261026",
+      "queFalta": null,
+      "itemsEvaluados": 9,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-24",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-24",
+          "carta": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-101",
@@ -6203,8 +6623,29 @@
       "pu": 658.19,
       "parcial": 7240.13,
       "fila": 119,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 9 requerimientos acreditados con la ficha de ECO HOSPITAL TECH S.A.C., fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "M-101",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-011-261026",
+      "queFalta": null,
+      "itemsEvaluados": 9,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-24",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-24",
+          "carta": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-11",
@@ -6214,8 +6655,29 @@
       "pu": 1297.88,
       "parcial": 1297.88,
       "fila": 120,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 8 requerimientos acreditados con la ficha de ECO HOSPITAL TECH S.A.C., fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "M-11",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-011-261026",
+      "queFalta": null,
+      "itemsEvaluados": 8,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-24",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-24",
+          "carta": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-123",
@@ -6396,8 +6858,29 @@
       "pu": 1056.28,
       "parcial": 26407.08,
       "fila": 127,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 10 requerimientos acreditados con la ficha de ECO HOSPITAL TECH S.A.C., fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "M-18",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-011-261026",
+      "queFalta": null,
+      "itemsEvaluados": 10,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-24",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-24",
+          "carta": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-2",
@@ -6696,8 +7179,29 @@
       "pu": 715.25,
       "parcial": 1430.5,
       "fila": 139,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 11 requerimientos acreditados con la ficha de ECO HOSPITAL TECH S.A.C., fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "M-37",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-011-261026",
+      "queFalta": null,
+      "itemsEvaluados": 11,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-24",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-24",
+          "carta": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-38",
@@ -6707,8 +7211,29 @@
       "pu": 1466.59,
       "parcial": 1466.59,
       "fila": 140,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 8 requerimientos acreditados con la ficha de ECO HOSPITAL TECH S.A.C., fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "M-38",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-011-261026",
+      "queFalta": null,
+      "itemsEvaluados": 8,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-24",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-24",
+          "carta": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-39",
@@ -6718,8 +7243,29 @@
       "pu": 775.48,
       "parcial": 19387,
       "fila": 141,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 13 requerimientos acreditados con la ficha de ECO HOSPITAL TECH S.A.C., fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "M-39",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-011-261026",
+      "queFalta": null,
+      "itemsEvaluados": 13,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-24",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-24",
+          "carta": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-40",
@@ -6729,8 +7275,29 @@
       "pu": 829.24,
       "parcial": 7463.19,
       "fila": 142,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 12 requerimientos acreditados con la ficha de ECO HOSPITAL TECH S.A.C., fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "M-40",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-011-261026",
+      "queFalta": null,
+      "itemsEvaluados": 12,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-24",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-24",
+          "carta": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-42",
@@ -6740,8 +7307,29 @@
       "pu": 1193.74,
       "parcial": 2387.48,
       "fila": 143,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 12 requerimientos acreditados con la ficha de ECO HOSPITAL TECH S.A.C., fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "M-42",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-011-261026",
+      "queFalta": null,
+      "itemsEvaluados": 12,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-24",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-24",
+          "carta": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-44",
@@ -6751,8 +7339,29 @@
       "pu": 1339.31,
       "parcial": 4017.94,
       "fila": 144,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 11 requerimientos acreditados con la ficha de ECO HOSPITAL TECH S.A.C., fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "M-44",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-011-261026",
+      "queFalta": null,
+      "itemsEvaluados": 11,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-24",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-24",
+          "carta": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-45",
@@ -6762,8 +7371,29 @@
       "pu": 1898.49,
       "parcial": 3796.98,
       "fila": 145,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 11 requerimientos acreditados con la ficha de ECO HOSPITAL TECH S.A.C., fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "M-45",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-011-261026",
+      "queFalta": null,
+      "itemsEvaluados": 11,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-24",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-24",
+          "carta": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-011-261026",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-53",
@@ -7341,11 +7971,11 @@
       "descripcion": "Pronunciamiento sobre cada informe o carta del Contratista que lo requiera.",
       "metrica": {
         "etiqueta": "Cartas contestadas",
-        "hecho": 15,
-        "total": 15,
+        "hecho": 16,
+        "total": 16,
         "unidad": "cartas"
       },
-      "nota": "Los 15 informes recibidos del Contratista tienen pronunciamiento emitido; el último, el INF-SUP-FT-EQ-DLVM-010-261026, sobre la versión 2 del D-245. Los de octubre FT-003 a FT-009 se entregaron a la Jefatura el 26/10/2026; el FT-010 está por entregar.",
+      "nota": "Los 16 informes recibidos del Contratista tienen pronunciamiento emitido; el último, el INF-SUP-FT-EQ-DLVM-011-261026, sobre dieciséis fichas nuevas. Los de octubre FT-003 a FT-009 se entregaron a la Jefatura el 26/10/2026; el FT-010 y el FT-011 están por entregar.",
       "responsable": "Supervisión de Equipamiento"
     },
     {
@@ -7356,11 +7986,11 @@
       "descripcion": "Aprobación de la ficha técnica de cada código de equipo del expediente.",
       "metrica": {
         "etiqueta": "Fichas técnicas aprobadas",
-        "hecho": 54,
+        "hecho": 67,
         "total": 179,
         "unidad": "códigos"
       },
-      "nota": "79 de 179 códigos presentados: 54 aprobados, 1 aprobados parcialmente, 19 observados y 5 que no cumplen. Vencidas la S4 (9 de 17), la S5 (4 de 17), la S6 (0 de 17) y la S7 (2 de 16). Quedan 100 por presentar hasta la S10 (13/11/2026).",
+      "nota": "95 de 179 códigos presentados: 67 aprobados, 1 aprobados parcialmente, 22 observados y 5 que no cumplen. Vencidas la S4 (11 de 17), la S5 (5 de 17), la S6 (4 de 17) y la S7 (8 de 16). Quedan 84 por presentar hasta la S10 (13/11/2026).",
       "responsable": "Contratista ICM S.A."
     },
     {
