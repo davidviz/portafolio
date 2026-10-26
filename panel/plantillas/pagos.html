@@ -47,7 +47,11 @@ const bruto = D.pagos.reduce((s, p) => s + p.montoBruto, 0);
 const cobrados = (codigo) => CB.porFacturar.every((x) => x.producto !== codigo);
 const reciboDe = (codigo) => {
   const p = CB.porFacturar.find((x) => x.producto === codigo);
-  if (!p) return D.recibos[0] ? D.recibos[0].numero : '—';
+  if (!p) {
+    /* Cobrado: el recibo que lo lista en `productos`. El E001-50 no trae lista y es el primero. */
+    const r = D.recibos.find((x) => (x.productos || []).includes(codigo));
+    return r ? r.numero : (D.recibos[0] ? D.recibos[0].numero : '—');
+  }
   return p.estado === 'FACTURADO' ? (p.recibo || '—') : '—';
 };
 
