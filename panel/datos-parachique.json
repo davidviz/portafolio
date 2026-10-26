@@ -1000,6 +1000,58 @@
         "Equipos complementarios"
       ],
       "honorarioNeto": 500
+    },
+    {
+      "id": "CT-IN-016",
+      "flujo": "RECIBIDA",
+      "clase": "INFORME DEL CONTRATISTA",
+      "etapa": "E3",
+      "codigo": "CARTA N° 133-2026 / INFORME N° 016-2026/JCAMF-EQH",
+      "fecha": "2026-10-26",
+      "contraparte": "INGENIERÍA CIVIL MONTAJES S.A. (ICM) — Contratista de obra",
+      "asunto": "Levantamiento de la observación del ítem A02 de la ficha técnica del D-245, Analizador bioquímico semiautomático.",
+      "estado": "ATENDIDA",
+      "numeral": "2.3",
+      "membrete": false,
+      "respondidaPor": "INF-SUP-FT-EQ-DLVM-010-261026",
+      "detalle": "Informe N° 016 del 24/10/2026, del Ing. Juan Carlos Augusto Mendiola Florez (CIP 201412), suscrito también por el Residente de Obra Ing. Luis Enrique Santisteban Romero (CIP 81329). 4 folios. Recibido el 26/10/2026 a las 16:03 h. Versión 2 de la ficha del D-245, ELITech Microlab 300: no trae carta del fabricante; sostiene que el rango de 320 a 1000 nm cubre las determinaciones de química clínica y lo presenta como mejora. No presenta códigos nuevos.",
+      "archivo": "CARTA N 133-2026 ICM - Informe 016 - Levantamiento de observacion D-245.pdf",
+      "ruta": "3.Sustentos\\",
+      "url": null,
+      "drive": {
+        "sustento": "1S439hP8cIFI1j80_yhhDtDoXEHyvsboB"
+      },
+      "areas": [
+        "Equipos biomédicos"
+      ]
+    },
+    {
+      "id": "PR-019",
+      "flujo": "EMITIDA",
+      "clase": "INFORME",
+      "etapa": "E3",
+      "codigo": "INF-SUP-FT-EQ-DLVM-010-261026",
+      "fecha": "2026-10-26",
+      "contraparte": "Jefatura de Supervisión de Obra — Ing. Manuel Ricardo Torres Peche",
+      "asunto": "Informe de Validación de Fichas Técnicas N° 010 — levantamiento del A02 del D-245.",
+      "estado": "POR ENTREGAR",
+      "numeral": "2.3",
+      "membrete": true,
+      "responde": "CARTA N° 133-2026 / INFORME N° 016-2026/JCAMF-EQH",
+      "detalle": "Se APRUEBA la ficha del D-245, analizador bioquímico semiautomático ELITech Microlab 300, en su versión 2: 32 de 32 requerimientos (100 %). El A02 se aprueba por equivalencia funcional: los filtros de 340 a 620 nm quedan dentro del detector de 320 a 1000 nm y el tramo de 1000 a 1100 nm no tiene uso. Constancias: no se reconoce la mejora alegada, la conformidad se limita al modelo ofertado y la lectura de los seis filtros se verifica en la recepción. Autoriza la procura.",
+      "archivo": "INF-SUP-FT-EQ-DLVM-010-261026_INFORME_FIRMADO.pdf",
+      "ruta": "2.Informes Mensuales\\3.Informe de repsuestas\\FT-010-261026\\",
+      "url": null,
+      "drive": {
+        "informe": "1nSN3UmE-s6XoKj-fqFkkeZ4KngSDkXpA",
+        "pdf": "1-tHHTN__VTl3pkR8iqro_wRN2uA4g4xv",
+        "firmado": "1n5cQUdUaJv5XWE3_fXENv_2jEselEc9Z",
+        "sustento": "1539kOCougnD3A6NzeJGp7e9fFhYhLMay"
+      },
+      "areas": [
+        "Equipos biomédicos"
+      ],
+      "honorarioNeto": 500
     }
   ],
   "expediente": {
@@ -2666,7 +2718,7 @@
           "equipo": "D-245 — Analizador bioquímico semiautomático",
           "materia": "NO APROBADA en A02: fotodiodo de 320 a 1000 nm frente a los 320 a 1100 nm o mejor del expediente. Los 31 requerimientos restantes acreditados.",
           "nivel": "CRITICA",
-          "estado": "Por absolver",
+          "estado": "Subsanada con el INF-SUP-FT-EQ-DLVM-010-261026: A02 aprobado por equivalencia funcional y ficha aprobada",
           "ubicacion": "ANEXO N° 1 del bloque D-245 del Informe N° 006",
           "extremos": 1,
           "codigos": [
@@ -3402,6 +3454,36 @@
           "fuente": "Validación de fichas técnicas"
         }
       ]
+    },
+    {
+      "informe": "INF-SUP-FT-EQ-DLVM-010-261026",
+      "documentoAbsuelto": "INFORME N° 016-2026/JCAMF-EQH (24/10/2026) — CARTA N° 133-2026, 4 folios",
+      "materia": "Levantamiento de la observación del ítem A02 de la ficha técnica del D-245",
+      "observaciones": 0,
+      "extremos": 0,
+      "confirmadas": 0,
+      "trasladadas": 0,
+      "yaAbsueltas": 0,
+      "codigoEvaluado": "D-245",
+      "tipo": "FICHA",
+      "resultado": "Ficha del D-245 APROBADA en la versión 2: 32 de 32 requerimientos (100 %). Autoriza la procura.",
+      "naturaleza": "El expediente pide detector de foto diodo de 320 a 1100 nm o mejor y el fabricante declara 320 a 1000 nm. El Microlab 300 es un fotómetro de filtros: la longitud de onda la fija el filtro, y los seis del A04 (340 a 620 nm) y las seis posiciones opcionales quedan dentro del rango declarado. Se aprueba por equivalencia funcional, como en los FT-006 y FT-008, sin reconocer la mejora de señal/ruido que alega el Contratista. El Microlab 400, que declara 1100 nm, no alcanzaría el A03 ni el A12.",
+      "detalle": [
+        {
+          "obs": "OK",
+          "equipo": "D-245 — Analizador bioquímico semiautomatico",
+          "materia": "Ficha aprobada en la versión 2. A02 aprobado por equivalencia funcional; no se reconoce la mejora alegada y la conformidad se limita al modelo ofertado.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "Informe N° 016, folio 002; bloque D-245 del Informe N° 006, folio 002",
+          "extremos": null,
+          "codigos": [
+            "D-245"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-010-261026",
+          "fuente": "Validación de fichas técnicas"
+        }
+      ]
     }
   ],
   "valorizacion": {
@@ -3422,7 +3504,7 @@
       {
         "requisito": "Aprobación de las EETT por la Entidad",
         "estado": "PENDIENTE",
-        "nota": "46 asuntos siguen pendientes de pronunciamiento del Proyectista. De las fichas técnicas, 53 de 179 cuentan con aprobación de la Supervisión, que no sustituye la aprobación de las EETT por la Entidad."
+        "nota": "46 asuntos siguen pendientes de pronunciamiento del Proyectista. De las fichas técnicas, 54 de 179 cuentan con aprobación de la Supervisión, que no sustituye la aprobación de las EETT por la Entidad."
       },
       {
         "requisito": "Planos de preinstalación emitidos por el Contratista",
@@ -3510,7 +3592,7 @@
       "nivel": "SUSTANCIAL",
       "reservada": false,
       "titulo": "Plazo de participación vencido el 12/09/2026",
-      "detalle": "La propuesta fija 60 días calendario desde el inicio de servicio del 14/07/2026, de modo que el plazo venció el 12/09/2026. Con posterioridad se emitieron doce pronunciamientos: el RC-004, el AP-001, el FT-001, el FT-002, el RC-005, el FT-003, el FT-004, el FT-005, el FT-006, el FT-007, el FT-008 y el FT-009.",
+      "detalle": "La propuesta fija 60 días calendario desde el inicio de servicio del 14/07/2026, de modo que el plazo venció el 12/09/2026. Con posterioridad se emitieron trece pronunciamientos: el RC-004, el AP-001, el FT-001, el FT-002, el RC-005, el FT-003, el FT-004, el FT-005, el FT-006, el FT-007, el FT-008, el FT-009 y el FT-010.",
       "accion": "Formalizar con el CONSORCIO PARACHIQUE la ampliación del plazo de participación, para que los pronunciamientos posteriores al 12/09 queden amparados."
     },
     {
@@ -3930,20 +4012,20 @@
       "pu": 49339.61,
       "parcial": 49339.61,
       "fila": 16,
-      "ficha": "NO CUMPLE",
-      "obs": "NO APROBADA. El fabricante declara un fotodiodo de 320 a 1000 nm y el expediente pide de 320 a 1100 nm o mejor. Los 31 requerimientos restantes están acreditados, y los seis filtros exigidos, de 340 a 620 nm, quedan comprendidos con holgura.",
-      "version": 1,
-      "versiones": 1,
+      "ficha": "APROBADA",
+      "obs": "APROBADA en la versión 2. Cumple los 32 requerimientos (100 %). El A02 se aprueba por equivalencia funcional: el Microlab 300 lee con filtros de interferencia de 340 a 620 nm, más seis posiciones para filtros opcionales, todos dentro del detector de 320 a 1000 nm que declara el fabricante (folio 002 del bloque D-245 del Informe N° 006); el tramo de 1000 a 1100 nm no tiene uso en las determinaciones previstas. Constancias: no se reconoce la mejora de señal/ruido alegada; la conformidad se limita al modelo ofertado; en la recepción se verifica la lectura en los seis filtros del A04.",
+      "version": 2,
+      "versiones": 2,
       "marca": "ELITECH",
       "modelo": "Microlab 300",
-      "fabricante": null,
-      "verificacionWeb": null,
-      "cartaContratista": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
-      "informeSupervision": "INF-SUP-FT-EQ-DLVM-002-260919",
-      "queFalta": "Carta de ELITECHGROUP con el rango real del fotodiodo, o descargo al Comité para la variación del límite superior.",
+      "fabricante": "ELITechGroup",
+      "verificacionWeb": "elitechgroup.com (26/10/2026): folleto Microlab 300, código 600231049002EN de marzo de 2022, fotodiodo de 320 a 1000 nm y siete filtros estándar de 340 a 660 nm. El Microlab 400 declara 320 a 1100 nm, pero no alcanza el A03 ni el A12.",
+      "cartaContratista": "CARTA N° 133-2026 / INFORME N° 016-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-010-261026",
+      "queFalta": null,
       "itemsEvaluados": 32,
-      "itemsPendientes": "A02",
-      "fechaEntrega": "2026-09-18",
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-24",
       "historial": [
         {
           "version": 1,
@@ -3951,6 +4033,13 @@
           "carta": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
           "informe": "INF-SUP-FT-EQ-DLVM-002-260919",
           "resultado": "NO CUMPLE"
+        },
+        {
+          "version": 2,
+          "fecha": "2026-10-24",
+          "carta": "CARTA N° 133-2026 / INFORME N° 016-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-010-261026",
+          "resultado": "APROBADA"
         }
       ]
     },
@@ -7252,11 +7341,11 @@
       "descripcion": "Pronunciamiento sobre cada informe o carta del Contratista que lo requiera.",
       "metrica": {
         "etiqueta": "Cartas contestadas",
-        "hecho": 14,
-        "total": 14,
+        "hecho": 15,
+        "total": 15,
         "unidad": "cartas"
       },
-      "nota": "Los 14 informes recibidos del Contratista tienen pronunciamiento emitido; el último, el INF-SUP-FT-EQ-DLVM-009-261022, sobre la versión 2 del D-158. Los de octubre (FT-003 a FT-009) están emitidos y pendientes de entrega a la Jefatura.",
+      "nota": "Los 15 informes recibidos del Contratista tienen pronunciamiento emitido; el último, el INF-SUP-FT-EQ-DLVM-010-261026, sobre la versión 2 del D-245. Los de octubre FT-003 a FT-009 se entregaron a la Jefatura el 26/10/2026; el FT-010 está por entregar.",
       "responsable": "Supervisión de Equipamiento"
     },
     {
@@ -7267,11 +7356,11 @@
       "descripcion": "Aprobación de la ficha técnica de cada código de equipo del expediente.",
       "metrica": {
         "etiqueta": "Fichas técnicas aprobadas",
-        "hecho": 53,
+        "hecho": 54,
         "total": 179,
         "unidad": "códigos"
       },
-      "nota": "79 de 179 códigos presentados: 53 aprobados, 1 aprobados parcialmente, 19 observados y 6 que no cumplen. Vencidas la S4 (9 de 17), la S5 (4 de 17) y la S6 (0 de 17). Quedan 100 por presentar hasta la S10 (13/11/2026).",
+      "nota": "79 de 179 códigos presentados: 54 aprobados, 1 aprobados parcialmente, 19 observados y 5 que no cumplen. Vencidas la S4 (9 de 17), la S5 (4 de 17), la S6 (0 de 17) y la S7 (2 de 16). Quedan 100 por presentar hasta la S10 (13/11/2026).",
       "responsable": "Contratista ICM S.A."
     },
     {
