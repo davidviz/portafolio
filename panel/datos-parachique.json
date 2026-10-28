@@ -1,7 +1,7 @@
 {
   "_lea_esto": "Respaldo y datos de fondo del panel CS PARACHIQUE. El estado de las fichas técnicas ya NO se gobierna aquí: manda la hoja «2 SEGUIMIENTO» del Drive, y las observaciones a fichas, la hoja «3 OBSERVACIONES». Lo que se edite aquí para un código que la hoja mencione, la hoja lo sobrescribe. Todo lo demás —etapas, documentos, expediente, presupuesto, valorización— sí se edita aquí. No edite los dashboard.html a mano: se regeneran y se pierde el cambio.",
   "meta": {
-    "actualizado": "2026-10-26",
+    "actualizado": "2026-10-27",
     "proyecto": "Mejoramiento de los Servicios de Salud del Establecimiento de Salud Parachique",
     "cui": "2571750",
     "ubicacion": "Distrito y provincia de Sechura — Piura",
@@ -1091,7 +1091,7 @@
       "numeral": "2.3",
       "membrete": true,
       "responde": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
-      "detalle": "Contrasta 225 requerimientos contra los folios del fabricante. APRUEBA trece fichas (D-96 y los doce de mobiliario M-1, M-10, M-101, M-11, M-18, M-37, M-38, M-39, M-40, M-42, M-44 y M-45) y OBSERVA tres: D-212 GETIDY JN-29 en D2, A14, A16 y A08; D-112 NINGBO DAVID TI-2000 en D01 (segunda batería); y D-350 NINGBO DAVID HKN-93CS en A12 (balanza opcional). Ninguna NO APROBADA. Cumplimiento global del 97 %: 219 de 225. Emitido el 26/10/2026, por entregar a la Jefatura.",
+      "detalle": "Contrasta 225 requerimientos contra los folios del fabricante. APRUEBA trece fichas (D-96 y los doce de mobiliario M-1, M-10, M-101, M-11, M-18, M-37, M-38, M-39, M-40, M-42, M-44 y M-45) y OBSERVA tres: D-212 GETIDY JN-29 en D2 y A16; D-112 NINGBO DAVID TI-2000 en D01 (segunda batería); y D-350 NINGBO DAVID HKN-93CS en A12 (balanza opcional). Ninguna NO APROBADA. Cumplimiento global del 98 %: 221 de 225. Versión definitiva del 27/10/2026, revisada por el suscrito, que levanta el A14 y el A08 del D-212. Emitido el 26/10/2026, por entregar a la Jefatura.",
       "archivo": "INF-SUP-FT-EQ-DLVM-011-261026_INFORME_FIRMADO.pdf",
       "ruta": "2.Informes Mensuales\\3.Informe de repsuestas\\FT-011-261026\\",
       "url": null,
@@ -3544,14 +3544,14 @@
       "documentoAbsuelto": "INFORME N° 017-2026/JCAMF-EQH (24/10/2026) — CARTA N° 134-2026, 141 folios",
       "materia": "Fichas técnicas de cumplimiento de dieciséis (16) códigos de equipamiento",
       "observaciones": 3,
-      "extremos": 6,
-      "confirmadas": 6,
+      "extremos": 4,
+      "confirmadas": 4,
       "trasladadas": 0,
       "yaAbsueltas": 0,
       "codigoEvaluado": "16 códigos",
       "tipo": "FICHA",
-      "resultado": "13 fichas APROBADAS y 3 OBSERVADAS (D-212, D-112 y D-350); ninguna NO APROBADA. Cumplimiento técnico global sustentado del 97 %: 219 de 225 requerimientos. Solo la ficha APROBADA autoriza la procura.",
-      "naturaleza": "Sexta entrega de fichas técnicas nuevas: trae dos códigos de la S4, uno de la S5, cuatro de la S6 y seis de la S7, y adelanta tres de la S8. Con ella suman 95 de los 179 códigos. El mobiliario de fabricación nacional se aprueba con la ficha del proveedor, que transcribe el expediente, y se verifica en la recepción. Las tres observadas se cierran con un documento, sin cambiar de equipo: dos componentes que el fabricante marca como opcionales (segunda batería de la TI-2000 y balanza de la HKN-93CS) y, en el esterilizador JN-29, valores del fabricante que se contradicen y un certificado PED vencido.",
+      "resultado": "13 fichas APROBADAS y 3 OBSERVADAS (D-212, D-112 y D-350); ninguna NO APROBADA. Cumplimiento técnico global sustentado del 98 %: 221 de 225 requerimientos. Solo la ficha APROBADA autoriza la procura.",
+      "naturaleza": "Sexta entrega de fichas técnicas nuevas: trae dos códigos de la S4, uno de la S5, cuatro de la S6 y seis de la S7, y adelanta tres de la S8. Con ella suman 95 de los 179 códigos. El mobiliario de fabricación nacional se aprueba con la ficha del proveedor, que transcribe el expediente, y se verifica en la recepción. Las tres observadas se cierran con un documento, sin cambiar de equipo: dos componentes que el fabricante marca como opcionales (segunda batería de la TI-2000 y balanza de la HKN-93CS) y, en el esterilizador JN-29, valores del fabricante que se contradicen y un consumo de agua por ciclo deducido.",
       "detalle": [
         {
           "obs": "OK",
@@ -3766,11 +3766,11 @@
         {
           "obs": "D-212",
           "equipo": "D-212 — Esterilizador con generador eléctrico de vapor de 20 lt",
-          "materia": "OBSERVADA. 20 de 24. D2: el fabricante da 3000 W y 20 A (folio 016) y 3500 VA a 230 V (folio 005), valores que no cuadran entre sí. A14: el catálogo declara impresora incorporada y el manual una mini impresora externa o USB. A16: el consumo por ciclo lo deduce la nota (583 ml). A08: el certificado PED venció el 24/08/2026. La cámara de 29 L cumple el A09.",
+          "materia": "OBSERVADA. 22 de 24. D2: el fabricante da 3000 W y 20 A (folio 016) y 3500 VA a 230 V (folio 005), valores que no cuadran entre sí. A16: el consumo por ciclo lo deduce la nota (583 ml). La cámara de 29 L cumple el A09.",
           "nivel": "LEVE",
           "estado": "Por absolver",
           "ubicacion": "Bloque D-212 del Informe N° 017",
-          "extremos": 4,
+          "extremos": 2,
           "codigos": [
             "D-212"
           ],
@@ -4247,7 +4247,7 @@
       "parcial": 34587.71,
       "fila": 13,
       "ficha": "OBSERVADA",
-      "obs": "OBSERVADA. 20 de 24. D2: el fabricante da 3000 W y 20 A (folio 016) y 3500 VA a 230 V (folio 005), valores que no cuadran entre sí. A14: el catálogo declara impresora incorporada y el manual una mini impresora externa o USB. A16: el consumo por ciclo lo deduce la nota (583 ml). A08: el certificado PED venció el 24/08/2026. La cámara de 29 L cumple el A09.",
+      "obs": "OBSERVADA. 22 de 24. D2: el fabricante da 3000 W y 20 A (folio 016) y 3500 VA a 230 V (folio 005), valores que no cuadran entre sí. A16: el consumo por ciclo lo deduce la nota (583 ml). La cámara de 29 L cumple el A09.",
       "version": 1,
       "versiones": 1,
       "marca": "GETIDY",
@@ -4256,9 +4256,9 @@
       "verificacionWeb": "Búsqueda del 26/10/2026: GETIDY no publica en línea el consumo de agua por ciclo del JN-29.",
       "cartaContratista": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
       "informeSupervision": "INF-SUP-FT-EQ-DLVM-011-261026",
-      "queFalta": "Carta de GETIDY que fije la potencia y la corriente nominal del JN-29 a 220 V, no mayor de 16 A (D2), declare impresora térmica incorporada (A14) y el consumo de agua por ciclo, igual o menor a 300 ml (A16); y certificado PED vigente que comprenda al JN-29 (A08).",
+      "queFalta": "Carta de GETIDY que fije la potencia y la corriente nominal del JN-29 a 220 V, no mayor de 16 A (D2), y el consumo de agua por ciclo, igual o menor a 300 ml (A16).",
       "itemsEvaluados": 24,
-      "itemsPendientes": "D2, A14, A16 y A08",
+      "itemsPendientes": "D2 y A16",
       "fechaEntrega": "2026-10-24",
       "historial": [
         {
