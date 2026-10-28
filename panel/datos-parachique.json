@@ -1106,6 +1106,32 @@
         "Mobiliario administrativo"
       ],
       "honorarioNeto": 500
+    },
+    {
+      "id": "PR-021",
+      "flujo": "EMITIDA",
+      "clase": "INFORME",
+      "codigo": "INF-SUP-MEN-EQ-DLVM-003-261027",
+      "fecha": "2026-10-27",
+      "contraparte": "Jefatura de Supervisión de Obra — Ing. Manuel Ricardo Torres Peche",
+      "asunto": "Informe Mensual de Supervisión N° 003 — octubre de 2026.",
+      "estado": "POR ENTREGAR",
+      "numeral": "2.2",
+      "membrete": true,
+      "detalle": "Estado de la especialidad al 27/10/2026. Nueve informes del Contratista atendidos con nueve pronunciamientos (FT-003 a FT-011), ninguno en más de tres días. Fichas: 95 de 179 presentadas y 67 aprobadas por S/ 861,973.74 (27.7 % del presupuesto), 1 aprobada parcialmente, 22 observadas, 5 no aprobadas y 84 sin presentar; 28 por subsanar. De los nueve códigos con pre instalación solo el M-10 está aprobado. La ficha del E-130 sigue detenida por la respuesta pendiente del Proyectista, pedida a través de la Entidad el 15/09/2026; su atraso en la S6 no es imputable al Contratista. 46 asuntos del Proyectista sin absolver; el I-5 y el I-9 condicionan la S9 del 06/11. 40 códigos de semanas vencidas sin presentar, sin reprogramación escrita. Emitido el 27/10/2026, por entregar a la Jefatura.",
+      "archivo": "INF-SUP-MEN-EQ-DLVM-003-261027_INFORME.docx + _INFORME_FIRMADO.pdf",
+      "ruta": "2.Informes Mensuales\\2.Informes Mensuales\\MEN-003-261027\\",
+      "url": null,
+      "etapa": "E2",
+      "drive": {
+        "informe": "1O_TR9kY5EmIqVp6kyeOmwRgJigZ-99v1",
+        "pdf": "1BW1Iv_BVnPnwaTJ-_ZQfXUvyB1z4iWSU",
+        "firmado": "1TyV-iwN5guQ-u-AY0B4XcHYCRwADWydl"
+      },
+      "areas": [
+        "Transversal / documental"
+      ],
+      "honorarioNeto": 1800
     }
   ],
   "expediente": {
@@ -3899,9 +3925,9 @@
     {
       "nivel": "SUSTANCIAL",
       "reservada": false,
-      "titulo": "El E-130 sigue como 8 litros/h en los documentos de recepción",
-      "detalle": "La capacidad exigible quedó ratificada en 4 litros/h con el INF-SUP-RC-EQ-DLVM-003-260908, pero el Proyectista sostuvo después otra cifra y el asunto se elevó a la Entidad con el INF-SUP-AP-EQ-DLVM-001-260915. El cronograma de la CARTA N° 085-2026 vuelve a denominarlo de 8 litros/h y lo programa en la S6, el 16/10/2026; el INF-SUP-RC-EQ-DLVM-005-260929 precisa que su aprobación no altera el criterio.",
-      "accion": "Esperar el pronunciamiento de la Entidad antes de que el Contratista remita la ficha técnica del E-130."
+      "titulo": "El E-130 sigue esperando al Proyectista: sin su respuesta el Contratista no puede presentar la ficha",
+      "detalle": "La capacidad exigible quedó ratificada en 4 litros/h con el INF-SUP-RC-EQ-DLVM-003-260908, pero el Proyectista sostuvo después otra cifra y el asunto se elevó a la Entidad con el INF-SUP-AP-EQ-DLVM-001-260915, para que precise en cuál de sus dos manifestaciones se afirma. Al 27/10/2026, seis semanas después, no hay respuesta. El cronograma lo programaba en la S6, vencida el 16/10/2026: ese atraso no es imputable al Contratista, que no sabe qué equipo ofertar, y tampoco puede cerrarse la pre instalación eléctrica del ambiente (folio 958: 380 V trifásico y 4,000 W para 4 litros/h). El cronograma de la CARTA N° 085-2026 lo denomina de 8 litros/h; el INF-SUP-RC-EQ-DLVM-005-260929 precisa que su aprobación no altera el criterio.",
+      "accion": "Solicitar a la Entidad que reitere al Proyectista el pedido del INF-SUP-AP-EQ-DLVM-001-260915, como recomienda el INF-SUP-MEN-EQ-DLVM-003-261027. Hasta entonces el Contratista no remite la ficha del E-130."
     },
     {
       "nivel": "LEVE",
