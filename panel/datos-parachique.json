@@ -1,7 +1,7 @@
 {
   "_lea_esto": "Respaldo y datos de fondo del panel CS PARACHIQUE. El estado de las fichas técnicas ya NO se gobierna aquí: manda la hoja «2 SEGUIMIENTO» del Drive, y las observaciones a fichas, la hoja «3 OBSERVACIONES». Lo que se edite aquí para un código que la hoja mencione, la hoja lo sobrescribe. Todo lo demás —etapas, documentos, expediente, presupuesto, valorización— sí se edita aquí. No edite los dashboard.html a mano: se regeneran y se pierde el cambio.",
   "meta": {
-    "actualizado": "2026-10-27",
+    "actualizado": "2026-10-28",
     "proyecto": "Mejoramiento de los Servicios de Salud del Establecimiento de Salud Parachique",
     "cui": "2571750",
     "ubicacion": "Distrito y provincia de Sechura — Piura",
@@ -1132,6 +1132,60 @@
         "Transversal / documental"
       ],
       "honorarioNeto": 1800
+    },
+    {
+      "id": "CT-IN-011",
+      "flujo": "RECIBIDA",
+      "clase": "INFORME DEL CONTRATISTA",
+      "etapa": "E3",
+      "codigo": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+      "fecha": "2026-10-19",
+      "contraparte": "INGENIERÍA CIVIL MONTAJES S.A. (ICM) — Contratista de obra",
+      "asunto": "Fichas técnicas de cumplimiento de dieciséis (16) códigos de mobiliario.",
+      "estado": "ATENDIDA",
+      "numeral": "2.3",
+      "membrete": false,
+      "respondidaPor": "INF-SUP-FT-EQ-DLVM-012-261028",
+      "detalle": "Informe N° 011 del 17/10/2026, del Ing. Juan Carlos Augusto Mendiola Florez (CIP 201412), suscrito también por el Residente de Obra Ing. Luis Enrique Santisteban Romero (CIP 81329). 90 folios. Recibido por la Jefatura el 19/10/2026 a las 18:50 h y derivado a la especialidad el 28/10/2026. Dieciséis fichas de mobiliario de fabricación nacional, de ACEROS INOXIDABLES PIURA: cuatro administrativos y doce clínicos. Trae un código de la S4, uno de la S5, tres de la S6 y dos de la S7, y adelanta nueve de la S8 a la S10, entre ellos el M-9, con pre instalación. No acompaña la reprogramación escrita.",
+      "archivo": "CARTA N 119-2026 ICM - Informe 011 - Fichas tecnicas de 16 equipos de mobiliario.pdf",
+      "ruta": "3.Sustentos\\",
+      "url": null,
+      "drive": {
+        "sustento": "1cD_Q-1AH3U2855da4n3H7d52V84bVCa8"
+      },
+      "areas": [
+        "Mobiliario administrativo",
+        "Mobiliario asistencial"
+      ]
+    },
+    {
+      "id": "PR-022",
+      "flujo": "EMITIDA",
+      "clase": "INFORME",
+      "etapa": "E3",
+      "codigo": "INF-SUP-FT-EQ-DLVM-012-261028",
+      "fecha": "2026-10-28",
+      "contraparte": "Jefatura de Supervisión de Obra — Ing. Manuel Ricardo Torres Peche",
+      "asunto": "Informe de Validación de Fichas Técnicas N° 012 — dieciséis (16) códigos de mobiliario.",
+      "estado": "POR ENTREGAR",
+      "numeral": "2.3",
+      "membrete": true,
+      "responde": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+      "detalle": "Contrasta 144 requerimientos contra la ficha del fabricante. APRUEBA las dieciséis fichas: M-9, M-15, M-30, M-59, M-60, M-72, M-86, M-90, M-94, M-99, M-105, M-113, M-115, M-116, M-117 y M-159. Las estanterías M-59 y M-60 se aprueban en 900 x 400 x 2300 mm, porque el expediente tiene cruzados el largo y la altura; se aceptan como mejora el acero inoxidable del M-9, los regatones de poliuretano del M-30 y la soldadura TIG del M-117. Cumplimiento global del 100 %: 144 de 144. Corrige la cuenta del cronograma del FT-011, que dio por no presentados siete de estos códigos. Emitido el 28/10/2026, por entregar a la Jefatura.",
+      "archivo": "INF-SUP-FT-EQ-DLVM-012-261028_INFORME_FIRMADO.pdf",
+      "ruta": "2.Informes Mensuales\\3.Informe de repsuestas\\FT-012-261028\\",
+      "url": null,
+      "drive": {
+        "informe": "1NU3dJwlYIYWqVEEFx8s8hFNlpKOZCzzR",
+        "pdf": "1k8nQTfMtcviQolTcB5ay9jfvJn3KrDDe",
+        "firmado": "15vBwC8eFYK8O5uXB_IPyAt8dJFbEhC60",
+        "sustento": "11s2XbUtx5nN4TUoi2eofqZRFv6OLaDkD"
+      },
+      "areas": [
+        "Mobiliario administrativo",
+        "Mobiliario asistencial"
+      ],
+      "honorarioNeto": 500
     }
   ],
   "expediente": {
@@ -3804,6 +3858,246 @@
           "fuente": "Validación de fichas técnicas"
         }
       ]
+    },
+    {
+      "informe": "INF-SUP-FT-EQ-DLVM-012-261028",
+      "documentoAbsuelto": "INFORME N° 011-2026/JCAMF-EQH (17/10/2026) — CARTA N° 119-2026, 90 folios",
+      "materia": "Fichas técnicas de cumplimiento de dieciséis (16) códigos de mobiliario",
+      "observaciones": 0,
+      "extremos": 0,
+      "confirmadas": 0,
+      "trasladadas": 0,
+      "yaAbsueltas": 0,
+      "codigoEvaluado": "16 códigos",
+      "tipo": "FICHA",
+      "resultado": "16 fichas APROBADAS; ninguna OBSERVADA ni NO APROBADA. Cumplimiento técnico global sustentado del 100 %: 144 de 144 requerimientos. Las estanterías M-59 y M-60, en 900 x 400 x 2300 mm.",
+      "naturaleza": "Séptima entrega de fichas técnicas nuevas, recibida por la Jefatura el 19/10/2026 y derivada a la especialidad el 28/10/2026: un código de la S4, uno de la S5, tres de la S6 y dos de la S7, y nueve adelantados de la S8 a la S10. Con ella suman 111 de los 179 códigos. El mobiliario de fabricación nacional se aprueba con la ficha del fabricante, que transcribe el expediente, y se verifica en la recepción. El largo y la altura de las estanterías están cruzados en el expediente y se aprueban en las medidas que fijan sus demás ítems, como el M-21 del FT-004.",
+      "detalle": [
+        {
+          "obs": "OK",
+          "equipo": "M-9 — Percha metálica de pared con 4 ganchos",
+          "materia": "Ficha aprobada. Los 5 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción. Mejora aceptada en el A02: acero inoxidable de 1 mm en lugar de acero LAF. Pre instalación: refuerzo en la pared si va sobre drywall (folio 957); la ubicación de las veinticinco perchas se coordina con la obra civil antes de cerrar los tabiques.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-9 del Informe N° 011",
+          "extremos": null,
+          "codigos": [
+            "M-9"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-15 — Papelera metálica de piso",
+          "materia": "Ficha aprobada. Los 5 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-15 del Informe N° 011",
+          "extremos": null,
+          "codigos": [
+            "M-15"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-30 — Mesa metálica de centro",
+          "materia": "Ficha aprobada. Los 7 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción. Mejora aceptada en el A02 y el A03: regatones de poliuretano en lugar de polietileno.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-30 del Informe N° 011",
+          "extremos": null,
+          "codigos": [
+            "M-30"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-59 — Estantería de acero inoxidable de 01 cuerpo 03 divisiones",
+          "materia": "Ficha aprobada. Los 9 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción. Se aprueba en 900 mm de largo, 400 de ancho y 2300 de altura: el expediente tiene cruzados el largo y la altura del capítulo B, como lo muestra el panel de 900 x 400 mm del A04 del M-60 (folio 1043).",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-59 del Informe N° 011",
+          "extremos": null,
+          "codigos": [
+            "M-59"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-60 — Estantería de acero inoxidable de un 01 cuerpo 05 divisiones",
+          "materia": "Ficha aprobada. Los 13 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción. Se aprueba en 900 mm de largo, 400 de ancho y 2300 de altura: el expediente tiene cruzados el largo y la altura del capítulo B, como lo muestra el panel de 900 x 400 mm del A04 del M-60 (folio 1043). El A08 anuncia un tratamiento de superficie y no lo describe.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-60 del Informe N° 011",
+          "extremos": null,
+          "codigos": [
+            "M-60"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-72 — Biombo de acero inoxidable de 2 cuerpos",
+          "materia": "Ficha aprobada. Los 11 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-72 del Informe N° 011",
+          "extremos": null,
+          "codigos": [
+            "M-72"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-86 — Escalinata metálica 2 peldaños",
+          "materia": "Ficha aprobada. Los 8 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-86 del Informe N° 011",
+          "extremos": null,
+          "codigos": [
+            "M-86"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-90 — Mesa de acero inoxidable tipo mayo",
+          "materia": "Ficha aprobada. Los 12 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-90 del Informe N° 011",
+          "extremos": null,
+          "codigos": [
+            "M-90"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-94 — Mesa de trabajo de acero inoxidable de 140 x 70 cm",
+          "materia": "Ficha aprobada. Los 9 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción. Las tres vigas del tablero (A01) se verifican en la recepción.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-94 del Informe N° 011",
+          "extremos": null,
+          "codigos": [
+            "M-94"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-99 — Mesa rodable de acero inoxidable para curaciones con tablero",
+          "materia": "Ficha aprobada. Los 11 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-99 del Informe N° 011",
+          "extremos": null,
+          "codigos": [
+            "M-99"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-105 — Portasuero metálico rodable",
+          "materia": "Ficha aprobada. Los 10 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-105 del Informe N° 011",
+          "extremos": null,
+          "codigos": [
+            "M-105"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-113 — Carro para útiles de limpieza",
+          "materia": "Ficha aprobada. Los 12 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción. El borde de 45 mm de las bandejas (A04) se verifica en la recepción.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-113 del Informe N° 011",
+          "extremos": null,
+          "codigos": [
+            "M-113"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-115 — Porta balde de acero inoxidable rodable con balde de acero inoxidable",
+          "materia": "Ficha aprobada. Los 7 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción. El espesor de 1,2 mm del balde (A03) se verifica en la recepción.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-115 del Informe N° 011",
+          "extremos": null,
+          "codigos": [
+            "M-115"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-116 — Porta lavatorio doble metálico rodable, incluye lavatorio de acero inoxidable",
+          "materia": "Ficha aprobada. Los 10 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción. El B02 del expediente no fija el ancho; se acepta el de 450 mm del fabricante.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-116 del Informe N° 011",
+          "extremos": null,
+          "codigos": [
+            "M-116"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-117 — Portabolsa metálica rodable, con bolsa de lona",
+          "materia": "Ficha aprobada. Los 7 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción. Mejora aceptada en el A05: soldadura TIG en lugar de MIG.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-117 del Informe N° 011",
+          "extremos": null,
+          "codigos": [
+            "M-117"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-159 — Mesa de uso  múltiple de acero inoxidable de 90 x 45 cm",
+          "materia": "Ficha aprobada. Los 8 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-159 del Informe N° 011",
+          "extremos": null,
+          "codigos": [
+            "M-159"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "fuente": "Validación de fichas técnicas"
+        }
+      ]
     }
   ],
   "valorizacion": {
@@ -3824,7 +4118,7 @@
       {
         "requisito": "Aprobación de las EETT por la Entidad",
         "estado": "PENDIENTE",
-        "nota": "46 asuntos siguen pendientes de pronunciamiento del Proyectista. De las fichas técnicas, 67 de 179 cuentan con aprobación de la Supervisión, que no sustituye la aprobación de las EETT por la Entidad."
+        "nota": "46 asuntos siguen pendientes de pronunciamiento del Proyectista. De las fichas técnicas, 83 de 179 cuentan con aprobación de la Supervisión, que no sustituye la aprobación de las EETT por la Entidad."
       },
       {
         "requisito": "Planos de preinstalación emitidos por el Contratista",
@@ -3912,7 +4206,7 @@
       "nivel": "SUSTANCIAL",
       "reservada": false,
       "titulo": "Plazo de participación vencido el 12/09/2026",
-      "detalle": "La propuesta fija 60 días calendario desde el inicio de servicio del 14/07/2026, de modo que el plazo venció el 12/09/2026. Con posterioridad se emitieron catorce pronunciamientos: el RC-004, el AP-001, el FT-001, el FT-002, el RC-005, el FT-003, el FT-004, el FT-005, el FT-006, el FT-007, el FT-008, el FT-009, el FT-010 y el FT-011.",
+      "detalle": "La propuesta fija 60 días calendario desde el inicio de servicio del 14/07/2026, de modo que el plazo venció el 12/09/2026. Con posterioridad se emitieron quince pronunciamientos: el RC-004, el AP-001, el FT-001, el FT-002, el RC-005, el FT-003, el FT-004, el FT-005, el FT-006, el FT-007, el FT-008, el FT-009, el FT-010, el FT-011 y el FT-012.",
       "accion": "Formalizar con el CONSORCIO PARACHIQUE la ampliación del plazo de participación, para que los pronunciamientos posteriores al 12/09 queden amparados."
     },
     {
@@ -3939,9 +4233,9 @@
     {
       "nivel": "SUSTANCIAL",
       "reservada": false,
-      "titulo": "Cronograma: vencidas la S4 a la S7 con 28 de 67 códigos; 84 fichas por presentar hasta el 13/11/2026",
-      "detalle": "El INF-SUP-RC-EQ-DLVM-005-260929 aprobó el cronograma de la CARTA N° 085-2026: 179 códigos en diez entregas semanales. La S1 y la S2 están cumplidas con 47 fichas. Con las CARTAS N° 092, 101, 111 y 134-2026, la S3 lleva 16 de 17 (falta D-204); la S4, vencida el 02/10/2026, 11 de 17: faltan D-159, D-234, E-56, D-153, M-15, D-140; la S5, vencida el 09/10/2026, 5 de 17; la S6, vencida el 16/10/2026, 4 de 17, sin el E-130, que espera al Comité; y la S7, vencida el 23/10/2026, 8 de 16, sin el E-54 ni el E-210, que tienen pre instalación, como el E-56 de la S4. La S8 del 30/10/2026 lleva 4 de 16 adelantados y trae el M-9, también con pre instalación. Ninguna carta trae la reprogramación escrita.",
-      "accion": "Obtener del Contratista la fecha escrita de los códigos faltantes de la S3 a la S7, con prioridad del E-56, el E-54 y el E-210 por su pre instalación, como pide la recomendación CUARTA del INF-SUP-FT-EQ-DLVM-011-261026, y cotejar la S8 del 30/10/2026, que trae el M-9."
+      "titulo": "Cronograma: vencidas la S4 a la S7 con 35 de 67 códigos; 68 fichas por presentar hasta el 13/11/2026",
+      "detalle": "El INF-SUP-RC-EQ-DLVM-005-260929 aprobó el cronograma de la CARTA N° 085-2026: 179 códigos en diez entregas semanales. La S1 y la S2 están cumplidas con 47 fichas. Con las CARTAS N° 092, 101, 111, 119 y 134-2026, la S3 lleva 16 de 17 (falta D-204); la S4, vencida el 02/10/2026, 12 de 17: faltan D-159, D-234, E-56, D-153, D-140; la S5, vencida el 09/10/2026, 6 de 17; la S6, vencida el 16/10/2026, 7 de 17, sin el E-130, que espera al Comité; y la S7, vencida el 23/10/2026, 10 de 16, sin el E-54 ni el E-210, que tienen pre instalación, como el E-56 de la S4. La S8 del 30/10/2026 lleva 6 de 16 adelantados, entre ellos el M-9, con pre instalación; la S9, 2 de 16, y la S10, 5 de 16. La CARTA N° 119-2026, recibida por la Jefatura el 19/10/2026, llegó a la especialidad el 28/10/2026, después del FT-011. Ninguna carta trae la reprogramación escrita.",
+      "accion": "Obtener del Contratista la fecha escrita de los códigos faltantes de la S3 a la S7, con prioridad del E-56, el E-54 y el E-210 por su pre instalación, como pide la recomendación CUARTA del INF-SUP-FT-EQ-DLVM-012-261028, y cotejar la S8 del 30/10/2026."
     },
     {
       "nivel": "LEVE",
@@ -6809,8 +7103,29 @@
       "pu": 214.55,
       "parcial": 4720.1,
       "fila": 124,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 5 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "S/M",
+      "fabricante": "ACEROS INOXIDABLES PIURA",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-012-261028",
+      "queFalta": null,
+      "itemsEvaluados": 5,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-17",
+          "carta": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-164",
@@ -7119,8 +7434,29 @@
       "pu": 841.94,
       "parcial": 1683.88,
       "fila": 135,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 7 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción. Mejora aceptada en el A02 y el A03: regatones de poliuretano en lugar de polietileno.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "S/M",
+      "fabricante": "ACEROS INOXIDABLES PIURA",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-012-261028",
+      "queFalta": null,
+      "itemsEvaluados": 7,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-17",
+          "carta": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-33",
@@ -7461,8 +7797,29 @@
       "pu": 2454.51,
       "parcial": 24545.1,
       "fila": 147,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 9 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción. Se aprueba en 900 mm de largo, 400 de ancho y 2300 de altura: el expediente tiene cruzados el largo y la altura del capítulo B, como lo muestra el panel de 900 x 400 mm del A04 del M-60 (folio 1043).",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "S/M",
+      "fabricante": "ACEROS INOXIDABLES PIURA",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-012-261028",
+      "queFalta": null,
+      "itemsEvaluados": 9,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-17",
+          "carta": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-6",
@@ -7483,8 +7840,29 @@
       "pu": 225.23,
       "parcial": 5630.75,
       "fila": 149,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 5 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción. Mejora aceptada en el A02: acero inoxidable de 1 mm en lugar de acero LAF. Pre instalación: refuerzo en la pared si va sobre drywall (folio 957); la ubicación de las veinticinco perchas se coordina con la obra civil antes de cerrar los tabiques.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "S/M",
+      "fabricante": "ACEROS INOXIDABLES PIURA",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-012-261028",
+      "queFalta": null,
+      "itemsEvaluados": 5,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-17",
+          "carta": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-141",
@@ -7549,8 +7927,29 @@
       "pu": 812.66,
       "parcial": 7313.94,
       "fila": 158,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 10 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "S/M",
+      "fabricante": "ACEROS INOXIDABLES PIURA",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-012-261028",
+      "queFalta": null,
+      "itemsEvaluados": 10,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-17",
+          "carta": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-108",
@@ -7593,8 +7992,29 @@
       "pu": 2940.54,
       "parcial": 5881.09,
       "fila": 162,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 12 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción. El borde de 45 mm de las bandejas (A04) se verifica en la recepción.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "S/M",
+      "fabricante": "ACEROS INOXIDABLES PIURA",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-012-261028",
+      "queFalta": null,
+      "itemsEvaluados": 12,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-17",
+          "carta": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-114",
@@ -7615,8 +8035,29 @@
       "pu": 977.77,
       "parcial": 5866.62,
       "fila": 164,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 7 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción. El espesor de 1,2 mm del balde (A03) se verifica en la recepción.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "S/M",
+      "fabricante": "ACEROS INOXIDABLES PIURA",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-012-261028",
+      "queFalta": null,
+      "itemsEvaluados": 7,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-17",
+          "carta": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-116",
@@ -7626,8 +8067,29 @@
       "pu": 1592.95,
       "parcial": 4778.84,
       "fila": 165,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 10 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción. El B02 del expediente no fija el ancho; se acepta el de 450 mm del fabricante.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "S/M",
+      "fabricante": "ACEROS INOXIDABLES PIURA",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-012-261028",
+      "queFalta": null,
+      "itemsEvaluados": 10,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-17",
+          "carta": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-117",
@@ -7637,8 +8099,29 @@
       "pu": 582.79,
       "parcial": 1165.58,
       "fila": 166,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 7 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción. Mejora aceptada en el A05: soldadura TIG en lugar de MIG.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "S/M",
+      "fabricante": "ACEROS INOXIDABLES PIURA",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-012-261028",
+      "queFalta": null,
+      "itemsEvaluados": 7,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-17",
+          "carta": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-124",
@@ -7681,8 +8164,29 @@
       "pu": 2559.64,
       "parcial": 5119.28,
       "fila": 170,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 8 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "S/M",
+      "fabricante": "ACEROS INOXIDABLES PIURA",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-012-261028",
+      "queFalta": null,
+      "itemsEvaluados": 8,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-17",
+          "carta": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-161",
@@ -7758,8 +8262,29 @@
       "pu": 3200.87,
       "parcial": 76820.8,
       "fila": 177,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 13 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción. Se aprueba en 900 mm de largo, 400 de ancho y 2300 de altura: el expediente tiene cruzados el largo y la altura del capítulo B, como lo muestra el panel de 900 x 400 mm del A04 del M-60 (folio 1043). El A08 anuncia un tratamiento de superficie y no lo describe.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "S/M",
+      "fabricante": "ACEROS INOXIDABLES PIURA",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-012-261028",
+      "queFalta": null,
+      "itemsEvaluados": 13,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-17",
+          "carta": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-64",
@@ -7791,8 +8316,29 @@
       "pu": 1182.2,
       "parcial": 1182.2,
       "fila": 180,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 11 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "S/M",
+      "fabricante": "ACEROS INOXIDABLES PIURA",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-012-261028",
+      "queFalta": null,
+      "itemsEvaluados": 11,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-17",
+          "carta": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-73",
@@ -7857,8 +8403,29 @@
       "pu": 518.41,
       "parcial": 7776.1,
       "fila": 186,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 8 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "S/M",
+      "fabricante": "ACEROS INOXIDABLES PIURA",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-012-261028",
+      "queFalta": null,
+      "itemsEvaluados": 8,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-17",
+          "carta": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-88",
@@ -7879,8 +8446,29 @@
       "pu": 1338.66,
       "parcial": 2677.33,
       "fila": 188,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 12 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "S/M",
+      "fabricante": "ACEROS INOXIDABLES PIURA",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-012-261028",
+      "queFalta": null,
+      "itemsEvaluados": 12,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-17",
+          "carta": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-91",
@@ -7901,8 +8489,29 @@
       "pu": 2672.17,
       "parcial": 10688.67,
       "fila": 190,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 9 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción. Las tres vigas del tablero (A01) se verifican en la recepción.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "S/M",
+      "fabricante": "ACEROS INOXIDABLES PIURA",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-012-261028",
+      "queFalta": null,
+      "itemsEvaluados": 9,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-17",
+          "carta": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-95",
@@ -7945,8 +8554,29 @@
       "pu": 2198.28,
       "parcial": 10991.42,
       "fila": 194,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 11 requerimientos acreditados con la ficha de ACEROS INOXIDABLES PIURA, fabricación nacional; espesores, materiales y dimensiones se verifican en la recepción.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "S/M",
+      "fabricante": "ACEROS INOXIDABLES PIURA",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-012-261028",
+      "queFalta": null,
+      "itemsEvaluados": 11,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-10-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-10-17",
+          "carta": "CARTA N° 119-2026 / INFORME N° 011-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-012-261028",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "V-1",
@@ -7997,11 +8627,11 @@
       "descripcion": "Pronunciamiento sobre cada informe o carta del Contratista que lo requiera.",
       "metrica": {
         "etiqueta": "Cartas contestadas",
-        "hecho": 16,
-        "total": 16,
+        "hecho": 17,
+        "total": 17,
         "unidad": "cartas"
       },
-      "nota": "Los 16 informes recibidos del Contratista tienen pronunciamiento emitido; el último, el INF-SUP-FT-EQ-DLVM-011-261026, sobre dieciséis fichas nuevas. Los de octubre FT-003 a FT-009 se entregaron a la Jefatura el 26/10/2026; el FT-010 y el FT-011 están por entregar.",
+      "nota": "Los 17 informes recibidos del Contratista tienen pronunciamiento emitido; el último, el INF-SUP-FT-EQ-DLVM-012-261028, sobre dieciséis fichas de mobiliario de la CARTA N° 119-2026, que llegó a la especialidad el 28/10/2026. Los de octubre FT-003 a FT-009 se entregaron a la Jefatura el 26/10/2026; el FT-010, el FT-011 y el FT-012 están por entregar.",
       "responsable": "Supervisión de Equipamiento"
     },
     {
@@ -8012,11 +8642,11 @@
       "descripcion": "Aprobación de la ficha técnica de cada código de equipo del expediente.",
       "metrica": {
         "etiqueta": "Fichas técnicas aprobadas",
-        "hecho": 67,
+        "hecho": 83,
         "total": 179,
         "unidad": "códigos"
       },
-      "nota": "95 de 179 códigos presentados: 67 aprobados, 1 aprobados parcialmente, 22 observados y 5 que no cumplen. Vencidas la S4 (11 de 17), la S5 (5 de 17), la S6 (4 de 17) y la S7 (8 de 16). Quedan 84 por presentar hasta la S10 (13/11/2026).",
+      "nota": "111 de 179 códigos presentados: 83 aprobados, 1 aprobados parcialmente, 22 observados y 5 que no cumplen. Vencidas la S4 (12 de 17), la S5 (6 de 17), la S6 (7 de 17) y la S7 (10 de 16). Quedan 68 por presentar hasta la S10 (13/11/2026).",
       "responsable": "Contratista ICM S.A."
     },
     {
