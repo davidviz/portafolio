@@ -154,7 +154,7 @@ if (EV) {
   h += `<div class="seccion">
   <h2>Entrega y acuse de cada informe</h2>
   <p class="nota">Cuándo se entregó cada informe y qué respondió el Ing. Wilmer Vásquez. <b>${cuentaEv('CON ACUSE')} de ${filasEv.length}</b> tienen acuse,
-  ${cuentaEv('SIN ACUSE DIRECTO')} no tienen acuse directo y ${cuentaEv('ESPERANDO ACUSE')} lo espera. Un acuse prueba que lo recibió; no es la conformidad del numeral 3.5.
+  ${cuentaEv('SIN ACUSE DIRECTO')} no tienen acuse directo${cuentaEv('ESPERANDO ACUSE') ? ` y ${cuentaEv('ESPERANDO ACUSE')} lo espera` : ''}. Un acuse prueba que lo recibió; no es la conformidad del numeral 3.5, que se pidió en las relaciones del 27/10 y del 29/10.
   Evidencia: ${enlaceEv(EV.registro, 'registro de entregas')} · ${enlaceEv(EV.chat, 'chat exportado')}.</p>
   <div class="tabla-caja"><div class="tabla-scroll">
     <table class="datos" id="t-entregas">
