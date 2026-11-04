@@ -47,7 +47,7 @@ function piezasDe(d) {
   if (drive.firmado) {
     piezas.push({
       id: drive.firmado, etiqueta: rotulo + ' firmado',
-      archivo: sinExt + '_FIRMADO.pdf',
+      archivo: sinExt.replace(/_FIRMADO$/i, '') + '_FIRMADO.pdf',
     });
   } else if (drive.pdf) {
     piezas.push({
