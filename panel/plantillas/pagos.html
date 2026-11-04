@@ -142,6 +142,36 @@ h += `<div class="seccion">
   </div></div>
 </div>`;
 
+/* ---------- Entrega y acuse ---------- */
+/* Reservado: solo viaja a este tablero. Sale del chat exportado; ver el registro en Drive. */
+const EV = D.entregas || null;
+if (EV) {
+  const filasEv = EV.items || [];
+  const cuentaEv = (e) => filasEv.filter((x) => x.estado === e).length;
+  const claseEv = { 'CON ACUSE': 'bien', 'SIN ACUSE DIRECTO': 'aviso', 'ESPERANDO ACUSE': 'info' };
+  const nombreDe = (c) => (D.documentos.find((d) => d.codigo === c) || {}).asunto || '';
+  const enlaceEv = (id, txt) => `<a href="https://drive.google.com/file/d/${esc(id)}/view" target="_blank" rel="noopener">${esc(txt)}</a>`;
+  h += `<div class="seccion">
+  <h2>Entrega y acuse de cada informe</h2>
+  <p class="nota">Cuándo se entregó cada informe y qué respondió el Ing. Wilmer Vásquez. <b>${cuentaEv('CON ACUSE')} de ${filasEv.length}</b> tienen acuse,
+  ${cuentaEv('SIN ACUSE DIRECTO')} no tienen acuse directo y ${cuentaEv('ESPERANDO ACUSE')} lo espera. Un acuse prueba que lo recibió; no es la conformidad del numeral 3.5.
+  Evidencia: ${enlaceEv(EV.registro, 'registro de entregas')} · ${enlaceEv(EV.chat, 'chat exportado')}.</p>
+  <div class="tabla-caja"><div class="tabla-scroll">
+    <table class="datos" id="t-entregas">
+      <thead><tr><th>Producto</th><th>Entregado</th><th>Acuse del Ing. Vásquez</th><th>Estado</th><th>Línea del chat</th></tr></thead>
+      <tbody>${filasEv.map((x) => `<tr>
+          <td class="cod">${esc(x.producto)}<div style="font-size:.75rem;color:var(--tinta-tenue);margin-top:3px;font-family:var(--cuerpo)">${esc(nombreDe(x.producto))}</div></td>
+          <td>${esc(x.entregado)}</td>
+          <td>${esc(x.acuse)}</td>
+          <td>${insignia(x.estado, claseEv[x.estado] || 'neutro', claseEv[x.estado] || 'neutro')}</td>
+          <td class="cod">${esc(x.linea)}</td>
+        </tr>`).join('')}
+      </tbody>
+    </table>
+  </div></div>
+</div>`;
+}
+
 /* ---------- Abonos ---------- */
 h += `<div class="seccion">
   <h2>Abonos recibidos</h2>
