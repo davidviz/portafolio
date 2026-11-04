@@ -1200,7 +1200,7 @@
       "numeral": "2.3",
       "membrete": false,
       "respondidaPor": "INF-SUP-FT-EQ-DLVM-013-261104",
-      "detalle": "Informe N° 018 del 02/11/2026, del Ing. Juan Carlos Augusto Mendiola Florez (CIP 201412), suscrito también por el Residente de Obra Ing. Luis Enrique Santisteban Romero (CIP 81329). 204 folios. CARTA del 03/11/2026, recibida el 04/11/2026 a las 10:10 h. Versión 2 de ocho fichas observadas en los FT-003, FT-004, FT-005 y FT-011, con declaraciones juradas actualizadas, Anexos N° 1 corregidos, dos planos de pre instalación y el cuadro comparativo del D-86. No presenta códigos nuevos.",
+      "detalle": "Informe N° 018 del 02/11/2026, del Ing. Juan Carlos Augusto Mendiola Florez (CIP 201412), suscrito también por el Residente de Obra Ing. Luis Enrique Santisteban Romero (CIP 81329). 204 folios. CARTA del 03/11/2026, recibida el 04/11/2026 a las 10:10 h y derivada a la especialidad a las 11:53 h. Versión 2 de ocho fichas observadas en los FT-003, FT-004, FT-005 y FT-011, con declaraciones juradas actualizadas, Anexos N° 1 corregidos, dos planos de pre instalación y el cuadro comparativo del D-86. No presenta códigos nuevos.",
       "archivo": "CARTA N 151-2026 ICM - Informe 018 - Levantamiento de observaciones de 8 fichas.pdf",
       "ruta": "3.Sustentos\\",
       "url": null,
@@ -1220,11 +1220,11 @@
       "fecha": "2026-11-04",
       "contraparte": "Jefatura de Supervisión de Obra — Ing. Manuel Ricardo Torres Peche",
       "asunto": "Informe de Validación de Fichas Técnicas N° 013 — levantamiento de las observaciones de ocho fichas.",
-      "estado": "POR ENTREGAR",
+      "estado": "ENTREGADA",
       "numeral": "2.3",
       "membrete": true,
       "responde": "CARTA N° 151-2026 / INFORME N° 018-2026/JCAMF-EQH",
-      "detalle": "Se APRUEBAN las ocho fichas en su versión 2: D-18, D-269, D-334, D-41, D-34, D-86, D-112 y D-350, 213 de 213 requerimientos (100 %). El A08 del D-86 se aprueba por equivalencia funcional, con constancia. La pre instalación del D-18 y del D-41 se aprueba de manera documentaria: el Contratista entrega los planos a su ingeniero de campo y los valida con las demás especialidades. Autoriza la procura de los ocho códigos.",
+      "detalle": "Se APRUEBAN las ocho fichas en su versión 2: D-18, D-269, D-334, D-41, D-34, D-86, D-112 y D-350, 213 de 213 requerimientos (100 %). El A08 del D-86 se aprueba por equivalencia funcional, con constancia. La pre instalación del D-18 y del D-41 se aprueba de manera documentaria: el Contratista entrega los planos a su ingeniero de campo y los valida con las demás especialidades. Autoriza la procura de los ocho códigos. Entregado el 04/11/2026 a las 16:41 h por WhatsApp al Ing. Wilmer Vásquez, con evidencia en 5.Entregas, NOVIEMBRE-2026.",
       "archivo": "INF-SUP-FT-EQ-DLVM-013-261104_INFORME_FIRMADO.pdf",
       "ruta": "2.Informes Mensuales\\3.Informe de repsuestas\\FT-013-261104\\",
       "url": null,
@@ -8867,7 +8867,7 @@
         "total": 18,
         "unidad": "cartas"
       },
-      "nota": "Los 18 informes recibidos del Contratista tienen pronunciamiento emitido; el último, el INF-SUP-FT-EQ-DLVM-013-261104, sobre la versión 2 de ocho fichas de la CARTA N° 151-2026. Los de octubre FT-003 a FT-009 se entregaron a la Jefatura el 26/10/2026; el FT-010, el FT-011, el FT-012 y el FT-013 están por entregar.",
+      "nota": "Los 18 informes recibidos del Contratista tienen pronunciamiento emitido; el último, el INF-SUP-FT-EQ-DLVM-013-261104, sobre la versión 2 de ocho fichas de la CARTA N° 151-2026. Los de octubre FT-003 a FT-009 se entregaron a la Jefatura el 26/10/2026; el FT-010, el FT-011 y el FT-012 están por entregar, y el FT-013 se entregó el 04/11/2026.",
       "responsable": "Supervisión de Equipamiento"
     },
     {
