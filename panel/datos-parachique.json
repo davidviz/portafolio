@@ -1,7 +1,7 @@
 {
   "_lea_esto": "Respaldo y datos de fondo del panel CS PARACHIQUE. El estado de las fichas técnicas ya NO se gobierna aquí: manda la hoja «2 SEGUIMIENTO» del Drive, y las observaciones a fichas, la hoja «3 OBSERVACIONES». Lo que se edite aquí para un código que la hoja mencione, la hoja lo sobrescribe. Todo lo demás —etapas, documentos, expediente, presupuesto, valorización— sí se edita aquí. No edite los dashboard.html a mano: se regeneran y se pierde el cambio.",
   "meta": {
-    "actualizado": "2026-11-04",
+    "actualizado": "2026-11-05",
     "proyecto": "Mejoramiento de los Servicios de Salud del Establecimiento de Salud Parachique",
     "cui": "2571750",
     "ubicacion": "Distrito y provincia de Sechura — Piura",
@@ -1236,6 +1236,66 @@
       },
       "areas": [
         "Equipos biomédicos"
+      ],
+      "honorarioNeto": 500
+    },
+    {
+      "id": "CT-IN-019",
+      "flujo": "RECIBIDA",
+      "clase": "INFORME DEL CONTRATISTA",
+      "etapa": "E3",
+      "codigo": "CARTA N° 156-2026 / INFORME N° 019-2026/JCAMF-EQH",
+      "fecha": "2026-11-05",
+      "contraparte": "INGENIERÍA CIVIL MONTAJES S.A. (ICM) — Contratista de obra",
+      "asunto": "Fichas técnicas de cumplimiento de diez (10) códigos de equipamiento.",
+      "estado": "ATENDIDA",
+      "numeral": "2.3",
+      "membrete": false,
+      "respondidaPor": "INF-SUP-FT-EQ-DLVM-014-261105",
+      "detalle": "Informe N° 019 del 04/11/2026, del Ing. Juan Carlos Augusto Mendiola Florez (CIP 201412), suscrito también por el Residente de Obra Ing. Luis Enrique Santisteban Romero (CIP 81329). 100 folios. CARTA del 05/11/2026, recibida ese día a las 16:06 h. Fichas de diez códigos que no se habían presentado: D-140, D-153, D-204, D-234, D-39, E-81, M-136, M-152, M-19 y M-3. Con el D-204, la S3 queda completa.",
+      "archivo": "CARTA N 156-2026 ICM - Informe 019 - Fichas tecnicas de 10 equipos.pdf",
+      "ruta": "3.Sustentos\\",
+      "url": null,
+      "drive": {
+        "sustento": "1dW6Op5L4unrXIJyRMzuPxIAofAf0t879"
+      },
+      "areas": [
+        "Equipos biomédicos",
+        "Equipos complementarios",
+        "Equipos electromecánicos",
+        "Mobiliario administrativo",
+        "Mobiliario asistencial"
+      ]
+    },
+    {
+      "id": "PR-024",
+      "flujo": "EMITIDA",
+      "clase": "INFORME",
+      "etapa": "E3",
+      "codigo": "INF-SUP-FT-EQ-DLVM-014-261105",
+      "fecha": "2026-11-05",
+      "contraparte": "Jefatura de Supervisión de Obra — Ing. Manuel Ricardo Torres Peche",
+      "asunto": "Informe de Validación de Fichas Técnicas N° 014 — fichas de diez códigos.",
+      "estado": "POR ENTREGAR",
+      "numeral": "2.3",
+      "membrete": true,
+      "responde": "CARTA N° 156-2026 / INFORME N° 019-2026/JCAMF-EQH",
+      "detalle": "Se APRUEBAN ocho fichas: D-140, D-204, D-234, E-81, M-136, M-152, M-19 y M-3. Se OBSERVAN dos: D-39 en A05 y A12, y D-153 en A05. 121 de 124 requerimientos (98 %). El A04 del D-234 se aprueba por equivalencia funcional, con constancia. Solo las fichas aprobadas autorizan la procura.",
+      "archivo": "INF-SUP-FT-EQ-DLVM-014-261105_INFORME_FIRMADO.pdf",
+      "ruta": "2.Informes Mensuales\\3.Informe de repsuestas\\FT-014-261105\\",
+      "url": null,
+      "drive": {
+        "informe": "1H4UYVjg260CW1EN7HYCilX3-VJST38fz",
+        "pdf": "1LS3FojcJKyqvjnps2q7OqaOmBeMUoLEm",
+        "firmado": "1eM0u3wNv356FJrqm4Xk_vqobzFX7s61a",
+        "sustento": "1k882OX8CYTl8f-KGIoli5qTJaihMfFGn"
+      },
+      "areas": [
+        "Equipos biomédicos",
+        "Equipos complementarios",
+        "Equipos electromecánicos",
+        "Mobiliario administrativo",
+        "Mobiliario asistencial"
       ],
       "honorarioNeto": 500
     }
@@ -4278,6 +4338,162 @@
           "fuente": "Validación de fichas técnicas"
         }
       ]
+    },
+    {
+      "informe": "INF-SUP-FT-EQ-DLVM-014-261105",
+      "documentoAbsuelto": "INFORME N° 019-2026/JCAMF-EQH (04/11/2026) — CARTA N° 156-2026, 100 folios",
+      "materia": "Fichas técnicas de cumplimiento de diez (10) códigos de equipamiento",
+      "observaciones": 2,
+      "extremos": 3,
+      "confirmadas": 3,
+      "trasladadas": 0,
+      "yaAbsueltas": 0,
+      "codigoEvaluado": "10 códigos",
+      "tipo": "FICHA",
+      "resultado": "8 fichas APROBADAS y 2 OBSERVADAS (D-39 y D-153); ninguna NO APROBADA. Cumplimiento técnico global sustentado del 98 %: 121 de 124 requerimientos. Solo la ficha APROBADA autoriza la procura.",
+      "naturaleza": "Octava entrega de fichas técnicas nuevas: trae el D-204, que completa la S3, tres códigos de la S4, cuatro de la S5, uno de la S6 y uno de la S7. Con ella suman 121 de los 179 códigos. Las dos observadas se cierran con un documento, sin cambiar de equipo. El A04 del D-234 se aprueba por equivalencia funcional, tras verificar que ninguna cubeta consultada alcanza las medidas del expediente.",
+      "detalle": [
+        {
+          "obs": "OK",
+          "equipo": "D-140 — Equipo de oxigenoterapia rodable",
+          "materia": "Ficha aprobada. Los 11 requerimientos acreditados. Constancias: el carrito del A02 se coteja en la recepción como acero inoxidable o acero al carbón; el cilindro se entrega con válvula compatible con el yugo CGA-870; son treinta cánulas, diez por tipo de paciente.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque D-140 del Informe N° 019",
+          "extremos": null,
+          "codigos": [
+            "D-140"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-014-261105",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "D-204 — Maletín de reanimación adulto pediatrico",
+          "materia": "Ficha aprobada. Los 15 requerimientos acreditados. Constancia: la válvula PEEP que se entrega es la RE-21330, encasillada en el folio 009.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque D-204 del Informe N° 019",
+          "extremos": null,
+          "codigos": [
+            "D-204"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-014-261105",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "D-234 — Canastilla (gradilla) de coloración de 20 láminas",
+          "materia": "Ficha aprobada. Los 4 requerimientos acreditados. El A04 se aprueba por equivalencia funcional: dos cubetas de vidrio de 90 x 70 x 40 mm frente a 95 x 95 x 105 mm, con 20 láminas cada una. No se reconoce la Mejora, la conformidad se limita a lo ofertado y se verifica en la recepción.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque D-234 del Informe N° 019",
+          "extremos": null,
+          "codigos": [
+            "D-234"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-014-261105",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "E-81 — Cocina eléctrica de dos hornillas de mesa",
+          "materia": "Ficha aprobada. Los 7 requerimientos acreditados con los folios del fabricante.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque E-81 del Informe N° 019",
+          "extremos": null,
+          "codigos": [
+            "E-81"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-014-261105",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-136 — Piso microporoso",
+          "materia": "Ficha aprobada. Los 7 requerimientos acreditados. Constancia: lo antialérgico del A03 consta en la nota y se coteja en la recepción con el material EVA sin látex.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-136 del Informe N° 019",
+          "extremos": null,
+          "codigos": [
+            "M-136"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-014-261105",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-152 — Silla de partos multifuncional",
+          "materia": "Ficha aprobada. Los 26 requerimientos acreditados. Constancias: el A06 se califica con el ancho exterior de 102 cm, con plataforma del colchón de 85 cm; la inclinación del asiento la da el Trendelenburg de ±14°; la batería del E02 es opcional para MESPA y se acredita con la declaración jurada.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-152 del Informe N° 019",
+          "extremos": null,
+          "codigos": [
+            "M-152"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-014-261105",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-19 — Caja fuerte con clave tipo reloj",
+          "materia": "Ficha aprobada. Los 16 requerimientos acreditados con la ficha de TEFINSA S.A.C. El Anexo N° 1 dice China y el fabricante es de Lima: error material.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-19 del Informe N° 019",
+          "extremos": null,
+          "codigos": [
+            "M-19"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-014-261105",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-3 — Armario metálico de un cuerpo y dos compartimientos",
+          "materia": "Ficha aprobada. Los 14 requerimientos acreditados con la ficha de ECO HOSPITAL TECH S.A.C. Constancia: el A01 y el A06 se contradicen en el material de las puertas; rige el A06.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "ANEXO N° 1 del bloque M-3 del Informe N° 019",
+          "extremos": null,
+          "codigos": [
+            "M-3"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-014-261105",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "D-39",
+          "equipo": "D-39 — Destartarizador ultrasónico",
+          "materia": "OBSERVADA. 15 de 17. A05: los 30 ajustes son una multiplicación de la nota; el fabricante da una escala de 1 a 10 y limita endo al quinto grado (folio 003). A12: los folios acreditan la botella y no un filtro, y la Mejora no se demuestra. El A11 cumple, con 28 kHz ±3 kHz.",
+          "nivel": "LEVE",
+          "estado": "Por absolver",
+          "ubicacion": "Bloque D-39 del Informe N° 019",
+          "extremos": 2,
+          "codigos": [
+            "D-39"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-014-261105",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "D-153",
+          "equipo": "D-153 — Canastilla (gradilla) para transporte de muestras",
+          "materia": "OBSERVADA. 6 de 7. A05: la rejilla de acero inoxidable 316 en lugar de cubierta con plástico puede aceptarse como mejora, pero el bloque no trae ficha de fabricante ni declaración jurada de proveedor.",
+          "nivel": "LEVE",
+          "estado": "Por absolver",
+          "ubicacion": "Bloque D-153 del Informe N° 019",
+          "extremos": 1,
+          "codigos": [
+            "D-153"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-014-261105",
+          "fuente": "Validación de fichas técnicas"
+        }
+      ]
     }
   ],
   "valorizacion": {
@@ -4298,7 +4514,7 @@
       {
         "requisito": "Aprobación de las EETT por la Entidad",
         "estado": "PENDIENTE",
-        "nota": "46 asuntos siguen pendientes de pronunciamiento del Proyectista. De las fichas técnicas, 91 de 179 cuentan con aprobación de la Supervisión, que no sustituye la aprobación de las EETT por la Entidad."
+        "nota": "46 asuntos siguen pendientes de pronunciamiento del Proyectista. De las fichas técnicas, 99 de 179 cuentan con aprobación de la Supervisión, que no sustituye la aprobación de las EETT por la Entidad."
       },
       {
         "requisito": "Planos de preinstalación emitidos por el Contratista",
@@ -4386,7 +4602,7 @@
       "nivel": "SUSTANCIAL",
       "reservada": false,
       "titulo": "Plazo de participación vencido el 12/09/2026",
-      "detalle": "La propuesta fija 60 días calendario desde el inicio de servicio del 14/07/2026, de modo que el plazo venció el 12/09/2026. Con posterioridad se emitieron dieciséis pronunciamientos: el RC-004, el AP-001, el FT-001, el FT-002, el RC-005, el FT-003, el FT-004, el FT-005, el FT-006, el FT-007, el FT-008, el FT-009, el FT-010, el FT-011, el FT-012 y el FT-013.",
+      "detalle": "La propuesta fija 60 días calendario desde el inicio de servicio del 14/07/2026, de modo que el plazo venció el 12/09/2026. Con posterioridad se emitieron diecisiete pronunciamientos: el RC-004, el AP-001, el FT-001, el FT-002, el RC-005, el FT-003, el FT-004, el FT-005, el FT-006, el FT-007, el FT-008, el FT-009, el FT-010, el FT-011, el FT-012, el FT-013 y el FT-014.",
       "accion": "Formalizar con el CONSORCIO PARACHIQUE la ampliación del plazo de participación, para que los pronunciamientos posteriores al 12/09 queden amparados."
     },
     {
@@ -4413,9 +4629,9 @@
     {
       "nivel": "SUSTANCIAL",
       "reservada": false,
-      "titulo": "Cronograma: vencidas la S4 a la S8 con 41 de 83 códigos; 68 fichas por presentar hasta el 13/11/2026",
-      "detalle": "El INF-SUP-RC-EQ-DLVM-005-260929 aprobó el cronograma de la CARTA N° 085-2026: 179 códigos en diez entregas semanales. La S1 y la S2 están cumplidas con 47 fichas. Con las CARTAS N° 092, 101, 111, 119 y 134-2026, la S3 lleva 16 de 17 (falta D-204); la S4, vencida el 02/10/2026, 12 de 17: faltan D-159, D-234, E-56, D-153, D-140; la S5, vencida el 09/10/2026, 6 de 17; la S6, vencida el 16/10/2026, 7 de 17, sin el E-130, que espera al Comité; la S7, vencida el 23/10/2026, 10 de 16, sin el E-54 ni el E-210, que tienen pre instalación, como el E-56 de la S4; y la S8, vencida el 30/10/2026, 6 de 16, con el M-9, que tiene pre instalación. Son 43 los códigos sin presentar en semanas vencidas. La S9 del 06/11/2026 lleva 2 de 16 y la S10, 5 de 16. La CARTA N° 151-2026 solo trae levantamientos. La CARTA N° 119-2026, recibida por la Jefatura el 19/10/2026, llegó a la especialidad el 28/10/2026, después del FT-011. Ninguna carta trae la reprogramación escrita.",
-      "accion": "Obtener del Contratista la fecha escrita de los códigos faltantes de la S3 a la S8, con prioridad del E-56, el E-54 y el E-210 por su pre instalación, como pide la recomendación CUARTA del INF-SUP-FT-EQ-DLVM-012-261028, y cotejar la S9 del 06/11/2026."
+      "titulo": "Cronograma: vencidas la S4 a la S8 con 50 de 83 códigos; 58 fichas por presentar hasta el 13/11/2026",
+      "detalle": "El INF-SUP-RC-EQ-DLVM-005-260929 aprobó el cronograma de la CARTA N° 085-2026: 179 códigos en diez entregas semanales. La S1 y la S2 están cumplidas con 47 fichas, y la S3 quedó completa con el D-204 de la CARTA N° 156-2026. La S4, vencida el 02/10/2026, lleva 15 de 17: faltan D-159 y E-56; la S5, vencida el 09/10/2026, 10 de 17; la S6, vencida el 16/10/2026, 8 de 17, sin el E-130, que espera al Comité; la S7, vencida el 23/10/2026, 11 de 16, sin el E-54 ni el E-210, que tienen pre instalación, como el E-56 de la S4; y la S8, vencida el 30/10/2026, 6 de 16, con el M-9, que tiene pre instalación. Son 33 los códigos sin presentar en semanas vencidas. La S9 del 06/11/2026 lleva 2 de 16 y la S10, 5 de 16. La CARTA N° 119-2026, recibida por la Jefatura el 19/10/2026, llegó a la especialidad el 28/10/2026, después del FT-011. Ninguna carta trae la reprogramación escrita.",
+      "accion": "Obtener del Contratista la fecha escrita de los 33 códigos faltantes de la S4 a la S8, con prioridad del E-56, el E-54 y el E-210 por su pre instalación, como pide la recomendación CUARTA del INF-SUP-FT-EQ-DLVM-014-261105, y cotejar la S9 del 06/11/2026."
     },
     {
       "nivel": "LEVE",
@@ -5368,8 +5584,29 @@
       "pu": 54350.34,
       "parcial": 54350.34,
       "fila": 31,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 26 requerimientos acreditados. Constancias: el A06 se califica con el ancho exterior de 102 cm, con plataforma del colchón de 85 cm; la inclinación del asiento la da el Trendelenburg de ±14°; la batería del E02 es opcional para MESPA y se acredita con la declaración jurada.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "MESPA",
+      "modelo": "ELEGANT 5040",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 156-2026 / INFORME N° 019-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-014-261105",
+      "queFalta": null,
+      "itemsEvaluados": 26,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-11-04",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-11-04",
+          "carta": "CARTA N° 156-2026 / INFORME N° 019-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-014-261105",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-123",
@@ -5596,8 +5833,29 @@
       "pu": 4983.43,
       "parcial": 24917.15,
       "fila": 41,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 11 requerimientos acreditados. Constancias: el carrito del A02 se coteja en la recepción como acero inoxidable o acero al carbón; el cilindro se entrega con válvula compatible con el yugo CGA-870; son treinta cánulas, diez por tipo de paciente.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "CATALINA CYLINDERS, PRECISION, ETIMSA, S/M",
+      "modelo": "ME, ATTJ-4, EF-01, S/M",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 156-2026 / INFORME N° 019-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-014-261105",
+      "queFalta": null,
+      "itemsEvaluados": 11,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-11-04",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-11-04",
+          "carta": "CARTA N° 156-2026 / INFORME N° 019-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-014-261105",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-148",
@@ -5639,8 +5897,29 @@
       "pu": 996.64,
       "parcial": 2989.91,
       "fila": 43,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "OBSERVADA",
+      "obs": "OBSERVADA. 6 de 7. A05: la rejilla de acero inoxidable 316 en lugar de cubierta con plástico puede aceptarse como mejora, pero el bloque no trae ficha de fabricante ni declaración jurada de proveedor.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "S/M",
+      "modelo": "S/M",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 156-2026 / INFORME N° 019-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-014-261105",
+      "queFalta": "Declaración jurada del proveedor que lo identifique y se obligue a entregar la canastilla de acero inoxidable 316, en las medidas del A07 (A05).",
+      "itemsEvaluados": 7,
+      "itemsPendientes": "A05",
+      "fechaEntrega": "2026-11-04",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-11-04",
+          "carta": "CARTA N° 156-2026 / INFORME N° 019-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-014-261105",
+          "resultado": "OBSERVADA"
+        }
+      ]
     },
     {
       "cod": "D-156",
@@ -5900,8 +6179,29 @@
       "pu": 6054.12,
       "parcial": 6054.12,
       "fila": 52,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 15 requerimientos acreditados. Constancia: la válvula PEEP que se entrega es la RE-21330, encasillada en el folio 009.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "ETIMSA, CA-MI, BESMED, RIESTER",
+      "modelo": "FS-074, New Emivac, ri-modul",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 156-2026 / INFORME N° 019-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-014-261105",
+      "queFalta": null,
+      "itemsEvaluados": 15,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-11-04",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-11-04",
+          "carta": "CARTA N° 156-2026 / INFORME N° 019-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-014-261105",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-234",
@@ -5911,8 +6211,29 @@
       "pu": 889.34,
       "parcial": 889.34,
       "fila": 53,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 4 requerimientos acreditados. El A04 se aprueba por equivalencia funcional: dos cubetas de vidrio de 90 x 70 x 40 mm frente a 95 x 95 x 105 mm, con 20 láminas cada una. No se reconoce la Mejora, la conformidad se limita a lo ofertado y se verifica en la recepción.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "S/M",
+      "modelo": "S/M",
+      "fabricante": null,
+      "verificacionWeb": "Consulta del 05/11/2026: WHEATON 900200, 20 láminas, 95 x 76 x 64 mm interior; LLG Schiefferdecker, 20 láminas, 87 x 74 x 40 mm; Delta Microscopies D70314-05, 80 x 70 x 40 mm. Ninguna alcanza las tres medidas del expediente.",
+      "cartaContratista": "CARTA N° 156-2026 / INFORME N° 019-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-014-261105",
+      "queFalta": null,
+      "itemsEvaluados": 4,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-11-04",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-11-04",
+          "carta": "CARTA N° 156-2026 / INFORME N° 019-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-014-261105",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-235",
@@ -6399,8 +6720,29 @@
       "pu": 3920.91,
       "parcial": 3920.91,
       "fila": 69,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "OBSERVADA",
+      "obs": "OBSERVADA. 15 de 17. A05: los 30 ajustes son una multiplicación de la nota; el fabricante da una escala de 1 a 10 y limita endo al quinto grado (folio 003). A12: los folios acreditan la botella y no un filtro, y la Mejora no se demuestra. El A11 cumple, con 28 kHz ±3 kHz.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "WOODPECKER",
+      "modelo": "UDS-E LED",
+      "fabricante": null,
+      "verificacionWeb": "Consulta del 05/11/2026: el manual de la UDS-E LED (ManualsLib, pág. 21) da de 1 a 10 en destartraje y de 1 a 3 o de 1 a 6 en endo, y no menciona filtro de agua. El manual del NSK Varios 970 da 11 niveles, de 0 a 10.",
+      "cartaContratista": "CARTA N° 156-2026 / INFORME N° 019-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-014-261105",
+      "queFalta": "Carta de WOODPECKER con los niveles de potencia efectivos en cada modo, o cuadro comparativo con tres marcas (A05); y que indique cómo se protege el circuito de agua y que el uso sin filtro adicional no afecta la garantía (A12).",
+      "itemsEvaluados": 17,
+      "itemsPendientes": "A05 y A12",
+      "fechaEntrega": "2026-11-04",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-11-04",
+          "carta": "CARTA N° 156-2026 / INFORME N° 019-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-014-261105",
+          "resultado": "OBSERVADA"
+        }
+      ]
     },
     {
       "cod": "D-449",
@@ -6874,8 +7216,29 @@
       "pu": 1380.26,
       "parcial": 1380.26,
       "fila": 91,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 7 requerimientos acreditados con los folios del fabricante.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "FINEZZA",
+      "modelo": "FZ-320 H2CE",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 156-2026 / INFORME N° 019-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-014-261105",
+      "queFalta": null,
+      "itemsEvaluados": 7,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-11-04",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-11-04",
+          "carta": "CARTA N° 156-2026 / INFORME N° 019-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-014-261105",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "E-86",
@@ -6917,8 +7280,29 @@
       "pu": 6730.97,
       "parcial": 6730.97,
       "fila": 93,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 16 requerimientos acreditados con la ficha de TEFINSA S.A.C. El Anexo N° 1 dice China y el fabricante es de Lima: error material.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "TEFINSA",
+      "modelo": "TFS-50",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 156-2026 / INFORME N° 019-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-014-261105",
+      "queFalta": null,
+      "itemsEvaluados": 16,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-11-04",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-11-04",
+          "carta": "CARTA N° 156-2026 / INFORME N° 019-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-014-261105",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-145",
@@ -7659,8 +8043,29 @@
       "pu": 652.21,
       "parcial": 3261.05,
       "fila": 134,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 14 requerimientos acreditados con la ficha de ECO HOSPITAL TECH S.A.C. Constancia: el A01 y el A06 se contradicen en el material de las puertas; rige el A06.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "M-3",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 156-2026 / INFORME N° 019-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-014-261105",
+      "queFalta": null,
+      "itemsEvaluados": 14,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-11-04",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-11-04",
+          "carta": "CARTA N° 156-2026 / INFORME N° 019-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-014-261105",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-30",
@@ -8389,8 +8794,29 @@
       "pu": 84.16,
       "parcial": 84.16,
       "fila": 169,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. Los 7 requerimientos acreditados. Constancia: lo antialérgico del A03 consta en la nota y se coteja en la recepción con el material EVA sin látex.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "INTELIKIDS",
+      "modelo": "Pisos para bebé de goma EVA",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 156-2026 / INFORME N° 019-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-014-261105",
+      "queFalta": null,
+      "itemsEvaluados": 7,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-11-04",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-11-04",
+          "carta": "CARTA N° 156-2026 / INFORME N° 019-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-014-261105",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-159",
@@ -8863,11 +9289,11 @@
       "descripcion": "Pronunciamiento sobre cada informe o carta del Contratista que lo requiera.",
       "metrica": {
         "etiqueta": "Cartas contestadas",
-        "hecho": 18,
-        "total": 18,
+        "hecho": 19,
+        "total": 19,
         "unidad": "cartas"
       },
-      "nota": "Los 18 informes recibidos del Contratista tienen pronunciamiento emitido; el último, el INF-SUP-FT-EQ-DLVM-013-261104, sobre la versión 2 de ocho fichas de la CARTA N° 151-2026. Los de octubre FT-003 a FT-009 se entregaron a la Jefatura el 26/10/2026; el FT-010, el mismo día; el FT-011 y el Informe Mensual N° 003, el 27/10/2026; el FT-012, el 29/10/2026; y el FT-013, el 04/11/2026.",
+      "nota": "Los 19 informes recibidos del Contratista tienen pronunciamiento emitido; el último, el INF-SUP-FT-EQ-DLVM-014-261105, sobre las fichas de diez códigos de la CARTA N° 156-2026. Los de octubre FT-003 a FT-009 se entregaron a la Jefatura el 26/10/2026; el FT-010, el mismo día; el FT-011 y el Informe Mensual N° 003, el 27/10/2026; el FT-012, el 29/10/2026; y el FT-013, el 04/11/2026. El FT-014 está por entregar.",
       "responsable": "Supervisión de Equipamiento"
     },
     {
@@ -8878,11 +9304,11 @@
       "descripcion": "Aprobación de la ficha técnica de cada código de equipo del expediente.",
       "metrica": {
         "etiqueta": "Fichas técnicas aprobadas",
-        "hecho": 91,
+        "hecho": 99,
         "total": 179,
         "unidad": "códigos"
       },
-      "nota": "111 de 179 códigos presentados: 91 aprobados, 1 aprobados parcialmente, 15 observados y 4 que no cumplen. Vencidas la S4 (12 de 17), la S5 (6 de 17), la S6 (7 de 17), la S7 (10 de 16) y la S8 (6 de 16). Quedan 68 por presentar hasta la S10 (13/11/2026).",
+      "nota": "121 de 179 códigos presentados: 99 aprobados, 1 aprobados parcialmente, 17 observados y 4 que no cumplen. La S3 está completa. Vencidas la S4 (15 de 17), la S5 (10 de 17), la S6 (8 de 17), la S7 (11 de 16) y la S8 (6 de 16). Quedan 58 por presentar hasta la S10 (13/11/2026).",
       "responsable": "Contratista ICM S.A."
     },
     {
