@@ -1338,7 +1338,7 @@
       "numeral": "2.3",
       "membrete": true,
       "responde": "CARTA N° 158-2026 / INFORME N° 022-2026/JCAMF-EQH",
-      "detalle": "Opinión favorable en lo que toca a equipamiento: el Cuadro de Pre Instalaciones exige agua blanda para el D-41, el E-130, el E-210 y el E-54 (folios 959 y 958) y la especialidad sanitaria no le dio fuente; es una incompatibilidad del expediente. El plano IS-17 lleva agua blanda al D-41, al E-210 y al ambiente de lavado del E-130; le falta el punto de la planchadora E-54 y el código en cada salida. La presión del E-210 y del E-54 se verifica con sus fichas. De los 3,230 L de la cisterna, 700 responden a equipos y 2,530 al agua caliente de las termas. Aprobar el sistema excede la competencia de la supervisión: corresponde a la Entidad con el Proyectista.",
+      "detalle": "Opinión favorable en lo que toca a equipamiento: el Cuadro de Pre Instalaciones exige agua blanda para el D-41, el E-130, el E-210 y el E-54 (folios 959 y 958). La propuesta prevé el punto del D-41, del E-210 y del ambiente del E-130, no el de la planchadora E-54; cada punto se valida con la ficha del equipo que se apruebe. Se limita a equipamiento: Instalaciones Sanitarias (Informe N° 0011-2026-CP-JRSH-IISS-SUP) y Estructuras (Informe N° 013-2026/MEC-EEST) se pronunciaron sobre lo suyo. La aprobación del sistema no corresponde a esta especialidad.",
       "archivo": "INF-SUP-RC-EQ-DLVM-006-261107_INFORME_FIRMADO.pdf",
       "ruta": "2.Informes Mensuales\\3.Informe de repsuestas\\006-261107\\",
       "url": null,
@@ -4564,10 +4564,10 @@
         {
           "obs": "07",
           "equipo": "D-41, E-130, E-210 y E-54 — agua blanda",
-          "materia": "El Cuadro de Pre Instalaciones exige agua blanda en cuatro códigos y la especialidad sanitaria no le dio fuente. Opinión favorable. Falta en el IS-17 el punto de la planchadora E-54 y el código en cada salida.",
+          "materia": "El Cuadro de Pre Instalaciones exige agua blanda en cuatro códigos. Opinión favorable en lo que toca a equipamiento. La propuesta no prevé el punto de la planchadora E-54.",
           "nivel": "SUSTANCIAL",
           "estado": "Por absolver",
-          "ubicacion": "Cuadro de Pre Instalaciones, folios 959 y 958, frente al plano IS-17 (folio 009 de la carta)",
+          "ubicacion": "Cuadro de Pre Instalaciones, folios 959 y 958, frente a la propuesta del Contratista (folio 009 de la carta)",
           "extremos": 2,
           "confirmadas": 1,
           "trasladadas": 1,
@@ -4584,7 +4584,7 @@
       ],
       "codigoEvaluado": "D-41, E-130, E-210, E-54",
       "tipo": "CONSULTAS",
-      "naturaleza": "Consulta del Contratista al expediente técnico, de cinco especialidades. La necesidad de agua blanda la acredita el propio expediente; aprobar el sistema, su tamaño y los planos de las demás especialidades modifica el expediente y se traslada a la Entidad, por intermedio del Comité, para que el Proyectista compatibilice las especialidades sanitaria y de equipamiento."
+      "naturaleza": "Consulta del Contratista al expediente técnico, de cinco especialidades. Este pronunciamiento se limita a equipamiento: la necesidad de agua blanda la acredita el propio expediente. La aprobación del sistema y de los planos de las demás especialidades se traslada a la Entidad para su trámite con el Proyectista."
     }
   ],
   "valorizacion": {
@@ -4749,8 +4749,8 @@
       "nivel": "SUSTANCIAL",
       "reservada": false,
       "titulo": "Agua blanda: el expediente la exige en cuatro equipos y no tiene cómo producirla",
-      "detalle": "El Cuadro de Pre Instalaciones pide agua blanda para la unidad dental D-41 (folio 959) y para el destilador E-130, la lavadora E-210 y la planchadora E-54 (folio 958), pero las instalaciones sanitarias solo distribuyen agua dura. El agua del Pozo 07 de Illescas-Bayóvar tiene 230.96 mg CaCO3/L. Con la Consulta de Obra N° 07 (CARTA N° 158-2026) el Contratista propone un sistema centralizado; el INF-SUP-RC-EQ-DLVM-006-261107 da opinión favorable en lo que toca a equipamiento, pide completar el IS-17 con el punto del E-54 y deja la aprobación a la Entidad con el Proyectista. Tres de los cuatro equipos (E-130, E-210 y E-54) aún no presentan ficha.",
-      "accion": "Trasladar la consulta a la Entidad para que, por intermedio del Comité del FOSPIBAY, el Proyectista compatibilice las especialidades sanitaria y de equipamiento; y requerir al Contratista el punto de agua blanda del E-54 en el IS-17."
+      "detalle": "El Cuadro de Pre Instalaciones pide agua blanda para la unidad dental D-41 (folio 959) y para el destilador E-130, la lavadora E-210 y la planchadora E-54 (folio 958), y la obra solo distribuye agua dura. Con la Consulta de Obra N° 07 (CARTA N° 158-2026) el Contratista propone un sistema centralizado. El INF-SUP-RC-EQ-DLVM-006-261107 da opinión favorable en lo que toca a equipamiento y anota que la propuesta no prevé el punto del E-54; Instalaciones Sanitarias y Estructuras de la supervisión se pronunciaron sobre lo suyo. Tres de los cuatro equipos (E-130, E-210 y E-54) aún no presentan ficha.",
+      "accion": "Trasladar los pronunciamientos a la Entidad para su trámite con el Proyectista, y poner en conocimiento del Contratista que falta el punto de agua blanda del E-54."
     }
   ],
   "protocoloRespuesta": [
