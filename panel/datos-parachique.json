@@ -1,7 +1,7 @@
 {
   "_lea_esto": "Respaldo y datos de fondo del panel CS PARACHIQUE. El estado de las fichas técnicas ya NO se gobierna aquí: manda la hoja «2 SEGUIMIENTO» del Drive, y las observaciones a fichas, la hoja «3 OBSERVACIONES». Lo que se edite aquí para un código que la hoja mencione, la hoja lo sobrescribe. Todo lo demás —etapas, documentos, expediente, presupuesto, valorización— sí se edita aquí. No edite los dashboard.html a mano: se regeneran y se pierde el cambio.",
   "meta": {
-    "actualizado": "2026-11-05",
+    "actualizado": "2026-11-07",
     "proyecto": "Mejoramiento de los Servicios de Salud del Establecimiento de Salud Parachique",
     "cui": "2571750",
     "ubicacion": "Distrito y provincia de Sechura — Piura",
@@ -1296,6 +1296,62 @@
         "Equipos electromecánicos",
         "Mobiliario administrativo",
         "Mobiliario asistencial"
+      ],
+      "honorarioNeto": 500
+    },
+    {
+      "id": "CT-IN-022",
+      "flujo": "RECIBIDA",
+      "clase": "INFORME DEL CONTRATISTA",
+      "etapa": "E3",
+      "codigo": "CARTA N° 158-2026 / INFORME N° 022-2026/JCAMF-EQH",
+      "fecha": "2026-11-06",
+      "contraparte": "INGENIERÍA CIVIL MONTAJES S.A. (ICM) — Contratista de obra",
+      "asunto": "Consulta de Obra N° 07: propuesta de sistema de ablandamiento del agua dura.",
+      "estado": "ATENDIDA",
+      "numeral": "2.3",
+      "membrete": false,
+      "respondidaPor": "INF-SUP-RC-EQ-DLVM-006-261107",
+      "detalle": "CARTA del 06/11/2026, recibida ese día a las 16:03 h, 92 folios, con el INFORME N° 002-2026/LESR-ICM del Residente de Obra, que reúne los informes de cinco especialidades y pide aprobar un sistema centralizado de ablandamiento (caseta, cisterna de 3.23 m³, ablandadores, filtro multimedia y bombas) y los planos IS-16, IS-17, IS-18, A-49, E-66, E-67 e IE-11. La parte de equipamiento es el INFORME N° 022-2026/JCAMF-EQH del 02/11/2026, del Ing. Juan Carlos Augusto Mendiola Florez (CIP 201412), folios 052 a 048: opinión favorable por la dureza del Pozo 07 de Illescas-Bayóvar, 230.96 mg CaCO3/L.",
+      "archivo": "CARTA N 158-2026 ICM - Consulta de Obra N 07 - Sistema de ablandamiento de agua.pdf",
+      "ruta": "3.Sustentos\\",
+      "url": null,
+      "drive": {
+        "sustento": "1Ao-tyyFpwsFh3oL9O2LmNZy9mVWWgtHk"
+      },
+      "areas": [
+        "Equipos biomédicos",
+        "Equipos complementarios",
+        "Equipos electromecánicos"
+      ]
+    },
+    {
+      "id": "PR-025",
+      "flujo": "EMITIDA",
+      "clase": "INFORME",
+      "etapa": "E3",
+      "codigo": "INF-SUP-RC-EQ-DLVM-006-261107",
+      "fecha": "2026-11-07",
+      "contraparte": "Jefatura de Supervisión de Obra — Ing. Manuel Ricardo Torres Peche",
+      "asunto": "Informe de Respuesta a Consultas del Contratista N° 006 — Consulta de Obra N° 07, sistema de ablandamiento del agua dura (parte de equipamiento).",
+      "estado": "POR ENTREGAR",
+      "numeral": "2.3",
+      "membrete": true,
+      "responde": "CARTA N° 158-2026 / INFORME N° 022-2026/JCAMF-EQH",
+      "detalle": "Opinión favorable en lo que toca a equipamiento: el Cuadro de Pre Instalaciones exige agua blanda para el D-41, el E-130, el E-210 y el E-54 (folios 959 y 958) y la especialidad sanitaria no le dio fuente; es una incompatibilidad del expediente. El plano IS-17 lleva agua blanda al D-41, al E-210 y al ambiente de lavado del E-130; le falta el punto de la planchadora E-54 y el código en cada salida. La presión del E-210 y del E-54 se verifica con sus fichas. De los 3,230 L de la cisterna, 700 responden a equipos y 2,530 al agua caliente de las termas. Aprobar el sistema excede la competencia de la supervisión: corresponde a la Entidad con el Proyectista.",
+      "archivo": "INF-SUP-RC-EQ-DLVM-006-261107_INFORME_FIRMADO.pdf",
+      "ruta": "2.Informes Mensuales\\3.Informe de repsuestas\\006-261107\\",
+      "url": null,
+      "drive": {
+        "informe": "1mhZV_c7nv02fHULXLIl2lgRXsU9R92x1",
+        "pdf": "1KLKCV3CwDG9wBEE10gM3A7m7wEn7JcVZ",
+        "firmado": "1NW3ZopbttRG-wX8tkEOIPID24Z0XVpOd",
+        "sustento": "1spBlT4OMVD_X2srw3a017zvXC1TsNZic"
+      },
+      "areas": [
+        "Equipos biomédicos",
+        "Equipos complementarios",
+        "Equipos electromecánicos"
       ],
       "honorarioNeto": 500
     }
@@ -4494,6 +4550,41 @@
           "fuente": "Validación de fichas técnicas"
         }
       ]
+    },
+    {
+      "informe": "INF-SUP-RC-EQ-DLVM-006-261107",
+      "documentoAbsuelto": "INFORME N° 022-2026/JCAMF-EQH (02/11/2026) — CARTA N° 158-2026, 92 folios",
+      "materia": "Consulta de Obra N° 07 — sistema de ablandamiento del agua dura (parte de equipamiento)",
+      "observaciones": 1,
+      "extremos": 2,
+      "confirmadas": 1,
+      "trasladadas": 1,
+      "yaAbsueltas": 0,
+      "detalle": [
+        {
+          "obs": "07",
+          "equipo": "D-41, E-130, E-210 y E-54 — agua blanda",
+          "materia": "El Cuadro de Pre Instalaciones exige agua blanda en cuatro códigos y la especialidad sanitaria no le dio fuente. Opinión favorable. Falta en el IS-17 el punto de la planchadora E-54 y el código en cada salida.",
+          "nivel": "SUSTANCIAL",
+          "estado": "Por absolver",
+          "ubicacion": "Cuadro de Pre Instalaciones, folios 959 y 958, frente al plano IS-17 (folio 009 de la carta)",
+          "extremos": 2,
+          "confirmadas": 1,
+          "trasladadas": 1,
+          "yaAbsueltas": 0,
+          "codigos": [
+            "D-41",
+            "E-130",
+            "E-210",
+            "E-54"
+          ],
+          "origen": "INF-SUP-RC-EQ-DLVM-006-261107",
+          "fuente": "Pronunciamiento sobre consultas del Contratista"
+        }
+      ],
+      "codigoEvaluado": "D-41, E-130, E-210, E-54",
+      "tipo": "CONSULTAS",
+      "naturaleza": "Consulta del Contratista al expediente técnico, de cinco especialidades. La necesidad de agua blanda la acredita el propio expediente; aprobar el sistema, su tamaño y los planos de las demás especialidades modifica el expediente y se traslada a la Entidad, por intermedio del Comité, para que el Proyectista compatibilice las especialidades sanitaria y de equipamiento."
     }
   ],
   "valorizacion": {
@@ -4602,7 +4693,7 @@
       "nivel": "SUSTANCIAL",
       "reservada": false,
       "titulo": "Plazo de participación vencido el 12/09/2026",
-      "detalle": "La propuesta fija 60 días calendario desde el inicio de servicio del 14/07/2026, de modo que el plazo venció el 12/09/2026. Con posterioridad se emitieron diecisiete pronunciamientos: el RC-004, el AP-001, el FT-001, el FT-002, el RC-005, el FT-003, el FT-004, el FT-005, el FT-006, el FT-007, el FT-008, el FT-009, el FT-010, el FT-011, el FT-012, el FT-013 y el FT-014.",
+      "detalle": "La propuesta fija 60 días calendario desde el inicio de servicio del 14/07/2026, de modo que el plazo venció el 12/09/2026. Con posterioridad se emitieron dieciocho pronunciamientos: el RC-004, el AP-001, el FT-001, el FT-002, el RC-005, el FT-003, el FT-004, el FT-005, el FT-006, el FT-007, el FT-008, el FT-009, el FT-010, el FT-011, el FT-012, el FT-013, el FT-014 y el RC-006.",
       "accion": "Formalizar con el CONSORCIO PARACHIQUE la ampliación del plazo de participación, para que los pronunciamientos posteriores al 12/09 queden amparados."
     },
     {
@@ -4653,6 +4744,13 @@
       "titulo": "El D-213 no se aprueba: el equipo ofertado no alcanza el valor del expediente",
       "detalle": "En el INF-SUP-FT-EQ-DLVM-005-261014, el esterilizador Getidy JN-45 (D-213) declara una cámara de 45 L frente a los 30 a 40 L del expediente y una corriente de 25 A que no admite el enchufe schuko de 16 A. El mercado alcanza el valor exigido, de modo que el defecto es del equipo y no del expediente. El D-86 quedó aprobado por equivalencia funcional con el INF-SUP-FT-EQ-DLVM-013-261104.",
       "accion": "Requerir al Contratista la ficha del D-213 con otro modelo, antes de cualquier procura de ese código."
+    },
+    {
+      "nivel": "SUSTANCIAL",
+      "reservada": false,
+      "titulo": "Agua blanda: el expediente la exige en cuatro equipos y no tiene cómo producirla",
+      "detalle": "El Cuadro de Pre Instalaciones pide agua blanda para la unidad dental D-41 (folio 959) y para el destilador E-130, la lavadora E-210 y la planchadora E-54 (folio 958), pero las instalaciones sanitarias solo distribuyen agua dura. El agua del Pozo 07 de Illescas-Bayóvar tiene 230.96 mg CaCO3/L. Con la Consulta de Obra N° 07 (CARTA N° 158-2026) el Contratista propone un sistema centralizado; el INF-SUP-RC-EQ-DLVM-006-261107 da opinión favorable en lo que toca a equipamiento, pide completar el IS-17 con el punto del E-54 y deja la aprobación a la Entidad con el Proyectista. Tres de los cuatro equipos (E-130, E-210 y E-54) aún no presentan ficha.",
+      "accion": "Trasladar la consulta a la Entidad para que, por intermedio del Comité del FOSPIBAY, el Proyectista compatibilice las especialidades sanitaria y de equipamiento; y requerir al Contratista el punto de agua blanda del E-54 en el IS-17."
     }
   ],
   "protocoloRespuesta": [
@@ -9289,11 +9387,11 @@
       "descripcion": "Pronunciamiento sobre cada informe o carta del Contratista que lo requiera.",
       "metrica": {
         "etiqueta": "Cartas contestadas",
-        "hecho": 19,
-        "total": 19,
+        "hecho": 20,
+        "total": 20,
         "unidad": "cartas"
       },
-      "nota": "Los 19 informes recibidos del Contratista tienen pronunciamiento emitido; el último, el INF-SUP-FT-EQ-DLVM-014-261105, sobre las fichas de diez códigos de la CARTA N° 156-2026. Los de octubre FT-003 a FT-009 se entregaron a la Jefatura el 26/10/2026; el FT-010, el mismo día; el FT-011 y el Informe Mensual N° 003, el 27/10/2026; el FT-012, el 29/10/2026; y el FT-013, el 04/11/2026. El FT-014 está por entregar.",
+      "nota": "Los 20 informes recibidos del Contratista tienen pronunciamiento emitido; el último, el INF-SUP-RC-EQ-DLVM-006-261107, sobre la Consulta de Obra N° 07 (agua blanda) de la CARTA N° 158-2026. Los de octubre FT-003 a FT-009 se entregaron a la Jefatura el 26/10/2026; el FT-010, el mismo día; el FT-011 y el Informe Mensual N° 003, el 27/10/2026; el FT-012, el 29/10/2026; y el FT-013, el 04/11/2026. El FT-014 y el RC-006 están por entregar.",
       "responsable": "Supervisión de Equipamiento"
     },
     {
