@@ -1,7 +1,7 @@
 {
   "_lea_esto": "Respaldo y datos de fondo del panel CS PARACHIQUE. El estado de las fichas técnicas ya NO se gobierna aquí: manda la hoja «2 SEGUIMIENTO» del Drive, y las observaciones a fichas, la hoja «3 OBSERVACIONES». Lo que se edite aquí para un código que la hoja mencione, la hoja lo sobrescribe. Todo lo demás —etapas, documentos, expediente, presupuesto, valorización— sí se edita aquí. No edite los dashboard.html a mano: se regeneran y se pierde el cambio.",
   "meta": {
-    "actualizado": "2026-11-07",
+    "actualizado": "2026-11-09",
     "proyecto": "Mejoramiento de los Servicios de Salud del Establecimiento de Salud Parachique",
     "cui": "2571750",
     "ubicacion": "Distrito y provincia de Sechura — Piura",
@@ -1280,7 +1280,7 @@
       "numeral": "2.3",
       "membrete": true,
       "responde": "CARTA N° 156-2026 / INFORME N° 019-2026/JCAMF-EQH",
-      "detalle": "Se APRUEBAN ocho fichas: D-140, D-204, D-234, E-81, M-136, M-152, M-19 y M-3. Se OBSERVAN dos: D-39 en A05 y A12, y D-153 en A05. 121 de 124 requerimientos (98 %). El A04 del D-234 se aprueba por equivalencia funcional, con constancia. Solo las fichas aprobadas autorizan la procura.",
+      "detalle": "Se APRUEBAN ocho fichas: D-140, D-204, D-234, E-81, M-136, M-152, M-19 y M-3. Se OBSERVAN dos: D-39 en A05 y D-153 en A05. 122 de 124 requerimientos (98 %). El A04 del D-234 se aprueba por equivalencia funcional, con constancia. Solo las fichas aprobadas autorizan la procura. Versión definitiva del 08/11/2026, revisada por el suscrito, que levanta el A12 del D-39.",
       "archivo": "INF-SUP-FT-EQ-DLVM-014-261105_INFORME_FIRMADO.pdf",
       "ruta": "2.Informes Mensuales\\3.Informe de repsuestas\\FT-014-261105\\",
       "url": null,
@@ -4400,13 +4400,13 @@
       "documentoAbsuelto": "INFORME N° 019-2026/JCAMF-EQH (04/11/2026) — CARTA N° 156-2026, 100 folios",
       "materia": "Fichas técnicas de cumplimiento de diez (10) códigos de equipamiento",
       "observaciones": 2,
-      "extremos": 3,
-      "confirmadas": 3,
+      "extremos": 2,
+      "confirmadas": 2,
       "trasladadas": 0,
       "yaAbsueltas": 0,
       "codigoEvaluado": "10 códigos",
       "tipo": "FICHA",
-      "resultado": "8 fichas APROBADAS y 2 OBSERVADAS (D-39 y D-153); ninguna NO APROBADA. Cumplimiento técnico global sustentado del 98 %: 121 de 124 requerimientos. Solo la ficha APROBADA autoriza la procura.",
+      "resultado": "8 fichas APROBADAS y 2 OBSERVADAS (D-39 y D-153); ninguna NO APROBADA. Cumplimiento técnico global sustentado del 98 %: 122 de 124 requerimientos. Solo la ficha APROBADA autoriza la procura.",
       "naturaleza": "Octava entrega de fichas técnicas nuevas: trae el D-204, que completa la S3, tres códigos de la S4, cuatro de la S5, uno de la S6 y uno de la S7. Con ella suman 121 de los 179 códigos. Las dos observadas se cierran con un documento, sin cambiar de equipo. El A04 del D-234 se aprueba por equivalencia funcional, tras verificar que ninguna cubeta consultada alcanza las medidas del expediente.",
       "detalle": [
         {
@@ -4524,11 +4524,11 @@
         {
           "obs": "D-39",
           "equipo": "D-39 — Destartarizador ultrasónico",
-          "materia": "OBSERVADA. 15 de 17. A05: los 30 ajustes son una multiplicación de la nota; el fabricante da una escala de 1 a 10 y limita endo al quinto grado (folio 003). A12: los folios acreditan la botella y no un filtro, y la Mejora no se demuestra. El A11 cumple, con 28 kHz ±3 kHz.",
+          "materia": "OBSERVADA. 16 de 17. A05: los 30 ajustes son una multiplicación de la nota; el fabricante da una escala de 1 a 10 y limita endo al quinto grado (folio 003). El A12 se aprueba en la versión revisada: la botella con agua purificada se acepta en lugar del filtro. El A11 cumple, con 28 kHz ±3 kHz.",
           "nivel": "LEVE",
           "estado": "Por absolver",
           "ubicacion": "Bloque D-39 del Informe N° 019",
-          "extremos": 2,
+          "extremos": 1,
           "codigos": [
             "D-39"
           ],
@@ -6819,18 +6819,18 @@
       "parcial": 3920.91,
       "fila": 69,
       "ficha": "OBSERVADA",
-      "obs": "OBSERVADA. 15 de 17. A05: los 30 ajustes son una multiplicación de la nota; el fabricante da una escala de 1 a 10 y limita endo al quinto grado (folio 003). A12: los folios acreditan la botella y no un filtro, y la Mejora no se demuestra. El A11 cumple, con 28 kHz ±3 kHz.",
+      "obs": "OBSERVADA. 16 de 17. A05: los 30 ajustes son una multiplicación de la nota; el fabricante da una escala de 1 a 10 y limita endo al quinto grado (folio 003). El A12 se aprueba en la versión revisada: la botella con agua purificada se acepta en lugar del filtro. El A11 cumple, con 28 kHz ±3 kHz.",
       "version": 1,
       "versiones": 1,
       "marca": "WOODPECKER",
       "modelo": "UDS-E LED",
       "fabricante": null,
-      "verificacionWeb": "Consulta del 05/11/2026: el manual de la UDS-E LED (ManualsLib, pág. 21) da de 1 a 10 en destartraje y de 1 a 3 o de 1 a 6 en endo, y no menciona filtro de agua. El manual del NSK Varios 970 da 11 niveles, de 0 a 10.",
+      "verificacionWeb": "Consulta del 05/11/2026: el manual de la UDS-E LED (ManualsLib, pág. 21) da de 1 a 10 en destartraje y de 1 a 3 o de 1 a 6 en endo.",
       "cartaContratista": "CARTA N° 156-2026 / INFORME N° 019-2026/JCAMF-EQH",
       "informeSupervision": "INF-SUP-FT-EQ-DLVM-014-261105",
-      "queFalta": "Carta de WOODPECKER con los niveles de potencia efectivos en cada modo, o cuadro comparativo con tres marcas (A05); y que indique cómo se protege el circuito de agua y que el uso sin filtro adicional no afecta la garantía (A12).",
+      "queFalta": "Carta de WOODPECKER con los niveles de potencia efectivos en cada modo, o cuadro comparativo con tres marcas y sus parámetros más importantes (A05).",
       "itemsEvaluados": 17,
-      "itemsPendientes": "A05 y A12",
+      "itemsPendientes": "A05",
       "fechaEntrega": "2026-11-04",
       "historial": [
         {
