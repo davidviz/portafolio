@@ -1,7 +1,7 @@
 {
   "_lea_esto": "Respaldo y datos de fondo del panel CS PARACHIQUE. El estado de las fichas técnicas ya NO se gobierna aquí: manda la hoja «2 SEGUIMIENTO» del Drive, y las observaciones a fichas, la hoja «3 OBSERVACIONES». Lo que se edite aquí para un código que la hoja mencione, la hoja lo sobrescribe. Todo lo demás —etapas, documentos, expediente, presupuesto, valorización— sí se edita aquí. No edite los dashboard.html a mano: se regeneran y se pierde el cambio.",
   "meta": {
-    "actualizado": "2026-11-12",
+    "actualizado": "2026-11-17",
     "proyecto": "Mejoramiento de los Servicios de Salud del Establecimiento de Salud Parachique",
     "cui": "2571750",
     "ubicacion": "Distrito y provincia de Sechura — Piura",
@@ -1572,6 +1572,60 @@
       },
       "areas": [
         "Equipos electromecánicos"
+      ],
+      "honorarioNeto": 500
+    },
+    {
+      "id": "CT-IN-026",
+      "flujo": "RECIBIDA",
+      "clase": "INFORME DEL CONTRATISTA",
+      "etapa": "E3",
+      "codigo": "CARTA N° 175-2026 / INFORME N° 026-2026/JCAMF-EQH",
+      "fecha": "2026-11-17",
+      "contraparte": "INGENIERÍA CIVIL MONTAJES S.A. (ICM) — Contratista de obra",
+      "asunto": "Levantamiento de las observaciones de siete fichas técnicas.",
+      "estado": "ATENDIDA",
+      "numeral": "2.3",
+      "membrete": false,
+      "respondidaPor": "INF-SUP-FT-EQ-DLVM-019-261117",
+      "detalle": "Informe N° 026 del 17/11/2026, del Ing. Juan Carlos Augusto Mendiola Florez (CIP 201412), suscrito también por el Residente de Obra Ing. Luis Enrique Santisteban Romero (CIP 81329). 191 folios. Recibida por la Jefatura el 17/11/2026 a las 18:00 h y subida a la carpeta de Drive de cartas pendientes. Versión 2 de D-104, D-109, D-212, D-213, D-153, D-349 y D-39. No presenta códigos nuevos.",
+      "archivo": "CARTA N 175-2026 ICM - Informe 026 - Levantamiento de observaciones de 7 fichas.pdf",
+      "ruta": "3.Sustentos\\",
+      "url": null,
+      "drive": {
+        "sustento": "1SGi0MjJpmTQ-2xFwvBnvsdTZxmnq6yyr"
+      },
+      "areas": [
+        "Equipos biomédicos",
+        "Equipos complementarios"
+      ]
+    },
+    {
+      "id": "PR-030",
+      "flujo": "EMITIDA",
+      "clase": "INFORME",
+      "etapa": "E3",
+      "codigo": "INF-SUP-FT-EQ-DLVM-019-261117",
+      "fecha": "2026-11-17",
+      "contraparte": "Jefatura de Supervisión de Obra — Ing. Manuel Ricardo Torres Peche",
+      "asunto": "Informe de Validación de Fichas Técnicas N° 019 — levantamiento de siete fichas.",
+      "estado": "POR ENTREGAR",
+      "numeral": "2.3",
+      "membrete": true,
+      "responde": "CARTA N° 175-2026 / INFORME N° 026-2026/JCAMF-EQH",
+      "detalle": "Se APRUEBAN seis fichas en su versión 2 y se OBSERVA la del D-104 (A10, alarma de puerta abierta). 149 de 150 (99 %). El D-213 se aprueba sujeto a Instalaciones Eléctricas (45 L, 25 A y 5000 W); el D-349, por equivalencia de finalidad con el doppler, y la consulta al Comité deja de ser necesaria; el A05 del D-39, por equivalencia.",
+      "archivo": "INF-SUP-FT-EQ-DLVM-019-261117_INFORME_FIRMADO.pdf",
+      "ruta": "2.Informes Mensuales\\3.Informe de repsuestas\\FT-019-261117\\",
+      "url": null,
+      "drive": {
+        "informe": "1qjbC4guruShfYS-fKSp0GUFZtYQYsWHS",
+        "pdf": "1faZ1Qpc92ZTAbf-4pQs7_JS11JvZJbNT",
+        "firmado": "1TEZt76a8aKhoHA11Rh7MLnf7GfgJUmkS",
+        "sustento": "1rYCYJTjzkwjY337fx6vh2_Dr25PpKc2g"
+      },
+      "areas": [
+        "Equipos biomédicos",
+        "Equipos complementarios"
       ],
       "honorarioNeto": 500
     }
@@ -3310,7 +3364,7 @@
           "equipo": "D-349 — Estetoscopio fetoscopio",
           "materia": "NO APROBADA en A02, A03 y A05: se oferta un doppler fetal donde el expediente pide fetoscopio tipo Pinard. La NTS 113 los trata como códigos distintos y coexistentes, D-349 y D-96. Va por consulta al Comité.",
           "nivel": "CRITICA",
-          "estado": "Por absolver",
+          "estado": "Subsanada con el INF-SUP-FT-EQ-DLVM-019-261117: ficha aprobada en la versión 2",
           "ubicacion": "ANEXO N° 1 del bloque D-349 del Informe N° 006",
           "extremos": 3,
           "codigos": [
@@ -3492,7 +3546,7 @@
           "equipo": "D-104 — Bomba de infusión de 1 canales",
           "materia": "OBSERVADA. 17 de 18. La puerta abierta figura como aviso y no como alarma audiovisual. El rango de 0,1 a 2000 ml/h se aprueba con el manual de operación; el máximo de 1200 ml/h del manual de servicio no rige.",
           "nivel": "LEVE",
-          "estado": "Por absolver",
+          "estado": "Absuelta con el INF-SUP-FT-EQ-DLVM-019-261117: la observación del A10 sigue abierta en ese informe",
           "ubicacion": "Bloque D-104 del Informe N° 008",
           "extremos": 1,
           "codigos": [
@@ -3776,7 +3830,7 @@
           "equipo": "D-109 — Coche de paro equipado",
           "materia": "OBSERVADA. 53 de 55. B06: el porta aspirador es una propuesta del Contratista, sin accesorio identificado. H01: el desfibrilador CU-HD1 pesa 8,1 kg o menos con palas y cables (folio 026), por encima de los 8 kg.",
           "nivel": "LEVE",
-          "estado": "Por absolver",
+          "estado": "Subsanada con el INF-SUP-FT-EQ-DLVM-019-261117: ficha aprobada en la versión 2",
           "ubicacion": "Bloque D-109 del Informe N° 010",
           "extremos": 2,
           "codigos": [
@@ -3846,7 +3900,7 @@
           "equipo": "D-213 — esterilizador con generador electrico de vapor de 30 litros",
           "materia": "NO APROBADA. 20 de 24. El JN-45 tiene cámara de 45 L, fuera de los 30 a 40 L (A09), y absorbe 25 A, que no admite el enchufe schuko de 16 A (D02). Además, el consumo de agua por ciclo es deducido por la nota y no declarado (A16), y el certificado PED venció el 24/08/2026 (A08).",
           "nivel": "CRITICA",
-          "estado": "Por absolver",
+          "estado": "Subsanada con el INF-SUP-FT-EQ-DLVM-019-261117: ficha aprobada en la versión 2",
           "ubicacion": "Bloque D-213 del Informe N° 010",
           "extremos": 4,
           "codigos": [
@@ -4236,7 +4290,7 @@
           "equipo": "D-212 — Esterilizador con generador eléctrico de vapor de 20 lt",
           "materia": "OBSERVADA. 22 de 24. D2: el fabricante da 3000 W y 20 A (folio 016) y 3500 VA a 230 V (folio 005), valores que no cuadran entre sí. A16: el consumo por ciclo lo deduce la nota (583 ml). La cámara de 29 L cumple el A09.",
           "nivel": "LEVE",
-          "estado": "Por absolver",
+          "estado": "Subsanada con el INF-SUP-FT-EQ-DLVM-019-261117: ficha aprobada en la versión 2",
           "ubicacion": "Bloque D-212 del Informe N° 017",
           "extremos": 2,
           "codigos": [
@@ -4746,7 +4800,7 @@
           "equipo": "D-39 — Destartarizador ultrasónico",
           "materia": "OBSERVADA. 16 de 17. A05: los 30 ajustes son una multiplicación de la nota; el fabricante da una escala de 1 a 10 y limita endo al quinto grado (folio 003). El A12 se aprueba en la versión revisada: la botella con agua purificada se acepta en lugar del filtro. El A11 cumple, con 28 kHz ±3 kHz.",
           "nivel": "LEVE",
-          "estado": "Por absolver",
+          "estado": "Subsanada con el INF-SUP-FT-EQ-DLVM-019-261117: ficha aprobada en la versión 2",
           "ubicacion": "Bloque D-39 del Informe N° 019",
           "extremos": 1,
           "codigos": [
@@ -4760,7 +4814,7 @@
           "equipo": "D-153 — Canastilla (gradilla) para transporte de muestras",
           "materia": "OBSERVADA. 6 de 7. A05: la rejilla de acero inoxidable 316 en lugar de cubierta con plástico puede aceptarse como mejora, pero el bloque no trae ficha de fabricante ni declaración jurada de proveedor.",
           "nivel": "LEVE",
-          "estado": "Por absolver",
+          "estado": "Subsanada con el INF-SUP-FT-EQ-DLVM-019-261117: ficha aprobada en la versión 2",
           "ubicacion": "Bloque D-153 del Informe N° 019",
           "extremos": 1,
           "codigos": [
@@ -5611,6 +5665,120 @@
           "fuente": "Validación de fichas técnicas"
         }
       ]
+    },
+    {
+      "informe": "INF-SUP-FT-EQ-DLVM-019-261117",
+      "documentoAbsuelto": "INFORME N° 026-2026/JCAMF-EQH (17/11/2026) — CARTA N° 175-2026, 191 folios",
+      "materia": "Levantamiento de las observaciones de siete fichas técnicas",
+      "observaciones": 1,
+      "extremos": 1,
+      "confirmadas": 1,
+      "trasladadas": 0,
+      "yaAbsueltas": 0,
+      "codigoEvaluado": "7 códigos",
+      "tipo": "FICHA",
+      "resultado": "6 fichas APROBADAS y 1 OBSERVADA (D-104) en la versión 2; 149 de 150 (99 %).",
+      "naturaleza": "Tercer levantamiento en lote. Cierra los dos NO CUMPLE que quedaban: el D-213, aprobado sujeto a Instalaciones Eléctricas, y el D-349, aprobado por equivalencia de finalidad, con lo que la consulta al Comité deja de ser necesaria. Primera carta recibida por la carpeta de Drive de la Jefatura.",
+      "detalle": [
+        {
+          "obs": "OK",
+          "equipo": "D-109 — Coche de paro equipado",
+          "materia": "Ficha aprobada en la versión 2. B06 con la declaración jurada de BIOMEDICAL CARE SYSTEMS: base reforzada sobre los rieles del Hospitool EC. H01 con la carta de CU Medical Systems: el CU-HD1 cumple 8 kg o menos.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "Bloque D-109 del Informe N° 026",
+          "extremos": null,
+          "codigos": [
+            "D-109"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-019-261117",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "D-212 — Esterilizador con generador eléctrico de vapor de 20 lt",
+          "materia": "Ficha aprobada en la versión 2. Carta de GETIDY del 09/11/2026: enchufe schuko de 16 A y limitador de 300 ml por ciclo.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "Bloque D-212 del Informe N° 026",
+          "extremos": null,
+          "codigos": [
+            "D-212"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-019-261117",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "D-213 — esterilizador con generador electrico de vapor de 30 litros",
+          "materia": "Ficha aprobada en la versión 2. Cámara de 45 L aceptada como mejora; 25 A y 5000 W a 220 V según GETIDY: circuito y tomacorriente a validar por Instalaciones Eléctricas, adecuación a cargo del Contratista. PED EUROCERT vigente al 29/09/2027 y limitador de 300 ml.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "Bloque D-213 del Informe N° 026",
+          "extremos": null,
+          "codigos": [
+            "D-213"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-019-261117",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "D-153 — Canastilla (gradilla) para transporte de muestras",
+          "materia": "Ficha aprobada en la versión 2. Carta de MEDI MATIC: canastilla y rejilla de acero inoxidable 316, aceptadas como mejora.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "Bloque D-153 del Informe N° 026",
+          "extremos": null,
+          "codigos": [
+            "D-153"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-019-261117",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "D-39 — Destartarizador ultrasónico",
+          "materia": "Ficha aprobada en la versión 2. A05 por equivalencia: ninguna de las cuatro marcas del cuadro ofrece 20 niveles.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "Bloque D-39 del Informe N° 026",
+          "extremos": null,
+          "codigos": [
+            "D-39"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-019-261117",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "D-349 — Estetoscopio fetoscopio",
+          "materia": "Ficha aprobada en la versión 2. La consulta al Comité deja de ser necesaria.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "Bloque D-349 del Informe N° 026",
+          "extremos": null,
+          "codigos": [
+            "D-349"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-019-261117",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "D-104",
+          "equipo": "D-104 — Bomba de infusión de 1 canales",
+          "materia": "OBSERVADA en la versión 2. 17 de 18. El manual de servicio clasifica la falla de puerta como advertencia, y el bloqueo de la puerta durante la infusión solo lo afirma el Contratista.",
+          "nivel": "LEVE",
+          "estado": "Por absolver",
+          "ubicacion": "Bloque D-104 del Informe N° 026",
+          "extremos": 1,
+          "codigos": [
+            "D-104"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-019-261117",
+          "fuente": "Validación de fichas técnicas"
+        }
+      ]
     }
   ],
   "valorizacion": {
@@ -5631,7 +5799,7 @@
       {
         "requisito": "Aprobación de las EETT por la Entidad",
         "estado": "PENDIENTE",
-        "nota": "46 asuntos siguen pendientes de pronunciamiento del Proyectista. De las fichas técnicas, 150 de 179 cuentan con aprobación de la Supervisión, que no sustituye la aprobación de las EETT por la Entidad."
+        "nota": "46 asuntos siguen pendientes de pronunciamiento del Proyectista. De las fichas técnicas, 156 de 179 cuentan con aprobación de la Supervisión, que no sustituye la aprobación de las EETT por la Entidad."
       },
       {
         "requisito": "Planos de preinstalación emitidos por el Contratista",
@@ -5690,13 +5858,6 @@
     {
       "nivel": "SUSTANCIAL",
       "reservada": false,
-      "titulo": "El D-349 va por consulta al Comité",
-      "detalle": "En el D-349 el Contratista oferta un doppler fetal electrónico donde el expediente define un fetoscopio mecánico tipo Pinard, y la NTS N° 113 los trata como códigos distintos y coexistentes. No es una decisión de la Supervisión. El D-345, que iba por la misma vía, quedó aprobado con el INF-SUP-FT-EQ-DLVM-015-261111: el tallímetro del numeral 2.4 de la Guía del MINSA sirve a menores de diez años.",
-      "accion": "Canalizado con el INF-SUP-FT-EQ-DLVM-002-260919 mediante consulta del Contratista al Comité de Evaluación y Adjudicación del FOSPIBAY. El Contratista no debe remitir versión subsanada del D-349 hasta que el Comité se pronuncie."
-    },
-    {
-      "nivel": "SUSTANCIAL",
-      "reservada": false,
       "titulo": "El V-1 Ambulancia queda en la última semana del cronograma",
       "detalle": "El código V-1, Ambulancia Rural Tipo I, concentra S/ 346 833,33, el mayor importe unitario del equipamiento, y su carrozado es el de mayor plazo de fabricación del proyecto. El cronograma aprobado con el INF-SUP-RC-EQ-DLVM-005-260929 lo programa en la S10, el 13/11/2026.",
       "accion": "El INF-SUP-RC-EQ-DLVM-005-260929 deja constancia de que esa fecha es decisión del Contratista y de que la Supervisión no asume responsabilidad por ampliaciones de plazo que se originen en el plazo de fabricación del V-1."
@@ -5712,7 +5873,7 @@
       "nivel": "SUSTANCIAL",
       "reservada": false,
       "titulo": "Plazo de participación vencido el 12/09/2026",
-      "detalle": "La propuesta fija 60 días calendario desde el inicio de servicio del 14/07/2026, de modo que el plazo venció el 12/09/2026. Con posterioridad se emitieron veintidós pronunciamientos: el RC-004, el AP-001, el FT-001, el FT-002, el RC-005, el FT-003, el FT-004, el FT-005, el FT-006, el FT-007, el FT-008, el FT-009, el FT-010, el FT-011, el FT-012, el FT-013, el FT-014, el RC-006, el FT-015, el FT-016, el FT-017 y el FT-018.",
+      "detalle": "La propuesta fija 60 días calendario desde el inicio de servicio del 14/07/2026, de modo que el plazo venció el 12/09/2026. Con posterioridad se emitieron veintitrés pronunciamientos: el RC-004, el AP-001, el FT-001, el FT-002, el RC-005, el FT-003, el FT-004, el FT-005, el FT-006, el FT-007, el FT-008, el FT-009, el FT-010, el FT-011, el FT-012, el FT-013, el FT-014, el RC-006, el FT-015, el FT-016, el FT-017, el FT-018 y el FT-019.",
       "accion": "Formalizar con el CONSORCIO PARACHIQUE la ampliación del plazo de participación, para que los pronunciamientos posteriores al 12/09 queden amparados."
     },
     {
@@ -5739,9 +5900,9 @@
     {
       "nivel": "SUSTANCIAL",
       "reservada": false,
-      "titulo": "Cronograma: vencidas la S4 a la S9, con 11 códigos sin presentar; la S10 vence el 13/11/2026",
-      "detalle": "El INF-SUP-RC-EQ-DLVM-005-260929 aprobó el cronograma de la CARTA N° 085-2026: 179 códigos en diez entregas semanales. Con las CARTAS N° 163, 165 y 166-2026, derivadas el 11/11/2026, son 159 los presentados. La S3, la S4 y la S7 están completas. La S5 lleva 14 de 17 (faltan E-103, E-159 y D-331); la S6, 12 de 17 (faltan el E-130, que espera al Comité, y M-124, M-161, M-162 y M-55); la S8, 14 de 16 (faltan M-109 y M-111); y la S9, 15 de 16 (falta M-68). De los nueve códigos con pre instalación solo falta el E-130. La S10, con el V-1, lleva 7 de 16 y vence el 13/11/2026. Ninguna carta trae la reprogramación escrita.",
-      "accion": "Obtener del Contratista la fecha escrita de los 11 códigos de las semanas vencidas, como pide la recomendación CUARTA del INF-SUP-FT-EQ-DLVM-017-261111, y cotejar la S10 del 13/11/2026."
+      "titulo": "Cronograma vencido: 20 códigos sin presentar, la S10 con el V-1 incluida",
+      "detalle": "El INF-SUP-RC-EQ-DLVM-005-260929 aprobó el cronograma de la CARTA N° 085-2026: 179 códigos en diez entregas semanales, la última el 13/11/2026. Hay 159 presentados. La S3, la S4 y la S7 están completas. La S5 lleva 14 de 17 (faltan E-103, E-159 y D-331); la S6, 12 de 17 (faltan el E-130, que espera al Comité, y M-124, M-161, M-162 y M-55); la S8, 14 de 16 (faltan M-109 y M-111); la S9, 15 de 16 (falta M-68); y la S10, 7 de 16 (faltan V-1, M-73, M-75, M-78, M-81, M-85, M-88, M-95, M-97). De los nueve códigos con pre instalación solo falta el E-130. La CARTA N° 175-2026, del 17/11/2026, solo trae levantamientos. Ninguna carta trae la reprogramación escrita.",
+      "accion": "Obtener del Contratista la fecha escrita de los 20 códigos sin presentar, con prioridad para el V-1, Ambulancia Rural Tipo I."
     },
     {
       "nivel": "LEVE",
@@ -5760,13 +5921,6 @@
     {
       "nivel": "SUSTANCIAL",
       "reservada": false,
-      "titulo": "El D-213 no se aprueba: el equipo ofertado no alcanza el valor del expediente",
-      "detalle": "En el INF-SUP-FT-EQ-DLVM-005-261014, el esterilizador Getidy JN-45 (D-213) declara una cámara de 45 L frente a los 30 a 40 L del expediente y una corriente de 25 A que no admite el enchufe schuko de 16 A. El mercado alcanza el valor exigido, de modo que el defecto es del equipo y no del expediente. El D-86 quedó aprobado por equivalencia funcional con el INF-SUP-FT-EQ-DLVM-013-261104.",
-      "accion": "Requerir al Contratista la ficha del D-213 con otro modelo, antes de cualquier procura de ese código."
-    },
-    {
-      "nivel": "SUSTANCIAL",
-      "reservada": false,
       "titulo": "Agua blanda: el expediente la exige en cuatro equipos y no tiene cómo producirla",
       "detalle": "El Cuadro de Pre Instalaciones pide agua blanda para la unidad dental D-41 (folio 959) y para el destilador E-130, la lavadora E-210 y la planchadora E-54 (folio 958), y la obra solo distribuye agua dura. Con la Consulta de Obra N° 07 (CARTA N° 158-2026) el Contratista propone un sistema centralizado. El INF-SUP-RC-EQ-DLVM-006-261107 da opinión favorable en lo que toca a equipamiento y anota que la propuesta no prevé el punto del E-54; Instalaciones Sanitarias y Estructuras de la supervisión se pronunciaron sobre lo suyo. El E-210 y el E-54 ya tienen ficha aprobada (INF-SUP-FT-EQ-DLVM-018-261111): la lavadora WS6-14 lleva punto de agua blanda de 3/4\" y la planchadora ofertada es de llenado manual, sin punto de agua. Falta la ficha del E-130.",
       "accion": "Trasladar los pronunciamientos a la Entidad para su trámite con el Proyectista. Con la planchadora ofertada, el punto de agua blanda del E-54 no es necesario; la decisión sobre ese punto corresponde a Instalaciones Sanitarias."
@@ -5777,6 +5931,13 @@
       "titulo": "Lavandería: la potencia supera el expediente y la pre instalación espera a IIEE e IISS",
       "detalle": "El INF-SUP-FT-EQ-DLVM-018-261111 aprobó las fichas del E-54, el E-56 y el E-210 y, de manera documentaria, el plano EQ-06-01. La secadora TD6-14 declara 14,5 kW frente a 8 kW y la lavadora WS6-14, 10,4 kW frente a 7,5 kW; la planchadora es monofásica de 220 V. El especialista eléctrico del Contratista replanteó el tablero TES-4 y declara que el Contratista asume el cambio. Equipamiento no responde por interferencias con las demás instalaciones.",
       "accion": "Trasladar a los especialistas de Instalaciones Eléctricas e Instalaciones Sanitarias de la supervisión el plano, los cuadros y los Informes N° 015-2026/E-IME-VNTC-ICM y N° 012-2026/E-IISS-MEID-ICM, y verificar que el Contratista compatibilice el plano antes de ejecutar."
+    },
+    {
+      "nivel": "LEVE",
+      "reservada": false,
+      "titulo": "D-213: el esterilizador de 45 L necesita un punto de 25 A, a validar por IIEE",
+      "detalle": "El INF-SUP-FT-EQ-DLVM-019-261117 aprobó el GETIDY JN-45 con la cámara de 45 L como mejora. El fabricante fija 25 A y 5000 W a 220 V, que no admite el schuko de 16 A del expediente. El Contratista asume la adecuación del punto eléctrico.",
+      "accion": "Trasladar la carta de GETIDY al especialista de Instalaciones Eléctricas de la supervisión y obtener del especialista eléctrico del Contratista el replanteo del punto."
     }
   ],
   "protocoloRespuesta": [
@@ -5870,25 +6031,32 @@
       "parcial": 39736.59,
       "fila": 6,
       "ficha": "OBSERVADA",
-      "obs": "OBSERVADA. 17 de 18. La puerta abierta figura como aviso y no como alarma audiovisual. El rango de 0,1 a 2000 ml/h se aprueba con el manual de operación; el máximo de 1200 ml/h del manual de servicio no rige.",
-      "version": 1,
-      "versiones": 1,
+      "obs": "OBSERVADA en la versión 2. 17 de 18. El manual de servicio clasifica la falla de puerta como advertencia, y el bloqueo de la puerta durante la infusión solo lo afirma el Contratista.",
+      "version": 2,
+      "versiones": 2,
       "marca": "MEDCAPTAIN",
       "modelo": "HP-60",
       "fabricante": null,
       "verificacionWeb": "zonemedical.com.au (01/10/2026): HP-60 de 0,10 a 2000 ml/h con equipo de 20 gotas/ml.",
-      "cartaContratista": "CARTA N° 092-2026 / INFORME N° 008-2026/JCAMF-EQH",
-      "informeSupervision": "INF-SUP-FT-EQ-DLVM-003-261001",
-      "queFalta": "Página del manual o carta de MEDCAPTAIN con la alarma audiovisual de puerta abierta.",
+      "cartaContratista": "CARTA N° 175-2026 / INFORME N° 026-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-019-261117",
+      "queFalta": "Carta de MEDCAPTAIN que declare el bloqueo de la puerta durante la infusión y el aviso sonoro y visual de su apertura o falla, o un modelo con alarma de puerta abierta.",
       "itemsEvaluados": 18,
       "itemsPendientes": "A10",
-      "fechaEntrega": "2026-09-30",
+      "fechaEntrega": "2026-11-17",
       "historial": [
         {
           "version": 1,
           "fecha": "2026-09-30",
           "carta": "CARTA N° 092-2026 / INFORME N° 008-2026/JCAMF-EQH",
           "informe": "INF-SUP-FT-EQ-DLVM-003-261001",
+          "resultado": "OBSERVADA"
+        },
+        {
+          "version": 2,
+          "fecha": "2026-11-17",
+          "carta": "CARTA N° 175-2026 / INFORME N° 026-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-019-261117",
           "resultado": "OBSERVADA"
         }
       ]
@@ -5901,20 +6069,20 @@
       "pu": 69421.4,
       "parcial": 138842.81,
       "fila": 7,
-      "ficha": "OBSERVADA",
-      "obs": "OBSERVADA. 53 de 55. B06: el porta aspirador es una propuesta del Contratista, sin accesorio identificado. H01: el desfibrilador CU-HD1 pesa 8,1 kg o menos con palas y cables (folio 026), por encima de los 8 kg.",
-      "version": 1,
-      "versiones": 1,
+      "ficha": "APROBADA",
+      "obs": "APROBADA en la versión 2. B06 con la declaración jurada de BIOMEDICAL CARE SYSTEMS: base reforzada sobre los rieles del Hospitool EC. H01 con la carta de CU Medical Systems: el CU-HD1 cumple 8 kg o menos.",
+      "version": 2,
+      "versiones": 2,
       "marca": "VARIAS",
       "modelo": "VARIOS",
       "fabricante": null,
       "verificacionWeb": null,
-      "cartaContratista": "CARTA N° 111-2026 / INFORME N° 010-2026/JCAMF-EQH",
-      "informeSupervision": "INF-SUP-FT-EQ-DLVM-005-261014",
-      "queFalta": "Declaración jurada del proveedor que identifique la base porta aspirador, declare que se entrega y que su montaje no afecta la garantía del coche (B06). Carta de CU MEDICAL SYSTEMS, o de su distribuidor autorizado, con el peso de la configuración de entrega del CU-HD1, igual o menor a 8 kg (H01).",
+      "cartaContratista": "CARTA N° 175-2026 / INFORME N° 026-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-019-261117",
+      "queFalta": null,
       "itemsEvaluados": 55,
-      "itemsPendientes": "B06 y H01",
-      "fechaEntrega": "2026-10-13",
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-11-17",
       "historial": [
         {
           "version": 1,
@@ -5922,6 +6090,13 @@
           "carta": "CARTA N° 111-2026 / INFORME N° 010-2026/JCAMF-EQH",
           "informe": "INF-SUP-FT-EQ-DLVM-005-261014",
           "resultado": "OBSERVADA"
+        },
+        {
+          "version": 2,
+          "fecha": "2026-11-17",
+          "carta": "CARTA N° 175-2026 / INFORME N° 026-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-019-261117",
+          "resultado": "APROBADA"
         }
       ]
     },
@@ -6107,20 +6282,20 @@
       "pu": 34587.71,
       "parcial": 34587.71,
       "fila": 13,
-      "ficha": "OBSERVADA",
-      "obs": "OBSERVADA. 22 de 24. D2: el fabricante da 3000 W y 20 A (folio 016) y 3500 VA a 230 V (folio 005), valores que no cuadran entre sí. A16: el consumo por ciclo lo deduce la nota (583 ml). La cámara de 29 L cumple el A09.",
-      "version": 1,
-      "versiones": 1,
+      "ficha": "APROBADA",
+      "obs": "APROBADA en la versión 2. Carta de GETIDY del 09/11/2026: enchufe schuko de 16 A y limitador de 300 ml por ciclo.",
+      "version": 2,
+      "versiones": 2,
       "marca": "GETIDY",
       "modelo": "JN-29",
       "fabricante": null,
       "verificacionWeb": "Búsqueda del 26/10/2026: GETIDY no publica en línea el consumo de agua por ciclo del JN-29.",
-      "cartaContratista": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
-      "informeSupervision": "INF-SUP-FT-EQ-DLVM-011-261026",
-      "queFalta": "Carta de GETIDY que fije la potencia y la corriente nominal del JN-29 a 220 V, no mayor de 16 A (D2), y el consumo de agua por ciclo, igual o menor a 300 ml (A16).",
+      "cartaContratista": "CARTA N° 175-2026 / INFORME N° 026-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-019-261117",
+      "queFalta": null,
       "itemsEvaluados": 24,
-      "itemsPendientes": "D2 y A16",
-      "fechaEntrega": "2026-10-24",
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-11-17",
       "historial": [
         {
           "version": 1,
@@ -6128,6 +6303,13 @@
           "carta": "CARTA N° 134-2026 / INFORME N° 017-2026/JCAMF-EQH",
           "informe": "INF-SUP-FT-EQ-DLVM-011-261026",
           "resultado": "OBSERVADA"
+        },
+        {
+          "version": 2,
+          "fecha": "2026-11-17",
+          "carta": "CARTA N° 175-2026 / INFORME N° 026-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-019-261117",
+          "resultado": "APROBADA"
         }
       ]
     },
@@ -6139,20 +6321,20 @@
       "pu": 43314.15,
       "parcial": 86628.31,
       "fila": 14,
-      "ficha": "NO CUMPLE",
-      "obs": "NO APROBADA. 20 de 24. El JN-45 tiene cámara de 45 L, fuera de los 30 a 40 L (A09), y absorbe 25 A, que no admite el enchufe schuko de 16 A (D02). Además, el consumo de agua por ciclo es deducido por la nota y no declarado (A16), y el certificado PED venció el 24/08/2026 (A08).",
-      "version": 1,
-      "versiones": 1,
+      "ficha": "APROBADA",
+      "obs": "APROBADA en la versión 2, sujeta a IIEE. Cámara de 45 L aceptada como mejora; 25 A y 5000 W a 220 V según GETIDY: circuito y tomacorriente a validar por Instalaciones Eléctricas, adecuación a cargo del Contratista. PED EUROCERT vigente al 29/09/2027 y limitador de 300 ml.",
+      "version": 2,
+      "versiones": 2,
       "marca": "GETIDY",
       "modelo": "JN-45",
       "fabricante": null,
       "verificacionWeb": "labonline.com.au, DAIHAN MaXterile BT40 (14/10/2026): cámara de 40 L, ciclo clase B según EN 13060.",
-      "cartaContratista": "CARTA N° 111-2026 / INFORME N° 010-2026/JCAMF-EQH",
-      "informeSupervision": "INF-SUP-FT-EQ-DLVM-005-261014",
-      "queFalta": "Ficha nueva con un modelo de 30 a 40 litros y corriente nominal no mayor de 16 A (A09 y D02), con hoja o carta del fabricante del consumo de agua por ciclo, igual o menor a 300 ml (A16), y certificado PED vigente (A08).",
+      "cartaContratista": "CARTA N° 175-2026 / INFORME N° 026-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-019-261117",
+      "queFalta": null,
       "itemsEvaluados": 24,
-      "itemsPendientes": "A09, D02, A16 y A08",
-      "fechaEntrega": "2026-10-13",
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-11-17",
       "historial": [
         {
           "version": 1,
@@ -6160,6 +6342,13 @@
           "carta": "CARTA N° 111-2026 / INFORME N° 010-2026/JCAMF-EQH",
           "informe": "INF-SUP-FT-EQ-DLVM-005-261014",
           "resultado": "NO CUMPLE"
+        },
+        {
+          "version": 2,
+          "fecha": "2026-11-17",
+          "carta": "CARTA N° 175-2026 / INFORME N° 026-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-019-261117",
+          "resultado": "APROBADA"
         }
       ]
     },
@@ -7070,20 +7259,20 @@
       "pu": 996.64,
       "parcial": 2989.91,
       "fila": 43,
-      "ficha": "OBSERVADA",
-      "obs": "OBSERVADA. 6 de 7. A05: la rejilla de acero inoxidable 316 en lugar de cubierta con plástico puede aceptarse como mejora, pero el bloque no trae ficha de fabricante ni declaración jurada de proveedor.",
-      "version": 1,
-      "versiones": 1,
+      "ficha": "APROBADA",
+      "obs": "APROBADA en la versión 2. Carta de MEDI MATIC: canastilla y rejilla de acero inoxidable 316, aceptadas como mejora.",
+      "version": 2,
+      "versiones": 2,
       "marca": "S/M",
       "modelo": "S/M",
       "fabricante": null,
       "verificacionWeb": null,
-      "cartaContratista": "CARTA N° 156-2026 / INFORME N° 019-2026/JCAMF-EQH",
-      "informeSupervision": "INF-SUP-FT-EQ-DLVM-014-261105",
-      "queFalta": "Declaración jurada del proveedor que lo identifique y se obligue a entregar la canastilla de acero inoxidable 316, en las medidas del A07 (A05).",
+      "cartaContratista": "CARTA N° 175-2026 / INFORME N° 026-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-019-261117",
+      "queFalta": null,
       "itemsEvaluados": 7,
-      "itemsPendientes": "A05",
-      "fechaEntrega": "2026-11-04",
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-11-17",
       "historial": [
         {
           "version": 1,
@@ -7091,6 +7280,13 @@
           "carta": "CARTA N° 156-2026 / INFORME N° 019-2026/JCAMF-EQH",
           "informe": "INF-SUP-FT-EQ-DLVM-014-261105",
           "resultado": "OBSERVADA"
+        },
+        {
+          "version": 2,
+          "fecha": "2026-11-17",
+          "carta": "CARTA N° 175-2026 / INFORME N° 026-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-019-261117",
+          "resultado": "APROBADA"
         }
       ]
     },
@@ -7939,20 +8135,20 @@
       "pu": 260.77,
       "parcial": 521.55,
       "fila": 68,
-      "ficha": "NO CUMPLE",
-      "obs": "NO APROBADA. Se oferta un doppler fetal electrónico donde el expediente define un fetoscopio mecánico tipo Pinard. La NTS N° 113-MINSA/DGIEM-V.01 trata el D-349 fetoscopio y el D-96 detector de latidos como códigos distintos que coexisten en Sala de Dilatación y Sala de Parto.",
-      "version": 1,
-      "versiones": 1,
+      "ficha": "APROBADA",
+      "obs": "APROBADA en la versión 2 por equivalencia de finalidad: doppler EDAN SonoTrax II Pro con sonda obstétrica de 2 MHz, ante el retiro del Pinard Riester 4191. La consulta al Comité deja de ser necesaria.",
+      "version": 2,
+      "versiones": 2,
       "marca": "EDAN",
       "modelo": "SonoTrax II Pro",
       "fabricante": null,
-      "verificacionWeb": null,
-      "cartaContratista": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
-      "informeSupervision": "INF-SUP-FT-EQ-DLVM-002-260919",
-      "queFalta": "Ofertar un fetoscopio tipo Pinard, o descargo al Comité para la variación técnica.",
+      "verificacionWeb": "Consulta del 17/11/2026 en DIGEMID (rsDispositivos): trece registros vigentes de estetoscopios, entre ellos el DM6714E de Riester al 14/11/2029, sin detalle de modelos; ninguno con «Pinard» o «fetoscopio» en el nombre. Mercado Libre Perú ofrece un estetoscopio de Pinard de aluminio sin registro visible. ICM acredita el retiro del Riester 4191 y el vencimiento del DM6254E.",
+      "cartaContratista": "CARTA N° 175-2026 / INFORME N° 026-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-019-261117",
+      "queFalta": null,
       "itemsEvaluados": 5,
-      "itemsPendientes": "A02, A03 y A05",
-      "fechaEntrega": "2026-09-18",
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-11-17",
       "historial": [
         {
           "version": 1,
@@ -7960,6 +8156,13 @@
           "carta": "CARTA N° 084-2026 / INFORME N° 006-2026/JCAMF-EQH",
           "informe": "INF-SUP-FT-EQ-DLVM-002-260919",
           "resultado": "NO CUMPLE"
+        },
+        {
+          "version": 2,
+          "fecha": "2026-11-17",
+          "carta": "CARTA N° 175-2026 / INFORME N° 026-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-019-261117",
+          "resultado": "APROBADA"
         }
       ]
     },
@@ -7971,20 +8174,20 @@
       "pu": 3920.91,
       "parcial": 3920.91,
       "fila": 69,
-      "ficha": "OBSERVADA",
-      "obs": "OBSERVADA. 16 de 17. A05: los 30 ajustes son una multiplicación de la nota; el fabricante da una escala de 1 a 10 y limita endo al quinto grado (folio 003). El A12 se aprueba en la versión revisada: la botella con agua purificada se acepta en lugar del filtro. El A11 cumple, con 28 kHz ±3 kHz.",
-      "version": 1,
-      "versiones": 1,
+      "ficha": "APROBADA",
+      "obs": "APROBADA en la versión 2. A05 por equivalencia: ninguna de las cuatro marcas del cuadro ofrece 20 niveles.",
+      "version": 2,
+      "versiones": 2,
       "marca": "WOODPECKER",
       "modelo": "UDS-E LED",
       "fabricante": null,
       "verificacionWeb": "Consulta del 05/11/2026: el manual de la UDS-E LED (ManualsLib, pág. 21) da de 1 a 10 en destartraje y de 1 a 3 o de 1 a 6 en endo.",
-      "cartaContratista": "CARTA N° 156-2026 / INFORME N° 019-2026/JCAMF-EQH",
-      "informeSupervision": "INF-SUP-FT-EQ-DLVM-014-261105",
-      "queFalta": "Carta de WOODPECKER con los niveles de potencia efectivos en cada modo, o cuadro comparativo con tres marcas y sus parámetros más importantes (A05).",
+      "cartaContratista": "CARTA N° 175-2026 / INFORME N° 026-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-019-261117",
+      "queFalta": null,
       "itemsEvaluados": 17,
-      "itemsPendientes": "A05",
-      "fechaEntrega": "2026-11-04",
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-11-17",
       "historial": [
         {
           "version": 1,
@@ -7992,6 +8195,13 @@
           "carta": "CARTA N° 156-2026 / INFORME N° 019-2026/JCAMF-EQH",
           "informe": "INF-SUP-FT-EQ-DLVM-014-261105",
           "resultado": "OBSERVADA"
+        },
+        {
+          "version": 2,
+          "fecha": "2026-11-17",
+          "carta": "CARTA N° 175-2026 / INFORME N° 026-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-019-261117",
+          "resultado": "APROBADA"
         }
       ]
     },
@@ -11317,11 +11527,11 @@
       "descripcion": "Pronunciamiento sobre cada informe o carta del Contratista que lo requiera.",
       "metrica": {
         "etiqueta": "Cartas contestadas",
-        "hecho": 24,
-        "total": 24,
+        "hecho": 25,
+        "total": 25,
         "unidad": "cartas"
       },
-      "nota": "Los 24 informes recibidos del Contratista tienen pronunciamiento emitido; los últimos, el FT-015, el FT-016, el FT-017 y el FT-018 del 11/11/2026, uno por cada CARTA N° 162, 163, 165 y 166-2026. Los de octubre se entregaron a la Jefatura entre el 26/10/2026 y el 29/10/2026, y el FT-013 el 04/11/2026. El FT-014, el RC-006 y los cuatro del 11/11/2026 están por entregar.",
+      "nota": "Los 25 informes recibidos del Contratista tienen pronunciamiento emitido; el último, el FT-019 del 17/11/2026, sobre la CARTA N° 175-2026, la primera que llega por la carpeta de Drive de la Jefatura. Hasta el FT-018 están entregados a la Jefatura; el FT-019 está por entregar.",
       "responsable": "Supervisión de Equipamiento"
     },
     {
@@ -11332,11 +11542,11 @@
       "descripcion": "Aprobación de la ficha técnica de cada código de equipo del expediente.",
       "metrica": {
         "etiqueta": "Fichas técnicas aprobadas",
-        "hecho": 150,
+        "hecho": 156,
         "total": 179,
         "unidad": "códigos"
       },
-      "nota": "159 de 179 códigos presentados: 150 aprobados, 0 aprobados parcialmente, 7 observados y 2 que no cumplen. Completas la S3, la S4 y la S7. Vencidas con faltantes la S5 (14 de 17), la S6 (12 de 17), la S8 (14 de 16) y la S9 (15 de 16). Quedan 20 por presentar, 9 de ellos de la S10 (13/11/2026).",
+      "nota": "159 de 179 códigos presentados: 156 aprobados, 0 aprobados parcialmente, 3 observados y 0 que no cumplen. Completas la S3, la S4 y la S7. Vencidas con faltantes la S5 (14 de 17), la S6 (12 de 17), la S8 (14 de 16), la S9 (15 de 16) y la S10 (7 de 16). Quedan 20 por presentar.",
       "responsable": "Contratista ICM S.A."
     },
     {
