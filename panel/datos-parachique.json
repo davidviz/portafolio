@@ -1,7 +1,7 @@
 {
   "_lea_esto": "Respaldo y datos de fondo del panel CS PARACHIQUE. El estado de las fichas técnicas ya NO se gobierna aquí: manda la hoja «2 SEGUIMIENTO» del Drive, y las observaciones a fichas, la hoja «3 OBSERVACIONES». Lo que se edite aquí para un código que la hoja mencione, la hoja lo sobrescribe. Todo lo demás —etapas, documentos, expediente, presupuesto, valorización— sí se edita aquí. No edite los dashboard.html a mano: se regeneran y se pierde el cambio.",
   "meta": {
-    "actualizado": "2026-11-17",
+    "actualizado": "2026-11-18",
     "proyecto": "Mejoramiento de los Servicios de Salud del Establecimiento de Salud Parachique",
     "cui": "2571750",
     "ubicacion": "Distrito y provincia de Sechura — Piura",
@@ -1626,6 +1626,60 @@
       "areas": [
         "Equipos biomédicos",
         "Equipos complementarios"
+      ],
+      "honorarioNeto": 500
+    },
+    {
+      "id": "CT-IN-027",
+      "flujo": "RECIBIDA",
+      "clase": "INFORME DEL CONTRATISTA",
+      "etapa": "E3",
+      "codigo": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+      "fecha": "2026-11-17",
+      "contraparte": "INGENIERÍA CIVIL MONTAJES S.A. (ICM) — Contratista de obra",
+      "asunto": "Presentación de dieciocho fichas técnicas para su aprobación.",
+      "estado": "ATENDIDA",
+      "numeral": "2.3",
+      "membrete": false,
+      "respondidaPor": "INF-SUP-FT-EQ-DLVM-020-261118",
+      "detalle": "Informe N° 025 del 17/11/2026, del Ing. Juan Carlos Augusto Mendiola Florez (CIP 201412), suscrito también por el Residente de Obra Ing. Luis Enrique Santisteban Romero (CIP 81329). 226 folios. Recibida por la Jefatura el 17/11/2026 a las 17:00 h y subida a la carpeta de Drive de cartas pendientes el 18/11/2026. Fichas nuevas de E-103, E-159, D-331, M-109, M-111, M-124, M-161, M-162, M-55, M-68, M-73, M-75, M-78, M-81, M-85, M-88, M-95 y M-97, con nota aclaratoria sobre la denominación del D-331.",
+      "archivo": "CARTA N 174-2026 ICM - Informe 025 - Aprobacion de fichas tecnicas.pdf",
+      "ruta": "3.Sustentos\\",
+      "url": null,
+      "drive": {
+        "sustento": "14LK_aBKTW9ZiU-w0rkjc-dW1_osNpY97"
+      },
+      "areas": [
+        "Equipos electromecánicos",
+        "Mobiliario clínico"
+      ]
+    },
+    {
+      "id": "PR-031",
+      "flujo": "EMITIDA",
+      "clase": "INFORME",
+      "etapa": "E3",
+      "codigo": "INF-SUP-FT-EQ-DLVM-020-261118",
+      "fecha": "2026-11-18",
+      "contraparte": "Jefatura de Supervisión de Obra — Ing. Manuel Ricardo Torres Peche",
+      "asunto": "Informe de Validación de Fichas Técnicas N° 020 — dieciocho fichas nuevas.",
+      "estado": "POR ENTREGAR",
+      "numeral": "2.3",
+      "membrete": true,
+      "responde": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+      "detalle": "Se APRUEBAN trece fichas y se OBSERVAN cinco: E-103 (A08, resolución), E-159 (A03, seguro de puerta), M-111 (A04, acero 201 en el timón), M-97 (A03, espesor del pedestal) y M-75 (fabricante y modelo). 228 de 232 (98 %). Se aceptan las variaciones que declara MEDIMATIC: cremalleras, cojín y acabados pulidos sobre AISI 304. Con esta carta quedan sin presentar solo el E-130 y el V-1.",
+      "archivo": "INF-SUP-FT-EQ-DLVM-020-261118_INFORME_FIRMADO.pdf",
+      "ruta": "2.Informes Mensuales\\3.Informe de repsuestas\\FT-020-261118\\",
+      "url": null,
+      "drive": {
+        "informe": "1PDIwcpLJSGPLC8HnGmapqNcBuJyHu4mL",
+        "pdf": "11org0SSD3AT2aheExBPkfvR2QMQB6YC6",
+        "firmado": "12zSHMBCdLYZnsSqgDEUw6dzCxz6Dxm9d",
+        "sustento": "13c8-jXQME58yOrH0mLXkU2y5u3cVg-7l"
+      },
+      "areas": [
+        "Equipos electromecánicos",
+        "Mobiliario clínico"
       ],
       "honorarioNeto": 500
     }
@@ -5779,6 +5833,274 @@
           "fuente": "Validación de fichas técnicas"
         }
       ]
+    },
+    {
+      "informe": "INF-SUP-FT-EQ-DLVM-020-261118",
+      "documentoAbsuelto": "INFORME N° 025-2026/JCAMF-EQH (17/11/2026) — CARTA N° 174-2026, 226 folios",
+      "materia": "Validación de dieciocho fichas técnicas nuevas",
+      "observaciones": 5,
+      "extremos": 5,
+      "confirmadas": 5,
+      "trasladadas": 0,
+      "yaAbsueltas": 0,
+      "codigoEvaluado": "18 códigos",
+      "tipo": "FICHA",
+      "resultado": "13 fichas APROBADAS y 5 OBSERVADAS (E-103, E-159, M-111, M-97 y M-75); 228 de 232 (98 %).",
+      "naturaleza": "Lote de dos electromecánicos y dieciséis de mobiliario clínico, catorce de fabricación nacional. Completa la S5, la S8 y la S9 del cronograma; solo quedan sin presentar el E-130 y el V-1. Segunda carta recibida por la carpeta de Drive de la Jefatura.",
+      "detalle": [
+        {
+          "obs": "OK",
+          "equipo": "D-331 — Módulos de psicomotricidad para niños de 3 años a más",
+          "materia": "Ficha aprobada. 9 de 9. Fabricación nacional con carta de MEDI MATIC; rige la denominación «3 años a más» del Programa (folio 984), no el encabezado de la EETT.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "Bloque D-331 del Informe N° 025",
+          "extremos": null,
+          "codigos": [
+            "D-331"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-109 — Silla especial para toma de muestras",
+          "materia": "Ficha aprobada. 13 de 13.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "Bloque M-109 del Informe N° 025",
+          "extremos": null,
+          "codigos": [
+            "M-109"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-124 — Mesa rodable para alimentos",
+          "materia": "Ficha aprobada. 14 de 14.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "Bloque M-124 del Informe N° 025",
+          "extremos": null,
+          "codigos": [
+            "M-124"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-161 — Cama para trabajo de parto",
+          "materia": "Ficha aprobada. 16 de 16. Elevación del espaldar con cremallera, declarada por MEDIMATIC.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "Bloque M-161 del Informe N° 025",
+          "extremos": null,
+          "codigos": [
+            "M-161"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-162 — Taburete de acero inoxidable con asiento giratorio rodable con respaldo",
+          "materia": "Ficha aprobada. 11 de 11. Cojín tapizado en korofán aceptado, como en el M-47 y el M-48.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "Bloque M-162 del Informe N° 025",
+          "extremos": null,
+          "codigos": [
+            "M-162"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-55 — Vitrina de acero Inoxidable para instrumentos o material esteril de un cuerpo",
+          "materia": "Ficha aprobada. 15 de 15.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "Bloque M-55 del Informe N° 025",
+          "extremos": null,
+          "codigos": [
+            "M-55"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-68 — Mesa (diván) para exámenes gineco obstétricos",
+          "materia": "Ficha aprobada. 17 de 17. Cremallera en lugar de bisagras tipo tijera, bastidor de 1,45 mm y acabados 600# y N° 4 sobre AISI 304.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "Bloque M-68 del Informe N° 025",
+          "extremos": null,
+          "codigos": [
+            "M-68"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-73 — Cama camilla multipropósito",
+          "materia": "Ficha aprobada. 16 de 16. Portasueros y sujeción de monitor con declaración jurada de MEDI MATIC.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "Bloque M-73 del Informe N° 025",
+          "extremos": null,
+          "codigos": [
+            "M-73"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-78 — Cama de 1 1/2 plaza",
+          "materia": "Ficha aprobada. 11 de 11.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "Bloque M-78 del Informe N° 025",
+          "extremos": null,
+          "codigos": [
+            "M-78"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-81 — Carro metálico fichero para 20 porta historias clínicas",
+          "materia": "Ficha aprobada. 13 de 13. Marco con acabado N° 4 sobre AISI 304; veinte porta historias con declaración jurada.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "Bloque M-81 del Informe N° 025",
+          "extremos": null,
+          "codigos": [
+            "M-81"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-85 — Cuna acrílica con base metálica rodable",
+          "materia": "Ficha aprobada. 12 de 12. Rige la gaveta declarada; la foto con puertas es referencial.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "Bloque M-85 del Informe N° 025",
+          "extremos": null,
+          "codigos": [
+            "M-85"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-88 — Mesa (diván) para exámenes y curaciones",
+          "materia": "Ficha aprobada. 11 de 11. Bastidor de 1,45 mm.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "Bloque M-88 del Informe N° 025",
+          "extremos": null,
+          "codigos": [
+            "M-88"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "OK",
+          "equipo": "M-95 — mesa especial en acero inoxidable para tópico",
+          "materia": "Ficha aprobada. 16 de 16. Acabados 600#, 180HL y N° 4 sobre AISI 304.",
+          "nivel": "LEVE",
+          "estado": "Conforme",
+          "ubicacion": "Bloque M-95 del Informe N° 025",
+          "extremos": null,
+          "codigos": [
+            "M-95"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "E-103",
+          "equipo": "E-103 — Balanza de plataforma digital, fuerza 100 kg",
+          "materia": "OBSERVADA. 12 de 13. A08: los 10 g los declara solo la cotización de un vendedor local; el manual de T-Scale da 1/6000, que a 150 kg son 25 g frente a los 20 g pedidos.",
+          "nivel": "LEVE",
+          "estado": "Por absolver",
+          "ubicacion": "Bloque E-103 del Informe N° 025",
+          "extremos": 1,
+          "codigos": [
+            "E-103"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "E-159",
+          "equipo": "E-159 — Refrigeradora de 4P3",
+          "materia": "OBSERVADA. 10 de 11. A03: la ficha de Miray dice «Llave de seguridad: No» y el seguro externo de cable no lo identifica ni lo suscribe nadie. 199 L aceptados frente a 4 pies cúbicos.",
+          "nivel": "LEVE",
+          "estado": "Por absolver",
+          "ubicacion": "Bloque E-159 del Informe N° 025",
+          "extremos": 1,
+          "codigos": [
+            "E-159"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "M-111",
+          "equipo": "M-111 — Coche para transporte de ropa limpia.",
+          "materia": "OBSERVADA. 9 de 10. A04: el certificado marcado para la plancha de 1/8\" de los timones es AISI 201 (fila 6, 3 mm), no el 304 del C01.",
+          "nivel": "LEVE",
+          "estado": "Por absolver",
+          "ubicacion": "Bloque M-111 del Informe N° 025",
+          "extremos": 1,
+          "codigos": [
+            "M-111"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "M-75",
+          "equipo": "M-75 — Cama clinica rodable para adultos",
+          "materia": "OBSERVADA. 12 de 12. S/M, de China, sin ningún documento del fabricante: falta identificar fabricante y modelo.",
+          "nivel": "LEVE",
+          "estado": "Por absolver",
+          "ubicacion": "Bloque M-75 del Informe N° 025",
+          "extremos": 1,
+          "codigos": [
+            "M-75"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "fuente": "Validación de fichas técnicas"
+        },
+        {
+          "obs": "M-97",
+          "equipo": "M-97 — Mesa metálica para exámenes y cambiar pañales",
+          "materia": "OBSERVADA. 11 de 12. A03: el certificado marcado para el pedestal es de plancha de 1,00 mm y la ficha dice 1,2 mm.",
+          "nivel": "LEVE",
+          "estado": "Por absolver",
+          "ubicacion": "Bloque M-97 del Informe N° 025",
+          "extremos": 1,
+          "codigos": [
+            "M-97"
+          ],
+          "origen": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "fuente": "Validación de fichas técnicas"
+        }
+      ]
     }
   ],
   "valorizacion": {
@@ -5799,7 +6121,7 @@
       {
         "requisito": "Aprobación de las EETT por la Entidad",
         "estado": "PENDIENTE",
-        "nota": "46 asuntos siguen pendientes de pronunciamiento del Proyectista. De las fichas técnicas, 156 de 179 cuentan con aprobación de la Supervisión, que no sustituye la aprobación de las EETT por la Entidad."
+        "nota": "46 asuntos siguen pendientes de pronunciamiento del Proyectista. De las fichas técnicas, 169 de 179 cuentan con aprobación de la Supervisión, que no sustituye la aprobación de las EETT por la Entidad."
       },
       {
         "requisito": "Planos de preinstalación emitidos por el Contratista",
@@ -5873,7 +6195,7 @@
       "nivel": "SUSTANCIAL",
       "reservada": false,
       "titulo": "Plazo de participación vencido el 12/09/2026",
-      "detalle": "La propuesta fija 60 días calendario desde el inicio de servicio del 14/07/2026, de modo que el plazo venció el 12/09/2026. Con posterioridad se emitieron veintitrés pronunciamientos: el RC-004, el AP-001, el FT-001, el FT-002, el RC-005, el FT-003, el FT-004, el FT-005, el FT-006, el FT-007, el FT-008, el FT-009, el FT-010, el FT-011, el FT-012, el FT-013, el FT-014, el RC-006, el FT-015, el FT-016, el FT-017, el FT-018 y el FT-019.",
+      "detalle": "La propuesta fija 60 días calendario desde el inicio de servicio del 14/07/2026, de modo que el plazo venció el 12/09/2026. Con posterioridad se emitieron veinticuatro pronunciamientos: el RC-004, el AP-001, el FT-001, el FT-002, el RC-005, el FT-003, el FT-004, el FT-005, el FT-006, el FT-007, el FT-008, el FT-009, el FT-010, el FT-011, el FT-012, el FT-013, el FT-014, el RC-006, el FT-015, el FT-016, el FT-017, el FT-018, el FT-019 y el FT-020.",
       "accion": "Formalizar con el CONSORCIO PARACHIQUE la ampliación del plazo de participación, para que los pronunciamientos posteriores al 12/09 queden amparados."
     },
     {
@@ -5900,9 +6222,9 @@
     {
       "nivel": "SUSTANCIAL",
       "reservada": false,
-      "titulo": "Cronograma vencido: 20 códigos sin presentar, la S10 con el V-1 incluida",
-      "detalle": "El INF-SUP-RC-EQ-DLVM-005-260929 aprobó el cronograma de la CARTA N° 085-2026: 179 códigos en diez entregas semanales, la última el 13/11/2026. Hay 159 presentados. La S3, la S4 y la S7 están completas. La S5 lleva 14 de 17 (faltan E-103, E-159 y D-331); la S6, 12 de 17 (faltan el E-130, que espera al Comité, y M-124, M-161, M-162 y M-55); la S8, 14 de 16 (faltan M-109 y M-111); la S9, 15 de 16 (falta M-68); y la S10, 7 de 16 (faltan V-1, M-73, M-75, M-78, M-81, M-85, M-88, M-95, M-97). De los nueve códigos con pre instalación solo falta el E-130. La CARTA N° 175-2026, del 17/11/2026, solo trae levantamientos. Ninguna carta trae la reprogramación escrita.",
-      "accion": "Obtener del Contratista la fecha escrita de los 20 códigos sin presentar, con prioridad para el V-1, Ambulancia Rural Tipo I."
+      "titulo": "Cronograma vencido: solo faltan el E-130 y el V-1",
+      "detalle": "El INF-SUP-RC-EQ-DLVM-005-260929 aprobó el cronograma de la CARTA N° 085-2026: 179 códigos en diez entregas semanales, la última el 13/11/2026. Con la CARTA N° 174-2026 hay 177 presentados y están completas la S3, la S4, la S5, la S7, la S8 y la S9. Faltan el E-130 de la S6, que espera al Comité, y el V-1, Ambulancia Rural Tipo I, de la S10, vencida el 13/11/2026. Ninguna carta trae la reprogramación escrita.",
+      "accion": "Obtener del Contratista la fecha escrita de presentación del V-1, Ambulancia Rural Tipo I. El E-130 no se remite hasta que el Comité resuelva su capacidad."
     },
     {
       "nivel": "LEVE",
@@ -8586,8 +8908,29 @@
       "pu": 1945.31,
       "parcial": 1945.31,
       "fila": 84,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "OBSERVADA",
+      "obs": "OBSERVADA. 12 de 13. A08: los 10 g los declara solo la cotización de un vendedor local; el manual de T-Scale da 1/6000, que a 150 kg son 25 g frente a los 20 g pedidos.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "T-SCALE",
+      "modelo": "BW",
+      "fabricante": "T-Scale (China)",
+      "verificacionWeb": "Consulta del 18/11/2026: no se halló publicación de T-Scale de la BW con plataforma de 52 x 42 cm y 150 kg x 10 g. El manual del indicador BW (folio 003) da 1/6000 OIML; la cotización es de Servicios Generales JEAZ, de Chepén.",
+      "cartaContratista": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-020-261118",
+      "queFalta": "Carta de T-Scale o de su distribuidor autorizado con la división de lectura de 20 g o menos y capacidad de 100 kg o más (por ejemplo, 120 kg x 20 g).",
+      "itemsEvaluados": 13,
+      "itemsPendientes": "A08",
+      "fechaEntrega": "2026-11-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-11-17",
+          "carta": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "resultado": "OBSERVADA"
+        }
+      ]
     },
     {
       "cod": "E-159",
@@ -8597,8 +8940,29 @@
       "pu": 2763.11,
       "parcial": 5526.21,
       "fila": 85,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "OBSERVADA",
+      "obs": "OBSERVADA. 10 de 11. A03: la ficha de Miray dice «Llave de seguridad: No» y el seguro externo de cable no lo identifica ni lo suscribe nadie. 199 L aceptados frente a 4 pies cúbicos.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "MIRAY",
+      "modelo": "RM-206HID",
+      "fabricante": "Miray (China)",
+      "verificacionWeb": "Hiraoka publica la Miray RM-206HID (consulta del 18/11/2026): top freezer de 199 L, No Frost, 146,5 x 54,5 x 59 cm.",
+      "cartaContratista": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-020-261118",
+      "queFalta": "Declaración jurada del proveedor que identifique el seguro con llave, se obligue a entregarlo instalado y declare que no afecta la garantía.",
+      "itemsEvaluados": 11,
+      "itemsPendientes": "A03",
+      "fechaEntrega": "2026-11-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-11-17",
+          "carta": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "resultado": "OBSERVADA"
+        }
+      ]
     },
     {
       "cod": "E-167",
@@ -10574,8 +10938,29 @@
       "pu": 9137.75,
       "parcial": 9137.75,
       "fila": 156,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. 9 de 9. Fabricación nacional con carta de MEDI MATIC; rige la denominación «3 años a más» del Programa (folio 984), no el encabezado de la EETT.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "NACIONAL",
+      "modelo": "S/M",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-020-261118",
+      "queFalta": null,
+      "itemsEvaluados": 9,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-11-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-11-17",
+          "carta": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "D-332",
@@ -10681,8 +11066,29 @@
       "pu": 2410.02,
       "parcial": 4820.04,
       "fila": 160,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. 13 de 13.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "MEDIMATIC",
+      "modelo": "MMS-00990",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-020-261118",
+      "queFalta": null,
+      "itemsEvaluados": 13,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-11-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-11-17",
+          "carta": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-111",
@@ -10692,8 +11098,29 @@
       "pu": 3884.34,
       "parcial": 3884.34,
       "fila": 161,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "OBSERVADA",
+      "obs": "OBSERVADA. 9 de 10. A04: el certificado marcado para la plancha de 1/8\" de los timones es AISI 201 (fila 6, 3 mm), no el 304 del C01.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "MEDIMATIC",
+      "modelo": "MRO-00164",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-020-261118",
+      "queFalta": "Certificado de plancha AISI 304 de 3 mm o declaración de MEDI MATIC que precise el grado de los timones.",
+      "itemsEvaluados": 10,
+      "itemsPendientes": "A04",
+      "fechaEntrega": "2026-11-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-11-17",
+          "carta": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "resultado": "OBSERVADA"
+        }
+      ]
     },
     {
       "cod": "M-113",
@@ -10863,8 +11290,29 @@
       "pu": 790.38,
       "parcial": 1580.76,
       "fila": 167,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. 14 de 14.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "MEDIMATIC",
+      "modelo": "MRC-00141",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-020-261118",
+      "queFalta": null,
+      "itemsEvaluados": 14,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-11-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-11-17",
+          "carta": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-133",
@@ -10970,8 +11418,29 @@
       "pu": 4739.3,
       "parcial": 9478.61,
       "fila": 171,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. 16 de 16. Elevación del espaldar con cremallera, declarada por MEDIMATIC.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "MEDIMATIC",
+      "modelo": "CPA-00124",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-020-261118",
+      "queFalta": null,
+      "itemsEvaluados": 16,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-11-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-11-17",
+          "carta": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-162",
@@ -10981,8 +11450,29 @@
       "pu": 1071.55,
       "parcial": 2143.11,
       "fila": 172,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. 11 de 11. Cojín tapizado en korofán aceptado, como en el M-47 y el M-48.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "MEDIMATIC",
+      "modelo": "MTB-13000",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-020-261118",
+      "queFalta": null,
+      "itemsEvaluados": 11,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-11-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-11-17",
+          "carta": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-47",
@@ -11056,8 +11546,29 @@
       "pu": 3607.06,
       "parcial": 28856.48,
       "fila": 175,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. 15 de 15.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "MEDIMATIC",
+      "modelo": "MVV-00950",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-020-261118",
+      "queFalta": null,
+      "itemsEvaluados": 15,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-11-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-11-17",
+          "carta": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-57",
@@ -11163,8 +11674,29 @@
       "pu": 1711.96,
       "parcial": 3423.91,
       "fila": 179,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. 17 de 17. Cremallera en lugar de bisagras tipo tijera, bastidor de 1,45 mm y acabados 600# y N° 4 sobre AISI 304.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "MEDIMATIC",
+      "modelo": "MES-00950",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-020-261118",
+      "queFalta": null,
+      "itemsEvaluados": 17,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-11-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-11-17",
+          "carta": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-72",
@@ -11206,8 +11738,29 @@
       "pu": 19234.95,
       "parcial": 38469.89,
       "fila": 181,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. 16 de 16. Portasueros y sujeción de monitor con declaración jurada de MEDI MATIC.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "MEDIKAL 2000",
+      "modelo": "M2-T800",
+      "fabricante": "Medikal 2000 (Konya, Turquía)",
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-020-261118",
+      "queFalta": null,
+      "itemsEvaluados": 16,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-11-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-11-17",
+          "carta": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-75",
@@ -11217,8 +11770,29 @@
       "pu": 8043.69,
       "parcial": 16087.37,
       "fila": 182,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "OBSERVADA",
+      "obs": "OBSERVADA. 12 de 12. S/M, de China, sin ningún documento del fabricante: falta identificar fabricante y modelo.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "S/M",
+      "modelo": "S/M",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-020-261118",
+      "queFalta": "Ficha o catálogo del fabricante con la marca y el modelo, los mismos que declare el Anexo N° 1.",
+      "itemsEvaluados": 12,
+      "itemsPendientes": "Fabricante y modelo",
+      "fechaEntrega": "2026-11-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-11-17",
+          "carta": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "resultado": "OBSERVADA"
+        }
+      ]
     },
     {
       "cod": "M-78",
@@ -11228,8 +11802,29 @@
       "pu": 1857.21,
       "parcial": 7428.83,
       "fila": 183,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. 11 de 11.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "MEDIMATIC",
+      "modelo": "MCA-01891",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-020-261118",
+      "queFalta": null,
+      "itemsEvaluados": 11,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-11-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-11-17",
+          "carta": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-81",
@@ -11239,8 +11834,29 @@
       "pu": 1521.9,
       "parcial": 1521.9,
       "fila": 184,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. 13 de 13. Marco con acabado N° 4 sobre AISI 304; veinte porta historias con declaración jurada.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "MEDIMATIC",
+      "modelo": "MCO-3245",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-020-261118",
+      "queFalta": null,
+      "itemsEvaluados": 13,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-11-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-11-17",
+          "carta": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-85",
@@ -11250,8 +11866,29 @@
       "pu": 3138.41,
       "parcial": 9415.22,
       "fila": 185,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. 12 de 12. Rige la gaveta declarada; la foto con puertas es referencial.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "MEDIMATIC",
+      "modelo": "MCU-00180",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-020-261118",
+      "queFalta": null,
+      "itemsEvaluados": 12,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-11-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-11-17",
+          "carta": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-86",
@@ -11293,8 +11930,29 @@
       "pu": 1235.59,
       "parcial": 4942.35,
       "fila": 187,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. 11 de 11. Bastidor de 1,45 mm.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "MEDIMATIC",
+      "modelo": "MES-00131",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-020-261118",
+      "queFalta": null,
+      "itemsEvaluados": 11,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-11-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-11-17",
+          "carta": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-90",
@@ -11400,8 +12058,29 @@
       "pu": 4660.84,
       "parcial": 9321.68,
       "fila": 191,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "APROBADA",
+      "obs": "APROBADA. 16 de 16. Acabados 600#, 180HL y N° 4 sobre AISI 304.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "MEDIMATIC",
+      "modelo": "MES-00952",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-020-261118",
+      "queFalta": null,
+      "itemsEvaluados": 16,
+      "itemsPendientes": null,
+      "fechaEntrega": "2026-11-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-11-17",
+          "carta": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "resultado": "APROBADA"
+        }
+      ]
     },
     {
       "cod": "M-96",
@@ -11443,8 +12122,29 @@
       "pu": 2008.8,
       "parcial": 10043.98,
       "fila": 193,
-      "ficha": "SIN PRESENTAR",
-      "obs": null
+      "ficha": "OBSERVADA",
+      "obs": "OBSERVADA. 11 de 12. A03: el certificado marcado para el pedestal es de plancha de 1,00 mm y la ficha dice 1,2 mm.",
+      "version": 1,
+      "versiones": 1,
+      "marca": "MEDIMATIC",
+      "modelo": "MES-01006",
+      "fabricante": null,
+      "verificacionWeb": null,
+      "cartaContratista": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+      "informeSupervision": "INF-SUP-FT-EQ-DLVM-020-261118",
+      "queFalta": "Certificado de plancha LAF de 1,2 mm o declaración de MEDI MATIC que precise el espesor del pedestal.",
+      "itemsEvaluados": 12,
+      "itemsPendientes": "A03",
+      "fechaEntrega": "2026-11-17",
+      "historial": [
+        {
+          "version": 1,
+          "fecha": "2026-11-17",
+          "carta": "CARTA N° 174-2026 / INFORME N° 025-2026/JCAMF-EQH",
+          "informe": "INF-SUP-FT-EQ-DLVM-020-261118",
+          "resultado": "OBSERVADA"
+        }
+      ]
     },
     {
       "cod": "M-99",
@@ -11527,11 +12227,11 @@
       "descripcion": "Pronunciamiento sobre cada informe o carta del Contratista que lo requiera.",
       "metrica": {
         "etiqueta": "Cartas contestadas",
-        "hecho": 25,
-        "total": 25,
+        "hecho": 26,
+        "total": 26,
         "unidad": "cartas"
       },
-      "nota": "Los 25 informes recibidos del Contratista tienen pronunciamiento emitido; el último, el FT-019 del 17/11/2026, sobre la CARTA N° 175-2026, la primera que llega por la carpeta de Drive de la Jefatura. Hasta el FT-018 están entregados a la Jefatura; el FT-019 está por entregar.",
+      "nota": "Los 26 informes recibidos del Contratista tienen pronunciamiento emitido; el último, el FT-020 del 18/11/2026, sobre la CARTA N° 174-2026, que llegó por la carpeta de Drive de la Jefatura. Hasta el FT-018 están entregados a la Jefatura; el FT-019 y el FT-020 están por entregar.",
       "responsable": "Supervisión de Equipamiento"
     },
     {
@@ -11542,11 +12242,11 @@
       "descripcion": "Aprobación de la ficha técnica de cada código de equipo del expediente.",
       "metrica": {
         "etiqueta": "Fichas técnicas aprobadas",
-        "hecho": 156,
+        "hecho": 169,
         "total": 179,
         "unidad": "códigos"
       },
-      "nota": "159 de 179 códigos presentados: 156 aprobados, 0 aprobados parcialmente, 3 observados y 0 que no cumplen. Completas la S3, la S4 y la S7. Vencidas con faltantes la S5 (14 de 17), la S6 (12 de 17), la S8 (14 de 16), la S9 (15 de 16) y la S10 (7 de 16). Quedan 20 por presentar.",
+      "nota": "177 de 179 códigos presentados: 169 aprobados, 0 aprobados parcialmente, 8 observados y 0 que no cumplen. Completas la S3, la S4, la S5, la S7, la S8 y la S9. Faltan el E-130 de la S6, que espera al Comité, y el V-1 de la S10. Quedan 2 por presentar.",
       "responsable": "Contratista ICM S.A."
     },
     {
